@@ -37,7 +37,7 @@ public class PlayerController : MonoBehaviour
 
     void OnControllerColliderHit(ControllerColliderHit hit)
     {
-        Debug.LogError("Col = " + hit.gameObject.name.ToString());
+        //Debug.LogError("Col = " + hit.gameObject.name.ToString());
         
     }
     //private void OnTriggerEnter(Collider other)
