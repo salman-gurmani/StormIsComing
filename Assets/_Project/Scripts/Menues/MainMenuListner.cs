@@ -14,7 +14,12 @@ public class MainMenuListner : MonoBehaviour {
 		PurchaseCheck();
 	}
 
-    public void PurchaseCheck() {
+    private void Start()
+    {
+		Toolbox.HUDListner.DisableHUD();
+
+	}
+	public void PurchaseCheck() {
 
 		if (Toolbox.DB.prefs.NoAdsPurchased)
 			noAdsBtn.SetActive(false);
@@ -80,7 +85,8 @@ public class MainMenuListner : MonoBehaviour {
 	public void OnPress_Play()
     {
 		Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.buttonPressYes);
-        //Toolbox.GameManager.OnPlay_Pressed();
+		//Toolbox.GameManager.OnPlay_Pressed();
+		Toolbox.HUDListner.EnableHUD();
 		Destroy(gameObject);
     }
 
