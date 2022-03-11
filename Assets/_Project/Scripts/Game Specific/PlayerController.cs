@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,6 +14,10 @@ public class PlayerController : MonoBehaviour
     private bool groundedPlayer;
     [SerializeField] private float playerSpeed = 2.0f;
     private float gravityValue = -9.81f;
+
+    [Header("Resources")]
+    public List<ResourceHandler> resourceInTrigger;
+    [SerializeField] private bool isGathering = false;
 
     private void Start()
     {
@@ -33,6 +38,12 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+        PlayerMovement();
+        ResourceGatherHandling();
+    }
+
+    void PlayerMovement() {
+
         groundedPlayer = controller.isGrounded;
         if (groundedPlayer && playerVelocity.y < 0)
         {
@@ -50,10 +61,11 @@ public class PlayerController : MonoBehaviour
         playerVelocity.y += gravityValue * Time.deltaTime;
         controller.Move(playerVelocity * Time.deltaTime);
 
-        UpdateAnimator(move);
+        UpdateMovement(move);
     }
 
-    private void UpdateAnimator(Vector3 _mov) {
+
+    private void UpdateMovement(Vector3 _mov) {
 
         if (_mov.x != 0 || _mov.z != 0)
         {
@@ -65,6 +77,32 @@ public class PlayerController : MonoBehaviour
         }
 
         anim.SetBool("Run", run);
+    }
+
+    private void ResourceGatherHandling()
+    {
+        if (!isGathering && resourceInTrigger.Count > 0) {
+
+            isGathering = true;
+            anim.SetTrigger("Attack");
+
+            Invoke("GatherRequestHandling", 1f);
+        }
+    }
+
+    public void GatherRequestHandling() {
+        
+        
+        if (resourceInTrigger.Count > 0)
+        {
+            foreach (var item in resourceInTrigger)
+            {
+                Debug.LogError("IN ANIM");
+            }
+        }
+
+        isGathering = false;
+
     }
 
     void OnControllerColliderHit(ControllerColliderHit hit)
@@ -98,13 +136,53 @@ public class PlayerController : MonoBehaviour
         body.velocity = pushDir * 10;
 
     }
-    //private void OnTriggerEnter(Collider other)
-    //{
-    //    Debug.LogError("Trigger = " + other.gameObject.tag.ToString());
-    //}
+    private void OnTriggerEnter(Collider other)
+    {
+        //Debug.LogError("Trigger = " + other.gameObject.tag.ToString());
+        switch (other.tag)
+        {
+            case "Resource":
+
+                resourceInTrigger.Add(other.GetComponent<ResourceHandler>());
+
+                break;
+
+            default:
+                break;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        //Debug.LogError("Trigger = " + other.gameObject.tag.ToString());
+        switch (other.tag)
+        {
+            case "Resource":
+
+                resourceInTrigger.Remove(other.GetComponent<ResourceHandler>());
+
+                break;
+
+            default:
+                break;
+        }
+    }
 
     private void OnTriggerStay(Collider other)
     {
         //Debug.LogError("Trigger = " + other.gameObject.tag.ToString());
+
+        //switch (other.tag)
+        //{
+        //    case "Resource":
+
+        //        Debug.LogError("Trigger = " + other.gameObject.tag.ToString());
+
+        //        break;
+
+        //    default:
+        //        break;
+        //}
+
     }
 }
