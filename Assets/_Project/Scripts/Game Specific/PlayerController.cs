@@ -1,5 +1,3 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -15,9 +13,13 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float playerSpeed = 2.0f;
     private float gravityValue = -9.81f;
 
-    [Header("Resources")]
+    [Space(10)]
     public List<ResourceHandler> resourceInTrigger;
     [SerializeField] private bool isGathering = false;
+
+    float time = 0;
+    float gatherDelay = 0.8f;
+
 
     private void Start()
     {
@@ -40,6 +42,22 @@ public class PlayerController : MonoBehaviour
     {
         PlayerMovement();
         ResourceGatherHandling();
+
+        GatherTimeHandling();
+    }
+
+    private void GatherTimeHandling()
+    {
+        if (time <= 0)
+            return;
+        
+
+        time -= Time.deltaTime;
+
+        if (time <= 0){
+
+            GatherRequestHandling();
+        }
     }
 
     void PlayerMovement() {
@@ -85,19 +103,18 @@ public class PlayerController : MonoBehaviour
 
             isGathering = true;
             anim.SetTrigger("Attack");
-
-            Invoke("GatherRequestHandling", 1f);
+            time = gatherDelay;
         }
     }
 
     public void GatherRequestHandling() {
         
-        
         if (resourceInTrigger.Count > 0)
         {
-            foreach (var item in resourceInTrigger)
+            for (int i = 0; i < resourceInTrigger.Count; i++)
             {
-                Debug.LogError("IN ANIM");
+                if (resourceInTrigger[i])
+                    resourceInTrigger[i].GetResource();
             }
         }
 
@@ -105,12 +122,19 @@ public class PlayerController : MonoBehaviour
 
     }
 
+    public void AddResource(ResourceHandler _handler)
+    {
+        resourceInTrigger.Add(_handler);
+        _handler.DistanceCheckStatus(true);
+    }
+
+    public void RemoveResource(ResourceHandler _handler) {
+
+        resourceInTrigger.Remove(_handler);
+    }
+
     void OnControllerColliderHit(ControllerColliderHit hit)
     {
-        //Debug.LogError("Col = " + hit.gameObject.name.ToString());
-
-
-
         Rigidbody body = hit.collider.attachedRigidbody;
 
         // no rigidbody
@@ -143,31 +167,28 @@ public class PlayerController : MonoBehaviour
         {
             case "Resource":
 
-                resourceInTrigger.Add(other.GetComponent<ResourceHandler>());
-
+                AddResource(other.GetComponent<ResourceHandler>());
                 break;
 
             default:
                 break;
         }
     }
+    //private void OnTriggerExit(Collider other)
+    //{
+    //    //Debug.LogError("Trigger = " + other.gameObject.tag.ToString());
+    //    switch (other.tag)
+    //    {
+    //        case "Resource":
 
-    private void OnTriggerExit(Collider other)
-    {
-        //Debug.LogError("Trigger = " + other.gameObject.tag.ToString());
-        switch (other.tag)
-        {
-            case "Resource":
+    //            RemoveResource(other.GetComponent<ResourceHandler>());
 
-                resourceInTrigger.Remove(other.GetComponent<ResourceHandler>());
+    //            break;
 
-                break;
-
-            default:
-                break;
-        }
-    }
-
+    //        default:
+    //            break;
+    //    }
+    //}
     private void OnTriggerStay(Collider other)
     {
         //Debug.LogError("Trigger = " + other.gameObject.tag.ToString());

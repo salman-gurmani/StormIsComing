@@ -74,6 +74,7 @@ public class Prefs
     [SerializeField] private bool[] skinsUnlocked;
     [SerializeField] private bool[] charactersUnlocked;
     [SerializeField] private bool[] carsUnlocked;
+    [SerializeField] private ResourceAmount[] resourceAmount;
     [SerializeField] private bool gameAudio = true;
     [SerializeField] private bool gameMusic = true;
     [SerializeField] private bool hasShadows = true;
@@ -84,6 +85,9 @@ public class Prefs
     [SerializeField] private int startSpawnPlayersVal = 0;
 
     [SerializeField] private int analytic_GameRunCount = 0;
+
+    [SerializeField] private int resourceGatherLevel = 0;
+    [SerializeField] private int playerSpeedLevel = 0;
 
     [SerializeField] private int lastSelectedPlayerObj = 0;
     [SerializeField] private int lastSelectedMode = 0;
@@ -188,6 +192,9 @@ public class Prefs
     public int LastSelectedEnv { get => lastSelectedEnv; set => lastSelectedEnv = value; }
     public bool IsBossLevel { get => isBossLevel; set => isBossLevel = value; }
     public int StartSpawnPlayersVal { get => startSpawnPlayersVal; set => startSpawnPlayersVal = value; }
+    public ResourceAmount[] ResourceAmount { get => resourceAmount; set => resourceAmount = value; }
+    public int ResourceGatherLevel { get => resourceGatherLevel; set => resourceGatherLevel = value; }
+    public int PlayerSpeedLevel { get => playerSpeedLevel; set => playerSpeedLevel = value; }
 }
 public class DB : MonoBehaviour {
        

@@ -11,7 +11,7 @@ public class GameplayScript : MonoBehaviour {
     public bool levelCompleted = false;
     public bool levelFailed = false;
 
-    public GameObject playerPrefab; 
+    public PlayerController player;
 
     public GameObject [] environments;
 
