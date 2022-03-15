@@ -84,13 +84,14 @@ public class ResourceHandler : MonoBehaviour
             return;
 
         Toolbox.DB.prefs.ResourceAmount[resourceVal].value += (Toolbox.DB.prefs.ResourceGatherLevel + 1);
+        Toolbox.HUDListner.UpdateResourceTxt(resourceVal);
         curResouceQuantity--;
         UpdateModelLevel(curResouceQuantity);
-        Debug.LogError(Toolbox.DB.prefs.ResourceAmount[resourceVal].name /*+ " " + Toolbox.DB.prefs.ResourceAmount[resourceVal].value*/ + "_Added");
+        //Debug.LogError(Toolbox.DB.prefs.ResourceAmount[resourceVal].name /*+ " " + Toolbox.DB.prefs.ResourceAmount[resourceVal].value*/ + "_Added");
         
         if(curResouceQuantity <= 0) {
 
-            Debug.LogError(Toolbox.DB.prefs.ResourceAmount[resourceVal].name + " Respawning");
+            //Debug.LogError(Toolbox.DB.prefs.ResourceAmount[resourceVal].name + " Respawning");
             Toolbox.GameplayScript.player.RemoveResource(this);
             time = respawnTime;
             DistanceCheckStatus(false);

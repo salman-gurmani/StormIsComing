@@ -14,6 +14,7 @@ public class GameplayScript : MonoBehaviour {
     public PlayerController player;
 
     public GameObject [] environments;
+    public GameObject [] resourceObjects;
 
     [HideInInspector]
     private int levelCompleteTime = 0;
@@ -132,5 +133,10 @@ public class GameplayScript : MonoBehaviour {
     public void SetSkybox(Material _mat) { 
     
         RenderSettings.skybox = _mat;
+    }
+
+    public void EnableResource(int _val) {
+
+        resourceObjects[_val].SetActive(true);
     }
 }

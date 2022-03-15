@@ -35,7 +35,8 @@ public class LevelsManager : MonoBehaviour
 
         LevelDataHandling();
         //PlayerDataHandling();
-        SpawnPlayersArmy();
+        SpawnPlayer();
+        ExtraHandling();
 
         Toolbox.Soundmanager.PlayBGSound(Toolbox.Soundmanager.gameBG);
         Toolbox.GameManager.Analytics_LevelStart();
@@ -52,7 +53,7 @@ public class LevelsManager : MonoBehaviour
         curLevelHandler = obj.GetComponent<LevelHandler>();
     }
 
-    private void SpawnPlayersArmy()
+    private void SpawnPlayer()
     {
 
     }
@@ -84,28 +85,34 @@ public class LevelsManager : MonoBehaviour
 
     private void ExtraHandling()
     {
-        if (curLevelData.envProfile)
-        {
-            for (int i = 0; i < curLevelData.envProfile.materialChange.Length; i++)
-            {
-                curLevelData.envProfile.materialChange[i].mat.SetTexture(curLevelData.envProfile.materialChange[i].fieldName, curLevelData.envProfile.materialChange[i].albedoTex);
+        //if (curLevelData.envProfile)
+        //{
+        //    for (int i = 0; i < curLevelData.envProfile.materialChange.Length; i++)
+        //    {
+        //        curLevelData.envProfile.materialChange[i].mat.SetTexture(curLevelData.envProfile.materialChange[i].fieldName, curLevelData.envProfile.materialChange[i].albedoTex);
 
-                if (curLevelData.weather == LevelData.Weather.RAINY)
-                {
-                    //Toolbox.GameManager.Log("isRaining!");
-                    curLevelData.envProfile.materialChange[i].mat.SetFloat("_Cutoff", curLevelData.envProfile.materialChange[i].alphaCutout);
-                    curLevelData.envProfile.materialChange[i].mat.SetFloat("_Metallic", curLevelData.envProfile.materialChange[i].mettalic);
-                    curLevelData.envProfile.materialChange[i].mat.SetFloat("_SmoothnessTextureChannel", curLevelData.envProfile.materialChange[i].smoothness);
-                }
-                else {
-                    curLevelData.envProfile.materialChange[i].mat.SetFloat("_Cutoff", 0);
-                    curLevelData.envProfile.materialChange[i].mat.SetFloat("_Metallic", 0);
-                    curLevelData.envProfile.materialChange[i].mat.SetFloat("_SmoothnessTextureChannel", 0);
-                }
-            }
+        //        if (curLevelData.weather == LevelData.Weather.RAINY)
+        //        {
+        //            //Toolbox.GameManager.Log("isRaining!");
+        //            curLevelData.envProfile.materialChange[i].mat.SetFloat("_Cutoff", curLevelData.envProfile.materialChange[i].alphaCutout);
+        //            curLevelData.envProfile.materialChange[i].mat.SetFloat("_Metallic", curLevelData.envProfile.materialChange[i].mettalic);
+        //            curLevelData.envProfile.materialChange[i].mat.SetFloat("_SmoothnessTextureChannel", curLevelData.envProfile.materialChange[i].smoothness);
+        //        }
+        //        else {
+        //            curLevelData.envProfile.materialChange[i].mat.SetFloat("_Cutoff", 0);
+        //            curLevelData.envProfile.materialChange[i].mat.SetFloat("_Metallic", 0);
+        //            curLevelData.envProfile.materialChange[i].mat.SetFloat("_SmoothnessTextureChannel", 0);
+        //        }
+        //    }
 
-            if (curLevelData.envProfile.skybox)
-                Toolbox.GameplayScript.SetSkybox(curLevelData.envProfile.skybox);
+        //    if (curLevelData.envProfile.skybox)
+        //        Toolbox.GameplayScript.SetSkybox(curLevelData.envProfile.skybox);
+        //}
+
+        for (int i = 0; i < curLevelData.hasResources.Length; i++) {
+
+            Toolbox.HUDListner.EnableResource((int)CurLevelData.hasResources[i]);
+            Toolbox.GameplayScript.EnableResource((int)CurLevelData.hasResources[i]);
         }
     }
 }

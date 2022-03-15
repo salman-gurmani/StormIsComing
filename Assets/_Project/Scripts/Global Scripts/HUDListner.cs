@@ -6,8 +6,14 @@ public class HUDListner : MonoBehaviour {
     public Text timeTxt;
 
     public GameObject uiParent;
+    public RectTransform resourcesParent;
+    private int resourceIndex = 0;
+
+    [Tooltip("Should be in the order of resources")]
+    public Text[] resourcesTxts;
 
     void Awake() {
+        
         Toolbox.Set_HudListner(this.GetComponent<HUDListner>());
         //AdsManager.instance.RequestBannerWithSpecs( Tapdaq.TDMBannerSize.TDMBannerStandard, Tapdaq.TDBannerPosition.Top);
     }
@@ -22,22 +28,18 @@ public class HUDListner : MonoBehaviour {
         uiParent.SetActive(true);
     }
 
-    private void Start()
-    { 
+    public void EnableResource(int _index) {
 
+        Transform resource = resourcesParent.GetChild(_index).transform;
+        resource.gameObject.SetActive(true);
+        UpdateResourceTxt(_index);
+        resource.GetComponent<RectTransform>().position = resourcesParent.GetChild(resourceIndex).position;
+        resourceIndex++;
     }
 
-    private void Update()
-    {
-        //if (Input.GetKeyDown(KeyCode.Space))
-        //    run = true;
-        //else if (Input.GetKeyUp(KeyCode.Space))
-        //    run = false;
-    }
+    public void UpdateResourceTxt(int _index) {
 
-    public void SetLvlTxt(string _str) {
-
-        
+        resourcesTxts[_index].text = Toolbox.DB.prefs.ResourceAmount[_index].value.ToString();    
     }
 
     public void Press_Pause() {
