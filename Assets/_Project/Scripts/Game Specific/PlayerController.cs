@@ -170,6 +170,11 @@ public class PlayerController : MonoBehaviour
                 AddResource(other.GetComponent<ResourceHandler>());
                 break;
 
+            case "ResourceStructure":
+
+                other.GetComponent<ResourceStructureHandling>().InitProcessing();
+                break;
+
             default:
                 break;
         }
