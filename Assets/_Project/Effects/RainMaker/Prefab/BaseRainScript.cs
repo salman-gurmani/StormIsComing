@@ -34,7 +34,7 @@ namespace DigitalRuby.RainMaker
         public AudioMixerGroup RainSoundAudioMixer;
 
         [Tooltip("Intensity of rain (0-1)")]
-        [Range(0.0f, 1.0f)]
+        [Range(0.0f, 1000.0f)]
         public float RainIntensity;
 
         [Tooltip("Rain particle system")]
@@ -79,7 +79,10 @@ namespace DigitalRuby.RainMaker
 
         private float lastRainIntensityValue = -1.0f;
         private float nextWindTime;
-
+        private void Awake()
+        {
+            Camera = Camera.main;
+        }
         private void UpdateWind()
         {
             if (EnableWind && WindZone != null && WindSpeedRange.y > 1.0f)
