@@ -8,7 +8,7 @@ public class ResourceStructureHandling : MonoBehaviour
     private float time = 0;
     private float convertResourceDelay = 0.5f;
 
-    public bool startProcessing = false;
+    private bool startProcessing = false;
     private int requirementResourceVal = 0;
     private int productionResourceVal = 0;
 
