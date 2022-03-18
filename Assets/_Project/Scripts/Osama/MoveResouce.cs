@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MoveResouce : MonoBehaviour
 {
+    public ResourceAreaHandler resourceAreaHandler;
     PileHandler pileHandler;
     public TruckHandler truckHander;
     public ContainerHandler containerHandler;
@@ -29,27 +30,32 @@ public class MoveResouce : MonoBehaviour
         
         if (truckHander.hasSteel)
         {
+            resourceAreaHandler = truckHander.steelContainer.gameObject.GetComponent<ResourceAreaHandler>();
             containerHandler = truckHander.steelContainer;
             materialArray = truckHander.pointofPileSteel;
 
         }
         if(truckHander.hasCement)
         {
+            resourceAreaHandler = truckHander.cementContainer.gameObject.GetComponent<ResourceAreaHandler>();
             containerHandler = truckHander.cementContainer;
             materialArray = truckHander.pointofPileCement;
         }
         if (truckHander.hasBrick)
         {
+            resourceAreaHandler = truckHander.brickContainer.gameObject.GetComponent<ResourceAreaHandler>();
             containerHandler = truckHander.brickContainer;
             materialArray = truckHander.pointofPileBrick;
         }
         if (truckHander.hasStone)
         {
+            resourceAreaHandler = truckHander.stoneContainer.gameObject.GetComponent<ResourceAreaHandler>();
             containerHandler = truckHander.stoneContainer;
             materialArray = truckHander.pointofPileStone;
         }
         if (truckHander.hasWoodLog)
         {
+            resourceAreaHandler = truckHander.woodContainer.gameObject.GetComponent<ResourceAreaHandler>();
             containerHandler = truckHander.woodContainer;
             materialArray = truckHander.pointofPileLog;
         }
@@ -135,7 +141,7 @@ public class MoveResouce : MonoBehaviour
         {
             if (move2)
             {
-                materialArray[truckHander.counter2].GetComponent<MoveResouce>().enabled = true;
+                Add();
             }
 
         }
@@ -143,27 +149,51 @@ public class MoveResouce : MonoBehaviour
         transform.GetComponent<MoveResouce>().enabled = false;
         
     }
+
+
+    public void Add()
+    {
+        if (containerHandler.pointofMatrial[truckHander.counter2].transform.childCount > 0)
+        {
+            truckHander.counter2++;
+            Add();
+        }
+        else
+        {
+            if(containerHandler.pointofMatrial[0].transform.childCount > 1)
+            {
+                containerHandler.pointofMatrial[0].transform.GetChild(1).transform.position = containerHandler.pointofMatrial[truckHander.counter2+1].position;
+                containerHandler.pointofMatrial[0].transform.GetChild(1).transform.parent = containerHandler.pointofMatrial[truckHander.counter2+1];
+            }
+            materialArray[truckHander.counter2].GetComponent<MoveResouce>().enabled = true;
+        }
+    }
     public void CheckIfFUll()
     {
         if (truckHander.hasSteel)
         {
             pileHandler.amountSteel++;
+            resourceAreaHandler.AddResources(pileHandler.amountSteel);
         }
         if (truckHander.hasCement)
         {
             pileHandler.amountCement++;
+            resourceAreaHandler.AddResources(pileHandler.amountCement);
         }
         if (truckHander.hasBrick)
         {
             pileHandler.amountBrick++;
+            resourceAreaHandler.AddResources(pileHandler.amountBrick);
         }
         if (truckHander.hasStone)
         {
             pileHandler.amountStone++;
+            resourceAreaHandler.AddResources(pileHandler.amountStone);
         }
         if (truckHander.hasWoodLog)
         {
             pileHandler.amountWoodLog++;
+            resourceAreaHandler.AddResources(pileHandler.amountWoodLog);
         }
     }
     
