@@ -13,26 +13,15 @@ namespace DigitalRuby.LightningBolt
         public GameObject tsunamiObj;
         public GameObject tornadoObj;
 
-
         
         public GameObject stormBtn;
         public GameObject volcanoBtn;
         public GameObject tsunamiBtn;
         public GameObject tornadoBtn;
-        // Start is called before the first frame update
-        void Start()
-        {
 
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-
-        }
         public void EarthQuakes()
         {
-            CinemachineShake.Instance.ShakeCamera(5, 4);
+            Toolbox.GameplayScript.camShake.ShakeCamera(5, 4);
         }
         public void StormLightSettings()
         {

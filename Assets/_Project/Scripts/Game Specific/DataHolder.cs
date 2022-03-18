@@ -18,6 +18,15 @@ public enum ResourceStructure
     IRON_MACHINE
 }
 
+public enum DisasterType
+{
+    EARTHQUAKE,
+    STORM,
+    VOLCANO,
+    TSUNAMI,
+    TORNADO
+}
+
 [System.Serializable]
 public class ResourceAmount
 {

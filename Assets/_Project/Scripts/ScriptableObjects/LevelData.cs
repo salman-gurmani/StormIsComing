@@ -8,9 +8,10 @@ public class LevelData : ScriptableObject
     public int environmentNumber = 0;
     public bool ShowTutorial = false;
 
-    [Header("Available Resources")]
-    public ResourceType[] hasResources;
+    public float time = 60;
 
+    public ResourceType[] hasResources;
+    public DisasterType disaster;
 
     public enum Weather { 
     

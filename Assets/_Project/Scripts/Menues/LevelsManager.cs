@@ -6,8 +6,6 @@ public class LevelsManager : MonoBehaviour
     public bool testPlayerObj = false;
     public int testPlayerObjVal = 0;
     
-    [HideInInspector]
-    public bool isBossLevel = false;
 
     private LevelHandler curLevelHandler;
     [SerializeField] private LevelData curLevelData;
@@ -17,7 +15,7 @@ public class LevelsManager : MonoBehaviour
 
     private void Start()
     {
-        if (testMode)
+        //if (testMode)
             StartLevelHandling();
     }
 
@@ -46,7 +44,7 @@ public class LevelsManager : MonoBehaviour
     private void InstantiateLevel()
     {
         string path = Constants.PrefabFolderPath + Constants.LevelsFolderPath + Toolbox.DB.prefs.LastSelectedMode.ToString() + "/" + Toolbox.DB.prefs.LastSelectedLevel.ToString();
-        //Toolbox.GameManager.Log("Lvl path = " + path);
+        Toolbox.GameManager.Log("Lvl path = " + path);
 
         GameObject obj = (GameObject)Instantiate(Resources.Load(path), this.transform);
         
@@ -114,5 +112,7 @@ public class LevelsManager : MonoBehaviour
             Toolbox.HUDListner.EnableResource((int)CurLevelData.hasResources[i]);
             Toolbox.GameplayScript.EnableResource((int)CurLevelData.hasResources[i]);
         }
+
+        Toolbox.HUDListner.StartTime(curLevelData.time);
     }
 }

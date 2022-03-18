@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.UI;
 
 public class HUDListner : MonoBehaviour {
@@ -9,9 +10,12 @@ public class HUDListner : MonoBehaviour {
     public RectTransform resourcesParent;
     private int resourceIndex = 0;
     public Image progressbar;
-
+    [HideInInspector]public float progress;
     [Tooltip("Should be in the order of resources")]
     public Text[] resourcesTxts;
+
+    public bool startTime { get; private set; }
+    public float tempTime { get; private set; }
 
     void Awake() {
         
@@ -27,6 +31,37 @@ public class HUDListner : MonoBehaviour {
     public void EnableHUD()
     {
         uiParent.SetActive(true);
+    }
+
+    private void Update()
+    {
+        HandleTime();
+    }
+
+    public void StartTime(float _val) {
+
+        tempTime = _val;
+        startTime = true;
+    }
+
+    private void HandleTime()
+    {
+        if (startTime)
+        {
+            tempTime -= Time.deltaTime;
+            timeTxt.transform.parent.gameObject.SetActive(true);
+            int roundedSec = Mathf.RoundToInt(tempTime);
+            int min = roundedSec / 60;
+            int seconds = roundedSec - (min * 60);
+
+            timeTxt.text = String.Format("{0:D2} : {1:D2}", min, seconds);
+
+            if (tempTime <= 0)
+            {
+                startTime = false;
+                Toolbox.GameplayScript.OnStormHandling();
+            }
+        }
     }
 
     public void EnableResource(int _index) {
@@ -67,6 +102,7 @@ public class HUDListner : MonoBehaviour {
 
     public void SetProgressBarFill(float _val) {
         //Debug.LogError("Fill = " + _val);
+        progress = _val;
         progressbar.fillAmount = _val;
     }
 

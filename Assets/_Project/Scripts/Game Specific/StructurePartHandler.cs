@@ -4,7 +4,11 @@ public class StructurePartHandler : MonoBehaviour
 {
     public ResourceType requireType;
     public int resourceRequired = 5;
+    private int totalResource = 5;
     private Animator anim;
+    public bool disableMeshInStart = false;
+
+    public Quaternion onHitRotation;
 
     private float time = 0;
     private float convertResourceDelay = 0.05f;
@@ -18,10 +22,22 @@ public class StructurePartHandler : MonoBehaviour
 
     private bool built = false;
 
+    public GameObject specsObj;
+    public TextMesh typeTxt;
+    public TextMesh valTxt;
+
     private void Start()
     {
         anim = this.GetComponent<Animator>();
         requirementResourceVal = (int)requireType;
+        totalResource = resourceRequired;
+
+        if (disableMeshInStart)
+            this.GetComponent<MeshRenderer>().enabled = false;
+
+        //typeTxt.text = requireType.ToString();
+        typeTxt.gameObject.SetActive(false);
+
     }
 
     private void Update()
@@ -96,6 +112,8 @@ public class StructurePartHandler : MonoBehaviour
 
         resourceRequired -= resourceAmount;
 
+        valTxt.text = resourceRequired.ToString() + "/" + totalResource.ToString();
+
         if (resourceRequired <= 0) {
 
             Build();
@@ -107,11 +125,17 @@ public class StructurePartHandler : MonoBehaviour
         if (built)
             return;
 
+        specsObj.SetActive(false);
         built = true;
 
         anim.SetTrigger("Build");
-        //this.GetComponent<MeshRenderer>().enabled = true;
+        this.GetComponent<MeshRenderer>().enabled = true;
         this.GetComponentInParent<StructureHandler>().HousePartComplete();
         this.enabled = false;
+    }
+
+    public void OnHit() {
+
+        //this.transform.rotation = Quaternion.Euler(new Vector3(this.transform.rotation.x + 10, this.transform.rotation.y + 10, this.transform.rotation.z + 10));
     }
 }

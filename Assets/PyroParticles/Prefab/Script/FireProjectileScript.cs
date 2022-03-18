@@ -98,7 +98,7 @@ namespace DigitalRuby.PyroParticles
             {
                 ProjectileExplosionParticleSystem.transform.position = c.contacts[0].point;
                 ProjectileExplosionParticleSystem.Play();
-                CinemachineShake.Instance.ShakeCamera(10, 1);
+                Toolbox.GameplayScript.camShake.ShakeCamera(10, 1);
                 FireBaseScript.CreateExplosion(c.contacts[0].point, ProjectileExplosionRadius, ProjectileExplosionForce);
                 if (CollisionDelegate != null)
                 {

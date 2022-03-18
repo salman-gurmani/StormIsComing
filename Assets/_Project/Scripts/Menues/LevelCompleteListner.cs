@@ -37,17 +37,17 @@ public class LevelCompleteListner : MonoBehaviour {
         EarningsHandling();
 
 		UnlockNextLevel();
-		NextEnvSetHandling();
-		if ((Toolbox.DB.prefs.LastSelectedLevel + 1) % 5 == 0)
-			Toolbox.DB.prefs.IsBossLevel = true;
-		else
-			Toolbox.DB.prefs.IsBossLevel = false;
+		//NextEnvSetHandling();
+		//if ((Toolbox.DB.prefs.LastSelectedLevel + 1) % 5 == 0)
+		//	Toolbox.DB.prefs.IsBossLevel = true;
+		//else
+		//	Toolbox.DB.prefs.IsBossLevel = false;
 
 
-		if (Toolbox.DB.prefs.LastSelectedLevel % 2 == 0)
-		{
-			Toolbox.DB.prefs.StartSpawnPlayersVal++;
-		}
+		//if (Toolbox.DB.prefs.LastSelectedLevel % 2 == 0)
+		//{
+		//	Toolbox.DB.prefs.StartSpawnPlayersVal++;
+		//}
 
 		SetTxt();
 	}
@@ -93,6 +93,7 @@ public class LevelCompleteListner : MonoBehaviour {
 
     private void UnlockNextLevel()
     {
+		Toolbox.DB.prefs.LastSelectedLevel++;
         if (Toolbox.DB.prefs.LastSelectedLevel < Toolbox.DB.prefs.GameMode[Toolbox.DB.prefs.LastSelectedMode].GetLastUnlockedLevel())
             return;
 
@@ -106,7 +107,7 @@ public class LevelCompleteListner : MonoBehaviour {
             Toolbox.DB.prefs.GameMode[Toolbox.DB.prefs.LastSelectedMode].LevelUnlocked[Toolbox.DB.prefs.LastSelectedLevel + 1] = true;
         }
 
-	}
+    }
 
 	private void UnlockModeHandling()
 	{

@@ -12,9 +12,12 @@ public class GameplayScript : MonoBehaviour {
     public bool levelFailed = false;
 
     public PlayerController player;
-
+    public Cinemachine.CinemachineBrain camBrain;
+    public Cinemachine.CinemachineVirtualCamera playerCamMachine;
+    public CinemachineShake camShake;
     public GameObject [] environments;
     public GameObject [] resourceObjects;
+    public StructureHandler buildStructureHandler;
 
     [HideInInspector]
     private int levelCompleteTime = 0;
@@ -25,6 +28,7 @@ public class GameplayScript : MonoBehaviour {
     public AudioListener camListner;
     public bool canShowReviewMenu = false;
     public LevelsManager levelsManager;
+    public DisasterHandler disasterHandler;
 
     [Header("Colors")]
     public Color[] randomColors;
@@ -47,10 +51,8 @@ public class GameplayScript : MonoBehaviour {
     void Start()
     {
         levelCompleted = false;
-
         //EnableEnvHandling();
     }
-
 
     private void Update()
     {
@@ -114,7 +116,7 @@ public class GameplayScript : MonoBehaviour {
 
         levelCompleted = true;
 
-        Toolbox.GameManager.Instantiate_LevelComplete(1);
+        Toolbox.GameManager.Instantiate_LevelComplete(5);
         Toolbox.HUDListner.DisableHUD();
 
     }
@@ -126,7 +128,7 @@ public class GameplayScript : MonoBehaviour {
 
         levelFailed = true;
 
-        Toolbox.GameManager.Instantiate_LevelFail(1);
+        Toolbox.GameManager.Instantiate_LevelFail(5);
         Toolbox.HUDListner.DisableHUD();
     }
 
@@ -138,5 +140,50 @@ public class GameplayScript : MonoBehaviour {
     public void EnableResource(int _val) {
 
         resourceObjects[_val].SetActive(true);
+    }
+
+    public void OnStormHandling() {
+
+        playerCamMachine.Follow = levelsManager.CurLevelHandler.houseObj.transform;
+        Toolbox.HUDListner.DisableHUD();
+        player.gameObject.SetActive(false);
+
+        Invoke("InitDisaster", 1);
+
+        if (Toolbox.HUDListner.progress >= 0.7){
+
+            LevelCompleteHandling();
+        }
+        else {
+
+            LevelFailHandling();
+
+        }
+    }
+
+    void InitDisaster() {
+
+        switch (levelsManager.CurLevelData.disaster)
+        {
+            case DisasterType.EARTHQUAKE:
+                disasterHandler.EarthQuakes();
+                break;
+            case DisasterType.STORM:
+                disasterHandler.Storm();
+                break;
+            case DisasterType.VOLCANO:
+                disasterHandler.Volcano();
+                break;
+            case DisasterType.TSUNAMI:
+                disasterHandler.Tsunami();
+                break;
+            case DisasterType.TORNADO:
+                disasterHandler.Tornado();
+                break;
+            default:
+                break;
+        }
+
+        buildStructureHandler.InitDistruction();
     }
 }

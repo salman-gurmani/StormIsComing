@@ -15,6 +15,8 @@ public class StructureHandler : MonoBehaviour
         totalParts = houseParts.Length;
         //MaterialsTransparentStatus(true);
 
+        Toolbox.GameplayScript.buildStructureHandler = this;
+
     }
 
     public void MaterialsTransparentStatus(bool _val) {
@@ -52,6 +54,7 @@ public class StructureHandler : MonoBehaviour
         if (partsBuild >= totalParts) {
 
             MaterialsTransparentStatus(false);
+            Toolbox.GameplayScript.OnStormHandling();
         }
     }
 
@@ -88,5 +91,13 @@ public class StructureHandler : MonoBehaviour
                 break;
         }
 
+    }
+
+    public void InitDistruction() {
+
+        foreach (var item in houseParts)
+        {
+            item.OnHit();
+        }
     }
 }
