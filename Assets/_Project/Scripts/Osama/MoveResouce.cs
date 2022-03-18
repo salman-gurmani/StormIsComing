@@ -14,7 +14,7 @@ public class MoveResouce : MonoBehaviour
     bool move2 = true;
     public float speed;
     float distance;
-    public Transform[] materialArray;
+     
     // Start is called before the first frame update
     private void OnEnable()
     {
@@ -32,32 +32,32 @@ public class MoveResouce : MonoBehaviour
         {
             resourceAreaHandler = truckHander.steelContainer.gameObject.GetComponent<ResourceAreaHandler>();
             containerHandler = truckHander.steelContainer;
-            materialArray = truckHander.pointofPileSteel;
+            truckHander.materialArray = truckHander.pointofPileSteel;
 
         }
         if(truckHander.hasCement)
         {
             resourceAreaHandler = truckHander.cementContainer.gameObject.GetComponent<ResourceAreaHandler>();
             containerHandler = truckHander.cementContainer;
-            materialArray = truckHander.pointofPileCement;
+            truckHander.materialArray = truckHander.pointofPileCement;
         }
         if (truckHander.hasBrick)
         {
             resourceAreaHandler = truckHander.brickContainer.gameObject.GetComponent<ResourceAreaHandler>();
             containerHandler = truckHander.brickContainer;
-            materialArray = truckHander.pointofPileBrick;
+            truckHander.materialArray = truckHander.pointofPileBrick;
         }
         if (truckHander.hasStone)
         {
             resourceAreaHandler = truckHander.stoneContainer.gameObject.GetComponent<ResourceAreaHandler>();
             containerHandler = truckHander.stoneContainer;
-            materialArray = truckHander.pointofPileStone;
+            truckHander.materialArray = truckHander.pointofPileStone;
         }
         if (truckHander.hasWoodLog)
         {
             resourceAreaHandler = truckHander.woodContainer.gameObject.GetComponent<ResourceAreaHandler>();
             containerHandler = truckHander.woodContainer;
-            materialArray = truckHander.pointofPileLog;
+            truckHander.materialArray = truckHander.pointofPileLog;
         }
 
 
@@ -89,7 +89,7 @@ public class MoveResouce : MonoBehaviour
 
             transform.position = Vector3.MoveTowards(transform.position, containerHandler.pointofMatrial[truckHander.counter2].position, speed * Time.deltaTime);
         }
-        if (truckHander.counter2 > materialArray.Length - 1)
+        if (truckHander.counter2 > truckHander.materialArray.Length - 1)
         {
             
         }
@@ -133,7 +133,7 @@ public class MoveResouce : MonoBehaviour
         
         truckHander.counter2++;
         transform.parent = containerHandler.pointofMatrial[truckHander.counter2-1];
-        if (truckHander.counter2 > materialArray.Length - 1)
+        if (truckHander.counter2 > truckHander.materialArray.Length - 1)
         {
 
         }
@@ -165,7 +165,7 @@ public class MoveResouce : MonoBehaviour
                 containerHandler.pointofMatrial[0].transform.GetChild(1).transform.position = containerHandler.pointofMatrial[truckHander.counter2+1].position;
                 containerHandler.pointofMatrial[0].transform.GetChild(1).transform.parent = containerHandler.pointofMatrial[truckHander.counter2+1];
             }
-            materialArray[truckHander.counter2].GetComponent<MoveResouce>().enabled = true;
+            truckHander.materialArray[truckHander.counter2].GetComponent<MoveResouce>().enabled = true;
         }
     }
     public void CheckIfFUll()

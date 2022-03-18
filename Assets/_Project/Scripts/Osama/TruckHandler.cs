@@ -13,6 +13,8 @@ public class TruckHandler : MonoBehaviour
     public ContainerHandler woodContainer;
 
 
+    public Transform[] materialArray;
+
     public int amountSteel;
     public int amountCement;
     public int amountBrick;

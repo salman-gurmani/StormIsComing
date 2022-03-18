@@ -14,8 +14,8 @@ public class ResourceAreaHandler : MonoBehaviour
 
         resourcesValue = _val;
         amountTxt.text = resourcesValue.ToString();
-        //containerHandler.pointofMatrial
+       // containerHandler.pointofMatrial
     }
     
-    //
+    
 }
