@@ -16,6 +16,8 @@ public class StructurePartHandler : MonoBehaviour
     public float buildDistance = 4;
     private float distance = 0;
 
+    private bool built = false;
+
     private void Start()
     {
         anim = this.GetComponent<Animator>();
@@ -24,6 +26,9 @@ public class StructurePartHandler : MonoBehaviour
 
     private void Update()
     {
+        if (built)
+            return;
+
         PlayerDistanceCheck();
         ProcessHandling();
     }
@@ -99,8 +104,14 @@ public class StructurePartHandler : MonoBehaviour
 
     void Build() {
 
+        if (built)
+            return;
+
+        built = true;
+
         anim.SetTrigger("Build");
-        this.GetComponent<MeshRenderer>().enabled = true;
+        //this.GetComponent<MeshRenderer>().enabled = true;
+        this.GetComponentInParent<StructureHandler>().HousePartComplete();
         this.enabled = false;
     }
 }

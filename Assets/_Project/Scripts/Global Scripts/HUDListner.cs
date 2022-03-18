@@ -8,6 +8,7 @@ public class HUDListner : MonoBehaviour {
     public GameObject uiParent;
     public RectTransform resourcesParent;
     private int resourceIndex = 0;
+    public Image progressbar;
 
     [Tooltip("Should be in the order of resources")]
     public Text[] resourcesTxts;
@@ -64,5 +65,9 @@ public class HUDListner : MonoBehaviour {
         Toolbox.GameManager.Instantiate_SettingsMenu();
     }
 
+    public void SetProgressBarFill(float _val) {
+        //Debug.LogError("Fill = " + _val);
+        progressbar.fillAmount = _val;
+    }
 
 }
