@@ -391,9 +391,6 @@ GameObject:
   - component: {fileID: 1627616626445983424}
   - component: {fileID: 1652624030984929160}
   - component: {fileID: 1642963743277939330}
-  - component: {fileID: 1620570746539958894}
-  - component: {fileID: 1619810632433227202}
-  - component: {fileID: 1620650757233713634}
   - component: {fileID: 1628553258764115530}
   m_Layer: 0
   m_Name: SM_Veh_Pickup_01
@@ -471,48 +468,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &1620570746539958894
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1629733627658156966}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 43617518035168876, guid: 70db222f6ce41ce48a6e5fead366abb1, type: 2}
---- !u!64 &1619810632433227202
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1629733627658156966}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 43072114109095150, guid: 70db222f6ce41ce48a6e5fead366abb1, type: 2}
---- !u!64 &1620650757233713634
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1629733627658156966}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 43718689710434438, guid: 70db222f6ce41ce48a6e5fead366abb1, type: 2}
 --- !u!114 &1628553258764115530
 MonoBehaviour:
   m_ObjectHideFlags: 0

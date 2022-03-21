@@ -5,6 +5,8 @@ public class ResourceStructureHandling : MonoBehaviour
     public ResourceType requireType;
     public ResourceType productionType;
 
+    public EffectHandler effectHandler;
+
     private float time = 0;
     private float convertResourceDelay = 0.5f;
 
@@ -15,6 +17,7 @@ public class ResourceStructureHandling : MonoBehaviour
     private Transform player;
     public float gatherDistance = 2;
 
+    public GameObject effects;
     private void Start()
     {
         requirementResourceVal = (int)requireType;
@@ -33,11 +36,35 @@ public class ResourceStructureHandling : MonoBehaviour
 
                 time = convertResourceDelay;
             }
+            
+                effects.SetActive(true);
 
+                if (productionType == ResourceType.CEMENT_SACK)
+                {
+                    CementMachine();
+                }
+            
+           
+               effectHandler.OnEffects();
+                //effects.SetActive(false);
+                if (productionType == ResourceType.CEMENT_SACK)
+                {
+                    CementMachine();
+                }
+            
             PlayerDistanceCheck();
         }
     }
-
+    public void CementMachine()
+    {
+        transform.GetChild(0).GetComponent<Animator>().enabled = true;
+        transform.GetChild(1).GetComponent<Animator>().enabled = true;
+    }
+    public void CementMachineStop()
+    {
+        transform.GetChild(0).GetComponent<Animator>().enabled = false;
+        transform.GetChild(1).GetComponent<Animator>().enabled = false;
+    }
     private void PlayerDistanceCheck()
     {
         if (!player)
@@ -45,7 +72,15 @@ public class ResourceStructureHandling : MonoBehaviour
 
         if (Vector3.Distance(player.position, this.transform.position) >= gatherDistance)
         {
-            startProcessing = false;
+         
+                startProcessing = false;
+                effectHandler.OffEffects();
+                //  effects.SetActive(false);
+                if (productionType == ResourceType.CEMENT_SACK)
+                {
+                    CementMachineStop();
+                }
+            
         }        
     }
 
