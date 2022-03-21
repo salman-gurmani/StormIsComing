@@ -4,18 +4,18 @@ using System.Collections.Generic;
 
 public class StructureHandler : MonoBehaviour
 {
-    public Material [] usedMaterials;
+    //public Material [] usedMaterials;
     public HouseParts [] houseParts;
-    public Color transparentColor;
-    public Color solidColor;
+    [HideInInspector] public Color transparentColor;
+    [HideInInspector] public Color solidColor;
     float progress = 0;
-    public int totalParts = 0;
-    public int partsBuild = 0;
+    [HideInInspector] public int totalParts = 0;
+    [HideInInspector] public int partsBuild = 0;
     private int curPartArea = 0;
     private int curAreaPartsBuilt = 0;
 
     private float time = 0;
-    public float delayAmongPartHit = 1;
+    private float delayAmongPartHit = 0.1f;
     private int desIndex = 0;
     private int partsToDestroy = 0;
 
@@ -103,10 +103,10 @@ public class StructureHandler : MonoBehaviour
         //    }
         //}
 
-        for (int i = 0; i < usedMaterials.Length; i++)
-        {
-            ChangeRenderMode(usedMaterials[i], _val);
-        }
+        //for (int i = 0; i < usedMaterials.Length; i++)
+        //{
+        //    ChangeRenderMode(usedMaterials[i], _val);
+        //}
     }
 
     public void HousePartComplete(StructurePartHandler _handler) {

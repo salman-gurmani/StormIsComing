@@ -8,8 +8,6 @@ public class StructurePartHandler : MonoBehaviour
     private Animator anim;
     public bool disableMeshInStart = false;
 
-    public Quaternion onHitRotation;
-
     private float time = 0;
     private float convertResourceDelay = 0.05f;
 
@@ -38,8 +36,11 @@ public class StructurePartHandler : MonoBehaviour
 
         //typeTxt.text = requireType.ToString();
         specs = this.GetComponentInChildren<SpecHandler>();
-        specs.SetIcon(requirementResourceVal);
-        specs.SetVal((totalResource - resourceRequired).ToString() + "/" + totalResource.ToString());
+        if (specs) {
+
+            specs.SetIcon(requirementResourceVal);
+            specs.SetVal((totalResource - resourceRequired).ToString() + "/" + totalResource.ToString());
+        }
     }
 
     private void Update()
