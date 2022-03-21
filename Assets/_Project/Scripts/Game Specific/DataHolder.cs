@@ -34,6 +34,12 @@ public class ResourceAmount
     public int value;
 }
 
+[System.Serializable]
+public class HouseParts
+{
+    public StructurePartHandler [] part;
+}
+
 public class DataHolder : MonoBehaviour
 {
    

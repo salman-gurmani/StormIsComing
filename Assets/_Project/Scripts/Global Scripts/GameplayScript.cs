@@ -64,6 +64,11 @@ public class GameplayScript : MonoBehaviour {
             ScreenCapture.CaptureScreenshot(name);
             screenShotPicName++;
         }
+
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            OnStormHandling();
+        }
 #endif
     }
 
@@ -150,7 +155,7 @@ public class GameplayScript : MonoBehaviour {
 
         Invoke("InitDisaster", 1);
 
-        if (Toolbox.HUDListner.progress >= 0.7){
+        if (Toolbox.HUDListner.progress >= 0.5f){
 
             LevelCompleteHandling();
         }

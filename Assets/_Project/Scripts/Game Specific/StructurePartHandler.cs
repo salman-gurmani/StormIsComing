@@ -20,11 +20,12 @@ public class StructurePartHandler : MonoBehaviour
     public float buildDistance = 4;
     private float distance = 0;
 
-    private bool built = false;
+    public int minForceLimit = 0;
+    public int maxForceLimit = 0;
 
-    public GameObject specsObj;
-    public TextMesh typeTxt;
-    public TextMesh valTxt;
+    [HideInInspector]public bool built = false;
+
+    private SpecHandler specs;
 
     private void Start()
     {
@@ -36,8 +37,9 @@ public class StructurePartHandler : MonoBehaviour
             this.GetComponent<MeshRenderer>().enabled = false;
 
         //typeTxt.text = requireType.ToString();
-        typeTxt.gameObject.SetActive(false);
-
+        specs = this.GetComponentInChildren<SpecHandler>();
+        specs.SetIcon(requirementResourceVal);
+        specs.SetVal((totalResource - resourceRequired).ToString() + "/" + totalResource.ToString());
     }
 
     private void Update()
@@ -112,7 +114,7 @@ public class StructurePartHandler : MonoBehaviour
 
         resourceRequired -= resourceAmount;
 
-        valTxt.text = resourceRequired.ToString() + "/" + totalResource.ToString();
+        specs.SetVal((totalResource - resourceRequired).ToString() + "/" + totalResource.ToString());
 
         if (resourceRequired <= 0) {
 
@@ -125,17 +127,21 @@ public class StructurePartHandler : MonoBehaviour
         if (built)
             return;
 
-        specsObj.SetActive(false);
+        specs.gameObject.SetActive(false);
         built = true;
 
         anim.SetTrigger("Build");
         this.GetComponent<MeshRenderer>().enabled = true;
-        this.GetComponentInParent<StructureHandler>().HousePartComplete();
+        this.GetComponentInParent<StructureHandler>().HousePartComplete(this);
         this.enabled = false;
     }
 
     public void OnHit() {
 
         //this.transform.rotation = Quaternion.Euler(new Vector3(this.transform.rotation.x + 10, this.transform.rotation.y + 10, this.transform.rotation.z + 10));
+        GetComponent<MeshCollider>().isTrigger = false;
+        Rigidbody rbody = this.gameObject.AddComponent<Rigidbody>();
+        int rand = Random.Range(minForceLimit, maxForceLimit);
+        rbody.AddForce(Vector3.up * rand, ForceMode.Impulse);
     }
 }

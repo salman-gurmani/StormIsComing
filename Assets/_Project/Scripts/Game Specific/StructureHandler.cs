@@ -1,22 +1,86 @@
 using UnityEngine;
+using System.Collections.Generic;
+
 
 public class StructureHandler : MonoBehaviour
 {
     public Material [] usedMaterials;
-    public StructurePartHandler[] houseParts;
+    public HouseParts [] houseParts;
     public Color transparentColor;
     public Color solidColor;
-    public float totalParts = 0;
-    public float partsBuild = 0;
+    float progress = 0;
+    public int totalParts = 0;
+    public int partsBuild = 0;
+    private int curPartArea = 0;
+    private int curAreaPartsBuilt = 0;
+
+    private float time = 0;
+    public float delayAmongPartHit = 1;
+    private int desIndex = 0;
+    private int partsToDestroy = 0;
+
+    private List<StructurePartHandler> builtParts;
+
+    private bool startDestruction = false;
+    
 
     private void Start()
     {
-        houseParts = this.GetComponentsInChildren<StructurePartHandler>();
+        builtParts = new List<StructurePartHandler>();
         totalParts = houseParts.Length;
+
+        for (int i = 0; i < houseParts.Length; i++)
+        {
+            totalParts += houseParts[i].part.Length-1;
+        }
+        curPartArea = 0;
+
         //MaterialsTransparentStatus(true);
 
         Toolbox.GameplayScript.buildStructureHandler = this;
 
+        EnablePartInStart();
+    }
+
+    private void Update()
+    {
+        if (startDestruction)
+        {
+            time -= Time.deltaTime;
+
+            if (time <= 0)
+            {
+                time = delayAmongPartHit;
+
+                builtParts[desIndex].OnHit();
+                partsToDestroy--;
+
+                desIndex--;
+
+                if (desIndex < 0 || partsToDestroy <= 0)
+                {
+                    startDestruction = false;
+                }
+            }
+        }
+    }
+
+    void EnablePartInStart() {
+
+        for (int i = 0; i < houseParts.Length; i++)
+        {
+            for (int j = 0; j < houseParts[i].part.Length; j++)
+            {
+                if (i == 0)
+                {
+                    houseParts[i].part[j].gameObject.SetActive(true);
+                }
+                else
+                {
+                    houseParts[i].part[j].gameObject.SetActive(false);
+                }
+            }
+        }
     }
 
     public void MaterialsTransparentStatus(bool _val) {
@@ -45,15 +109,32 @@ public class StructureHandler : MonoBehaviour
         }
     }
 
-    public void HousePartComplete() {
+    public void HousePartComplete(StructurePartHandler _handler) {
 
         partsBuild++;
-        float progress = partsBuild / totalParts;
+        curAreaPartsBuilt++;
+        progress = ((float)partsBuild / (float)totalParts);
         Toolbox.HUDListner.SetProgressBarFill(progress);
+
+        builtParts.Add(_handler);
+
+        if (curPartArea < houseParts.Length-1) {
+
+            if (curAreaPartsBuilt >= houseParts[curPartArea].part.Length) {
+
+                curAreaPartsBuilt = 0;
+                curPartArea++;
+                for (int i = 0; i < houseParts[curPartArea].part.Length; i++)
+                {
+
+                    houseParts[curPartArea].part[i].gameObject.SetActive(true);
+                }
+            }
+        }
 
         if (partsBuild >= totalParts) {
 
-            MaterialsTransparentStatus(false);
+            //MaterialsTransparentStatus(false);
             Toolbox.GameplayScript.OnStormHandling();
         }
     }
@@ -95,9 +176,45 @@ public class StructureHandler : MonoBehaviour
 
     public void InitDistruction() {
 
-        foreach (var item in houseParts)
+        if (progress < 0.5f)
         {
-            item.OnHit();
+            time = 0.1f;
+            partsToDestroy = totalParts;
+        }
+        else {
+
+            time = delayAmongPartHit;
+
+            if (progress < 0.6f) { 
+            
+                partsToDestroy = 1;
+
+            }else if (progress < 0.6f)
+            {
+                partsToDestroy = 2;
+            }
+            else if (progress < 0.7f)
+            {
+                partsToDestroy = 3;
+            }
+            else if (progress < 0.8f)
+            {
+                partsToDestroy = 4;
+            }
+            else if (progress < 0.9f)
+            {
+                partsToDestroy = 5;
+            }
+            else if (progress == 1)
+            {
+                partsToDestroy = 0;
+            }
+        }
+
+        if (partsToDestroy > 0) {
+
+            desIndex = builtParts.Count - 1;
+            startDestruction = true;
         }
     }
 }
