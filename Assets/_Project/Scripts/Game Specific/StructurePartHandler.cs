@@ -114,6 +114,7 @@ public class StructurePartHandler : MonoBehaviour
         Toolbox.HUDListner.UpdateResourceTxt(requirementResourceVal);
 
         resourceRequired -= resourceAmount;
+        Toolbox.GameplayScript.player.SendResource(requireType, this.transform);
 
         specs.SetVal((totalResource - resourceRequired).ToString() + "/" + totalResource.ToString());
 

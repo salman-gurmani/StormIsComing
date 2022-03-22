@@ -88,8 +88,9 @@ public class ResourceHandler : MonoBehaviour
         curResouceQuantity--;
         UpdateModelLevel(curResouceQuantity);
         //Debug.LogError(Toolbox.DB.prefs.ResourceAmount[resourceVal].name /*+ " " + Toolbox.DB.prefs.ResourceAmount[resourceVal].value*/ + "_Added");
-        
-        if(curResouceQuantity <= 0) {
+        InitEffect();
+
+        if (curResouceQuantity <= 0) {
 
             //Debug.LogError(Toolbox.DB.prefs.ResourceAmount[resourceVal].name + " Respawning");
             Toolbox.GameplayScript.player.RemoveResource(this);
@@ -104,7 +105,7 @@ public class ResourceHandler : MonoBehaviour
 
         if (effectPrefab) {
 
-            GameObject obj = Instantiate(effectPrefab, effectInitPoints[curEffectPointIndex].position, Quaternion.identity);
+            GameObject obj = Instantiate(effectPrefab, this.transform.position, Quaternion.identity);
         }
     }
 

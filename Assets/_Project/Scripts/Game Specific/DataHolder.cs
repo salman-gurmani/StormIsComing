@@ -35,6 +35,13 @@ public class ResourceAmount
 }
 
 [System.Serializable]
+public class PlayerResources
+{
+    public string name;
+    public Transform[] part;
+}
+
+[System.Serializable]
 public class HouseParts
 {
     public StructurePartHandler [] part;

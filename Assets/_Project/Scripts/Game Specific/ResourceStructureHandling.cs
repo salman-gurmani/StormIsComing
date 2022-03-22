@@ -6,6 +6,7 @@ public class ResourceStructureHandling : MonoBehaviour
     public ResourceType productionType;
 
     public EffectHandler effectHandler;
+    public GameObject effectPrefab;
 
     private float time = 0;
     private float convertResourceDelay = 0.5f;
@@ -105,11 +106,21 @@ public class ResourceStructureHandling : MonoBehaviour
             resourceAmount = Toolbox.DB.prefs.ResourceAmount[requirementResourceVal].value;
         }
 
+        Toolbox.GameplayScript.player.SendResource(requireType, this.transform);
+        InitEffect();
 
         Toolbox.DB.prefs.ResourceAmount[requirementResourceVal].value -= resourceAmount;
         Toolbox.HUDListner.UpdateResourceTxt(requirementResourceVal);
 
         Toolbox.DB.prefs.ResourceAmount[productionResourceVal].value += resourceAmount;
         Toolbox.HUDListner.UpdateResourceTxt(productionResourceVal);
+    }
+
+    public void InitEffect()
+    {
+        if (effectPrefab)
+        {
+            GameObject obj = Instantiate(effectPrefab, this.transform.position, Quaternion.identity);
+        }
     }
 }

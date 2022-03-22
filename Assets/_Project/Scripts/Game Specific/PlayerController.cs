@@ -13,6 +13,12 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float playerSpeed = 2.0f;
     private float gravityValue = -9.81f;
 
+    public Transform resourcesParent;
+    public PlayerResources[] resources;
+
+    public GameObject [] resourceSendEffect;
+
+
     [Space(10)]
     public List<ResourceHandler> resourceInTrigger;
     [SerializeField] private bool isGathering = false;
@@ -210,5 +216,25 @@ public class PlayerController : MonoBehaviour
         //        break;
         //}
 
+    }
+
+    public void UpdateResourcesOnBack() {
+
+        for (int i = 0; i < Toolbox.DB.prefs.ResourceAmount.Length; i++)
+        {
+            if (Toolbox.DB.prefs.ResourceAmount[i].value >= 3) {
+
+                for (int j = 0; j < 3; j++)
+                {
+                    resources[i].part[j].gameObject.SetActive(true);
+                }
+            }
+        }
+    }
+
+    public void SendResource(ResourceType _type, Transform _point) {
+
+        GameObject sendEffect = Instantiate(resourceSendEffect[(int)_type], this.transform.position /*+ new Vector3(this.transform.position.x, this.transform.position.y + 2, this.transform.position.z)*/, Quaternion.identity);
+        sendEffect.GetComponent<MoveTO>().EnableMovement(_point);
     }
 }

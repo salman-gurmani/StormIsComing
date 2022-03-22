@@ -32,5 +32,4 @@ public class CommonMethods : MonoBehaviour
         _anim.enabled = true;
     }
 
-
 }
