@@ -32,7 +32,11 @@ public class StructurePartHandler : MonoBehaviour
         totalResource = resourceRequired;
 
         if (disableMeshInStart)
-            this.GetComponent<MeshRenderer>().enabled = false;
+            MeshStatus(false);
+
+        //this.GetComponent<MeshRenderer>().enabled = false;
+
+
 
         //typeTxt.text = requireType.ToString();
         specs = this.GetComponentInChildren<SpecHandler>();
@@ -133,7 +137,12 @@ public class StructurePartHandler : MonoBehaviour
         built = true;
 
         anim.SetTrigger("Build");
-        this.GetComponent<MeshRenderer>().enabled = true;
+
+        //this.GetComponent<MeshRenderer>().enabled = true;
+
+        if (disableMeshInStart)
+            MeshStatus(true);
+
         this.GetComponentInParent<StructureHandler>().HousePartComplete(this);
         this.enabled = false;
     }
@@ -144,6 +153,24 @@ public class StructurePartHandler : MonoBehaviour
         GetComponent<MeshCollider>().isTrigger = false;
         Rigidbody rbody = this.gameObject.AddComponent<Rigidbody>();
         int rand = Random.Range(minForceLimit, maxForceLimit);
+
+        if (Toolbox.HUDListner.progress < 0.5f)
+            rand += 5;
+
         rbody.AddForce(Vector3.up * rand, ForceMode.Impulse);
+    }
+    void MeshStatus(bool _val) {
+
+        if(this.GetComponent<MeshRenderer>())
+            this.GetComponent<MeshRenderer>().enabled = _val;
+
+        if (this.GetComponentInChildren<MeshRenderer>()) {
+
+            foreach (var item in this.GetComponentsInChildren<MeshRenderer>())
+            {
+                if(!item.GetComponent<TextMesh>())
+                    item.enabled = _val;
+            }
+        }
     }
 }

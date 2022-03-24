@@ -156,6 +156,15 @@ public class Prefs
 
     }
 
+    public void ResetResources()
+    {
+        foreach (var item in resourceAmount)
+        {
+            item.value = 0;
+        }
+
+    }
+
     public bool GameAudio { get => gameAudio; set => gameAudio = value; }
     public bool GameMusic { get => gameMusic; set => gameMusic = value; }
     public int GoldCoins { get => goldCoins; set => goldCoins = value; }

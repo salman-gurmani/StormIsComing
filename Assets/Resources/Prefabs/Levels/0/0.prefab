@@ -87,8 +87,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1c93dd9f84111e4aa10661bb8dfe36d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  usedMaterials:
-  - {fileID: 2100000, guid: ead8806552750634ca63600645a557da, type: 2}
   houseParts:
   - part:
     - {fileID: 3642738817392621038}
@@ -109,7 +107,6 @@ MonoBehaviour:
   solidColor: {r: 1, g: 1, b: 1, a: 1}
   totalParts: 0
   partsBuild: 0
-  delayAmongPartHit: 0.1
 --- !u!1 &408809996019098576
 GameObject:
   m_ObjectHideFlags: 0
@@ -223,9 +220,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   requireType: 0
-  resourceRequired: 5
+  resourceRequired: 2
   disableMeshInStart: 0
-  onHitRotation: {x: 5.514, y: 0, z: 0, w: 0}
   buildDistance: 2
   minForceLimit: 2
   maxForceLimit: 5
@@ -524,10 +520,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   requireType: 0
-  resourceRequired: 5
+  resourceRequired: 3
   disableMeshInStart: 1
-  onHitRotation: {x: 0, y: 0, z: 0, w: 0}
-  buildDistance: 2
+  buildDistance: 4
   minForceLimit: 2
   maxForceLimit: 5
   built: 0
@@ -826,9 +821,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   requireType: 0
-  resourceRequired: 5
+  resourceRequired: 2
   disableMeshInStart: 0
-  onHitRotation: {x: 5.514, y: 0, z: 0, w: 0}
   buildDistance: 2
   minForceLimit: 2
   maxForceLimit: 5
@@ -965,9 +959,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   requireType: 0
-  resourceRequired: 5
+  resourceRequired: 2
   disableMeshInStart: 0
-  onHitRotation: {x: 5.514, y: 0, z: 0, w: 0}
   buildDistance: 2
   minForceLimit: 2
   maxForceLimit: 5
@@ -1349,9 +1342,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   requireType: 0
-  resourceRequired: 5
+  resourceRequired: 2
   disableMeshInStart: 0
-  onHitRotation: {x: 5.514, y: 0, z: 0, w: 0}
   buildDistance: 2
   minForceLimit: 2
   maxForceLimit: 5
@@ -1570,9 +1562,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   requireType: 0
-  resourceRequired: 5
+  resourceRequired: 2
   disableMeshInStart: 0
-  onHitRotation: {x: 5.514, y: 0, z: 0, w: 0}
   buildDistance: 2
   minForceLimit: 2
   maxForceLimit: 5
@@ -1954,9 +1945,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   requireType: 0
-  resourceRequired: 5
+  resourceRequired: 2
   disableMeshInStart: 0
-  onHitRotation: {x: 5.514, y: 0, z: 0, w: 0}
   buildDistance: 2
   minForceLimit: 2
   maxForceLimit: 5
@@ -2255,9 +2245,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   requireType: 0
-  resourceRequired: 5
+  resourceRequired: 2
   disableMeshInStart: 0
-  onHitRotation: {x: 5.514, y: 0, z: 0, w: 0}
   buildDistance: 2
   minForceLimit: 2
   maxForceLimit: 5
@@ -2475,10 +2464,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   requireType: 0
-  resourceRequired: 5
+  resourceRequired: 3
   disableMeshInStart: 1
-  onHitRotation: {x: 0, y: 0, z: 0, w: 0}
-  buildDistance: 2
+  buildDistance: 4
   minForceLimit: 2
   maxForceLimit: 5
   built: 0
@@ -2614,9 +2602,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   requireType: 0
-  resourceRequired: 5
+  resourceRequired: 2
   disableMeshInStart: 0
-  onHitRotation: {x: 5.514, y: 0, z: 0, w: 0}
   buildDistance: 2
   minForceLimit: 2
   maxForceLimit: 5
@@ -2998,9 +2985,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   requireType: 0
-  resourceRequired: 5
+  resourceRequired: 2
   disableMeshInStart: 0
-  onHitRotation: {x: 5.514, y: 0, z: 0, w: 0}
   buildDistance: 2
   minForceLimit: 2
   maxForceLimit: 5
@@ -3217,10 +3203,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   requireType: 0
-  resourceRequired: 5
+  resourceRequired: 3
   disableMeshInStart: 1
-  onHitRotation: {x: 0, y: 0, z: 0, w: 0}
-  buildDistance: 2
+  buildDistance: 4
   minForceLimit: 2
   maxForceLimit: 5
   built: 0
@@ -3531,9 +3516,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   requireType: 0
-  resourceRequired: 5
+  resourceRequired: 2
   disableMeshInStart: 0
-  onHitRotation: {x: 5.514, y: 0, z: 0, w: 0}
   buildDistance: 2
   minForceLimit: 2
   maxForceLimit: 5

@@ -2748,7 +2748,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c93a131a2fa8ce94e86c580d8c0ada1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  requireType: 3
+  requireType: 1
   resourceRequired: 5
   disableMeshInStart: 1
   buildDistance: 4
@@ -2888,7 +2888,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c93a131a2fa8ce94e86c580d8c0ada1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  requireType: 3
+  requireType: 1
   resourceRequired: 5
   disableMeshInStart: 1
   buildDistance: 4
@@ -3026,7 +3026,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c93a131a2fa8ce94e86c580d8c0ada1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  requireType: 3
+  requireType: 1
   resourceRequired: 5
   disableMeshInStart: 1
   buildDistance: 4
@@ -3166,7 +3166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c93a131a2fa8ce94e86c580d8c0ada1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  requireType: 3
+  requireType: 1
   resourceRequired: 5
   disableMeshInStart: 1
   buildDistance: 4
@@ -3304,7 +3304,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c93a131a2fa8ce94e86c580d8c0ada1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  requireType: 3
+  requireType: 1
   resourceRequired: 5
   disableMeshInStart: 1
   buildDistance: 4
@@ -3444,7 +3444,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c93a131a2fa8ce94e86c580d8c0ada1e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  requireType: 3
+  requireType: 1
   resourceRequired: 5
   disableMeshInStart: 1
   buildDistance: 4
@@ -6931,6 +6931,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1303431288598740, guid: 04d776f73f470af4592935c68bb2507c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4656579229165272, guid: 04d776f73f470af4592935c68bb2507c, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -7114,6 +7118,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1314289731430870, guid: a27e7ca155a88b14da323177680b1a72, type: 3}
       propertyPath: m_Name
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1314289731430870, guid: a27e7ca155a88b14da323177680b1a72, type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4055047009181182, guid: a27e7ca155a88b14da323177680b1a72, type: 3}

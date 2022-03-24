@@ -54,6 +54,7 @@ public class GameplayScript : MonoBehaviour {
     void Start()
     {
         levelCompleted = false;
+        Toolbox.DB.prefs.ResetResources();
         //EnableEnvHandling();
     }
 
