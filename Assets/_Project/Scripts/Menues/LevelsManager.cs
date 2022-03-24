@@ -21,7 +21,7 @@ public class LevelsManager : MonoBehaviour
 
     public void StartLevelHandling() {
 
-
+        
         if (testMode)
         {
             curLevelHandler = this.GetComponentInChildren<LevelHandler>();

@@ -95,7 +95,7 @@ public class MoveResouce : MonoBehaviour
         }
         else
         {
-            Debug.Log(distance);
+            //Debug.Log(distance);
 
             if (distance <= 0)
             {

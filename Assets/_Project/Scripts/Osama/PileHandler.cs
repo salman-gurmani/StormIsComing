@@ -18,11 +18,17 @@ public class PileHandler : MonoBehaviour
 
 
 
-
+    private void Start()
+    {
+        if (Toolbox.GameplayScript.truckON)
+        {
+            truck.SetActive(true);
+        }
+    }
     // Start is called before the first frame update
     void Awake()
     {
-        truck.SetActive(true);
+       
       
         StockUpLoop();
     }

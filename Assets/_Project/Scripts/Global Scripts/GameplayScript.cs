@@ -34,6 +34,9 @@ public class GameplayScript : MonoBehaviour {
     public Color[] randomColors;
 
 
+    [Header("Truck")]
+    public bool truckON;
+
     //screenshot requirement
     int screenShotPicName = 0;
 

@@ -8,7 +8,7 @@ public class ResourceAreaHandler : MonoBehaviour
 
     public ContainerHandler containerHandler;
 
-    private int resourcesValue = 0;
+    public int resourcesValue = 0;
 
     public void AddResources(int _val) {
 
@@ -16,6 +16,13 @@ public class ResourceAreaHandler : MonoBehaviour
         amountTxt.text = resourcesValue.ToString();
        // containerHandler.pointofMatrial
     }
-    
-    
+     void Update()
+    {
+
+        
+        amountTxt.text = resourcesValue.ToString();
+        // containerHandler.pointofMatrial
+    }
+
+
 }

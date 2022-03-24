@@ -27,8 +27,8 @@ public class MainMenuListner : MonoBehaviour {
 
     public void UpdateTxt(){
 
-	//	lvlTxt.text = "Level " + (Toolbox.DB.prefs.LastSelectedLevel + 1).ToString();
-	//	goldTxt.text = Toolbox.DB.prefs.GoldCoins.ToString();
+		lvlTxt.text = "Level " + (Toolbox.DB.prefs.LastSelectedLevel + 1).ToString();
+		goldTxt.text = Toolbox.DB.prefs.GoldCoins.ToString();
 
 	}
 
@@ -63,6 +63,7 @@ public class MainMenuListner : MonoBehaviour {
 	public void OnPress_RemoveAds()
 	{
 		//Toolbox.InAppHandler.BuyProductID(Constants.noAds);
+		IAPManager.instance.BuyIAP();
 		Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.Select);
 	}
 	public void OnPress_DailyReward()
