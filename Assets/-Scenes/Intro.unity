@@ -438,6 +438,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2269082e6e7ece44db4c302c34d086e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  remove_Ads: remove_Ads
 --- !u!4 &1131335847
 Transform:
   m_ObjectHideFlags: 0
@@ -580,34 +581,101 @@ PrefabInstance:
       value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 11484784, guid: ce968ffb37fd3924b9688c04e192b1ac, type: 3}
+      propertyPath: back
+      value: 
+      objectReference: {fileID: 8300000, guid: 103091d0b230eca4f927ebf2f290eca4, type: 3}
+    - target: {fileID: 11484784, guid: ce968ffb37fd3924b9688c04e192b1ac, type: 3}
+      propertyPath: fail
+      value: 
+      objectReference: {fileID: 8300000, guid: b437cc29ae804b644a149763cff229d1, type: 3}
+    - target: {fileID: 11484784, guid: ce968ffb37fd3924b9688c04e192b1ac, type: 3}
       propertyPath: paint
       value: 
       objectReference: {fileID: 8300000, guid: 9d4fed37aeedc8a43b2471181bf2ee94, type: 3}
     - target: {fileID: 11484784, guid: ce968ffb37fd3924b9688c04e192b1ac, type: 3}
+      propertyPath: Select
+      value: 
+      objectReference: {fileID: 8300000, guid: 6bc1365ae0d0a4347911a2cff2fb2fbf, type: 3}
+    - target: {fileID: 11484784, guid: ce968ffb37fd3924b9688c04e192b1ac, type: 3}
       propertyPath: gameBG
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 8300000, guid: 69a6bd86e49382041bfbe12dbb2b872f, type: 3}
     - target: {fileID: 11484784, guid: ce968ffb37fd3924b9688c04e192b1ac, type: 3}
       propertyPath: menuBG
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 11484784, guid: ce968ffb37fd3924b9688c04e192b1ac, type: 3}
+      propertyPath: running
+      value: 
+      objectReference: {fileID: 8300000, guid: fc918590312cf094795d27fc1ace9193, type: 3}
+    - target: {fileID: 11484784, guid: ce968ffb37fd3924b9688c04e192b1ac, type: 3}
       propertyPath: complete
       value: 
-      objectReference: {fileID: 8300000, guid: 7a417e1173e506a47beb6bd52b2c80c7, type: 3}
+      objectReference: {fileID: 8300000, guid: 8897b464d3ec7ee44a363308ea144ca4, type: 3}
+    - target: {fileID: 11484784, guid: ce968ffb37fd3924b9688c04e192b1ac, type: 3}
+      propertyPath: gatherLogs
+      value: 
+      objectReference: {fileID: 8300000, guid: f1751c7b8b6afdf49a68853efaa06a3c, type: 3}
+    - target: {fileID: 11484784, guid: ce968ffb37fd3924b9688c04e192b1ac, type: 3}
+      propertyPath: gatherBrick
+      value: 
+      objectReference: {fileID: 8300000, guid: 20beb9f66c637f74cbbd3736bb83d89c, type: 3}
+    - target: {fileID: 11484784, guid: ce968ffb37fd3924b9688c04e192b1ac, type: 3}
+      propertyPath: gatherStone
+      value: 
+      objectReference: {fileID: 8300000, guid: 82629037cd93c974480841917c3cd23d, type: 3}
+    - target: {fileID: 11484784, guid: ce968ffb37fd3924b9688c04e192b1ac, type: 3}
+      propertyPath: BrickFactory
+      value: 
+      objectReference: {fileID: 8300000, guid: 0b0c7ca9691f40c4cb29904e3de6ee29, type: 3}
     - target: {fileID: 11484784, guid: ce968ffb37fd3924b9688c04e192b1ac, type: 3}
       propertyPath: rightLeftObj
       value: 
       objectReference: {fileID: 8300000, guid: b0052a1de8d2e5b4696182330508e9f8, type: 3}
     - target: {fileID: 11484784, guid: ce968ffb37fd3924b9688c04e192b1ac, type: 3}
+      propertyPath: CollectReward
+      value: 
+      objectReference: {fileID: 8300000, guid: d1a4d968307c1b94fa1ece9e46987fb0, type: 3}
+    - target: {fileID: 11484784, guid: ce968ffb37fd3924b9688c04e192b1ac, type: 3}
+      propertyPath: buttonPressNo
+      value: 
+      objectReference: {fileID: 8300000, guid: 103091d0b230eca4f927ebf2f290eca4, type: 3}
+    - target: {fileID: 11484784, guid: ce968ffb37fd3924b9688c04e192b1ac, type: 3}
       propertyPath: vehicleUnlock
       value: 
       objectReference: {fileID: 8300000, guid: f934aab3344ee8f419c9474f1804e45b, type: 3}
+    - target: {fileID: 11484784, guid: ce968ffb37fd3924b9688c04e192b1ac, type: 3}
+      propertyPath: GatherIronPick
+      value: 
+      objectReference: {fileID: 8300000, guid: e57b204b45d5d2a4890a3b6afddcd9dc, type: 3}
+    - target: {fileID: 11484784, guid: ce968ffb37fd3924b9688c04e192b1ac, type: 3}
+      propertyPath: buttonPressYes
+      value: 
+      objectReference: {fileID: 8300000, guid: 6bc1365ae0d0a4347911a2cff2fb2fbf, type: 3}
+    - target: {fileID: 11484784, guid: ce968ffb37fd3924b9688c04e192b1ac, type: 3}
+      propertyPath: gatherIronPick
+      value: 
+      objectReference: {fileID: 8300000, guid: e57b204b45d5d2a4890a3b6afddcd9dc, type: 3}
+    - target: {fileID: 7471023796943984579, guid: ce968ffb37fd3924b9688c04e192b1ac,
+        type: 3}
+      propertyPath: m_Volume
+      value: 0.042
+      objectReference: {fileID: 0}
     - target: {fileID: 7471023796943984579, guid: ce968ffb37fd3924b9688c04e192b1ac,
         type: 3}
       propertyPath: m_audioClip
       value: 
+      objectReference: {fileID: 8300000, guid: 69a6bd86e49382041bfbe12dbb2b872f, type: 3}
+    - target: {fileID: 8463880564719870415, guid: ce968ffb37fd3924b9688c04e192b1ac,
+        type: 3}
+      propertyPath: Loop
+      value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8463880564719870415, guid: ce968ffb37fd3924b9688c04e192b1ac,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 0b0c7ca9691f40c4cb29904e3de6ee29, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ce968ffb37fd3924b9688c04e192b1ac, type: 3}
 --- !u!1 &1525240851

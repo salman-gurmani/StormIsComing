@@ -19,7 +19,7 @@ public class ResourceHandler : MonoBehaviour
     [SerializeField]private float time = 0;
     public float respawnTime = 5;
     private bool isRespawning = false;
-
+    public AudioClip GatherSound;
     private Transform player;
     private bool distanceCheck = false;
     public float gatherDistance = 5;
@@ -89,6 +89,7 @@ public class ResourceHandler : MonoBehaviour
         UpdateModelLevel(curResouceQuantity);
         //Debug.LogError(Toolbox.DB.prefs.ResourceAmount[resourceVal].name /*+ " " + Toolbox.DB.prefs.ResourceAmount[resourceVal].value*/ + "_Added");
         InitEffect();
+        Toolbox.Soundmanager.PlaySound(GatherSound);
 
         if (curResouceQuantity <= 0) {
 

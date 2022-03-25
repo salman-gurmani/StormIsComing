@@ -94,6 +94,7 @@ public class PlayerController : MonoBehaviour
         if (_mov.x != 0 || _mov.z != 0)
         {
             run = true;
+            //Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.running);
         }
         else {
 
@@ -101,6 +102,7 @@ public class PlayerController : MonoBehaviour
         }
 
         anim.SetBool("Run", run);
+
     }
 
     private void ResourceGatherHandling()
@@ -177,7 +179,8 @@ public class PlayerController : MonoBehaviour
                 break;
 
             case "ResourceStructure":
-
+                //Toolbox.Soundmanager.vehicleRadio.Play();
+                //Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.BrickFactory); 
                 other.GetComponent<ResourceStructureHandling>().InitProcessing();
                 break;
 

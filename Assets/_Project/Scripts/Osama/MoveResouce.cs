@@ -172,28 +172,28 @@ public class MoveResouce : MonoBehaviour
     {
         if (truckHander.hasSteel)
         {
-            pileHandler.amountSteel++;
+            pileHandler.amountSteel++; 
             resourceAreaHandler.AddResources(pileHandler.amountSteel);
         }
         if (truckHander.hasCement)
         {
             pileHandler.amountCement++;
-            resourceAreaHandler.AddResources(pileHandler.amountCement);
+            resourceAreaHandler.AddResources(pileHandler.amountCement); 
         }
         if (truckHander.hasBrick)
         {
             pileHandler.amountBrick++;
-            resourceAreaHandler.AddResources(pileHandler.amountBrick);
+            resourceAreaHandler.AddResources(pileHandler.amountBrick); 
         }
         if (truckHander.hasStone)
         {
             pileHandler.amountStone++;
-            resourceAreaHandler.AddResources(pileHandler.amountStone);
+            resourceAreaHandler.AddResources(pileHandler.amountStone); 
         }
         if (truckHander.hasWoodLog)
         {
             pileHandler.amountWoodLog++;
-            resourceAreaHandler.AddResources(pileHandler.amountWoodLog);
+            resourceAreaHandler.AddResources(pileHandler.amountWoodLog); 
         }
     }
     

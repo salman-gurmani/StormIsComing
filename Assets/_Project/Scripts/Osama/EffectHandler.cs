@@ -36,6 +36,8 @@ public class EffectHandler : MonoBehaviour
             effects[i].gameObject.SetActive(true);
             effects[i].GetComponent<Animator>().enabled = true;
             effects[i].GetComponent<Animator>().SetBool("on", true);
+            
+
         }
     }
 }

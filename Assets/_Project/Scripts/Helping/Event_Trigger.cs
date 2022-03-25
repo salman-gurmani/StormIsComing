@@ -58,6 +58,7 @@ public class Event_Trigger : MonoBehaviour
     IEnumerator CR_Trigger()
     {
         yield return new WaitForSeconds(triggerDelay);
+        
         onTriggerEnter.Invoke();
     }
 

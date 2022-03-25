@@ -4,7 +4,7 @@ using System.Collections;
 public class SoundManager : MonoBehaviour {
 
 	[Header("Audio Sources")]
-	public AudioSource audioo;
+	public AudioSource audioo; 
 	public AudioSource bgMusicSource;
 	public AudioSource vehicleRadio;
 
@@ -16,6 +16,13 @@ public class SoundManager : MonoBehaviour {
 	[Header("Sound Clips")]
     public AudioClip Select;
 	public AudioClip Play;
+	public AudioClip gatherIronPick;
+	public AudioClip gatherCement;
+	public AudioClip gatherBrick;
+	public AudioClip gatherStone;
+	public AudioClip gatherLogs;
+	public AudioClip running;
+	public AudioClip BrickFactory;
     public AudioClip rightLeftObj;
 	public AudioClip buttonPressYes;
 	public AudioClip buttonPressNo;
@@ -107,9 +114,9 @@ public class SoundManager : MonoBehaviour {
     }
 
     public void PlaySound(AudioClip _clip){
-		
-		if (_clip != null)
-			audioo.PlayOneShot (_clip);
+
+		if (_clip != null) 
+			audioo.PlayOneShot (_clip); 
 	} 
 
 
