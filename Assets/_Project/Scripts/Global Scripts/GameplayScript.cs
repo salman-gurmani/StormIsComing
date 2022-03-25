@@ -19,6 +19,8 @@ public class GameplayScript : MonoBehaviour {
     public GameObject [] resourceObjects;
     public StructureHandler buildStructureHandler;
 
+    public float finalDecisionDelay = 0;
+
     [HideInInspector]
     private int levelCompleteTime = 0;
 
@@ -125,7 +127,7 @@ public class GameplayScript : MonoBehaviour {
 
         levelCompleted = true;
 
-        Toolbox.GameManager.Instantiate_LevelComplete(5);
+        Toolbox.GameManager.Instantiate_LevelComplete(finalDecisionDelay);
         Toolbox.HUDListner.DisableHUD();
 
     }
@@ -137,7 +139,7 @@ public class GameplayScript : MonoBehaviour {
 
         levelFailed = true;
 
-        Toolbox.GameManager.Instantiate_LevelFail(5);
+        Toolbox.GameManager.Instantiate_LevelFail(finalDecisionDelay);
         Toolbox.HUDListner.DisableHUD();
     }
 
@@ -156,17 +158,24 @@ public class GameplayScript : MonoBehaviour {
         playerCamMachine.Follow = levelsManager.CurLevelHandler.houseObj.transform;
         Toolbox.HUDListner.DisableHUD();
         player.gameObject.SetActive(false);
+        
+        buildStructureHandler.DisableAllSpecs();
 
-        Invoke("InitDisaster", 1);
+        Invoke("InitDisaster", 3);
 
-        if (Toolbox.HUDListner.progress >= 0.5f){
+    }
 
+    public void FinalDecisionHandling(float _delay) {
+
+        finalDecisionDelay = _delay;
+
+        if (Toolbox.HUDListner.progress >= 0.5f)
+        {
             LevelCompleteHandling();
         }
-        else {
-
+        else
+        {
             LevelFailHandling();
-
         }
     }
 
@@ -193,6 +202,12 @@ public class GameplayScript : MonoBehaviour {
                 break;
         }
 
+        //buildStructureHandler.InitDistruction();
+    }
+
+    public void StartBuildingDistruction() {
+
+        Debug.LogError("Destruction");
         buildStructureHandler.InitDistruction();
     }
 }

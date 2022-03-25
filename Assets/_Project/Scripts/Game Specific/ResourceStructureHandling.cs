@@ -37,22 +37,22 @@ public class ResourceStructureHandling : MonoBehaviour
 
                 time = convertResourceDelay;
             }
-            
-                effects.SetActive(true);
 
-                if (productionType == ResourceType.CEMENT_SACK)
-                {
-                    CementMachine();
-                }
-            
-           
-               effectHandler.OnEffects();
-                //effects.SetActive(false);
-                if (productionType == ResourceType.CEMENT_SACK)
-                {
-                    CementMachine();
-                }
-            
+            //effects.SetActive(true);
+
+            //if (productionType == ResourceType.CEMENT_SACK)
+            //{
+            //    CementMachine();
+            //}
+
+
+            //effectHandler.OnEffects();
+            ////effects.SetActive(false);
+            //if (productionType == ResourceType.CEMENT_SACK)
+            //{
+            //    CementMachine();
+            //}
+
             PlayerDistanceCheck();
         }
     }
@@ -73,15 +73,7 @@ public class ResourceStructureHandling : MonoBehaviour
 
         if (Vector3.Distance(player.position, this.transform.position) >= gatherDistance)
         {
-         
-                startProcessing = false;
-                effectHandler.OffEffects();
-                //  effects.SetActive(false);
-                if (productionType == ResourceType.CEMENT_SACK)
-                {
-                    CementMachineStop();
-                }
-            
+            StopProcessing();
         }        
     }
 
@@ -90,10 +82,38 @@ public class ResourceStructureHandling : MonoBehaviour
         if (Toolbox.DB.prefs.ResourceAmount[requirementResourceVal].value > 0) {
 
             startProcessing = true;
+
+            effects.SetActive(true);
+
+            if (productionType == ResourceType.CEMENT_SACK)
+            {
+                CementMachine();
+            }
+
+
+            effectHandler.OnEffects();
+            //effects.SetActive(false);
+            if (productionType == ResourceType.CEMENT_SACK)
+            {
+                CementMachine();
+            }
+        }
+    }
+
+    public void StopProcessing() {
+
+        startProcessing = false;
+        effectHandler.OffEffects();
+        //  effects.SetActive(false);
+        if (productionType == ResourceType.CEMENT_SACK)
+        {
+            CementMachineStop();
         }
     }
 
     private void TransferResource() {
+
+
 
         int resourceAmount = 0;
 
@@ -114,6 +134,11 @@ public class ResourceStructureHandling : MonoBehaviour
 
         Toolbox.DB.prefs.ResourceAmount[productionResourceVal].value += resourceAmount;
         Toolbox.HUDListner.UpdateResourceTxt(productionResourceVal);
+
+        if (Toolbox.DB.prefs.ResourceAmount[requirementResourceVal].value <= 0) {
+
+            StopProcessing();
+        }
     }
 
     public void InitEffect()

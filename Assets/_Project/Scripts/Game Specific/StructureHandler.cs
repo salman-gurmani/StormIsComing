@@ -217,4 +217,12 @@ public class StructureHandler : MonoBehaviour
             startDestruction = true;
         }
     }
+
+    public void DisableAllSpecs() {
+
+        foreach (var item in this.GetComponentsInChildren<SpecHandler>())
+        {
+            item.gameObject.SetActive(false);
+        }
+    }
 }

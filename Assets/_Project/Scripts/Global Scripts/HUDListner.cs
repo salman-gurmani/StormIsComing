@@ -1,6 +1,7 @@
 ﻿using System;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections.Generic;
 
 public class HUDListner : MonoBehaviour {
 
@@ -13,6 +14,8 @@ public class HUDListner : MonoBehaviour {
     [HideInInspector]public float progress;
     [Tooltip("Should be in the order of resources")]
     public Text[] resourcesTxts;
+
+    public RectTransform [] resourcePosition;
 
     public bool startTime { get; private set; }
     public float tempTime { get; private set; }
@@ -69,7 +72,8 @@ public class HUDListner : MonoBehaviour {
         Transform resource = resourcesParent.GetChild(_index).transform;
         resource.gameObject.SetActive(true);
         UpdateResourceTxt(_index);
-        resource.GetComponent<RectTransform>().position = resourcesParent.GetChild(resourceIndex).position;
+
+        resource.GetComponent<RectTransform>().position = resourcePosition[resourceIndex].position;
         resourceIndex++;
     }
 

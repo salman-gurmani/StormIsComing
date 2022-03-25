@@ -10,7 +10,9 @@ public class DisasterHandler : MonoBehaviour
 
     public void EarthQuakes()
     {
+        Toolbox.GameplayScript.FinalDecisionHandling(5);
         Toolbox.GameplayScript.camShake.ShakeCamera(5, 4);
+        Toolbox.GameplayScript.StartBuildingDistruction();
     }
 
     public void Tsunami()
@@ -25,7 +27,10 @@ public class DisasterHandler : MonoBehaviour
     }
     public void Tornado()
     {
-        Instantiate(tornadoObj, transform);
+        Toolbox.GameplayScript.FinalDecisionHandling(15);
+        tornadoObj.SetActive(true);
+        Toolbox.GameplayScript.camBrain.gameObject.SetActive(false);
+
     }
     public void Storm()
     {
