@@ -162,6 +162,7 @@ public class GameplayScript : MonoBehaviour {
         buildStructureHandler.DisableAllSpecs();
 
         Invoke("InitDisaster", 3);
+        Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.siren);
 
     }
 
@@ -187,18 +188,28 @@ public class GameplayScript : MonoBehaviour {
         {
             case DisasterType.EARTHQUAKE:
                 disasterHandler.EarthQuakes();
+                Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.EarthQuake);
+
                 break;
             case DisasterType.STORM:
                 disasterHandler.Storm();
+                Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.Storm);
+
                 break;
             case DisasterType.VOLCANO:
                 disasterHandler.Volcano();
+                Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.fire);
+
                 break;
             case DisasterType.TSUNAMI:
                 disasterHandler.Tsunami();
+                Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.Storm);
+
                 break;
             case DisasterType.TORNADO:
                 disasterHandler.Tornado();
+                Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.Tornado);
+
                 break;
             default:
                 break;
@@ -211,6 +222,8 @@ public class GameplayScript : MonoBehaviour {
 
         //Debug.LogError("Destruction");
         buildStructureHandler.InitDistruction();
+        Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.vehicleExplosion);
+
     }
 
     public void StopTraffic() {

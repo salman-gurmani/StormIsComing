@@ -3,7 +3,7 @@ using UnityEngine;
 public class EffectHandler : MonoBehaviour
 {
     public GameObject[] effects;
-
+    
     public bool isCement;
     private void Start()
     {
@@ -32,7 +32,7 @@ public class EffectHandler : MonoBehaviour
     public void OnEffects()
     {
         for (int i = 0; i < effects.Length; i++)
-        {
+        { 
             effects[i].gameObject.SetActive(true);
             effects[i].GetComponent<Animator>().enabled = true;
             effects[i].GetComponent<Animator>().SetBool("on", true);

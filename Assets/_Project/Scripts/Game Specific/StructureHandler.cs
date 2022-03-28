@@ -110,7 +110,7 @@ public class StructureHandler : MonoBehaviour
     }
 
     public void HousePartComplete(StructurePartHandler _handler) {
-
+        Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.paint);
         partsBuild++;
         curAreaPartsBuilt++;
         progress = ((float)partsBuild / (float)totalParts);

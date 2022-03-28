@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class ResourceStructureHandling : MonoBehaviour
 {
+    public AudioClip factory;
     public ResourceType requireType;
     public ResourceType productionType;
 
@@ -59,12 +60,12 @@ public class ResourceStructureHandling : MonoBehaviour
     public void CementMachine()
     {
         transform.GetChild(0).GetComponent<Animator>().enabled = true;
-        transform.GetChild(1).GetComponent<Animator>().enabled = true;
+        transform.GetChild(1).GetComponent<Animator>().enabled = true; 
     }
     public void CementMachineStop()
     {
         transform.GetChild(0).GetComponent<Animator>().enabled = false;
-        transform.GetChild(1).GetComponent<Animator>().enabled = false;
+        transform.GetChild(1).GetComponent<Animator>().enabled = false; 
     }
     private void PlayerDistanceCheck()
     {
@@ -146,6 +147,7 @@ public class ResourceStructureHandling : MonoBehaviour
     {
         if (effectPrefab)
         {
+            Toolbox.Soundmanager.PlaySound(factory);
             GameObject obj = Instantiate(effectPrefab, this.transform.position, Quaternion.identity);
         }
     }

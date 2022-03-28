@@ -7,6 +7,7 @@ public class SoundManager : MonoBehaviour {
 	public AudioSource audioo; 
 	public AudioSource bgMusicSource;
 	public AudioSource vehicleRadio;
+	public AudioSource Running;
 
 	[Header("BG Clips")]
 	public AudioClip menuBG;
@@ -44,6 +45,11 @@ public class SoundManager : MonoBehaviour {
 	public AudioClip CollectReward;
 	public AudioClip checkpoint;
 	public AudioClip vehicleExplosion;
+	public AudioClip EarthQuake;
+	public AudioClip Tornado;
+	public AudioClip Storm;
+	public AudioClip fire;
+	public AudioClip siren;
 	public AudioClip vehicleUpgrade;
 	public AudioClip vehicleUnlock;
 	//public AudioClip[] Sportsmode;
@@ -56,14 +62,14 @@ public class SoundManager : MonoBehaviour {
 		UpdateSoundStatus();
 		UpdateMusicStatus();
 
-		//vehicleRadio.clip = RadioMusic;
-		vehicleRadio.mute = true;
+		//vehicleRadio.clip = RadioMusic; 
 	}
 
 	public void UpdateSoundStatus()
 	{
 		audioo.mute = !Toolbox.DB.prefs.GameAudio;
-
+		vehicleRadio.mute = !Toolbox.DB.prefs.GameAudio;
+		Running.mute = !Toolbox.DB.prefs.GameAudio;
 		if (audioo.mute && bgMusicSource.mute)
 		{
 			AudioListener.volume = 0.0f;
@@ -88,7 +94,8 @@ public class SoundManager : MonoBehaviour {
 	}
 
 	public void Pause_All(){
-
+		this.vehicleRadio.Pause();
+		this.Running.Pause();
 		this.audioo.Pause ();
 		this.bgMusicSource.Pause ();
 	}
@@ -97,11 +104,16 @@ public class SoundManager : MonoBehaviour {
 
 		this.audioo.UnPause ();
 		this.bgMusicSource.UnPause ();
+		this.Running.UnPause();
+		this.vehicleRadio.UnPause();
 
 	}
     public void Pause_Sound()
     {
-        this.audioo.Pause();
+		this.vehicleRadio.Pause();
+		this.Running.Pause();
+
+		this.audioo.Pause();
     }
 
     public void PlayBGSound(AudioClip _clip) {
@@ -111,17 +123,19 @@ public class SoundManager : MonoBehaviour {
         this.bgMusicSource.Play();
 
         this.bgMusicSource.loop = true;
-    }
+    } 
 
-    public void PlaySound(AudioClip _clip){
+	public void PlaySound(AudioClip _clip){
 
 		if (_clip != null) 
-			audioo.PlayOneShot (_clip); 
+			audioo.PlayOneShot (_clip);
+		vehicleRadio.Play();
+		Running.Play();
 	} 
 
 
 	public void Stop_PlayingSound(){
-		audioo.Stop ();
+		audioo.Stop (); 
 	}
 
 	public void Stop_PlayingBGSound()

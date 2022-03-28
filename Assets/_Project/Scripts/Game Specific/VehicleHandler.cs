@@ -14,6 +14,14 @@ public class VehicleHandler : MonoBehaviour
 
     private void Start()
     {
+        if(Toolbox.DB.prefs.GameAudio == true)
+        {
+            Toolbox.Soundmanager.vehicleRadio.Play();
+        }
+        else if (Toolbox.DB.prefs.GameAudio == false)
+        {
+            Toolbox.Soundmanager.vehicleRadio.Stop();
+        }
         start = true;
 
         if (hasFixedSpeed)
