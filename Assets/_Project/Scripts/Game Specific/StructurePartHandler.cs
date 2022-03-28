@@ -9,7 +9,7 @@ public class StructurePartHandler : MonoBehaviour
     public bool disableMeshInStart = false;
 
     private float time = 0;
-    private float convertResourceDelay = 0.05f;
+    private float convertResourceDelay = 0.2f;
 
     private bool startProcessing = false;
     private int requirementResourceVal = 0;
@@ -96,23 +96,23 @@ public class StructurePartHandler : MonoBehaviour
 
     private void TransferResource()
     {
-
-        int resourceAmount = 0;
+        //Debug.LogError("Transfer");
+        int resourceAmount = 1;
 
         if (Toolbox.DB.prefs.ResourceAmount[requirementResourceVal].value <= 0)
             return;
 
-        if (Toolbox.DB.prefs.ResourceAmount[requirementResourceVal].value > (Toolbox.DB.prefs.ResourceGatherLevel + 1))
-        {
-            resourceAmount = (Toolbox.DB.prefs.ResourceGatherLevel + 1);
-        }
-        else
-        {
-            resourceAmount = Toolbox.DB.prefs.ResourceAmount[requirementResourceVal].value;
-        }
+        //if (Toolbox.DB.prefs.ResourceAmount[requirementResourceVal].value > (Toolbox.DB.prefs.ResourceGatherLevel + 1))
+        //{
+        //    resourceAmount = (Toolbox.DB.prefs.ResourceGatherLevel + 1);
+        //}
+        //else
+        //{
+        //    resourceAmount = Toolbox.DB.prefs.ResourceAmount[requirementResourceVal].value;
+        //}
 
-        if (resourceAmount > resourceRequired)
-            resourceAmount = resourceRequired;
+        //if (resourceAmount > resourceRequired)
+        //    resourceAmount = resourceRequired;
 
         Toolbox.DB.prefs.ResourceAmount[requirementResourceVal].value -= resourceAmount;
         Toolbox.HUDListner.UpdateResourceTxt(requirementResourceVal);

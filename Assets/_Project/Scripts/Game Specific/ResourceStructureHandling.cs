@@ -115,16 +115,16 @@ public class ResourceStructureHandling : MonoBehaviour
 
 
 
-        int resourceAmount = 0;
+        int resourceAmount = 1;
 
-        if (Toolbox.DB.prefs.ResourceAmount[requirementResourceVal].value > (Toolbox.DB.prefs.ResourceGatherLevel + 1))
-        {
-            resourceAmount = (Toolbox.DB.prefs.ResourceGatherLevel + 1);
-        }
-        else {
+        //if (Toolbox.DB.prefs.ResourceAmount[requirementResourceVal].value > (Toolbox.DB.prefs.ResourceGatherLevel + 1))
+        //{
+        //    resourceAmount = (Toolbox.DB.prefs.ResourceGatherLevel + 1);
+        //}
+        //else {
 
-            resourceAmount = Toolbox.DB.prefs.ResourceAmount[requirementResourceVal].value;
-        }
+        //    resourceAmount = Toolbox.DB.prefs.ResourceAmount[requirementResourceVal].value;
+        //}
 
         Toolbox.GameplayScript.player.SendResource(requireType, this.transform);
         InitEffect();
