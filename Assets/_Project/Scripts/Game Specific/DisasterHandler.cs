@@ -22,8 +22,10 @@ public class DisasterHandler : MonoBehaviour
     }
     public void Volcano()
     {
-        Toolbox.GameplayScript.camShake.ShakeCamera(2, 4);
-        Instantiate(volcanoObj, transform);
+        //Toolbox.GameplayScript.camShake.ShakeCamera(2, 4);
+        //Instantiate(volcanoObj, transform);
+
+        volcanoObj.SetActive(true);
     }
     public void Tornado()
     {

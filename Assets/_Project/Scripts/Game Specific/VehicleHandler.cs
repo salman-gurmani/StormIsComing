@@ -7,13 +7,15 @@ public class VehicleHandler : MonoBehaviour
 
     public float minSpeedRange = 1;
     public float maxSpeedRange = 1;
-
+    bool start = false;
 
     public Transform initPoint;
     public Transform endPoint;
 
     private void Start()
     {
+        start = true;
+
         if (hasFixedSpeed)
         {
             speed = maxSpeedRange;
@@ -22,16 +24,22 @@ public class VehicleHandler : MonoBehaviour
         
             speed = Random.Range(minSpeedRange, maxSpeedRange);
         }
-
     }
 
+    public void Stop() {
+
+        start = false;
+    }
     private void FixedUpdate()
     {
-        this.transform.position += (this.transform.forward) * Time.deltaTime * speed;
+        if (start) {
 
-        if (Vector3.Distance(this.transform.position, endPoint.transform.position) < 2) {
+            this.transform.position += (this.transform.forward) * Time.deltaTime * speed;
 
-            this.transform.position = initPoint.position;
+            if (Vector3.Distance(this.transform.position, endPoint.transform.position) < 2)
+            {
+                this.transform.position = initPoint.position;
+            }
         }
     }
 }

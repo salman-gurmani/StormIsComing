@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-using UnityEngine;
-using System.Collections;
+﻿using UnityEngine;
 /// <summary>
 /// This script will hold everything that is needed to be global only in Game scene
 /// </summary>
@@ -18,6 +16,7 @@ public class GameplayScript : MonoBehaviour {
     public GameObject [] environments;
     public GameObject [] resourceObjects;
     public StructureHandler buildStructureHandler;
+    public GameObject traffic;
 
     public float finalDecisionDelay = 0;
 
@@ -181,6 +180,8 @@ public class GameplayScript : MonoBehaviour {
 
     void InitDisaster() {
 
+        StopTraffic();
+
         switch (levelsManager.CurLevelData.disaster)
         {
             case DisasterType.EARTHQUAKE:
@@ -207,7 +208,15 @@ public class GameplayScript : MonoBehaviour {
 
     public void StartBuildingDistruction() {
 
-        Debug.LogError("Destruction");
+        //Debug.LogError("Destruction");
         buildStructureHandler.InitDistruction();
+    }
+
+    public void StopTraffic() {
+
+        foreach (var item in traffic.GetComponentsInChildren<VehicleHandler>())
+        {
+            item.Stop();
+        }
     }
 }
