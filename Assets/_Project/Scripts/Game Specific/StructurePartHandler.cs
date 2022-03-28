@@ -9,7 +9,7 @@ public class StructurePartHandler : MonoBehaviour
     public bool disableMeshInStart = false;
 
     private float time = 0;
-    private float convertResourceDelay = 0.2f;
+    private float convertResourceDelay = 0.05f;
 
     private bool startProcessing = false;
     private int requirementResourceVal = 0;
@@ -150,7 +150,13 @@ public class StructurePartHandler : MonoBehaviour
     public void OnHit() {
 
         //this.transform.rotation = Quaternion.Euler(new Vector3(this.transform.rotation.x + 10, this.transform.rotation.y + 10, this.transform.rotation.z + 10));
-        GetComponent<MeshCollider>().isTrigger = false;
+        
+        if(GetComponent<MeshCollider>())
+            GetComponent<MeshCollider>().isTrigger = false;
+        else
+            GetComponentInChildren<MeshCollider>().isTrigger = false;
+
+
         Rigidbody rbody = this.gameObject.AddComponent<Rigidbody>();
         int rand = Random.Range(minForceLimit, maxForceLimit);
 

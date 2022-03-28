@@ -1,7 +1,6 @@
 ﻿using System;
 using UnityEngine;
 using UnityEngine.UI;
-using System.Collections.Generic;
 
 public class HUDListner : MonoBehaviour {
 
@@ -16,8 +15,9 @@ public class HUDListner : MonoBehaviour {
     public Text[] resourcesTxts;
 
     public RectTransform [] resourcePosition;
+    float reportTime = 10;
 
-    public bool startTime { get; private set; }
+    public bool startTime { get; set; }
     public float tempTime { get; private set; }
 
     void Awake() {
@@ -51,6 +51,8 @@ public class HUDListner : MonoBehaviour {
     {
         if (startTime)
         {
+            reportTime -= Time.deltaTime;
+
             tempTime -= Time.deltaTime;
             timeTxt.transform.parent.gameObject.SetActive(true);
             int roundedSec = Mathf.RoundToInt(tempTime);
@@ -58,6 +60,14 @@ public class HUDListner : MonoBehaviour {
             int seconds = roundedSec - (min * 60);
 
             timeTxt.text = String.Format("{0:D2} : {1:D2}", min, seconds);
+
+            //Debug.LogError("roundedSec = " + roundedSec);
+
+            if (reportTime <= 0) {
+
+                Toolbox.GameManager.InstantiatePopup_MessageBar("Storm is coming in " + roundedSec + " seconds.");
+                reportTime = 25;
+            }
 
             if (tempTime <= 0)
             {

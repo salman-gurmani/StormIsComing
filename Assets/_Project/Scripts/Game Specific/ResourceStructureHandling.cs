@@ -9,7 +9,7 @@ public class ResourceStructureHandling : MonoBehaviour
     public GameObject effectPrefab;
 
     private float time = 0;
-    private float convertResourceDelay = 0.5f;
+    private float convertResourceDelay = 0.3f;
 
     private bool startProcessing = false;
     private int requirementResourceVal = 0;
@@ -117,14 +117,15 @@ public class ResourceStructureHandling : MonoBehaviour
 
         int resourceAmount = 1;
 
-        //if (Toolbox.DB.prefs.ResourceAmount[requirementResourceVal].value > (Toolbox.DB.prefs.ResourceGatherLevel + 1))
-        //{
-        //    resourceAmount = (Toolbox.DB.prefs.ResourceGatherLevel + 1);
-        //}
-        //else {
+        if (Toolbox.DB.prefs.ResourceAmount[requirementResourceVal].value > (Toolbox.DB.prefs.ResourceGatherLevel + 1))
+        {
+            resourceAmount = (Toolbox.DB.prefs.ResourceGatherLevel + 1);
+        }
+        else
+        {
 
-        //    resourceAmount = Toolbox.DB.prefs.ResourceAmount[requirementResourceVal].value;
-        //}
+            resourceAmount = Toolbox.DB.prefs.ResourceAmount[requirementResourceVal].value;
+        }
 
         Toolbox.GameplayScript.player.SendResource(requireType, this.transform);
         InitEffect();

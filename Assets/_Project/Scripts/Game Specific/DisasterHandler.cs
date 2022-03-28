@@ -17,14 +17,18 @@ public class DisasterHandler : MonoBehaviour
 
     public void Tsunami()
     {
-        Toolbox.GameplayScript.camShake.ShakeCamera(1, 4);
-        Instantiate(tsunamiObj, transform);
+        //Toolbox.GameplayScript.camShake.ShakeCamera(3, 4);
+        //Instantiate(tsunamiObj, transform);
+        Toolbox.GameplayScript.FinalDecisionHandling(14);
+        tsunamiObj.SetActive(true);
+
     }
     public void Volcano()
     {
         //Toolbox.GameplayScript.camShake.ShakeCamera(2, 4);
         //Instantiate(volcanoObj, transform);
 
+        Toolbox.GameplayScript.FinalDecisionHandling(13);
         volcanoObj.SetActive(true);
     }
     public void Tornado()

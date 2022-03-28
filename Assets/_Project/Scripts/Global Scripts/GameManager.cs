@@ -261,7 +261,12 @@ public class GameManager : MonoBehaviour {
 
 		obj.GetComponent<PopupMsgListner>().UpdateMsg(str);
 	}
+	public void InstantiatePopup_MessageBar(String str)
+	{
+		GameObject obj = Instantiate((GameObject)Resources.Load(Constants.menuFolderPath + "Popup-MsgBar"));
 
+		obj.GetComponent<PopupMsgListner>().UpdateMsg(str);
+	}
 	public void InstantiatePopup_Tutorial()
     {
         if (FindObjectOfType<TutorialListner>())

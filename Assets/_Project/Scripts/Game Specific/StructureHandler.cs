@@ -211,7 +211,7 @@ public class StructureHandler : MonoBehaviour
             }
         }
 
-        if (partsToDestroy > 0) {
+        if (progress > 0 && partsToDestroy > 0) {
 
             desIndex = builtParts.Count - 1;
             startDestruction = true;

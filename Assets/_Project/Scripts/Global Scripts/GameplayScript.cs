@@ -157,7 +157,8 @@ public class GameplayScript : MonoBehaviour {
         playerCamMachine.Follow = levelsManager.CurLevelHandler.houseObj.transform;
         Toolbox.HUDListner.DisableHUD();
         player.gameObject.SetActive(false);
-        
+        Toolbox.HUDListner.startTime = false;
+
         buildStructureHandler.DisableAllSpecs();
 
         Invoke("InitDisaster", 3);
