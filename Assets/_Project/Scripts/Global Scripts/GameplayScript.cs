@@ -183,6 +183,7 @@ public class GameplayScript : MonoBehaviour {
     void InitDisaster() {
 
         StopTraffic();
+        Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.panicSound);
 
         switch (levelsManager.CurLevelData.disaster)
         {

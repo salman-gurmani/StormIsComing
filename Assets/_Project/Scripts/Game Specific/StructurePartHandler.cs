@@ -113,7 +113,7 @@ public class StructurePartHandler : MonoBehaviour
 
         //if (resourceAmount > resourceRequired)
         //    resourceAmount = resourceRequired;
-
+        Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.gatherCement);
         Toolbox.DB.prefs.ResourceAmount[requirementResourceVal].value -= resourceAmount;
         Toolbox.HUDListner.UpdateResourceTxt(requirementResourceVal);
 
