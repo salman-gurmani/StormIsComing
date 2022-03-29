@@ -40,6 +40,7 @@ public class DailyReward : MonoBehaviour
             Debug.Log("First Time Reward: You have been rewarded 10 coins");
             //currentDay++;
             Toolbox.DB.prefs.RewardDay = currentDay;
+            reward = EachDayReward[0];
             PlayerPrefs.SetInt("FirstTimeClaim", 1);
             CollectableBtn.interactable = true;
         }
@@ -95,7 +96,7 @@ public class DailyReward : MonoBehaviour
         Toolbox.GameplayScript.IncrementGoldCoins(reward);
         Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.CollectReward);
         Debug.Log("Gold Collected");
-        Toolbox.GameManager.Instantiate_RewardAnim();
+        //Toolbox.GameManager.Instantiate_RewardAnim();
         //claimedTick.transform.SetParent(RewardBoxes[currentDay].transform);
         //claimedTick.GetComponent<RectTransform>().position = RewardBoxes[currentDay].transform.position;
 
