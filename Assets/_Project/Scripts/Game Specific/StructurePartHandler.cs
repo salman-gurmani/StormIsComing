@@ -129,7 +129,7 @@ public class StructurePartHandler : MonoBehaviour
     }
 
     void Build() {
-
+        Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.paint);
         if (built)
             return;
 
