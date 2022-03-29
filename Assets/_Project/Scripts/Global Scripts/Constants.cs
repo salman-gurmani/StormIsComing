@@ -14,7 +14,7 @@ public static class Constants{
 #endif
 
 
-    public const string privacyPolicy = "https://docs.google.com/document/d/1hf6_VM8n9plRSescC16rfZn6KCxJnQgC/edit?usp=sharing&ouid=103277624180178507273&rtpof=true&sd=true";
+    public const string privacyPolicy = "https://docs.google.com/document/d/1Gf1rEWPgCMXkmyJzdQcoTZyyWAVbtbEW/edit";
     public const string fb = "";
 
     public const string serverPrefsLink = "";
