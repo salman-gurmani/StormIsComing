@@ -25,7 +25,7 @@ public class LevelData : ScriptableObject
 
     public bool isNight = false;
     public bool hasExtras = false;
-
+    public bool truckOn = false;
     [SerializeField] public AudioClip bgSound;
 
     [Space(20)]

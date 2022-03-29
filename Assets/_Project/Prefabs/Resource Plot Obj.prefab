@@ -5733,7 +5733,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3665501082939299525
 Transform:
   m_ObjectHideFlags: 0
@@ -5774,6 +5774,7 @@ MonoBehaviour:
   brickContainer: {fileID: 5405081317965851268}
   stoneContainer: {fileID: 5405081318169432212}
   woodContainer: {fileID: 5405081317061931974}
+  materialArray: []
   amountSteel: 28
   amountCement: 48
   amountBrick: 64
@@ -7808,7 +7809,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5405081317061931977
 Transform:
   m_ObjectHideFlags: 0
@@ -7856,6 +7857,7 @@ MonoBehaviour:
   type: 0
   amountTxt: {fileID: 5405081318709439381}
   containerHandler: {fileID: 5405081317061931974}
+  resourcesValue: 0
 --- !u!114 &5405081317061931974
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7868,6 +7870,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b14de316236ed342bff5ec123f9cd58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  giveResourcee: 0
+  effectResource: {fileID: 1059967587465715723, guid: b4e957227760d6b478ea48bde69b0b02,
+    type: 3}
+  resourceDistance: 1.5
   pointofMatrial:
   - {fileID: 3900441246325059439}
   - {fileID: 3309193916470828730}
@@ -7917,6 +7923,10 @@ MonoBehaviour:
   - {fileID: 8336793025451339003}
   - {fileID: 7600175337630029557}
   - {fileID: 5047263938832784527}
+  resourceVal: 0
+  resourceNumber: 0
+  pileHandler: {fileID: 5405081318292104878}
+  toGive: 0
 --- !u!1 &5405081317063911799
 GameObject:
   m_ObjectHideFlags: 0
@@ -8828,7 +8838,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5405081317823978551
 Transform:
   m_ObjectHideFlags: 0
@@ -8876,6 +8886,7 @@ MonoBehaviour:
   type: 7
   amountTxt: {fileID: 5405081318783270505}
   containerHandler: {fileID: 5405081317823978548}
+  resourcesValue: 0
 --- !u!114 &5405081317823978548
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8888,6 +8899,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b14de316236ed342bff5ec123f9cd58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  giveResourcee: 0
+  effectResource: {fileID: 1059967587465715723, guid: 9d87a785e0e07e44f93085954f923e3c,
+    type: 3}
+  resourceDistance: 1.5
   pointofMatrial:
   - {fileID: 9205715136719384294}
   - {fileID: 9205715137245439927}
@@ -8917,6 +8932,10 @@ MonoBehaviour:
   - {fileID: 9205715137822805382}
   - {fileID: 9205715136878041606}
   - {fileID: 9205715137830510452}
+  resourceVal: 0
+  resourceNumber: 7
+  pileHandler: {fileID: 5405081318292104878}
+  toGive: 0
 --- !u!1 &5405081317843246892
 GameObject:
   m_ObjectHideFlags: 0
@@ -9023,7 +9042,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5405081317965851271
 Transform:
   m_ObjectHideFlags: 0
@@ -9071,6 +9090,7 @@ MonoBehaviour:
   type: 3
   amountTxt: {fileID: 5405081318245470849}
   containerHandler: {fileID: 5405081317965851268}
+  resourcesValue: 0
 --- !u!114 &5405081317965851268
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9083,6 +9103,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b14de316236ed342bff5ec123f9cd58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  giveResourcee: 0
+  effectResource: {fileID: 1059967587465715723, guid: 27ee8b089a5e2f74ea6b2976ba822387,
+    type: 3}
+  resourceDistance: 1.5
   pointofMatrial:
   - {fileID: 9205715136441707874}
   - {fileID: 9205715137906789351}
@@ -9148,6 +9172,10 @@ MonoBehaviour:
   - {fileID: 9205715138373058926}
   - {fileID: 9205715136656730837}
   - {fileID: 9205715136859541044}
+  resourceVal: 0
+  resourceNumber: 3
+  pileHandler: {fileID: 5405081318292104878}
+  toGive: 0
 --- !u!1 &5405081317990997543
 GameObject:
   m_ObjectHideFlags: 0
@@ -9383,7 +9411,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5405081318169432215
 Transform:
   m_ObjectHideFlags: 0
@@ -9431,6 +9459,7 @@ MonoBehaviour:
   type: 1
   amountTxt: {fileID: 5405081316844623943}
   containerHandler: {fileID: 5405081318169432212}
+  resourcesValue: 0
 --- !u!114 &5405081318169432212
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9443,6 +9472,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b14de316236ed342bff5ec123f9cd58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  giveResourcee: 0
+  effectResource: {fileID: 1059967587465715723, guid: 2c8029a3743db4a46bdfa0f86f58c55f,
+    type: 3}
+  resourceDistance: 1.5
   pointofMatrial:
   - {fileID: 4719367812193150401}
   - {fileID: 6903153264996065407}
@@ -9508,6 +9541,10 @@ MonoBehaviour:
   - {fileID: 718321339884042100}
   - {fileID: 404734405162135992}
   - {fileID: 8791669424114377440}
+  resourceVal: 0
+  resourceNumber: 1
+  pileHandler: {fileID: 5405081318292104878}
+  toGive: 0
 --- !u!1 &5405081318245470851
 GameObject:
   m_ObjectHideFlags: 0
@@ -9660,6 +9697,21 @@ MonoBehaviour:
   amountBrick: 0
   amountStone: 0
   amountWoodLog: 0
+  steelResource: 0
+  cementResource: 0
+  brickResource: 0
+  stoneResource: 0
+  logResource: 0
+  woodPile: {fileID: 5405081317061931978}
+  stonePile: {fileID: 5405081318169432216}
+  brickPile: {fileID: 5405081317965851272}
+  steelPile: {fileID: 5405081317823978552}
+  cementPile: {fileID: 5405081318470709338}
+  amountofSteelRecord: 0
+  amountofCementRecord: 0
+  amountofStoneRecord: 0
+  amountofBrickRecord: 0
+  amountofLogRecord: 0
 --- !u!65 &5405081318292104877
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9966,7 +10018,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &5405081318470709337
 Transform:
   m_ObjectHideFlags: 0
@@ -10014,6 +10066,7 @@ MonoBehaviour:
   type: 5
   amountTxt: {fileID: 5405081316839263085}
   containerHandler: {fileID: 5405081318470709334}
+  resourcesValue: 0
 --- !u!114 &5405081318470709334
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10026,6 +10079,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6b14de316236ed342bff5ec123f9cd58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  giveResourcee: 0
+  effectResource: {fileID: 1059967587465715723, guid: 2c037cc789c4228449ca1db522f693e5,
+    type: 3}
+  resourceDistance: 1.5
   pointofMatrial:
   - {fileID: 556973241239066543}
   - {fileID: 556973240328809904}
@@ -10075,6 +10132,10 @@ MonoBehaviour:
   - {fileID: 556973242098541674}
   - {fileID: 556973240960939478}
   - {fileID: 556973242108126186}
+  resourceVal: 0
+  resourceNumber: 5
+  pileHandler: {fileID: 5405081318292104878}
+  toGive: 0
 --- !u!1 &5405081318495617859
 GameObject:
   m_ObjectHideFlags: 0
@@ -10669,7 +10730,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5405081318839679560
 Transform:
   m_ObjectHideFlags: 0

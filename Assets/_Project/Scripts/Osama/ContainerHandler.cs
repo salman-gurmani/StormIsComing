@@ -12,6 +12,8 @@ public class ContainerHandler : MonoBehaviour
     public Transform[] pointofMatrial;
     public int resourceVal;
     public int resourceNumber;
+    public PileHandler pileHandler;
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -42,15 +44,17 @@ public class ContainerHandler : MonoBehaviour
             player = Toolbox.GameplayScript.player.transform;
 
         distance = Vector3.Distance(player.position, this.transform.position);
-        if (distance <= resourceDistance)
+        if (distance <= resourceDistance && pileHandler.toGive)
         {
             if (resourceVal > 0)
             {
+                DestroyResourceFromPile();
                 transform.gameObject.GetComponent<ResourceAreaHandler>().amountTxt.ToString();
                 giveResourcee = true;
                 GiveResource();
                 ResourceToDB();
-                DestroyResourceFromPile();
+                
+                Toolbox.HUDListner.UpdateResourceTxt(resourceNumber);
             }
         }
         else
@@ -71,6 +75,8 @@ public class ContainerHandler : MonoBehaviour
     {
         Toolbox.DB.prefs.ResourceAmount[resourceNumber].value += resourceVal;
         transform.gameObject.GetComponent<ResourceAreaHandler>().resourcesValue = 0;
+    
+        
     }
 
 
@@ -81,8 +87,12 @@ public class ContainerHandler : MonoBehaviour
             if(pointofMatrial[i].childCount > 0)
             {
                 Destroy(pointofMatrial[i].GetChild(0).gameObject);
+                pileHandler.ResourceZero(resourceNumber);
             }
+
         }
+       // pileHandler.StockUpLoop();
     }
+    
     
 }

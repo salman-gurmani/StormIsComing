@@ -57,16 +57,24 @@ public class TruckHandler : MonoBehaviour
     public bool hasBrick;
     public bool hasSteel;
     public bool hasCement;
-    bool isSteel = false;
-    bool isCement = false;
-    bool isStone = false;
-    bool isBrick = false;
-    bool isLog = false;
+   public bool isSteel = false;
+    public bool isCement = false;
+    public bool isStone = false;
+    public bool isBrick = false;
+    public bool isLog = false;
     GameObject containerTEMP;
     // Start is called before the first frame update
-    void OnEnable()
+    private void Start()
     {
       
+    }
+    void OnEnable()
+    {
+        pilehandler.amountofSteelRecord = pilehandler.amountSteel;
+        pilehandler.amountofCementRecord = pilehandler.amountCement;
+        pilehandler.amountofStoneRecord = pilehandler.amountStone;
+        pilehandler.amountofBrickRecord = pilehandler.amountBrick;
+        pilehandler.amountofLogRecord = pilehandler.amountWoodLog;
         TruckMovementCheck();
         StockUp();
     }
@@ -216,6 +224,10 @@ public class TruckHandler : MonoBehaviour
     {
         if(other.CompareTag("stop"))
         {
+            isLog = false;
+            isStone = false;
+            isBrick = false;
+            isCement = false;
             isSteel = true;
             other.gameObject.SetActive(false);
             StockOnPileSteel();
@@ -225,7 +237,11 @@ public class TruckHandler : MonoBehaviour
 
         if (other.CompareTag("cementStop"))
         {
+            isLog = false;
+            isStone = false;
+            isBrick = false;
             isCement = true;
+            isSteel = false;
             other.gameObject.SetActive(false);
             CementStockup();
             speed = 0f;
@@ -233,7 +249,12 @@ public class TruckHandler : MonoBehaviour
         }
         if(other.CompareTag("brickStop"))
         {
+
+            isLog = false;
+            isStone = false;
             isBrick = true;
+            isCement = false;
+            isSteel = false;
             other.gameObject.SetActive(false);
             BrickStockup();
             speed = 0f;
@@ -243,7 +264,11 @@ public class TruckHandler : MonoBehaviour
         if (other.CompareTag("stoneStop"))
         {
             Debug.Log("aaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+            isLog = false;
             isStone = true;
+            isBrick = false;
+            isCement = false;
+            isSteel = false;
             other.gameObject.SetActive(false);
             StoneStockup();
             speed = 0f;
@@ -254,6 +279,10 @@ public class TruckHandler : MonoBehaviour
         {
             Debug.Log("aaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
             isLog = true;
+            isStone = false;
+            isBrick = false;
+            isCement = false;
+            isSteel = false;
             other.gameObject.SetActive(false);
             LogStockup();
             speed = 0f;
@@ -265,5 +294,6 @@ public class TruckHandler : MonoBehaviour
     public void RetuenSpeed()
     {
         speed = 5f;
+        woodContainer.resourceVal = transform.gameObject.GetComponent<ResourceAreaHandler>().resourcesValue;
     }
 }

@@ -13,6 +13,8 @@ public class LevelsManager : MonoBehaviour
     public LevelData CurLevelData { get => curLevelData; set => curLevelData = value; }
     public LevelHandler CurLevelHandler { get => curLevelHandler; set => curLevelHandler = value; }
 
+    public PileHandler pileHandler;
+
     private void Start()
     {
         //if (testMode)
@@ -107,12 +109,23 @@ public class LevelsManager : MonoBehaviour
         //        Toolbox.GameplayScript.SetSkybox(curLevelData.envProfile.skybox);
         //}
 
-        for (int i = 0; i < curLevelData.hasResources.Length; i++) {
+        for (int i = 0; i < curLevelData.hasResources.Length; i++)
+        {
 
             Toolbox.HUDListner.EnableResource((int)CurLevelData.hasResources[i]);
             Toolbox.GameplayScript.EnableResource((int)CurLevelData.hasResources[i]);
+            if (Toolbox.GameplayScript.levelsManager.CurLevelData.truckOn)
+            {
+                pileHandler.EnablePileResource((int)Toolbox.GameplayScript.levelsManager.CurLevelData.hasResources[i]);
+            }
         }
-
+        if (Toolbox.GameplayScript.levelsManager.CurLevelData.truckOn)
+        {
+            pileHandler.StockUpLoop();
+            pileHandler.truck.SetActive(true);
+            pileHandler.truckON = true;
+           
+        }
         Toolbox.HUDListner.StartTime(curLevelData.time);
     }
 }

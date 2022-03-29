@@ -14,7 +14,10 @@ public class MoveResouce : MonoBehaviour
     bool move2 = true;
     public float speed;
     float distance;
-     
+
+    
+
+
     // Start is called before the first frame update
     private void OnEnable()
     {
@@ -172,27 +175,33 @@ public class MoveResouce : MonoBehaviour
     {
         if (truckHander.hasSteel)
         {
-            pileHandler.amountSteel++; 
+            pileHandler.amountSteel++;
+            pileHandler.amountofSteelRecord++;
             resourceAreaHandler.AddResources(pileHandler.amountSteel);
+             
         }
         if (truckHander.hasCement)
         {
             pileHandler.amountCement++;
+            pileHandler.amountofCementRecord++;
             resourceAreaHandler.AddResources(pileHandler.amountCement); 
         }
         if (truckHander.hasBrick)
         {
             pileHandler.amountBrick++;
+            pileHandler.amountofBrickRecord++;
             resourceAreaHandler.AddResources(pileHandler.amountBrick); 
         }
         if (truckHander.hasStone)
         {
             pileHandler.amountStone++;
+            pileHandler.amountofStoneRecord++;
             resourceAreaHandler.AddResources(pileHandler.amountStone); 
         }
         if (truckHander.hasWoodLog)
         {
             pileHandler.amountWoodLog++;
+            pileHandler.amountofLogRecord++;
             resourceAreaHandler.AddResources(pileHandler.amountWoodLog); 
         }
     }
