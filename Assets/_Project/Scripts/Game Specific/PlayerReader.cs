@@ -6,15 +6,6 @@ public class PlayerReader : MonoBehaviour
 { 
     public void playerReader()
     {
-        if (Toolbox.DB.prefs.GameAudio == true)
-        {
-            Toolbox.Soundmanager.Running.Play();
-
-        }
-        else
-        {
-            Toolbox.Soundmanager.Running.Stop();
-
-        }
+        Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.running);
     }
 }
