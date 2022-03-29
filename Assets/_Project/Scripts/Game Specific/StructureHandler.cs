@@ -1,7 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-
 public class StructureHandler : MonoBehaviour
 {
     //public Material [] usedMaterials;
@@ -18,6 +17,9 @@ public class StructureHandler : MonoBehaviour
     private float delayAmongPartHit = 0.1f;
     private int desIndex = 0;
     private int partsToDestroy = 0;
+
+    public int onPartLiftEnable = 0;
+    public GameObject liftObj;
 
     private List<StructurePartHandler> builtParts;
 
@@ -110,6 +112,7 @@ public class StructureHandler : MonoBehaviour
     }
 
     public void HousePartComplete(StructurePartHandler _handler) {
+
         Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.paint);
         partsBuild++;
         curAreaPartsBuilt++;
@@ -118,12 +121,19 @@ public class StructureHandler : MonoBehaviour
 
         builtParts.Add(_handler);
 
+
         if (curPartArea < houseParts.Length-1) {
 
             if (curAreaPartsBuilt >= houseParts[curPartArea].part.Length) {
 
                 curAreaPartsBuilt = 0;
                 curPartArea++;
+
+                if (liftObj && onPartLiftEnable == curPartArea)
+                {
+                    liftObj.SetActive(true);
+                }
+
                 for (int i = 0; i < houseParts[curPartArea].part.Length; i++)
                 {
 
@@ -135,6 +145,8 @@ public class StructureHandler : MonoBehaviour
         if (partsBuild >= totalParts) {
 
             //MaterialsTransparentStatus(false);
+            if (liftObj)
+                liftObj.SetActive(false);
             Toolbox.GameplayScript.OnStormHandling();
         }
     }

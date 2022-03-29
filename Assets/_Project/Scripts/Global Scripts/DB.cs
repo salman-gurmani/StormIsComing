@@ -160,7 +160,7 @@ public class Prefs
     {
         foreach (var item in resourceAmount)
         {
-            item.value = 0;
+            item.value = 300;
         }
 
     }

@@ -14,6 +14,7 @@ public class PlayerController : MonoBehaviour
     private float gravityValue = -9.81f;
 
     public Transform resourcesParent;
+    public Transform playerParent;
     public PlayerResources[] resources;
 
     public GameObject [] resourceSendEffect;
@@ -179,30 +180,38 @@ public class PlayerController : MonoBehaviour
                 break;
 
             case "ResourceStructure":
-                //Toolbox.Soundmanager.vehicleRadio.Play();
-                //Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.BrickFactory); 
                 other.GetComponent<ResourceStructureHandling>().InitProcessing();
+                break;
+
+            case "Lift":
+                this.transform.parent = other.transform;
                 break;
 
             default:
                 break;
         }
     }
-    //private void OnTriggerExit(Collider other)
-    //{
-    //    //Debug.LogError("Trigger = " + other.gameObject.tag.ToString());
-    //    switch (other.tag)
-    //    {
-    //        case "Resource":
+    private void OnTriggerExit(Collider other)
+    {
+        //Debug.LogError("Trigger = " + other.gameObject.tag.ToString());
+        switch (other.tag)
+        {
+            case "Resource":
 
-    //            RemoveResource(other.GetComponent<ResourceHandler>());
+                RemoveResource(other.GetComponent<ResourceHandler>());
 
-    //            break;
+                break;
 
-    //        default:
-    //            break;
-    //    }
-    //}
+            case "Lift":
+
+                this.transform.parent = playerParent;
+
+                break;
+
+            default:
+                break;
+        }
+    }
     private void OnTriggerStay(Collider other)
     {
         //Debug.LogError("Trigger = " + other.gameObject.tag.ToString());

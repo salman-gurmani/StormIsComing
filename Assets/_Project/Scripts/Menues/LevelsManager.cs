@@ -114,6 +114,7 @@ public class LevelsManager : MonoBehaviour
 
             Toolbox.HUDListner.EnableResource((int)CurLevelData.hasResources[i]);
             Toolbox.GameplayScript.EnableResource((int)CurLevelData.hasResources[i]);
+
             if (Toolbox.GameplayScript.levelsManager.CurLevelData.truckOn)
             {
                 pileHandler.EnablePileResource((int)Toolbox.GameplayScript.levelsManager.CurLevelData.hasResources[i]);
