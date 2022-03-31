@@ -31,16 +31,16 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         index = Toolbox.DB.prefs.LastSelectedPlayerObj;
-        EnableCharacter();
+        EnableCharacter(index);
     }
 
-    void EnableCharacter() {
+    public void EnableCharacter(int index) {
 
         foreach (var item in models)
         {
             item.gameObject.SetActive(false);
         }
-
+        Debug.Log("aaasddddddddddddddddddddddddd");
         models[index].SetActive(true);
         anim = models[index].GetComponent<Animator>();
     }
