@@ -134,8 +134,17 @@ public class ResourceStructureHandling : MonoBehaviour
         Toolbox.DB.prefs.ResourceAmount[requirementResourceVal].value -= resourceAmount;
         Toolbox.HUDListner.UpdateResourceTxt(requirementResourceVal);
 
+        for (int i = 0; i < resourceAmount; i++)
+        {
+            Toolbox.GameplayScript.player.RemoveResourceOnBack(requireType);
+        }
+
         Toolbox.DB.prefs.ResourceAmount[productionResourceVal].value += resourceAmount;
         Toolbox.HUDListner.UpdateResourceTxt(productionResourceVal);
+        for (int i = 0; i < resourceAmount; i++)
+        {
+            Toolbox.GameplayScript.player.AddResourceOnBack(productionType);
+        }
 
         if (Toolbox.DB.prefs.ResourceAmount[requirementResourceVal].value <= 0) {
 

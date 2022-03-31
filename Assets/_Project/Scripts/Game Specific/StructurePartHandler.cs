@@ -9,7 +9,7 @@ public class StructurePartHandler : MonoBehaviour
     public bool disableMeshInStart = false;
 
     private float time = 0;
-    private float convertResourceDelay = 0.05f;
+    private float convertResourceDelay = 0.1f;
 
     private bool startProcessing = false;
     private int requirementResourceVal = 0;
@@ -18,8 +18,8 @@ public class StructurePartHandler : MonoBehaviour
     public float buildDistance = 4;
     private float distance = 0;
 
-    public int minForceLimit = 0;
-    public int maxForceLimit = 0;
+    //public int minForceLimit = 0;
+    //public int maxForceLimit = 0;
 
     [HideInInspector]public bool built = false;
 
@@ -115,6 +115,12 @@ public class StructurePartHandler : MonoBehaviour
         //    resourceAmount = resourceRequired;
         Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.gatherCement);
         Toolbox.DB.prefs.ResourceAmount[requirementResourceVal].value -= resourceAmount;
+
+        for (int i = 0; i < resourceAmount; i++)
+        {
+            Toolbox.GameplayScript.player.RemoveResourceOnBack(requireType);
+        }
+
         Toolbox.HUDListner.UpdateResourceTxt(requirementResourceVal);
 
         resourceRequired -= resourceAmount;
@@ -158,7 +164,7 @@ public class StructurePartHandler : MonoBehaviour
 
 
         Rigidbody rbody = this.gameObject.AddComponent<Rigidbody>();
-        int rand = Random.Range(minForceLimit, maxForceLimit);
+        int rand = Random.Range(7, 12);
 
         if (Toolbox.HUDListner.progress < 0.5f)
             rand += 5;

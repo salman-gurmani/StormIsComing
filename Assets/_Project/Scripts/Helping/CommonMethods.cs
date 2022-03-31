@@ -1,11 +1,15 @@
-﻿using System.Collections;
-using UnityEngine;
-using UnityEngine.Events;
+﻿using UnityEngine;
 public class CommonMethods : MonoBehaviour
 {
     public void PlaySound(AudioClip _clip) {
 
         Toolbox.Soundmanager.PlaySound(_clip);
+    }
+
+    public void PlayAmbientAudioSource(AudioSource _source)
+    {
+        if(Toolbox.DB.prefs.GameMusic)
+            _source.Play();
     }
 
     public void LoadSceneWithoutLoading(int _index) {
@@ -31,5 +35,4 @@ public class CommonMethods : MonoBehaviour
 
         _anim.enabled = true;
     }
-
 }

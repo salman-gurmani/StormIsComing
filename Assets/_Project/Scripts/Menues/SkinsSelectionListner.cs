@@ -304,16 +304,8 @@ public class SkinsSelectionListner : MonoBehaviour
         Destroy(this.gameObject);
     }
 
-
-
-
-
-
-
     public void OnPressApply(int _value)
     {
         Toolbox.GameplayScript.player.GetComponent<PlayerController>().EnableCharacter(_value);
-       
-       
     }
 }

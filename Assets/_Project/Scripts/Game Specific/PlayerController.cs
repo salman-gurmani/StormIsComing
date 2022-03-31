@@ -13,9 +13,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float playerSpeed = 2.0f;
     private float gravityValue = -9.81f;
 
-    public Transform resourcesParent;
+    public GameObject [] resourcesObjs;
+    public PlayerResourceHandler [] resourcesHandler;
     public Transform playerParent;
-    public PlayerResources[] resources;
+    //public PlayerResources[] resources;
 
     public GameObject [] resourceSendEffect;
 
@@ -26,21 +27,22 @@ public class PlayerController : MonoBehaviour
 
     float time = 0;
     float gatherDelay = 0.8f;
+    int resourceAvailableInLevel = 0;
 
 
     private void Start()
     {
         index = Toolbox.DB.prefs.LastSelectedPlayerObj;
-        EnableCharacter(index);
+        EnableCharacter();
     }
 
-    public void EnableCharacter(int index) {
+    void EnableCharacter() {
 
         foreach (var item in models)
         {
             item.gameObject.SetActive(false);
         }
-        Debug.Log("aaasddddddddddddddddddddddddd");
+
         models[index].SetActive(true);
         anim = models[index].GetComponent<Animator>();
     }
@@ -169,14 +171,30 @@ public class PlayerController : MonoBehaviour
         body.velocity = pushDir * 10;
 
     }
+
+    bool isResourceHandlerAvailable(ResourceHandler _handler) {
+
+        for (int i = 0; i < resourceInTrigger.Count; i++)
+        {
+            if (resourceInTrigger[i] == _handler) {
+
+                return true;
+            }
+        }
+
+        return false;
+    }
+
     private void OnTriggerEnter(Collider other)
     {
         //Debug.LogError("Trigger = " + other.gameObject.tag.ToString());
         switch (other.tag)
         {
             case "Resource":
+                ResourceHandler handler = other.GetComponent<ResourceHandler>();
+                if (!isResourceHandlerAvailable(handler))
+                    AddResource(handler);
 
-                AddResource(other.GetComponent<ResourceHandler>());
                 break;
 
             case "ResourceStructure":
@@ -230,16 +248,48 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    public void UpdateResourcesOnBack() {
+    //public void UpdateResourcesOnBack() {
 
-        for (int i = 0; i < Toolbox.DB.prefs.ResourceAmount.Length; i++)
+    //    for (int i = 0; i < Toolbox.DB.prefs.ResourceAmount.Length; i++)
+    //    {
+    //        if (Toolbox.DB.prefs.ResourceAmount[i].value >= 3) {
+
+    //            for (int j = 0; j < 3; j++)
+    //            {
+    //                resources[i].part[j].gameObject.SetActive(true);
+    //            }
+    //        }
+    //    }
+    //}
+
+
+
+    public void InitResourcesValOnBack() {
+
+        resourceAvailableInLevel = Toolbox.GameplayScript.levelsManager.CurLevelData.hasResources.Length;
+        for (int i = 0; i < resourceAvailableInLevel; i++)
         {
-            if (Toolbox.DB.prefs.ResourceAmount[i].value >= 3) {
+            ResourceType rType = Toolbox.GameplayScript.levelsManager.CurLevelData.hasResources[i];
+            resourcesHandler[i].SetResource(Toolbox.GameplayScript.levelsManager.CurLevelData.hasResources[i], resourcesObjs[(int)rType]);
+        }
+    }
+    public void AddResourceOnBack(ResourceType _type)
+    {
+        for (int i = 0; i < resourceAvailableInLevel; i++)
+        {
+            if (_type == resourcesHandler[i].type) {
+                resourcesHandler[i].Add();
+            }
+        }
+    }
 
-                for (int j = 0; j < 3; j++)
-                {
-                    resources[i].part[j].gameObject.SetActive(true);
-                }
+    public void RemoveResourceOnBack(ResourceType _type)
+    {
+        for (int i = 0; i < resourceAvailableInLevel; i++)
+        {
+            if (_type == resourcesHandler[i].type)
+            {
+                resourcesHandler[i].Remove();
             }
         }
     }

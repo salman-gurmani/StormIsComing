@@ -84,6 +84,12 @@ public class ResourceHandler : MonoBehaviour
             return;
 
         Toolbox.DB.prefs.ResourceAmount[resourceVal].value += (Toolbox.DB.prefs.ResourceGatherLevel + 1);
+
+        for (int i = 0; i < (Toolbox.DB.prefs.ResourceGatherLevel + 1); i++)
+        {
+            Toolbox.GameplayScript.player.AddResourceOnBack(type);
+        }
+
         Toolbox.HUDListner.UpdateResourceTxt(resourceVal);
         curResouceQuantity--;
         UpdateModelLevel(curResouceQuantity);

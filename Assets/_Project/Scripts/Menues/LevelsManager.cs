@@ -51,6 +51,7 @@ public class LevelsManager : MonoBehaviour
         GameObject obj = (GameObject)Instantiate(Resources.Load(path), this.transform);
         
         curLevelHandler = obj.GetComponent<LevelHandler>();
+
     }
 
     private void SpawnPlayer()
@@ -73,7 +74,7 @@ public class LevelsManager : MonoBehaviour
         
         curLevelData = (LevelData)Resources.Load(path);
 
-       // Toolbox.HUDListner.SetLvlTxt("Level " + (Toolbox.DB.prefs.LastSelectedLevel + 1).ToString());
+        // Toolbox.HUDListner.SetLvlTxt("Level " + (Toolbox.DB.prefs.LastSelectedLevel + 1).ToString());
     }
 
 
@@ -109,6 +110,9 @@ public class LevelsManager : MonoBehaviour
         //        Toolbox.GameplayScript.SetSkybox(curLevelData.envProfile.skybox);
         //}
 
+        Toolbox.GameplayScript.EnableEnvHandling(curLevelData.environmentNumber);
+
+
         for (int i = 0; i < curLevelData.hasResources.Length; i++)
         {
 
@@ -128,5 +132,7 @@ public class LevelsManager : MonoBehaviour
            
         }
         Toolbox.HUDListner.StartTime(curLevelData.time);
+
+        Toolbox.GameplayScript.player.InitResourcesValOnBack();
     }
 }

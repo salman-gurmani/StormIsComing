@@ -83,9 +83,10 @@ public class GameplayScript : MonoBehaviour {
         Toolbox.Soundmanager.PlayBGSound(Toolbox.Soundmanager.gameBG);
     }
 
-    private void EnableEnvHandling()
+    public void EnableEnvHandling(int _val)
     {
-        environments[Toolbox.DB.prefs.LastSelectedEnv].gameObject.SetActive(true);
+        environments[_val].gameObject.SetActive(true);
+        traffic.transform.GetChild(_val).gameObject.SetActive(true);
     }
 
     public void IncrementGoldCoins(int cost)
