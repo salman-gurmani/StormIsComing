@@ -33,10 +33,10 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         index = Toolbox.DB.prefs.LastSelectedPlayerObj;
-        EnableCharacter();
+        EnableCharacter(index);
     }
 
-    void EnableCharacter() {
+   public void EnableCharacter(int index) {
 
         foreach (var item in models)
         {

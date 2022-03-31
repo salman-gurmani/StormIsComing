@@ -306,6 +306,7 @@ public class SkinsSelectionListner : MonoBehaviour
 
     public void OnPressApply(int _value)
     {
+        Toolbox.DB.prefs.LastSelectedPlayerObj = _value;
         Toolbox.GameplayScript.player.GetComponent<PlayerController>().EnableCharacter(_value);
     }
 }
