@@ -111,7 +111,7 @@ public class PlayerController : MonoBehaviour
     private void ResourceGatherHandling()
     {
         if (!isGathering && resourceInTrigger.Count > 0) {
-
+           
             isGathering = true;
             anim.SetTrigger("Attack");
             time = gatherDelay;

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class ContainerHandler : MonoBehaviour
 {
+    public ResourceType type;
     public bool giveResourcee = false;
     public GameObject effectResource;
     private Transform player;
@@ -11,13 +12,14 @@ public class ContainerHandler : MonoBehaviour
     public float resourceDistance = 4;
     public Transform[] pointofMatrial;
     public int resourceVal;
+    public int resourceVal2;
     public int resourceNumber;
     public PileHandler pileHandler;
     
     // Start is called before the first frame update
     void Start()
     {
-        
+        resourceVal2 = (int)type;
     }
 
     // Update is called once per frame
@@ -53,7 +55,7 @@ public class ContainerHandler : MonoBehaviour
                 giveResourcee = true;
                 GiveResource();
                 ResourceToDB();
-                
+               
                 Toolbox.HUDListner.UpdateResourceTxt(resourceNumber);
             }
         }
@@ -66,6 +68,10 @@ public class ContainerHandler : MonoBehaviour
     }
     public void GiveResource()
     {
+        for (int i = 0; i < (Toolbox.DB.prefs.ResourceGatherLevel + resourceVal); i++)
+        {
+            Toolbox.GameplayScript.player.AddResourceOnBack(type);
+        }
         Instantiate(effectResource, transform.position, Quaternion.identity);
 
     }
