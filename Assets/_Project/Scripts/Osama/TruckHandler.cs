@@ -5,7 +5,7 @@ using UnityEngine;
 public class TruckHandler : MonoBehaviour
 {
     public PileHandler pilehandler;
-
+    
     public ContainerHandler steelContainer;
     public ContainerHandler cementContainer;
     public ContainerHandler brickContainer;

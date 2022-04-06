@@ -46,25 +46,26 @@ public class ContainerHandler : MonoBehaviour
             player = Toolbox.GameplayScript.player.transform;
 
         distance = Vector3.Distance(player.position, this.transform.position);
-        if (distance <= resourceDistance && pileHandler.toGive)
-        {
-            if (resourceVal > 0)
+       
+            if (distance <= resourceDistance && pileHandler.toGive)
             {
-                DestroyResourceFromPile();
-                transform.gameObject.GetComponent<ResourceAreaHandler>().amountTxt.ToString();
-                giveResourcee = true;
-                GiveResource();
-                ResourceToDB();
-               
-                Toolbox.HUDListner.UpdateResourceTxt(resourceNumber);
-            }
-        }
-        else
-        {
-            giveResourcee = false;
+                if (resourceVal > 0)
+                {
+                    DestroyResourceFromPile();
+                    transform.gameObject.GetComponent<ResourceAreaHandler>().amountTxt.ToString();
+                    giveResourcee = true;
+                    GiveResource();
+                    ResourceToDB();
 
-        }
-      
+                    Toolbox.HUDListner.UpdateResourceTxt(resourceNumber);
+                }
+            }
+            else
+            {
+                giveResourcee = false;
+
+            }
+        
     }
     public void GiveResource()
     {

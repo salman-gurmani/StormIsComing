@@ -93,15 +93,20 @@ public class LevelCompleteListner : MonoBehaviour {
 
     private void UnlockNextLevel()
     {
+
+		
+
+
 		Toolbox.DB.prefs.LastSelectedLevel++;
         if (Toolbox.DB.prefs.LastSelectedLevel < Toolbox.DB.prefs.GameMode[Toolbox.DB.prefs.LastSelectedMode].GetLastUnlockedLevel())
             return;
-
+        
         if (Toolbox.DB.prefs.LastSelectedLevel == Constants.maxLevelsOfMode[Toolbox.DB.prefs.LastSelectedMode] - 1)
         {
-            //This is the last level of current mode
-            //nextButton.SetActive(false);
-        }
+			
+			//This is the last level of current mode
+			//nextButton.SetActive(false);
+		}
         else
         {
             Toolbox.DB.prefs.GameMode[Toolbox.DB.prefs.LastSelectedMode].LevelUnlocked[Toolbox.DB.prefs.LastSelectedLevel + 1] = true;
@@ -153,7 +158,7 @@ public class LevelCompleteListner : MonoBehaviour {
 			Toolbox.DB.prefs.LastSelectedLevel++;
 		else
 		{
-		//	Press_Home();
+			Press_Home();
 			return;
 		}
 

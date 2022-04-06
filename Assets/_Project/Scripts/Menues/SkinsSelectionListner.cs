@@ -148,7 +148,7 @@ public class SkinsSelectionListner : MonoBehaviour
     //}
     public void characterHandler(int _value)
     {
-        if (int.Parse(btnText[_value].text) < Toolbox.DB.prefs.GoldCoins)
+        if (int.Parse(btnText[_value].text) <= Toolbox.DB.prefs.GoldCoins)
         {
             Toolbox.GameplayScript.DeductGoldCoins(int.Parse(btnText[_value].text));
             purchaseSomething = true;

@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PileHandler : MonoBehaviour
 {
+    public bool truckFinished = false;
     public bool toGive = false;
     public GameObject truck;
     public Transform truckSpot;
@@ -53,7 +54,7 @@ public class PileHandler : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if(truck.GetComponent<TruckHandler>().speed == 0)
+        if(truck.activeSelf)
         {
             toGive = false;
         }
@@ -69,6 +70,12 @@ public class PileHandler : MonoBehaviour
             ReActiveTruck();
            
         }
+
+
+
+
+
+
     }
 
     public void ReActiveTruck()
@@ -80,7 +87,7 @@ public class PileHandler : MonoBehaviour
     }
     IEnumerator Timerr()
     {
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.1f);
         truck.SetActive(true);
         StockUpLoop();
         
@@ -89,6 +96,7 @@ public class PileHandler : MonoBehaviour
     {
         if(other.CompareTag("Truck"))
         {
+           truckFinished = true;
             truck.GetComponent<TruckHandler>().steelRod.SetActive(false);
             truck.GetComponent<TruckHandler>().cementSack.SetActive(false);
             truck.GetComponent<TruckHandler>().brickStack.SetActive(false);
@@ -156,7 +164,7 @@ public class PileHandler : MonoBehaviour
     //}
     public void StockUpLoop()
     {
-        Debug.Log("asdasdasd");
+       
         // CheckIfResourceIsRequired();
         truck.GetComponent<TruckHandler>().hasSteel = false;
         truck.GetComponent<TruckHandler>().hasCement = false;

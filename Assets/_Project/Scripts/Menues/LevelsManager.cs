@@ -22,8 +22,12 @@ public class LevelsManager : MonoBehaviour
     }
 
     public void StartLevelHandling() {
+        if (Toolbox.DB.prefs.LastSelectedLevel > 9)
+        {
+            Toolbox.DB.prefs.LastSelectedLevel = 9;
 
-        
+        }
+
         if (testMode)
         {
             curLevelHandler = this.GetComponentInChildren<LevelHandler>();
