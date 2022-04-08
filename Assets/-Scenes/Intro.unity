@@ -565,7 +565,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2269082e6e7ece44db4c302c34d086e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  remove_Ads: remove_Ads
 --- !u!4 &1131335847
 Transform:
   m_ObjectHideFlags: 0
@@ -638,6 +637,10 @@ PrefabInstance:
     - target: {fileID: 478956, guid: ce968ffb37fd3924b9688c04e192b1ac, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 11433454, guid: ce968ffb37fd3924b9688c04e192b1ac, type: 3}
+      propertyPath: prefs.goldCoins
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 11433454, guid: ce968ffb37fd3924b9688c04e192b1ac, type: 3}
       propertyPath: prefs.graphicsVal
