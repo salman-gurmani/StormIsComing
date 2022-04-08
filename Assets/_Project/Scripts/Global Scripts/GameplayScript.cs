@@ -162,6 +162,8 @@ public class GameplayScript : MonoBehaviour {
 
         buildStructureHandler.DisableAllSpecs();
 
+        Toolbox.GameManager.InstantiatePopup_MessageBar( levelsManager.CurLevelData.disaster.ToString() + " IS COMING");
+
         Invoke("InitDisaster", 3);
         Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.siren);
 

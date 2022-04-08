@@ -65,7 +65,7 @@ public class HUDListner : MonoBehaviour {
 
             if (reportTime <= 0) {
 
-                Toolbox.GameManager.InstantiatePopup_MessageBar("Storm is coming in " + roundedSec + " seconds.");
+                Toolbox.GameManager.InstantiatePopup_MessageBar("Disaster is coming in " + roundedSec + " seconds.");
                 reportTime = 25;
             }
 

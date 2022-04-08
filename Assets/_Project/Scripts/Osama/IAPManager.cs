@@ -12,7 +12,7 @@ public class IAPManager : MonoBehaviour, IStoreListener
 
     //Step 1 create your products
 
-    public String remove_Ads = "remove_Ads";
+    private String remove_Ads = "remove_Ads";
 
 
     //************************** Adjust these methods **************************************
@@ -39,8 +39,6 @@ public class IAPManager : MonoBehaviour, IStoreListener
     {
         BuyProductID(remove_Ads);
     }
-
-
 
     //Step 4 modify purchasing
     public PurchaseProcessingResult ProcessPurchase(PurchaseEventArgs args)
