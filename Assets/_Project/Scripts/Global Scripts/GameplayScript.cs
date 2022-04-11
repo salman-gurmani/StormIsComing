@@ -80,6 +80,8 @@ public class GameplayScript : MonoBehaviour {
     public void StartGame()
     {
         Toolbox.HUDListner.EnableHUD();
+        Toolbox.HUDListner.StartTime(levelsManager.CurLevelData.time);
+
         Toolbox.Soundmanager.PlayBGSound(Toolbox.Soundmanager.gameBG);
     }
 
