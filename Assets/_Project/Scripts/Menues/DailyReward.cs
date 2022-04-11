@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using Coffee.UIEffects;
 
 public class DailyReward : MonoBehaviour
 {
@@ -37,65 +34,70 @@ public class DailyReward : MonoBehaviour
         if (currentDay== 0 && PlayerPrefs.GetInt("FirstTimeClaim") == 0)
         {
             Toolbox.DB.prefs.LastClaimedRewardTime = DateTime.Now;
-            Debug.Log("First Time Reward: You have been rewarded 10 coins");
+            //Debug.Log("First Time Reward: You have been rewarded 10 coins");
             //currentDay++;
             Toolbox.DB.prefs.RewardDay = currentDay;
             reward = EachDayReward[0];
             PlayerPrefs.SetInt("FirstTimeClaim", 1);
             CollectableBtn.interactable = true;
+            CollectableBtn.gameObject.SetActive(true);
+
         }
         else if (currentDay<=6 && DateTime.Now >= lastRewardTime.AddHours(24))
         {
             switch (currentDay)
             {
                 case 0:
-                    Debug.Log("You have been rewarded 10 coins");
+                    //Debug.Log("You have been rewarded 10 coins");
                     reward = EachDayReward[0];
                     //currentDay++;
                     break; 
                 case 1:
-                    Debug.Log("You have been rewarded 20 coins");
+                    //Debug.Log("You have been rewarded 20 coins");
                     reward = EachDayReward[1];
                     //currentDay++;
                     break;
                 case 2:
-                    Debug.Log("You have been rewarded 30 coins");
+                    //Debug.Log("You have been rewarded 30 coins");
                     reward = EachDayReward[2];
                     //currentDay++;
                     break;
                 case 3:
-                    Debug.Log("You have been rewarded 40 coins");
+                    //Debug.Log("You have been rewarded 40 coins");
                     reward = EachDayReward[3];
                     //currentDay++;
                     break;
                 case 4:
-                    Debug.Log("You have been rewarded 50 coins");
+                    //Debug.Log("You have been rewarded 50 coins");
                     reward = EachDayReward[4];
                     //currentDay++;
                     break;
                 case 5:
-                    Debug.Log("You have been rewarded 60 coins");
+                    //Debug.Log("You have been rewarded 60 coins");
                     reward = EachDayReward[5];
                     //currentDay++;
                     break;
                 case 6:
-                    Debug.Log("You have been rewarded 70 coins");
+                    //Debug.Log("You have been rewarded 70 coins");
                     reward = EachDayReward[6];
                     //currentDay =0;
                     break;
             }
             
             CollectableBtn.interactable = true;
+            CollectableBtn.gameObject.SetActive(true);
+
         }
     }
 
     public void CollectReward()
     {
         CollectableBtn.interactable = false;
+        CollectableBtn.gameObject.SetActive(false);
         //Toolbox.DB.prefs.GoldCoins += reward;
         Toolbox.GameplayScript.IncrementGoldCoins(reward);
         Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.CollectReward);
-        Debug.Log("Gold Collected");
+        //Debug.Log("Gold Collected");
         //Toolbox.GameManager.Instantiate_RewardAnim();
         //claimedTick.transform.SetParent(RewardBoxes[currentDay].transform);
         //claimedTick.GetComponent<RectTransform>().position = RewardBoxes[currentDay].transform.position;
@@ -119,13 +121,13 @@ public class DailyReward : MonoBehaviour
         for (int i=0; i< EachDayReward.Length; i++) //for CoinsText
         {
             RewardBoxes[i].transform.GetChild(2).GetComponent<Text>().text = EachDayReward[i].ToString() + " Coins";
-            Debug.Log(RewardBoxes[i].transform.GetChild(2));
+            //Debug.Log(RewardBoxes[i].transform.GetChild(2));
         }
 
         for(int n=0; n< currentDay; n++)//for tick
         {
             RewardBoxes[n].transform.GetChild(3).gameObject.SetActive(true);
-            Debug.Log(RewardBoxes[n].transform.GetChild(3));
+            //Debug.Log(RewardBoxes[n].transform.GetChild(3));
         }
 
         glowObj.transform.parent = RewardBoxes[currentDay].transform;

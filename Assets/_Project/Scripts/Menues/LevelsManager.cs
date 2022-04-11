@@ -135,7 +135,7 @@ public class LevelsManager : MonoBehaviour
             pileHandler.truckON = true;
            
         }
-        Toolbox.HUDListner.StartTime(curLevelData.time);
+        //Toolbox.HUDListner.StartTime(curLevelData.time);
 
         Toolbox.GameplayScript.player.InitResourcesValOnBack();
     }

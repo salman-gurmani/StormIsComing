@@ -87,7 +87,8 @@ public class MainMenuListner : MonoBehaviour {
     {
 		Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.buttonPressYes);
 		//Toolbox.GameManager.OnPlay_Pressed();
-		Toolbox.HUDListner.EnableHUD();
+		//Toolbox.HUDListner.EnableHUD();
+		Toolbox.GameplayScript.StartGame();
 		Destroy(gameObject);
     }
 
