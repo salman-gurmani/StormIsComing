@@ -189,6 +189,7 @@ public class GameplayScript : MonoBehaviour {
 
         StopTraffic();
         Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.panicSound);
+        Time.timeScale = 1.1f;
 
         switch (levelsManager.CurLevelData.disaster)
         {
