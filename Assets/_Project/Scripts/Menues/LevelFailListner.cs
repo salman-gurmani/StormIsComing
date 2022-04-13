@@ -12,6 +12,8 @@ public class LevelFailListner : MonoBehaviour {
 	}
 	private void Start()
     {
+		Time.timeScale = 1;
+
 		Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.fail);
 		lvlTxt.text = "Level " + (Toolbox.DB.prefs.LastSelectedLevel + 1).ToString();
 		coinTxt.text = Toolbox.DB.prefs.GoldCoins.ToString();

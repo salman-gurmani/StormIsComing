@@ -31,7 +31,7 @@ public class LevelCompleteListner : MonoBehaviour {
         Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.complete);
 		lvlTxt.text = "Level " + (Toolbox.DB.prefs.LastSelectedLevel + 1).ToString();
 		Invoke("ShowNoThanksBtb",1f);
-
+		Time.timeScale = 1;
 		Toolbox.GameManager.Analytics_LevelComplete();
 
         EarningsHandling();
