@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Advertisements;
 using UnityEngine.UI;
 public class TestAds : MonoBehaviour
-{
+{ 
     //    [SerializeField] string _androidGameId;
     //    [SerializeField] string _iOSGameId;
     //    [SerializeField] bool _testMode = true;
@@ -68,45 +68,52 @@ public class TestAds : MonoBehaviour
 
     public void loadInter()
     {
+        AdsManager.instance.Log("Unity InterAd Loaded");
       //AdsManager.instance.LoadAd();
         AdsManager.instance.Unity_LoadIAd();
     }
     public void loadInter2()
     {
+        AdsManager.instance.Log("Admob InterAd Loaded");
         //AdsManager.instance.LoadAd();
         AdsManager.instance.Admob_RequestAndLoadInterstitialAd();
     }
     public void loadRewarded()
     {
-       // AdsManager.instance.LoadAdReward();
+        AdsManager.instance.Log("Unity RewardedAd Loaded");
+        // AdsManager.instance.LoadAdReward();
         AdsManager.instance.Unity_LoadRAd();
     }
     public void loadRewarded2()
     {
-       // AdsManager.instance.LoadAdReward();
+        AdsManager.instance.Log("Admob RewardedAd Loaded");
+       // AdsManager.instance.LoadAdReward(); 
         AdsManager.instance.Admob_RequestAndLoadRewardedAd();
+        
     }
     public void showInter()
     {
+        AdsManager.instance.Log("unity InterAd Showed");
         AdsManager.instance.Unity_ShowIAd();
         //   AdsManager.instance.ShowAd();
         //  AdsManager.instance.ShowAd(AdsManager.AdType.INTERSTITIAL);
     }
     public void showInter2()
-    {
+    { 
+        AdsManager.instance.Log("Admob InterAd Showed");
         AdsManager.instance.Admob_ShowInterstitialAd();
         //   AdsManager.instance.ShowAd();
         //  AdsManager.instance.ShowAd(AdsManager.AdType.INTERSTITIAL);
     }
     public void showRewarded()
     {
-        
-         AdsManager.instance.Unity_ShowRAd();
+        AdsManager.instance.Log("unity RewardedAd Showed");
+        AdsManager.instance.Unity_ShowRAd();
         //AdsManager.instance.ShowAd(AdsManager.AdType.Re);
     }
     public void showRewarded2()
     {
-
+        AdsManager.instance.Log("Admob RewardedAd Showed");
         AdsManager.instance.Admob_ShowRewardedAd();
         //AdsManager.instance.ShowAd(AdsManager.AdType.Re);
     }

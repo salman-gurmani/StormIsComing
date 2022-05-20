@@ -103,7 +103,7 @@ public class AdsManager : MonoBehaviour , IUnityAdsInitializationListener , IUni
     }
 
 
-    void Log(string _str)
+    public void Log(string _str)
     {
 
         //Toolbox.GameManager.Log("Ads=" + _str);
@@ -356,14 +356,39 @@ public class AdsManager : MonoBehaviour , IUnityAdsInitializationListener , IUni
             admob_interstitialAd.Destroy();
         }
         admob_interstitialAd = new InterstitialAd(Constants.admobId_Interstitial);
+        admob_interstitialAd.OnAdLoaded += (sender, args) =>
+        {
+            Log("Interstitial ad loaded.");
+        };
+        admob_interstitialAd.OnAdFailedToLoad += (sender, args) =>
+        {
+            Log("Interstitial ad failed to load with error: " + args.LoadAdError.GetMessage());
+        };
+        admob_interstitialAd.OnAdOpening += (sender, args) =>
+        {
+            Log("Interstitial ad opening.");
+        };
+        admob_interstitialAd.OnAdClosed += (sender, args) =>
+        {
+            Log("Interstitial ad closed.");
+        };
+        admob_interstitialAd.OnAdDidRecordImpression += (sender, args) =>
+        {
+            Log("Interstitial ad recorded an impression.");
+        };
+        admob_interstitialAd.OnAdFailedToShow += (sender, args) =>
+        {
+            Log("Interstitial ad failed to show.");
+        };
+        admob_interstitialAd.OnPaidEvent += (sender, args) =>
+        {
+            string msg = string.Format("{0} (currency: {1}, value: {2}",
+                                        "Interstitial ad received a paid event.",
+                                        args.AdValue.CurrencyCode,
+                                        args.AdValue.Value);
+            Log(msg);
+        };
 
-        // Add Event Handlers
-        //admob_interstitialAd.OnAdLoaded += (sender, args) => OnAdLoadedEvent.Invoke();
-        //admob_interstitialAd.OnAdFailedToLoad += (sender, args) => OnAdFailedToLoadEvent.Invoke();
-        //admob_interstitialAd.OnAdOpening += (sender, args) => OnAdOpeningEvent.Invoke();
-        //admob_interstitialAd.OnAdClosed += (sender, args) => OnAdClosedEvent.Invoke();
-
-        // Load an interstitial ad
         admob_interstitialAd.LoadAd(Admob_CreateAdRequest());
     }
 

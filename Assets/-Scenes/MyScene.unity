@@ -597,7 +597,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.509434, g: 0.50655043, b: 0.50655043, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1292,7 +1292,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &808059445
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1307,10 +1307,10 @@ RectTransform:
   m_Father: {fileID: 224642534}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 117.86}
-  m_SizeDelta: {x: 1080, y: 166.47}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: 0, y: -305}
+  m_SizeDelta: {x: 1080, y: 166.46997}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &808059446
 MonoBehaviour:
@@ -1761,6 +1761,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1034094438884552573, guid: b83e54e90800f5041be675000f3b6e91,
+        type: 3}
+      propertyPath: testTxt
+      value: 
+      objectReference: {fileID: 808059446}
     - target: {fileID: 1034094438884552573, guid: b83e54e90800f5041be675000f3b6e91,
         type: 3}
       propertyPath: androidAppKey
