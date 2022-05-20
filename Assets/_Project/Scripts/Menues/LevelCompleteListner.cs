@@ -164,7 +164,7 @@ public class LevelCompleteListner : MonoBehaviour {
 
 		Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.buttonPressYes);
         Toolbox.GameManager.LoadScene(Toolbox.GameManager.GetCurrentLevelGameScene(), false, 0);
-		AdsManager.instance.ShowAd(AdsManager.AdType.VIDEOINTERSTITIAL);
+		AdsManager.instance.ShowAd(AdsManager.AdType.INTERSTITIAL);
 
 		//Toolbox.GameManager.directShowVehicleSel = true;
 		//Toolbox.GameManager.LoadScene(Constants.sceneIndex_Menu, true, 0);
@@ -176,7 +176,7 @@ public class LevelCompleteListner : MonoBehaviour {
 	{
 		Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.buttonPressYes);
 		Toolbox.GameManager.LoadScene(Toolbox.GameManager.GetCurrentLevelGameScene(), false, 0);
-		AdsManager.instance.ShowAd(AdsManager.AdType.VIDEOINTERSTITIAL);
+		AdsManager.instance.ShowAd(AdsManager.AdType.INTERSTITIAL);
 
 
 		Destroy(this.gameObject);

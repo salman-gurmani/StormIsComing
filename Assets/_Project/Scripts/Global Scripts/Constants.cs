@@ -42,12 +42,20 @@ public static class Constants{
     #region AdMob Ids
 
 #if UNITY_ANDROID
-    public const string admobId_Banner = "ca-app-pub-6351158520517644/4714049056";
-    public const string admobId_Interstitial = "ca-app-pub-6351158520517644/7148640700";
-    public const string admobId_RewardedVid = "ca-app-pub-6351158520517644/1896314021";
-    public const string admobId_Native = "ca-app-pub-9544941219013764/2312577308";
-#elif UNITY_IOS
+    public const string admobId_Banner = "ca-app-pub-8238060461072991/4248450785";
+    public const string admobId_Interstitial = "ca-app-pub-8238060461072991/1622287448";
+    public const string admobId_RewardedVid = "ca-app-pub-8238060461072991/2743797421";
+    public const string admobId_Native = "ca-app-pub-8238060461072991/6491470743";
 
+    public const string unityId_Appkey = "4759541";
+    public const string unityId_IADkey = "Interstitial_Android";
+    public const string unityId_RADkey = "Rewarded_Android";
+
+#elif UNITY_IOS
+    public const string unityId_Appkey = "4759540";
+    public const string unityId_IADkey = "Interstitial_iOS";
+    public const string unityId_RADkey = "Rewarded_iOS";
+    
     public const string admobId_Banner = "ca-app-pub-9544941219013764/7034425799";
     public const string admobId_Interstitial = "ca-app-pub-9544941219013764/7824956807";
     public const string admobId_RewardedVid = "ca-app-pub-9544941219013764/6540629449";

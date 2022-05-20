@@ -1,18 +1,21 @@
-﻿using Tapdaq;
-using System;
+﻿using System;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
+using GoogleMobileAds.Api;
+using GoogleMobileAds.Common;
+using UnityEngine.Events;
+using System.Collections.Generic;
+using UnityEngine.Advertisements;
 
-public class AdsManager : MonoBehaviour
+
+public class AdsManager : MonoBehaviour , IUnityAdsInitializationListener , IUnityAdsShowListener , IUnityAdsLoadListener
 {
     public static AdsManager instance;
-
+   
     public Text testTxt;
-
+    [SerializeField] private bool initializeOnStart = true; 
     public enum AdType
     {
-
         BANNER,
         INTERSTITIAL,
         VIDEOINTERSTITIAL,
@@ -20,29 +23,40 @@ public class AdsManager : MonoBehaviour
         NATIVE
     };
 
+    internal bool isRewardedAdAvailable()
+    {
+        return true;
+    }
+
     public enum RewardType
     {
         FREECOINS,
         DOUBLEREWARD,
         SKIPLEVEL
     };
-    private RewardType rewardType = RewardType.SKIPLEVEL;
+    private RewardType rewardType = RewardType.FREECOINS;
     private int coinsToReward = 0;
 
-    private bool isInitialized = false;
-    private bool iAdLoaded = false;
-    private bool rAdLoaded = false;
+    private bool admob_isInitialized = false;
+    private bool unity_isInitialized = false;
 
-    //private BannerView bannerView;
-    //private InterstitialAd interstitial;
-    //private RewardedAd rewardedAd;
+    private BannerView admob_bannerView;
+    private InterstitialAd admob_interstitialAd;
+    private RewardedAd admob_rewardedAd;
 
-    private TDMBannerSize bannerAdSize;
-    private TDBannerPosition bannerAdPosition;
+    private UnityEvent OnAdLoadedEvent;
+    private UnityEvent OnAdFailedToLoadEvent;
+    private UnityEvent OnAdOpeningEvent;
+    private UnityEvent OnAdFailedToShowEvent;
+    private UnityEvent OnAdClosedEvent;
 
-    private DateTime lastAdShownTime;
-    [SerializeField] private bool initializeOnStart = true;
     public int CoinsToReward { get => coinsToReward; set => coinsToReward = value; }
+
+    public bool IsRewardedAdAvailable()
+    {
+        return true;
+    }
+
     public RewardType RewardType1 { get => rewardType; set => rewardType = value; }
 
     private void Awake()
@@ -52,40 +66,48 @@ public class AdsManager : MonoBehaviour
 
     }
 
-    private void OnEnable()
-    {
-        TDCallbacks.TapdaqConfigLoaded += OnTapdaqConfigLoaded;
-        TDCallbacks.TapdaqConfigFailedToLoad += OnTapdaqConfigFailToLoad;
-        TDCallbacks.AdAvailable += OnAdAvailable;
-        TDCallbacks.AdNotAvailable += OnAdNotAvailable;
-        TDCallbacks.AdError += OnAdError;
-
-        TDCallbacks.RewardVideoValidated += OnRewardVideoValidated;
-    }
-
-    private void OnDisable()
-    {
-        TDCallbacks.TapdaqConfigLoaded -= OnTapdaqConfigLoaded;
-        TDCallbacks.TapdaqConfigFailedToLoad -= OnTapdaqConfigFailToLoad;
-        TDCallbacks.AdAvailable -= OnAdAvailable;
-        TDCallbacks.AdNotAvailable -= OnAdNotAvailable;
-        TDCallbacks.AdError -= OnAdError;
-
-        TDCallbacks.RewardVideoValidated -= OnRewardVideoValidated;
-    }
-
-
     private void Start()
     {
         if (initializeOnStart)
             Initialize();
+
     }
+
+    void Initialize()
+    {
+
+        MobileAds.SetiOSAppPauseOnBackground(true);
+
+        List<String> deviceIds = new List<String>() { AdRequest.TestDeviceSimulator };
+
+        // Add some test device IDs (replace with your own device IDs).
+#if UNITY_IPHONE
+        deviceIds.Add("96e23e80653bb28980d3f40beb58915c");
+#elif UNITY_ANDROID
+        deviceIds.Add("75EF8D155528C04DACBBA6F36F433035");
+#endif
+
+        // Configure TagForChildDirectedTreatment and test device IDs.
+        RequestConfiguration requestConfiguration =
+            new RequestConfiguration.Builder()
+            .SetTagForChildDirectedTreatment(TagForChildDirectedTreatment.Unspecified)
+            .SetTestDeviceIds(deviceIds).build();
+        MobileAds.SetRequestConfiguration(requestConfiguration);
+
+        // Initialize the Google Mobile Ads SDK.
+        MobileAds.Initialize(Admob_HandleInitCompleteAction);
+
+
+        //Untiy Ads
+        Advertisement.Initialize(Constants.unityId_Appkey, false,this);
+    }
+
 
     void Log(string _str)
     {
 
         //Toolbox.GameManager.Log("Ads=" + _str);
-        //Debug.Log("Ads=" + _str);
+        Debug.Log("Ads=" + _str);
 
         if (testTxt)
         {
@@ -93,57 +115,30 @@ public class AdsManager : MonoBehaviour
         }
     }
 
-    public void Initialize()
-    {
-
-        Log("Initializing");
-        // Initialize the Google Mobile Ads SDK.
-
-        AdManager.SetUserSubjectToGdprStatus(TDStatus.TRUE);
-        AdManager.SetConsentStatus(TDStatus.TRUE);
-        AdManager.SetAgeRestrictedUserStatus(TDStatus.TRUE);
-
-        AdManager.Init();
-
-        //lastAdShownTime = DateTime.Now;
-    }
-
     public void HideBannerAd()
     {
         Log("Hiding banner");
-        AdManager.HideBanner();
+        Admob_DestroyBannerAd();
     }
 
-    public void RequestBannerWithSpecs(TDMBannerSize _size, TDBannerPosition _pos)
+    public void RequestBannerWithSpecs()
     {
-
-        bannerAdSize = _size;
-        bannerAdPosition = _pos;
-
         ShowAd(AdType.BANNER);
     }
+
     public void SetNShowRewardedAd(RewardType _type, int _coins)
     {
-
         rewardType = _type;
         coinsToReward = _coins;
 
         ShowAd(AdType.REWARDED);
     }
-
     public void RequestAd(AdType _type)
     {
+
+
+
         Log("Request Ad. Type = " + _type);
-
-        //#if UNITY_EDITOR
-        //        return;
-        //#endif
-
-        if (!isInitialized /*|| !Toolbox.GameManager.IsNetworkAvailable()*/)
-        {
-            Log("Not Initialized");
-            return;
-        }
 
         switch (_type)
         {
@@ -151,38 +146,18 @@ public class AdsManager : MonoBehaviour
 
                 if (!Toolbox.DB.prefs.NoAdsPurchased)
                 {
-
-                    HideBannerAd();
-
-                    AdManager.RequestBanner(bannerAdSize);
-
+                    Admob_RequestBannerAd();
                 }
 
                 break;
 
             case AdType.INTERSTITIAL:
 
-                if (/*!iAdLoaded && */!Toolbox.DB.prefs.NoAdsPurchased)
+                if (!Toolbox.DB.prefs.NoAdsPurchased)
                 {
                     Log("Requesting Interstitial");
-
-                    AdManager.LoadInterstitial("default");
-
-                    AdManager.LoadInterstitial("Zone 1");
-
-                    AdManager.LoadInterstitial("Zone 2");
-
-                }
-
-                break;
-
-            case AdType.VIDEOINTERSTITIAL:
-
-                if (/*!iAdLoaded && */!Toolbox.DB.prefs.NoAdsPurchased)
-                {
-                    Log("Requesting " + _type);
-
-                    AdManager.LoadVideo("default");
+                    Admob_RequestAndLoadInterstitialAd();
+                    Unity_LoadIAd();
                 }
 
                 break;
@@ -190,15 +165,8 @@ public class AdsManager : MonoBehaviour
 
             case AdType.REWARDED:
 
-                //if (rAdLoaded)
-                //    return;
-
-                AdManager.LoadRewardedVideo("default");
-
-                break;
-
-            case AdType.NATIVE:
-
+                Admob_RequestAndLoadRewardedAd();
+                Unity_LoadRAd();
 
                 break;
         }
@@ -208,15 +176,14 @@ public class AdsManager : MonoBehaviour
     public void ShowAd(AdType _type)
     {
 
-        //#if UNITY_EDITOR
-        //        return;
-        //#endif
 
-        if (!isInitialized /*|| !Toolbox.GameManager.IsNetworkAvailable()*/) {
+
+        if (!admob_isInitialized /*|| !Toolbox.GameManager.IsNetworkAvailable()*/)
+        {
             Log("Not Initialized");
             return;
         }
-        
+
 
         Log("Trying to Show = " + _type);
 
@@ -224,15 +191,15 @@ public class AdsManager : MonoBehaviour
         {
 
             case AdType.BANNER:
-
-                if (AdManager.IsBannerReady())
-                {
-                    AdManager.ShowBanner(bannerAdPosition);
-                }
-                else {
-
-                    RequestAd(AdType.BANNER);
-                }
+                //if(admob_bannerView != null)
+                //{
+                //    RequestAd(AdType.BANNER);
+                //}
+                //else
+                //{
+                //    
+                //}
+                admob_bannerView.Show();
 
                 break;
 
@@ -241,221 +208,36 @@ public class AdsManager : MonoBehaviour
                 //if (Toolbox.DB.prefs.NoAdsPurchased)
                 //    return;
                 #region Acctual Showing the IAD
-                if (AdManager.IsInterstitialReady("default"))
-                {
-                    Log("IAD Show 0");
-                    AdManager.ShowInterstitial("default");
-                }
+
+                if (admob_interstitialAd.IsLoaded())
+                    Admob_ShowInterstitialAd();
                 else
-                if (AdManager.IsInterstitialReady("Zone 1"))
-                {
-                    Log("IAD Show 1");
-                    AdManager.ShowInterstitial("Zone 1");
-
-                }
-                else if (AdManager.IsInterstitialReady("Zone 2"))
-                {
-                    Log("IAD Show 2");
-                    AdManager.ShowInterstitial("Zone 2");
-                }
-                else {
-
-                    Log("IAD not Available!");
-
-                    if (AdManager.IsVideoReady("default"))
-                    {
-                        Log("VAD Show");
-                        AdManager.ShowVideo("default");
-                    }
-                }
+                    Unity_ShowIAd();
 
                 #endregion
                 break;
 
             case AdType.VIDEOINTERSTITIAL:
 
-                if (AdManager.IsVideoReady("default"))
-                {
-                    Log("VAD Show");
-                    AdManager.ShowVideo("default");
-                }
-
                 break;
 
             case AdType.REWARDED:
 
-                if (AdManager.IsRewardedVideoReady("default"))
-                {
-                    AdManager.ShowRewardVideo("default");
-                }
-                else { 
-                    Log("RAD not Available!");
-                }
+                if (admob_rewardedAd.IsLoaded())
+                    Admob_ShowRewardedAd();
+                else
+                    Unity_ShowRAd();
 
                 break;
         }
     }
 
-#region HELPER METHODS
-    public bool IsShowIAdTime()
-    {
-        return true;
-    }
-
-    public bool isRewardedAdAvailable() {
-
-        if (AdManager.IsRewardedVideoReady("default"))
-        {
-
-            return true;
-        }
-        else {
-
-            return false;
-        }
-    }
-
-    //private AdRequest CreateAdRequest()
-    //{
-    //    return new AdRequest.Builder()
-    //        //.AddTestDevice(AdRequest.TestDeviceSimulator)
-    //        //.AddTestDevice("8B3629979090AE15BCE808275C2963A4")
-    //        //.AddKeyword("unity-admob-sample")
-    //        //.TagForChildDirectedTreatment(true)
-    //        .Build();
-    //}
-
-
-    private void OnTapdaqConfigLoaded()
-    {
-        //Tapdaq Ready to use
-        isInitialized = true;
-
-        //AdManager.SetUserSubjectToGdprStatus(TDStatus.TRUE);
-        //AdManager.SetConsentStatus(TDStatus.TRUE);
-        //AdManager.SetAgeRestrictedUserStatus(TDStatus.TRUE);
-
-        RequestAd(AdType.BANNER);
-        RequestAd(AdType.INTERSTITIAL);
-        RequestAd(AdType.VIDEOINTERSTITIAL);
-        RequestAd(AdType.REWARDED);
-
-        Log("IsInitialized!");
-        //Toolbox.GameManager.InstantiatePopup_Message("Ads Initialized!");
-
-        //if (SceneManager.GetActiveScene().buildIndex == 0)
-        //    Toolbox.GameManager.LoadScene(Constants.sceneIndex_Menu, false, Toolbox.GameManager.SceneDelay);
-    }
-
-    private void OnTapdaqConfigFailToLoad(TDAdError error)
-    {
-        Log("Not Initialized!");
-        //Toolbox.GameManager.InstantiatePopup_Message("Ads Not Initialized!");
-        //Tapdaq failed to initialise
-        isInitialized = false;
-
-        //if (SceneManager.GetActiveScene().buildIndex == 0)
-        //    Toolbox.GameManager.LoadScene(Constants.sceneIndex_Menu, false, Toolbox.GameManager.SceneDelay);
-
-    }
-
-    private void OnAdAvailable(TDAdEvent e)
-    {
-        Log("OnAD Available");
-
-        if (e.IsBannerEvent())
-        {
-            Log("BAD Available");
-        }
-        
-        if (e.IsVideoEvent())
-        {
-            Log("VAD Available ");
-        }
-
-        if (e.IsInterstitialEvent())
-        {
-            Log("IAD Available");
-        }
-
-        if (e.IsRewardedVideoEvent())
-        {
-            Log("RAD Available");
-        }
-    }
-
-    private void OnAdNotAvailable(TDAdEvent e)
-    {
-        Log("OnAD not Available");
-
-        if (e.IsBannerEvent())
-        {
-            Log("BAD NOFILL - " + e.error);
-        }
-
-        if (e.IsVideoEvent())
-        {
-            Log("VAD NOFILL - " + e.error);
-        }
-
-        if (e.IsInterstitialEvent())
-        {
-            Log("IAD NOFILL - " + e.error);
-        }
-
-        if (e.IsRewardedVideoEvent())
-        {
-            Log("RAD NOFILL - " + e.error);
-        }
-    }
-
-    private void OnAdError(TDAdEvent e)
-    {
-        Log("OnAD Error");
-
-        if (e.IsBannerEvent())
-        {
-            Log("BAD Error - " + e.error);
-        }
-
-        if (e.IsVideoEvent())
-        {
-            Log("VAD Error - " + e.error);
-        }
-
-        if (e.IsInterstitialEvent())
-        {
-            Log("IAD Error - " + e.error);
-        }
-
-        if (e.IsRewardedVideoEvent())
-        {
-            Log("RAD Error - " + e.error);
-        }
-    }
-
-    #endregion
 
     #region CallBacks
 
-    private void OnRewardVideoValidated(TDVideoReward videoReward)
-    {
-        //Debug.Log("I got " + videoReward.RewardAmount + " of " + videoReward.RewardName
-        //        + "   tag=" + videoReward.Tag + " IsRewardValid " + videoReward.RewardValid + " CustomJson: " + videoReward.RewardJson);
-
-        if (videoReward.RewardValid)
-        {
-            RewardPlayer();
-        }
-        else
-        {
-            //Reward is invalid, video may not have completed or an ad network may have refused to the provide reward
-        }
-    }
-
     void RewardPlayer()
     {
-        Toolbox.DB.prefs.GoldCoins += coinsToReward;
+     //   Toolbox.DB.prefs.GoldCoins += coinsToReward;
 
         switch (rewardType)
         {
@@ -474,13 +256,291 @@ public class AdsManager : MonoBehaviour
 
             case RewardType.SKIPLEVEL:
 
-                FindObjectOfType<LevelFailListner>().UnlockAndPlayNextLevel();
+              //  FindObjectOfType<LevelFailListner>().UnlockAndPlayNextLevel();
 
                 break;
         }
     }
 
-#endregion
+    #endregion
+
+    #region ADMOB
+
+    private void Admob_HandleInitCompleteAction(InitializationStatus initstatus)
+    {
+        // Callbacks from GoogleMobileAds are not guaranteed to be called on
+        // main thread.
+        // In this example we use MobileAdsEventExecutor to schedule these calls on
+        // the next Update() loop.
+        MobileAdsEventExecutor.ExecuteInUpdate(() =>
+        {
+            Log("Initialization complete");
+            admob_isInitialized = true;
+            Admob_RequestBannerAd();
+            Admob_RequestAndLoadInterstitialAd();
+            Admob_RequestAndLoadRewardedAd();
+        });
+
+        if (!admob_isInitialized)
+        {
+            Log("Initialization not completed");
+        }
+    }
+
+    private AdRequest Admob_CreateAdRequest()
+    {
+        return new AdRequest.Builder()
+            .AddKeyword("unity-admob-sample")
+            .Build();
+    }
+
+    #region BANNER ADS
+
+    public void Admob_RequestBannerAd()
+    {
+        if (!admob_isInitialized)
+        {
+            Log("Not Initialized");
+            return;
+        }
+
+        Log("Requesting Banner Ad.");
 
 
+        if (admob_bannerView != null)
+        {
+            admob_bannerView.Destroy();
+        }
+
+
+        admob_bannerView = new BannerView(Constants.admobId_Banner, AdSize.Banner, AdPosition.Top);
+
+        // Add Event Handlers
+        //admob_bannerView.OnAdLoaded += (sender, args) => OnAdLoadedEvent.Invoke();
+        //admob_bannerView.OnAdFailedToLoad += (sender, args) => OnAdFailedToLoadEvent.Invoke();
+        //admob_bannerView.OnAdOpening += (sender, args) => OnAdOpeningEvent.Invoke();
+        //admob_bannerView.OnAdClosed += (sender, args) => OnAdClosedEvent.Invoke();
+
+        // Load a banner ad
+        admob_bannerView.LoadAd(Admob_CreateAdRequest());
+    }
+
+    public void Admob_DestroyBannerAd()
+    {
+        if (admob_bannerView != null)
+        {
+            admob_bannerView.Hide();
+        }
+    }
+
+    #endregion
+
+    #region INTERSTITIAL ADS
+
+    public void Admob_RequestAndLoadInterstitialAd()
+    {
+        if (!admob_isInitialized)
+        {
+            Log("Not Initialized");
+            return;
+        }
+
+        if (admob_interstitialAd != null && admob_interstitialAd.IsLoaded())
+            return;
+
+        Log("Requesting Interstitial Ad.");
+
+        // Clean up interstitial before using it
+        if (admob_interstitialAd != null)
+        {
+            admob_interstitialAd.Destroy();
+        }
+        admob_interstitialAd = new InterstitialAd(Constants.admobId_Interstitial);
+
+        // Add Event Handlers
+        //admob_interstitialAd.OnAdLoaded += (sender, args) => OnAdLoadedEvent.Invoke();
+        //admob_interstitialAd.OnAdFailedToLoad += (sender, args) => OnAdFailedToLoadEvent.Invoke();
+        //admob_interstitialAd.OnAdOpening += (sender, args) => OnAdOpeningEvent.Invoke();
+        //admob_interstitialAd.OnAdClosed += (sender, args) => OnAdClosedEvent.Invoke();
+
+        // Load an interstitial ad
+        admob_interstitialAd.LoadAd(Admob_CreateAdRequest());
+    }
+
+    public void Admob_ShowInterstitialAd()
+    {
+        if (!admob_isInitialized)
+        {
+            Log("Not Initialized");
+            return;
+        }
+
+        if (admob_interstitialAd != null && admob_interstitialAd.IsLoaded())
+        {
+            admob_interstitialAd.Show();
+        }
+        else
+        {
+            Log("Interstitial ad is not ready yet");
+        }
+    }
+
+    public void Admob_DestroyInterstitialAd()
+    {
+
+        if (admob_interstitialAd != null)
+        {
+            admob_interstitialAd.Destroy();
+        }
+    }
+
+    #endregion
+
+    #region REWARDED ADS
+
+    public void Admob_RequestAndLoadRewardedAd()
+    {
+        if (!admob_isInitialized)
+        {
+            Log("Not Initialized");
+            return;
+        }
+
+        if (admob_rewardedAd != null && admob_rewardedAd.IsLoaded())
+            return;
+
+        Log("Requesting Rewarded Ad.");
+
+        // create new rewarded ad instance
+        admob_rewardedAd = new RewardedAd(Constants.admobId_RewardedVid);
+
+        // Add Event Handlers
+        //admob_rewardedAd.OnAdLoaded += (sender, args) => OnAdLoadedEvent.Invoke();
+        //admob_rewardedAd.OnAdFailedToLoad += (sender, args) => OnAdFailedToLoadEvent.Invoke();
+        //admob_rewardedAd.OnAdOpening += (sender, args) => OnAdOpeningEvent.Invoke();
+        //admob_rewardedAd.OnAdFailedToShow += (sender, args) => OnAdFailedToShowEvent.Invoke();
+        //admob_rewardedAd.OnAdClosed += (sender, args) => OnAdClosedEvent.Invoke();
+        admob_rewardedAd.OnUserEarnedReward += (sender, args) => RewardPlayer();
+
+        // Create empty ad request
+        admob_rewardedAd.LoadAd(Admob_CreateAdRequest());
+    }
+
+    public void Admob_ShowRewardedAd()
+    {
+        if (!admob_isInitialized)
+        {
+            Log("Not Initialized");
+            return;
+        }
+
+        if (admob_rewardedAd != null)
+        {
+            admob_rewardedAd.Show();
+        }
+        else
+        {
+            Log("Rewarded ad is not ready yet.");
+        }
+    }
+
+    #endregion
+
+    #endregion
+
+    #region UnityAds
+
+    public void OnInitializationComplete()
+    {
+        Log("Unity Ads initialization complete.");
+        unity_isInitialized = true;
+
+        Unity_LoadIAd();
+        Unity_LoadRAd();
+    }
+
+    public void OnInitializationFailed(UnityAdsInitializationError error, string message)
+    {
+        Log($"Unity Ads Initialization Failed: {error.ToString()} - {message}");
+        unity_isInitialized = false;
+    }
+
+    public void Unity_LoadIAd()
+    {
+        if (!unity_isInitialized)
+            return;
+
+        Debug.Log("Loading UNITY IAd: ");
+        Advertisement.Load(Constants.unityId_IADkey,this);
+    }
+
+    public void Unity_ShowIAd()
+    {
+        if (!unity_isInitialized)
+            return;
+
+        Debug.Log("Showing Ad: UNITY IAd");
+        Advertisement.Show(Constants.unityId_IADkey,this);
+    }
+
+    public void Unity_LoadRAd()
+    {
+        if (!unity_isInitialized)
+            return;
+
+        Debug.Log("Loading Ad: Unity RAd");
+        Advertisement.Load(Constants.unityId_RADkey,this);
+    }
+
+    public void Unity_ShowRAd()
+    {
+        if (!unity_isInitialized)
+            return;
+
+        Debug.Log("Showing Ad: UNITY RAd");
+        Advertisement.Show(Constants.unityId_RADkey,this);
+    }
+
+    public void OnUnityAdsShowComplete(string adUnitId, UnityAdsShowCompletionState showCompletionState)
+    {
+        if (adUnitId.Equals(Constants.unityId_RADkey) && showCompletionState.Equals(UnityAdsShowCompletionState.COMPLETED))
+        {
+            Debug.Log("Unity Ads Rewarded Ad Completed");
+            RewardPlayer();
+
+            Unity_LoadRAd();
+        }
+    }
+
+    public void OnUnityAdsShowFailure(string adUnitId, UnityAdsShowError error, string message)
+    {
+        Debug.Log($"Error showing Ad Unit {adUnitId}: {error.ToString()} - {message}");
+        throw new NotImplementedException();
+    }
+
+    public void OnUnityAdsShowStart(string adUnitId) { }
+    public void OnUnityAdsShowClick(string adUnitId) { }
+
+    public void OnUnityAdsAdLoaded(string _adUnitId)
+    {
+        Debug.Log("Ad Loaded: " + _adUnitId);
+
+        if (_adUnitId.Equals(Constants.unityId_RADkey))
+        {
+            // Configure the button to call the ShowAd() method when clicked:
+            //  _showAdButton.onClick.AddListener(ShowAd);
+            // Enable the button for users to click:
+            // _showAdButton.interactable = true;
+        }
+    }
+
+    public void OnUnityAdsFailedToLoad(string adUnitId, UnityAdsLoadError error, string message)
+    {
+        Debug.Log($"Error loading Ad Unit: {adUnitId} - {error.ToString()} - {message}");
+
+        
+    }
+
+
+    #endregion
 }
