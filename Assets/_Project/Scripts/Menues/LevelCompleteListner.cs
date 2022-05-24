@@ -27,7 +27,7 @@ public class LevelCompleteListner : MonoBehaviour {
 	//public Sprite[] vehicleImages;
 
 	private void Start()
-    {
+    { 
         Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.complete);
 		lvlTxt.text = "Level " + (Toolbox.DB.prefs.LastSelectedLevel + 1).ToString();
 		Invoke("ShowNoThanksBtb",1f);
