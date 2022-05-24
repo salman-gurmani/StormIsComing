@@ -1,8 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
-using Firebase.Messaging;
-using System;
 
 public class Notification : MonoBehaviour
 {
@@ -14,11 +10,11 @@ public class Notification : MonoBehaviour
 
     public void OnTokenReceived(object sender, Firebase.Messaging.TokenReceivedEventArgs token)
     {
-        UnityEngine.Debug.Log("Received Registration Token: " + token.Token);
+        Debug.Log("Received Registration Token: " + token.Token);
     }
 
     public void OnMessageReceived(object sender, Firebase.Messaging.MessageReceivedEventArgs e)
     {
-        UnityEngine.Debug.Log("Received a new message from: " + e.Message.From);
+        Debug.Log("Received a new message from: " + e.Message.From);
     }
 }
