@@ -97,8 +97,7 @@ public class AdsManager : MonoBehaviour , IUnityAdsInitializationListener , IUni
 
     public void Log(string _str)
     {
-        //Toolbox.GameManager.Log("Ads=" + _str);
-        Debug.Log(">> >> >> Ads=" + _str);
+        //Toolbox.GameManager.Log("Ads=" + _str); 
 
         if (testTxt)
         {
