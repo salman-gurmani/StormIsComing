@@ -44,12 +44,6 @@ public class AdsManager : MonoBehaviour , IUnityAdsInitializationListener , IUni
     private InterstitialAd admob_interstitialAd;
     private RewardedAd admob_rewardedAd;
 
-    private UnityEvent OnAdLoadedEvent;
-    private UnityEvent OnAdFailedToLoadEvent;
-    private UnityEvent OnAdOpeningEvent;
-    private UnityEvent OnAdFailedToShowEvent;
-    private UnityEvent OnAdClosedEvent;
-
     public int CoinsToReward { get => coinsToReward; set => coinsToReward = value; }
 
     public bool IsRewardedAdAvailable()
@@ -75,7 +69,6 @@ public class AdsManager : MonoBehaviour , IUnityAdsInitializationListener , IUni
 
     void Initialize()
     {
-
         MobileAds.SetiOSAppPauseOnBackground(true);
 
         List<String> deviceIds = new List<String>() { AdRequest.TestDeviceSimulator };
@@ -97,17 +90,15 @@ public class AdsManager : MonoBehaviour , IUnityAdsInitializationListener , IUni
         // Initialize the Google Mobile Ads SDK.
         MobileAds.Initialize(Admob_HandleInitCompleteAction);
 
-
         //Untiy Ads
-        Advertisement.Initialize(Constants.unityId_Appkey, false,this);
+        Advertisement.Initialize(Constants.unityId_Appkey, false, this);
     }
 
 
     public void Log(string _str)
     {
-
         //Toolbox.GameManager.Log("Ads=" + _str);
-        Debug.Log("Ads=" + _str);
+        Debug.Log(">> >> >> Ads=" + _str);
 
         if (testTxt)
         {
@@ -133,32 +124,32 @@ public class AdsManager : MonoBehaviour , IUnityAdsInitializationListener , IUni
 
         ShowAd(AdType.REWARDED);
     }
+
     public void RequestAd(AdType _type)
     {
-
-
-
-        Log("Request Ad. Type = " + _type);
+        Log("RequestAdFunc = Type = " + _type);
 
         switch (_type)
         {
             case AdType.BANNER:
 
-                if (!Toolbox.DB.prefs.NoAdsPurchased)
-                {
-                    Admob_RequestBannerAd();
-                }
+
+                if (Toolbox.DB.prefs.NoAdsPurchased)
+                    return;
+
+                Admob_RequestBannerAd();
 
                 break;
 
             case AdType.INTERSTITIAL:
 
-                if (!Toolbox.DB.prefs.NoAdsPurchased)
-                {
-                    Log("Requesting Interstitial");
-                    Admob_RequestAndLoadInterstitialAd();
-                    Unity_LoadIAd();
-                }
+
+                if (Toolbox.DB.prefs.NoAdsPurchased)
+                    return;
+
+                Log("Requesting Interstitial");
+                Admob_RequestAndLoadInterstitialAd();
+                Unity_LoadIAd();
 
                 break;
 
@@ -175,8 +166,7 @@ public class AdsManager : MonoBehaviour , IUnityAdsInitializationListener , IUni
 
     public void ShowAd(AdType _type)
     {
-
-
+        Log("ShowAdFunc = Type = " + _type);
 
         if (!admob_isInitialized /*|| !Toolbox.GameManager.IsNetworkAvailable()*/)
         {
@@ -191,22 +181,19 @@ public class AdsManager : MonoBehaviour , IUnityAdsInitializationListener , IUni
         {
 
             case AdType.BANNER:
-                //if(admob_bannerView != null)
-                //{
-                //    RequestAd(AdType.BANNER);
-                //}
-                //else
-                //{
-                //    
-                //}
+
+                if (Toolbox.DB.prefs.NoAdsPurchased)
+                    return;
+
                 admob_bannerView.Show();
 
                 break;
 
             case AdType.INTERSTITIAL:
 
-                //if (Toolbox.DB.prefs.NoAdsPurchased)
-                //    return;
+                if (Toolbox.DB.prefs.NoAdsPurchased)
+                    return;
+
                 #region Acctual Showing the IAD
 
                 if (admob_interstitialAd.IsLoaded())
@@ -275,8 +262,10 @@ public class AdsManager : MonoBehaviour , IUnityAdsInitializationListener , IUni
         MobileAdsEventExecutor.ExecuteInUpdate(() =>
         {
             Log("Initialization complete");
+
             admob_isInitialized = true;
-            Admob_RequestBannerAd();
+
+            //Admob_RequestBannerAd();
             Admob_RequestAndLoadInterstitialAd();
             Admob_RequestAndLoadRewardedAd();
         });
@@ -304,7 +293,7 @@ public class AdsManager : MonoBehaviour , IUnityAdsInitializationListener , IUni
             return;
         }
 
-        Log("Requesting Banner Ad.");
+        Log("Admob Requesting Banner Ad.");
 
 
         if (admob_bannerView != null)
@@ -348,7 +337,7 @@ public class AdsManager : MonoBehaviour , IUnityAdsInitializationListener , IUni
         if (admob_interstitialAd != null && admob_interstitialAd.IsLoaded())
             return;
 
-        Log("Requesting Interstitial Ad.");
+        Log("Admob Requesting Interstitial Ad.");
 
         // Clean up interstitial before using it
         if (admob_interstitialAd != null)
@@ -358,27 +347,27 @@ public class AdsManager : MonoBehaviour , IUnityAdsInitializationListener , IUni
         admob_interstitialAd = new InterstitialAd(Constants.admobId_Interstitial);
         admob_interstitialAd.OnAdLoaded += (sender, args) =>
         {
-            Log("Interstitial ad loaded.");
+            Log("Admob Interstitial ad loaded.");
         };
         admob_interstitialAd.OnAdFailedToLoad += (sender, args) =>
         {
-            Log("Interstitial ad failed to load with error: " + args.LoadAdError.GetMessage());
+            Log("Admob Interstitial ad failed to load with error: " + args.LoadAdError.GetMessage());
         };
         admob_interstitialAd.OnAdOpening += (sender, args) =>
         {
-            Log("Interstitial ad opening.");
+            Log("Admob Interstitial ad opening.");
         };
         admob_interstitialAd.OnAdClosed += (sender, args) =>
         {
-            Log("Interstitial ad closed.");
+            Log("Admob Interstitial ad closed.");
         };
         admob_interstitialAd.OnAdDidRecordImpression += (sender, args) =>
         {
-            Log("Interstitial ad recorded an impression.");
+            Log("Admob Interstitial ad recorded an impression.");
         };
         admob_interstitialAd.OnAdFailedToShow += (sender, args) =>
         {
-            Log("Interstitial ad failed to show.");
+            Log("Admob Interstitial ad failed to show.");
         };
         admob_interstitialAd.OnPaidEvent += (sender, args) =>
         {
@@ -396,7 +385,7 @@ public class AdsManager : MonoBehaviour , IUnityAdsInitializationListener , IUni
     {
         if (!admob_isInitialized)
         {
-            Log("Not Initialized");
+            Log("Admob Not Initialized");
             return;
         }
 
@@ -406,7 +395,7 @@ public class AdsManager : MonoBehaviour , IUnityAdsInitializationListener , IUni
         }
         else
         {
-            Log("Interstitial ad is not ready yet");
+            Log("Admob Interstitial ad is not ready yet");
         }
     }
 
@@ -445,9 +434,13 @@ public class AdsManager : MonoBehaviour , IUnityAdsInitializationListener , IUni
         //admob_rewardedAd.OnAdOpening += (sender, args) => OnAdOpeningEvent.Invoke();
         //admob_rewardedAd.OnAdFailedToShow += (sender, args) => OnAdFailedToShowEvent.Invoke();
         //admob_rewardedAd.OnAdClosed += (sender, args) => OnAdClosedEvent.Invoke();
-        admob_rewardedAd.OnUserEarnedReward += (sender, args) => RewardPlayer();
 
-        // Create empty ad request
+        admob_interstitialAd.OnAdFailedToLoad += (sender, args) =>
+        {
+            Log("Admob RAD ad failed to load with error: " + args.LoadAdError.GetMessage());
+        };
+
+        admob_rewardedAd.OnUserEarnedReward += (sender, args) => RewardPlayer();
         admob_rewardedAd.LoadAd(Admob_CreateAdRequest());
     }
 
@@ -504,7 +497,7 @@ public class AdsManager : MonoBehaviour , IUnityAdsInitializationListener , IUni
         if (!unity_isInitialized)
             return;
 
-        Debug.Log("Showing Ad: UNITY IAd");
+        Log("Showing Ad: UNITY IAd");
         Advertisement.Show(Constants.unityId_IADkey,this);
     }
 
@@ -522,7 +515,7 @@ public class AdsManager : MonoBehaviour , IUnityAdsInitializationListener , IUni
         if (!unity_isInitialized)
             return;
 
-        Debug.Log("Showing Ad: UNITY RAd");
+        Log("Showing Ad: UNITY RAd");
         Advertisement.Show(Constants.unityId_RADkey,this);
     }
 
@@ -530,16 +523,14 @@ public class AdsManager : MonoBehaviour , IUnityAdsInitializationListener , IUni
     {
         if (adUnitId.Equals(Constants.unityId_RADkey) && showCompletionState.Equals(UnityAdsShowCompletionState.COMPLETED))
         {
-            Debug.Log("Unity Ads Rewarded Ad Completed");
+            Log("Unity Ads Rewarded Ad Completed");
             RewardPlayer();
-
-            Unity_LoadRAd();
         }
     }
 
     public void OnUnityAdsShowFailure(string adUnitId, UnityAdsShowError error, string message)
     {
-        Debug.Log($"Error showing Ad Unit {adUnitId}: {error.ToString()} - {message}");
+        Log($"Error showing Ad Unit {adUnitId}: {error.ToString()} - {message}");
         throw new NotImplementedException();
     }
 
@@ -548,22 +539,12 @@ public class AdsManager : MonoBehaviour , IUnityAdsInitializationListener , IUni
 
     public void OnUnityAdsAdLoaded(string _adUnitId)
     {
-        Debug.Log("Ad Loaded: " + _adUnitId);
-
-        if (_adUnitId.Equals(Constants.unityId_RADkey))
-        {
-            // Configure the button to call the ShowAd() method when clicked:
-            //  _showAdButton.onClick.AddListener(ShowAd);
-            // Enable the button for users to click:
-            // _showAdButton.interactable = true;
-        }
+        Log("Ad Loaded: " + _adUnitId);
     }
 
     public void OnUnityAdsFailedToLoad(string adUnitId, UnityAdsLoadError error, string message)
     {
-        Debug.Log($"Error loading Ad Unit: {adUnitId} - {error.ToString()} - {message}");
-
-        
+        Log($"Error loading Ad Unit: {adUnitId} - {error.ToString()} - {message}");
     }
 
 

@@ -49,6 +49,7 @@ public class LevelFailListner : MonoBehaviour {
 	public void Press_Home()
 	{
 		Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.buttonPressYes);
+		AdsManager.instance.ShowAd(AdsManager.AdType.INTERSTITIAL); 
 		Toolbox.GameManager.LoadScene(Constants.sceneIndex_Menu, true, 0);
 
 		Destroy(this.gameObject);
@@ -59,6 +60,7 @@ public class LevelFailListner : MonoBehaviour {
 			Toolbox.DB.prefs.LastSelectedLevel++;
 
 		Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.buttonPressYes);
+		AdsManager.instance.ShowAd(AdsManager.AdType.INTERSTITIAL); 
 		Toolbox.GameManager.LoadScene(Toolbox.GameManager.GetCurrentLevelGameScene(), true, 0);
 		//AdsManager.instance.ShowAd(AdsManager.AdType.INTERSTITIAL);
 
