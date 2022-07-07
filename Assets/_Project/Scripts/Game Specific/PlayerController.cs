@@ -204,6 +204,12 @@ public class PlayerController : MonoBehaviour
             case "Lift":
                 this.transform.parent = other.transform;
                 break;
+            case "Coin":
+
+                Toolbox.DB.prefs.GoldCoins = Toolbox.DB.prefs.GoldCoins + 1;
+                other.gameObject.SetActive(false);
+
+                break;
 
             default:
                 break;
@@ -225,6 +231,8 @@ public class PlayerController : MonoBehaviour
                 this.transform.parent = playerParent;
 
                 break;
+
+            
 
             default:
                 break;

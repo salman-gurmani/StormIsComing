@@ -64,15 +64,31 @@ public class HUDListner : MonoBehaviour {
             //Debug.LogError("roundedSec = " + roundedSec);
 
             if (reportTime <= 0) {
-
-                Toolbox.GameManager.InstantiatePopup_MessageBar("Disaster is coming in " + roundedSec + " seconds.");
-                reportTime = 25;
+                if (Toolbox.DB.prefs.LastSelectedLevel == 10 || Toolbox.DB.prefs.LastSelectedLevel == 11 || Toolbox.DB.prefs.LastSelectedLevel == 12)
+                {
+                    reportTime = 25;
+                }
+                else
+                {
+                    Toolbox.GameManager.InstantiatePopup_MessageBar("Disaster is coming in " + roundedSec + " seconds.");
+                    reportTime = 25;
+                }
+                    
             }
 
             if (tempTime <= 0)
             {
                 startTime = false;
-                Toolbox.GameplayScript.OnStormHandling();
+                if (Toolbox.DB.prefs.LastSelectedLevel == 10 || Toolbox.DB.prefs.LastSelectedLevel == 11 || Toolbox.DB.prefs.LastSelectedLevel == 12)
+                {
+                    Toolbox.GameManager.Instantiate_LevelComplete(0);
+                }
+                
+                else
+                {
+                    Toolbox.GameplayScript.OnStormHandling();
+                }
+                
             }
         }
     }
