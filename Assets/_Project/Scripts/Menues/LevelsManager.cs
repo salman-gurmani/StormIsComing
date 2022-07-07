@@ -24,7 +24,9 @@ public class LevelsManager : MonoBehaviour
     public void StartLevelHandling() {
         if (Toolbox.DB.prefs.LastSelectedLevel > 9)
         {
-            Toolbox.DB.prefs.LastSelectedLevel = 9;
+            //Arooj
+           // Toolbox.DB.prefs.LastSelectedLevel = 9;
+
 
         }
 
