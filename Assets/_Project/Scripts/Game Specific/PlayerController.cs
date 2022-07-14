@@ -211,7 +211,8 @@ public class PlayerController : MonoBehaviour
                 break;
             case "Chest":
                 Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.chestSound);
-                Toolbox.DB.prefs.GoldCoins = Toolbox.DB.prefs.GoldCoins + 1;
+                Toolbox.DB.prefs.GoldCoins = Toolbox.DB.prefs.GoldCoins + 5;
+                Toolbox.GameManager.Instantiate_RewardAnim();
                 other.gameObject.SetActive(false);
                 break;
 
