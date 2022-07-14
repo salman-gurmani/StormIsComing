@@ -205,10 +205,15 @@ public class PlayerController : MonoBehaviour
                 this.transform.parent = other.transform;
                 break;
             case "Coin":
-
+                Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.coinsSound);
                 Toolbox.DB.prefs.GoldCoins = Toolbox.DB.prefs.GoldCoins + 1;
                 other.gameObject.SetActive(false);
-                break; 
+                break;
+            case "Chest":
+                Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.chestSound);
+                Toolbox.DB.prefs.GoldCoins = Toolbox.DB.prefs.GoldCoins + 1;
+                other.gameObject.SetActive(false);
+                break;
 
             default:
                 break;

@@ -32,6 +32,8 @@ public class SoundManager : MonoBehaviour {
 	public AudioClip fail;
 	public AudioClip complete;
 	public AudioClip Loading;
+	public AudioClip coinsSound;
+	public AudioClip chestSound;
 	//public AudioClip [] Female;
  //   public AudioClip[] Male;
 	//public AudioClip [] Male_Shouting;
