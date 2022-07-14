@@ -95,6 +95,7 @@ public class HUDListner : MonoBehaviour {
 
     public void EnableResource(int _index) {
 
+        
         Transform resource = resourcesParent.GetChild(_index).transform;
         resource.gameObject.SetActive(true);
         UpdateResourceTxt(_index);

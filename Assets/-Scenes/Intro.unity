@@ -567,11 +567,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 11433454, guid: ce968ffb37fd3924b9688c04e192b1ac, type: 3}
       propertyPath: prefs.resourceAmount.Array.size
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 11433454, guid: ce968ffb37fd3924b9688c04e192b1ac, type: 3}
       propertyPath: prefs.charactersUnlocked.Array.size
-      value: 9
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 11433454, guid: ce968ffb37fd3924b9688c04e192b1ac, type: 3}
       propertyPath: prefs.charactersUnlocked.Array.data[0]
@@ -610,6 +610,10 @@ PrefabInstance:
       value: Steel Rod
       objectReference: {fileID: 0}
     - target: {fileID: 11433454, guid: ce968ffb37fd3924b9688c04e192b1ac, type: 3}
+      propertyPath: prefs.resourceAmount.Array.data[8].name
+      value: Coins Box
+      objectReference: {fileID: 0}
+    - target: {fileID: 11433454, guid: ce968ffb37fd3924b9688c04e192b1ac, type: 3}
       propertyPath: prefs.resourceAmount.Array.data[0].value
       value: 100
       objectReference: {fileID: 0}
@@ -636,6 +640,10 @@ PrefabInstance:
     - target: {fileID: 11433454, guid: ce968ffb37fd3924b9688c04e192b1ac, type: 3}
       propertyPath: prefs.resourceAmount.Array.data[7].value
       value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 11433454, guid: ce968ffb37fd3924b9688c04e192b1ac, type: 3}
+      propertyPath: prefs.resourceAmount.Array.data[8].value
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 11484784, guid: ce968ffb37fd3924b9688c04e192b1ac, type: 3}
       propertyPath: back
