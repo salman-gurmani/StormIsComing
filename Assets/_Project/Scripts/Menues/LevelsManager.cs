@@ -19,6 +19,7 @@ public class LevelsManager : MonoBehaviour
     {
         //if (testMode)
             StartLevelHandling();
+        
     }
 
     public void StartLevelHandling() {
@@ -51,6 +52,7 @@ public class LevelsManager : MonoBehaviour
 
     private void InstantiateLevel()
     {
+        Time.timeScale = 1f;
         string path = Constants.PrefabFolderPath + Constants.LevelsFolderPath + Toolbox.DB.prefs.LastSelectedMode.ToString() + "/" + Toolbox.DB.prefs.LastSelectedLevel.ToString();
         Toolbox.GameManager.Log("Lvl path = " + path);
 
