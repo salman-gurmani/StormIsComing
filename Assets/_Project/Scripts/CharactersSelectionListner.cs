@@ -70,6 +70,34 @@ public class CharactersSelectionListner : MonoBehaviour
         {
             Purchased[7].SetActive(true);
             skinsBuyBtn[7].interactable = false;
+        } 
+        
+        if (Toolbox.DB.prefs.CharactersUnlocked[8] == true)
+        {
+            Purchased[8].SetActive(true);
+            skinsBuyBtn[8].interactable = false;
+        } 
+        
+        if (Toolbox.DB.prefs.CharactersUnlocked[9] == true)
+        {
+            Purchased[9].SetActive(true);
+            skinsBuyBtn[9].interactable = false;
+        } 
+        
+        if (Toolbox.DB.prefs.CharactersUnlocked[10] == true)
+        {
+            Purchased[10].SetActive(true);
+            skinsBuyBtn[10].interactable = false;
+        }
+        if (Toolbox.DB.prefs.CharactersUnlocked[11] == true)
+        {
+            Purchased[11].SetActive(true);
+            skinsBuyBtn[11].interactable = false;
+        }
+        if (Toolbox.DB.prefs.CharactersUnlocked[12] == true)
+        {
+            Purchased[12].SetActive(true);
+            skinsBuyBtn[12].interactable = false;
         }
 
     }

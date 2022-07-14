@@ -148,6 +148,7 @@ public class SkinsSelectionListner : MonoBehaviour
     //}
     public void characterHandler(int _value)
     {
+       
         if (int.Parse(btnText[_value].text) <= Toolbox.DB.prefs.GoldCoins)
         {
             Toolbox.GameplayScript.DeductGoldCoins(int.Parse(btnText[_value].text));
@@ -155,6 +156,7 @@ public class SkinsSelectionListner : MonoBehaviour
            // Toolbox.DB.prefs.GoldCoins =  int.Parse(btnText[_value].text) - Toolbox.DB.prefs.GoldCoins;
             shopTxt.text = Toolbox.DB.prefs.GoldCoins.ToString();
             //shopTxt.text -= buttonTxt.text;
+            
             Toolbox.DB.prefs.CharactersUnlocked[_value] = true;
             Purchased[_value].SetActive(true);
             prices[_value].SetActive(false);
@@ -306,6 +308,7 @@ public class SkinsSelectionListner : MonoBehaviour
 
     public void OnPressApply(int _value)
     {
+        Debug.Log(_value);
         Toolbox.DB.prefs.LastSelectedPlayerObj = _value;
         Toolbox.GameplayScript.player.GetComponent<PlayerController>().EnableCharacter(_value);
     }
