@@ -208,8 +208,7 @@ public class PlayerController : MonoBehaviour
 
                 Toolbox.DB.prefs.GoldCoins = Toolbox.DB.prefs.GoldCoins + 1;
                 other.gameObject.SetActive(false);
-
-                break;
+                break; 
 
             default:
                 break;
