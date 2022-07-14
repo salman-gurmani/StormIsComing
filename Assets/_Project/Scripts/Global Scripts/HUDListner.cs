@@ -7,6 +7,7 @@ public class HUDListner : MonoBehaviour {
     public Text timeTxt;
 
     public GameObject uiParent;
+    public GameObject Bar;
     public RectTransform resourcesParent;
     private int resourceIndex = 0;
     public Image progressbar;
@@ -23,6 +24,10 @@ public class HUDListner : MonoBehaviour {
     void Awake() {
         
         Toolbox.Set_HudListner(this.GetComponent<HUDListner>());
+        if (Toolbox.DB.prefs.LastSelectedLevel == 2 || Toolbox.DB.prefs.LastSelectedLevel == 5 || Toolbox.DB.prefs.LastSelectedLevel == 8 || Toolbox.DB.prefs.LastSelectedLevel == 11 || Toolbox.DB.prefs.LastSelectedLevel == 14)
+        {
+            Bar.SetActive(false);
+        }
         //AdsManager.instance.RequestBannerWithSpecs( Tapdaq.TDMBannerSize.TDMBannerStandard, Tapdaq.TDBannerPosition.Top);
     }
 
@@ -64,7 +69,7 @@ public class HUDListner : MonoBehaviour {
             //Debug.LogError("roundedSec = " + roundedSec);
 
             if (reportTime <= 0) {
-                if (Toolbox.DB.prefs.LastSelectedLevel == 10 || Toolbox.DB.prefs.LastSelectedLevel == 11 || Toolbox.DB.prefs.LastSelectedLevel == 12)
+                if (Toolbox.DB.prefs.LastSelectedLevel == 2 || Toolbox.DB.prefs.LastSelectedLevel == 5 || Toolbox.DB.prefs.LastSelectedLevel == 8 || Toolbox.DB.prefs.LastSelectedLevel == 11 || Toolbox.DB.prefs.LastSelectedLevel == 14)
                 {
                     reportTime = 25;
                 }
@@ -79,7 +84,7 @@ public class HUDListner : MonoBehaviour {
             if (tempTime <= 0)
             {
                 startTime = false;
-                if (Toolbox.DB.prefs.LastSelectedLevel == 10 || Toolbox.DB.prefs.LastSelectedLevel == 11 || Toolbox.DB.prefs.LastSelectedLevel == 12)
+                if (Toolbox.DB.prefs.LastSelectedLevel == 2 || Toolbox.DB.prefs.LastSelectedLevel == 5 || Toolbox.DB.prefs.LastSelectedLevel == 8 || Toolbox.DB.prefs.LastSelectedLevel == 11 || Toolbox.DB.prefs.LastSelectedLevel == 14)
                 {
                     Toolbox.GameManager.Instantiate_LevelComplete(0);
                 }
