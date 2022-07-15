@@ -208,12 +208,18 @@ public class AdsManager : MonoBehaviour , IUnityAdsInitializationListener , IUni
                 break;
 
             case AdType.REWARDED:
-
+                
                 if (admob_rewardedAd.IsLoaded())
+                {
                     Admob_ShowRewardedAd();
+                    Toolbox.DB.prefs.GoldCoins += CoinsToReward;
+                }
+                    
                 else
+                {
                     Unity_ShowRAd();
-
+                    Toolbox.DB.prefs.GoldCoins += CoinsToReward;
+                }
                 break;
         }
     }

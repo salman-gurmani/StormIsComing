@@ -23,7 +23,7 @@ public class LevelCompleteListner : MonoBehaviour {
 	public Text lifeBonusTxt;
 	public Text netWorthTxt;
 
-	int rewardAmount = 0;
+	int rewardAmount = 100;
 	//public Sprite[] vehicleImages;
 
 	private void Start()
