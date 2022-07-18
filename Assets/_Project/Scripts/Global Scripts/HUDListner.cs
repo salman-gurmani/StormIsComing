@@ -8,6 +8,7 @@ public class HUDListner : MonoBehaviour {
     public Text goldTxt;
     public GameObject uiParent;
     public GameObject Bar;
+    public GameObject CoinsCollect;
     public RectTransform resourcesParent;
     private int resourceIndex = 0;
     public Image progressbar;
@@ -32,6 +33,11 @@ public class HUDListner : MonoBehaviour {
         if (Toolbox.DB.prefs.LastSelectedLevel == 2 || Toolbox.DB.prefs.LastSelectedLevel == 5 || Toolbox.DB.prefs.LastSelectedLevel == 8 || Toolbox.DB.prefs.LastSelectedLevel == 11 || Toolbox.DB.prefs.LastSelectedLevel == 14)
         {
             Bar.SetActive(false);
+            CoinsCollect.SetActive(true);
+        }
+        else
+        {
+            CoinsCollect.SetActive(false);
         }
         //AdsManager.instance.RequestBannerWithSpecs( Tapdaq.TDMBannerSize.TDMBannerStandard, Tapdaq.TDBannerPosition.Top);
     }
