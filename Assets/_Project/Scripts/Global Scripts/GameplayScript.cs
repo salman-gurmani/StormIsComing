@@ -103,6 +103,7 @@ public class GameplayScript : MonoBehaviour {
         if (FindObjectOfType<MainMenuListner>())
         {
             FindObjectOfType<MainMenuListner>().UpdateTxt();
+            FindObjectOfType<HUDListner>().UpdateTxt();
         }
     }
 
@@ -113,6 +114,7 @@ public class GameplayScript : MonoBehaviour {
         if (FindObjectOfType<MainMenuListner>()) {
 
             FindObjectOfType<MainMenuListner>().UpdateTxt();
+            FindObjectOfType<HUDListner>().UpdateTxt();
         }
     }
 

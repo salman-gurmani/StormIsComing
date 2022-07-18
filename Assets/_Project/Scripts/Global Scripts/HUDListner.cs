@@ -5,7 +5,7 @@ using UnityEngine.UI;
 public class HUDListner : MonoBehaviour {
 
     public Text timeTxt;
-
+    public Text goldTxt;
     public GameObject uiParent;
     public GameObject Bar;
     public RectTransform resourcesParent;
@@ -20,6 +20,11 @@ public class HUDListner : MonoBehaviour {
 
     public bool startTime { get; set; }
     public float tempTime { get; private set; }
+
+    private void OnEnable()
+    {
+        UpdateTxt(); 
+    }
 
     void Awake() {
         
@@ -39,6 +44,11 @@ public class HUDListner : MonoBehaviour {
     public void EnableHUD()
     {
         uiParent.SetActive(true);
+    }
+    public void UpdateTxt()
+    { 
+        goldTxt.text = Toolbox.DB.prefs.GoldCoins.ToString();
+
     }
 
     private void Update()

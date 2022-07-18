@@ -207,12 +207,14 @@ public class PlayerController : MonoBehaviour
             case "Coin":
                 Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.coinsSound);
                 Toolbox.DB.prefs.GoldCoins = Toolbox.DB.prefs.GoldCoins + 1;
+                FindObjectOfType<HUDListner>().UpdateTxt();
                 other.gameObject.SetActive(false);
                 break;
             case "Chest":
                 Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.chestSound);
-                Toolbox.DB.prefs.GoldCoins = Toolbox.DB.prefs.GoldCoins + 5;
+                Toolbox.DB.prefs.GoldCoins = Toolbox.DB.prefs.GoldCoins + 10;
                 Toolbox.GameManager.Instantiate_RewardAnim();
+                FindObjectOfType<HUDListner>().UpdateTxt();
                 other.gameObject.SetActive(false);
                 break;
 
