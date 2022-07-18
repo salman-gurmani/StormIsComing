@@ -9,7 +9,10 @@ public enum ResourceType
     CEMENT_BLOCK,
     CEMENT_SACK,
     IRON_BLOCK,
-    STEEL_ROD
+    STEEL_ROD,
+    COINS_BOX  //Arooj
+
+        
 }
 public enum ResourceStructure
 {
