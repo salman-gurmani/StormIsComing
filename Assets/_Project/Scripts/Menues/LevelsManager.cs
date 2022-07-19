@@ -57,7 +57,7 @@ public class LevelsManager : MonoBehaviour
         Toolbox.GameManager.Log("Lvl path = " + path);
 
         GameObject obj = (GameObject)Instantiate(Resources.Load(path), this.transform);
-        
+
         curLevelHandler = obj.GetComponent<LevelHandler>();
 
     }
