@@ -308,6 +308,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.42, y: 2.46, z: 1}
   m_Center: {x: -1.21, y: 0.7839432, z: 0}
+--- !u!114 &683952870365255098
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7119926684129913190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 492392c310a924d4291d26c3c333296b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  markerSprite: {fileID: 21300000, guid: c221874c423ae084dae24b1dccf4915c, type: 3}
+  markerSize: 15
+  isActive: 1
 --- !u!1001 &877306959
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -437,15 +452,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 521a74a6a29e7a9498aa209e87531e91, type: 3}
---- !u!4 &7603447485740429856 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7603447485938243183, guid: 521a74a6a29e7a9498aa209e87531e91,
-    type: 3}
-  m_PrefabInstance: {fileID: 877306959}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &7119926683776673946 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7119926684511358165, guid: 521a74a6a29e7a9498aa209e87531e91,
+    type: 3}
+  m_PrefabInstance: {fileID: 877306959}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7603447485740429856 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7603447485938243183, guid: 521a74a6a29e7a9498aa209e87531e91,
     type: 3}
   m_PrefabInstance: {fileID: 877306959}
   m_PrefabAsset: {fileID: 0}
@@ -462,6 +477,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.42, y: 2.46, z: 1}
   m_Center: {x: -1.21, y: 0.7839432, z: 0}
+--- !u!114 &8998855737209112274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7119926683776673946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 492392c310a924d4291d26c3c333296b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  markerSprite: {fileID: 21300000, guid: c221874c423ae084dae24b1dccf4915c, type: 3}
+  markerSize: 15
+  isActive: 1
 --- !u!1001 &1003102545
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -616,6 +646,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.42, y: 2.46, z: 1}
   m_Center: {x: -1.21, y: 0.7839432, z: 0}
+--- !u!114 &1867578804332663555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7119926683600547204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 492392c310a924d4291d26c3c333296b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  markerSprite: {fileID: 21300000, guid: c221874c423ae084dae24b1dccf4915c, type: 3}
+  markerSize: 15
+  isActive: 1
 --- !u!1001 &1330298261
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -770,6 +815,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.42, y: 2.46, z: 1}
   m_Center: {x: -1.21, y: 0.7839432, z: 0}
+--- !u!114 &3510752319500836971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7119926685538283840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 492392c310a924d4291d26c3c333296b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  markerSprite: {fileID: 21300000, guid: c221874c423ae084dae24b1dccf4915c, type: 3}
+  markerSize: 15
+  isActive: 1
 --- !u!1001 &1364367257
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -899,15 +959,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 521a74a6a29e7a9498aa209e87531e91, type: 3}
---- !u!4 &7603447487268717046 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7603447485938243183, guid: 521a74a6a29e7a9498aa209e87531e91,
-    type: 3}
-  m_PrefabInstance: {fileID: 1364367257}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &7119926685302872908 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7119926684511358165, guid: 521a74a6a29e7a9498aa209e87531e91,
+    type: 3}
+  m_PrefabInstance: {fileID: 1364367257}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7603447487268717046 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7603447485938243183, guid: 521a74a6a29e7a9498aa209e87531e91,
     type: 3}
   m_PrefabInstance: {fileID: 1364367257}
   m_PrefabAsset: {fileID: 0}
@@ -924,6 +984,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.42, y: 2.46, z: 1}
   m_Center: {x: -1.21, y: 0.7839432, z: 0}
+--- !u!114 &2069016571342641786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7119926685302872908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 492392c310a924d4291d26c3c333296b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  markerSprite: {fileID: 21300000, guid: c221874c423ae084dae24b1dccf4915c, type: 3}
+  markerSize: 15
+  isActive: 1
 --- !u!1001 &1592818545
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1053,15 +1128,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 521a74a6a29e7a9498aa209e87531e91, type: 3}
---- !u!4 &7603447487442971934 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7603447485938243183, guid: 521a74a6a29e7a9498aa209e87531e91,
-    type: 3}
-  m_PrefabInstance: {fileID: 1592818545}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &7119926685296736164 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7119926684511358165, guid: 521a74a6a29e7a9498aa209e87531e91,
+    type: 3}
+  m_PrefabInstance: {fileID: 1592818545}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7603447487442971934 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7603447485938243183, guid: 521a74a6a29e7a9498aa209e87531e91,
     type: 3}
   m_PrefabInstance: {fileID: 1592818545}
   m_PrefabAsset: {fileID: 0}
@@ -1078,6 +1153,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.42, y: 2.46, z: 1}
   m_Center: {x: -1.21, y: 0.7839432, z: 0}
+--- !u!114 &2847891969357360067
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7119926685296736164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 492392c310a924d4291d26c3c333296b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  markerSprite: {fileID: 21300000, guid: c221874c423ae084dae24b1dccf4915c, type: 3}
+  markerSize: 15
+  isActive: 1
 --- !u!1001 &1747034618
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1207,15 +1297,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 521a74a6a29e7a9498aa209e87531e91, type: 3}
---- !u!4 &7603447486607144853 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7603447485938243183, guid: 521a74a6a29e7a9498aa209e87531e91,
-    type: 3}
-  m_PrefabInstance: {fileID: 1747034618}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &7119926684916018479 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7119926684511358165, guid: 521a74a6a29e7a9498aa209e87531e91,
+    type: 3}
+  m_PrefabInstance: {fileID: 1747034618}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7603447486607144853 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7603447485938243183, guid: 521a74a6a29e7a9498aa209e87531e91,
     type: 3}
   m_PrefabInstance: {fileID: 1747034618}
   m_PrefabAsset: {fileID: 0}
@@ -1232,6 +1322,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.42, y: 2.46, z: 1}
   m_Center: {x: -1.21, y: 0.7839432, z: 0}
+--- !u!114 &5128114072340426617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7119926684916018479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 492392c310a924d4291d26c3c333296b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  markerSprite: {fileID: 21300000, guid: c221874c423ae084dae24b1dccf4915c, type: 3}
+  markerSize: 15
+  isActive: 1
 --- !u!1001 &1775731667
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1361,15 +1466,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 521a74a6a29e7a9498aa209e87531e91, type: 3}
---- !u!4 &7603447486588917180 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7603447485938243183, guid: 521a74a6a29e7a9498aa209e87531e91,
-    type: 3}
-  m_PrefabInstance: {fileID: 1775731667}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &7119926684908277510 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7119926684511358165, guid: 521a74a6a29e7a9498aa209e87531e91,
+    type: 3}
+  m_PrefabInstance: {fileID: 1775731667}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7603447486588917180 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7603447485938243183, guid: 521a74a6a29e7a9498aa209e87531e91,
     type: 3}
   m_PrefabInstance: {fileID: 1775731667}
   m_PrefabAsset: {fileID: 0}
@@ -1386,6 +1491,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.42, y: 2.46, z: 1}
   m_Center: {x: -1.21, y: 0.7839432, z: 0}
+--- !u!114 &1867406885582553190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7119926684908277510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 492392c310a924d4291d26c3c333296b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  markerSprite: {fileID: 21300000, guid: c221874c423ae084dae24b1dccf4915c, type: 3}
+  markerSize: 15
+  isActive: 1
 --- !u!1001 &434503407249117837
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1515,15 +1635,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 521a74a6a29e7a9498aa209e87531e91, type: 3}
---- !u!1 &7262235901296123480 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7119926684511358165, guid: 521a74a6a29e7a9498aa209e87531e91,
-    type: 3}
-  m_PrefabInstance: {fileID: 434503407249117837}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8035395627005789410 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7603447485938243183, guid: 521a74a6a29e7a9498aa209e87531e91,
+    type: 3}
+  m_PrefabInstance: {fileID: 434503407249117837}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &7262235901296123480 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7119926684511358165, guid: 521a74a6a29e7a9498aa209e87531e91,
     type: 3}
   m_PrefabInstance: {fileID: 434503407249117837}
   m_PrefabAsset: {fileID: 0}
@@ -1540,6 +1660,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.42, y: 2.46, z: 1}
   m_Center: {x: -1.21, y: 0.7839432, z: 0}
+--- !u!114 &841922569811099789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7262235901296123480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 492392c310a924d4291d26c3c333296b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  markerSprite: {fileID: 21300000, guid: c221874c423ae084dae24b1dccf4915c, type: 3}
+  markerSize: 15
+  isActive: 1
 --- !u!1001 &457477676684110961
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1694,6 +1829,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.42, y: 2.46, z: 1}
   m_Center: {x: -1.21, y: 0.7839432, z: 0}
+--- !u!114 &6933273413424510476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7248057742050631844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 492392c310a924d4291d26c3c333296b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  markerSprite: {fileID: 21300000, guid: c221874c423ae084dae24b1dccf4915c, type: 3}
+  markerSize: 15
+  isActive: 1
 --- !u!1001 &1009310830409496863
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1823,15 +1973,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 521a74a6a29e7a9498aa209e87531e91, type: 3}
---- !u!4 &7459392471520030576 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7603447485938243183, guid: 521a74a6a29e7a9498aa209e87531e91,
-    type: 3}
-  m_PrefabInstance: {fileID: 1009310830409496863}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &7840420892644275658 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7119926684511358165, guid: 521a74a6a29e7a9498aa209e87531e91,
+    type: 3}
+  m_PrefabInstance: {fileID: 1009310830409496863}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7459392471520030576 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7603447485938243183, guid: 521a74a6a29e7a9498aa209e87531e91,
     type: 3}
   m_PrefabInstance: {fileID: 1009310830409496863}
   m_PrefabAsset: {fileID: 0}
@@ -1848,6 +1998,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.42, y: 2.46, z: 1}
   m_Center: {x: -1.21, y: 0.7839432, z: 0}
+--- !u!114 &1598464347396338805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7840420892644275658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 492392c310a924d4291d26c3c333296b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  markerSprite: {fileID: 21300000, guid: c221874c423ae084dae24b1dccf4915c, type: 3}
+  markerSize: 15
+  isActive: 1
 --- !u!1001 &1355537707826150667
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1965,6 +2130,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &5799678952990347973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1354558589932827495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 492392c310a924d4291d26c3c333296b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  markerSprite: {fileID: 21300000, guid: ee8739f042e99cf4598897d7c9f2ac78, type: 3}
+  markerSize: 15
+  isActive: 1
 --- !u!1001 &2019635393090118406
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2094,15 +2274,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 521a74a6a29e7a9498aa209e87531e91, type: 3}
---- !u!1 &9135587201330884563 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7119926684511358165, guid: 521a74a6a29e7a9498aa209e87531e91,
-    type: 3}
-  m_PrefabInstance: {fileID: 2019635393090118406}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &8467876176921032041 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7603447485938243183, guid: 521a74a6a29e7a9498aa209e87531e91,
+    type: 3}
+  m_PrefabInstance: {fileID: 2019635393090118406}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &9135587201330884563 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7119926684511358165, guid: 521a74a6a29e7a9498aa209e87531e91,
     type: 3}
   m_PrefabInstance: {fileID: 2019635393090118406}
   m_PrefabAsset: {fileID: 0}
@@ -2119,6 +2299,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.42, y: 2.46, z: 1}
   m_Center: {x: -1.21, y: 0.7839432, z: 0}
+--- !u!114 &2759113346915923893
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9135587201330884563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 492392c310a924d4291d26c3c333296b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  markerSprite: {fileID: 21300000, guid: c221874c423ae084dae24b1dccf4915c, type: 3}
+  markerSize: 15
+  isActive: 1
 --- !u!1001 &2615757613744775063
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2266,6 +2461,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &4103571588598769663
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2616173781806109179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 492392c310a924d4291d26c3c333296b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  markerSprite: {fileID: 21300000, guid: ee8739f042e99cf4598897d7c9f2ac78, type: 3}
+  markerSize: 15
+  isActive: 1
 --- !u!1001 &3072867374840524703
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2339,15 +2549,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ffd3e66d4df2a554fb995d41f7ffe4c2, type: 3}
---- !u!4 &3074605477587965011 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4000010070424524, guid: ffd3e66d4df2a554fb995d41f7ffe4c2,
-    type: 3}
-  m_PrefabInstance: {fileID: 3072867374840524703}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &3073294539981070835 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1000011713842796, guid: ffd3e66d4df2a554fb995d41f7ffe4c2,
+    type: 3}
+  m_PrefabInstance: {fileID: 3072867374840524703}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &3074605477587965011 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4000010070424524, guid: ffd3e66d4df2a554fb995d41f7ffe4c2,
     type: 3}
   m_PrefabInstance: {fileID: 3072867374840524703}
   m_PrefabAsset: {fileID: 0}
@@ -2383,6 +2593,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1662234974415115895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3073294539981070835}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 492392c310a924d4291d26c3c333296b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  markerSprite: {fileID: 21300000, guid: ee8739f042e99cf4598897d7c9f2ac78, type: 3}
+  markerSize: 15
+  isActive: 1
 --- !u!1001 &3216961760395019224
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2500,6 +2725,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &258750354348365558
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3217676987579878836}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 492392c310a924d4291d26c3c333296b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  markerSprite: {fileID: 21300000, guid: ee8739f042e99cf4598897d7c9f2ac78, type: 3}
+  markerSize: 15
+  isActive: 1
 --- !u!1001 &3757614240189429556
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2629,15 +2869,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 521a74a6a29e7a9498aa209e87531e91, type: 3}
---- !u!1 &6263017959005846497 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7119926684511358165, guid: 521a74a6a29e7a9498aa209e87531e91,
-    type: 3}
-  m_PrefabInstance: {fileID: 3757614240189429556}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6746784810517078363 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7603447485938243183, guid: 521a74a6a29e7a9498aa209e87531e91,
+    type: 3}
+  m_PrefabInstance: {fileID: 3757614240189429556}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6263017959005846497 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7119926684511358165, guid: 521a74a6a29e7a9498aa209e87531e91,
     type: 3}
   m_PrefabInstance: {fileID: 3757614240189429556}
   m_PrefabAsset: {fileID: 0}
@@ -2654,6 +2894,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.42, y: 2.46, z: 1}
   m_Center: {x: -1.21, y: 0.7839432, z: 0}
+--- !u!114 &1716525118908977861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6263017959005846497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 492392c310a924d4291d26c3c333296b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  markerSprite: {fileID: 21300000, guid: c221874c423ae084dae24b1dccf4915c, type: 3}
+  markerSize: 15
+  isActive: 1
 --- !u!1001 &3801365346223219660
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2757,15 +3012,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ffd3e66d4df2a554fb995d41f7ffe4c2, type: 3}
---- !u!1 &3801781514507972000 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1000011713842796, guid: ffd3e66d4df2a554fb995d41f7ffe4c2,
-    type: 3}
-  m_PrefabInstance: {fileID: 3801365346223219660}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3805291377525594112 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4000010070424524, guid: ffd3e66d4df2a554fb995d41f7ffe4c2,
+    type: 3}
+  m_PrefabInstance: {fileID: 3801365346223219660}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3801781514507972000 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1000011713842796, guid: ffd3e66d4df2a554fb995d41f7ffe4c2,
     type: 3}
   m_PrefabInstance: {fileID: 3801365346223219660}
   m_PrefabAsset: {fileID: 0}
@@ -2801,6 +3056,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &6758551043377826116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3801781514507972000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 492392c310a924d4291d26c3c333296b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  markerSprite: {fileID: 21300000, guid: ee8739f042e99cf4598897d7c9f2ac78, type: 3}
+  markerSize: 15
+  isActive: 1
 --- !u!1001 &3874633133636681408
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2874,15 +3144,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ffd3e66d4df2a554fb995d41f7ffe4c2, type: 3}
---- !u!4 &3876266338314290444 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4000010070424524, guid: ffd3e66d4df2a554fb995d41f7ffe4c2,
-    type: 3}
-  m_PrefabInstance: {fileID: 3874633133636681408}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &3875061396742271148 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1000011713842796, guid: ffd3e66d4df2a554fb995d41f7ffe4c2,
+    type: 3}
+  m_PrefabInstance: {fileID: 3874633133636681408}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &3876266338314290444 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4000010070424524, guid: ffd3e66d4df2a554fb995d41f7ffe4c2,
     type: 3}
   m_PrefabInstance: {fileID: 3874633133636681408}
   m_PrefabAsset: {fileID: 0}
@@ -2918,6 +3188,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &6700003822047663700
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3875061396742271148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 492392c310a924d4291d26c3c333296b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  markerSprite: {fileID: 21300000, guid: ee8739f042e99cf4598897d7c9f2ac78, type: 3}
+  markerSize: 15
+  isActive: 1
 --- !u!1001 &4023321894247833606
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3047,15 +3332,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 521a74a6a29e7a9498aa209e87531e91, type: 3}
---- !u!1 &6132418811253386451 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7119926684511358165, guid: 521a74a6a29e7a9498aa209e87531e91,
-    type: 3}
-  m_PrefabInstance: {fileID: 4023321894247833606}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6796330712927450729 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7603447485938243183, guid: 521a74a6a29e7a9498aa209e87531e91,
+    type: 3}
+  m_PrefabInstance: {fileID: 4023321894247833606}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6132418811253386451 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7119926684511358165, guid: 521a74a6a29e7a9498aa209e87531e91,
     type: 3}
   m_PrefabInstance: {fileID: 4023321894247833606}
   m_PrefabAsset: {fileID: 0}
@@ -3072,6 +3357,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.42, y: 2.46, z: 1}
   m_Center: {x: -1.21, y: 0.7839432, z: 0}
+--- !u!114 &8986207764789827056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6132418811253386451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 492392c310a924d4291d26c3c333296b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  markerSprite: {fileID: 21300000, guid: c221874c423ae084dae24b1dccf4915c, type: 3}
+  markerSize: 15
+  isActive: 1
 --- !u!1001 &4063426586495903784
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3189,6 +3489,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &3099709433576738471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4064425489472611908}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 492392c310a924d4291d26c3c333296b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  markerSprite: {fileID: 21300000, guid: ee8739f042e99cf4598897d7c9f2ac78, type: 3}
+  markerSize: 15
+  isActive: 1
 --- !u!1001 &5937279896996659084
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3306,6 +3621,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &8745643213006793361
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5937707051591676384}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 492392c310a924d4291d26c3c333296b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  markerSprite: {fileID: 21300000, guid: ee8739f042e99cf4598897d7c9f2ac78, type: 3}
+  markerSize: 15
+  isActive: 1
 --- !u!1001 &6182096444664275214
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3379,15 +3709,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ffd3e66d4df2a554fb995d41f7ffe4c2, type: 3}
---- !u!1 &6181395508990504802 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1000011713842796, guid: ffd3e66d4df2a554fb995d41f7ffe4c2,
-    type: 3}
-  m_PrefabInstance: {fileID: 6182096444664275214}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6180348308766268098 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4000010070424524, guid: ffd3e66d4df2a554fb995d41f7ffe4c2,
+    type: 3}
+  m_PrefabInstance: {fileID: 6182096444664275214}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6181395508990504802 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1000011713842796, guid: ffd3e66d4df2a554fb995d41f7ffe4c2,
     type: 3}
   m_PrefabInstance: {fileID: 6182096444664275214}
   m_PrefabAsset: {fileID: 0}
@@ -3423,6 +3753,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &6855498858209108381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6181395508990504802}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 492392c310a924d4291d26c3c333296b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  markerSprite: {fileID: 21300000, guid: ee8739f042e99cf4598897d7c9f2ac78, type: 3}
+  markerSize: 15
+  isActive: 1
 --- !u!1001 &6439858763049888602
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3540,6 +3885,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &7516210218250765053
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6439431605776803126}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 492392c310a924d4291d26c3c333296b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  markerSprite: {fileID: 21300000, guid: ee8739f042e99cf4598897d7c9f2ac78, type: 3}
+  markerSize: 15
+  isActive: 1
 --- !u!1001 &6577280191325084922
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3643,15 +4003,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ffd3e66d4df2a554fb995d41f7ffe4c2, type: 3}
---- !u!1 &6576589151466721942 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1000011713842796, guid: ffd3e66d4df2a554fb995d41f7ffe4c2,
-    type: 3}
-  m_PrefabInstance: {fileID: 6577280191325084922}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6577793681162331958 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4000010070424524, guid: ffd3e66d4df2a554fb995d41f7ffe4c2,
+    type: 3}
+  m_PrefabInstance: {fileID: 6577280191325084922}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &6576589151466721942 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1000011713842796, guid: ffd3e66d4df2a554fb995d41f7ffe4c2,
     type: 3}
   m_PrefabInstance: {fileID: 6577280191325084922}
   m_PrefabAsset: {fileID: 0}
@@ -3687,6 +4047,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &5279801701404005389
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6576589151466721942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 492392c310a924d4291d26c3c333296b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  markerSprite: {fileID: 21300000, guid: ee8739f042e99cf4598897d7c9f2ac78, type: 3}
+  markerSize: 15
+  isActive: 1
 --- !u!1001 &7000704996761730593
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3760,15 +4135,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ffd3e66d4df2a554fb995d41f7ffe4c2, type: 3}
---- !u!4 &7001327097420482029 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4000010070424524, guid: ffd3e66d4df2a554fb995d41f7ffe4c2,
-    type: 3}
-  m_PrefabInstance: {fileID: 7000704996761730593}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &6999734681078952013 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1000011713842796, guid: ffd3e66d4df2a554fb995d41f7ffe4c2,
+    type: 3}
+  m_PrefabInstance: {fileID: 7000704996761730593}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7001327097420482029 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4000010070424524, guid: ffd3e66d4df2a554fb995d41f7ffe4c2,
     type: 3}
   m_PrefabInstance: {fileID: 7000704996761730593}
   m_PrefabAsset: {fileID: 0}
@@ -3804,6 +4179,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2122962260611982935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6999734681078952013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 492392c310a924d4291d26c3c333296b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  markerSprite: {fileID: 21300000, guid: ee8739f042e99cf4598897d7c9f2ac78, type: 3}
+  markerSize: 15
+  isActive: 1
 --- !u!1001 &7139554528580032870
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3877,15 +4267,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ffd3e66d4df2a554fb995d41f7ffe4c2, type: 3}
---- !u!4 &7141300502969655978 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 4000010070424524, guid: ffd3e66d4df2a554fb995d41f7ffe4c2,
-    type: 3}
-  m_PrefabInstance: {fileID: 7139554528580032870}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &7140253271606875914 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1000011713842796, guid: ffd3e66d4df2a554fb995d41f7ffe4c2,
+    type: 3}
+  m_PrefabInstance: {fileID: 7139554528580032870}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7141300502969655978 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4000010070424524, guid: ffd3e66d4df2a554fb995d41f7ffe4c2,
     type: 3}
   m_PrefabInstance: {fileID: 7139554528580032870}
   m_PrefabAsset: {fileID: 0}
@@ -3921,6 +4311,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &9118563705885519328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7140253271606875914}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 492392c310a924d4291d26c3c333296b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  markerSprite: {fileID: 21300000, guid: ee8739f042e99cf4598897d7c9f2ac78, type: 3}
+  markerSize: 15
+  isActive: 1
 --- !u!1001 &7908267297132683026
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4038,6 +4443,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2505026382301340926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7907268393673625982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 492392c310a924d4291d26c3c333296b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  markerSprite: {fileID: 21300000, guid: ee8739f042e99cf4598897d7c9f2ac78, type: 3}
+  markerSize: 15
+  isActive: 1
 --- !u!1001 &8296055753582467866
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4155,6 +4575,21 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1344291116956651024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8296210238569698678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 492392c310a924d4291d26c3c333296b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  markerSprite: {fileID: 21300000, guid: ee8739f042e99cf4598897d7c9f2ac78, type: 3}
+  markerSize: 15
+  isActive: 1
 --- !u!1001 &8658503085873583456
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4284,15 +4719,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 521a74a6a29e7a9498aa209e87531e91, type: 3}
---- !u!4 &1273939916357747471 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 7603447485938243183, guid: 521a74a6a29e7a9498aa209e87531e91,
-    type: 3}
-  m_PrefabInstance: {fileID: 8658503085873583456}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1938273206129498549 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7119926684511358165, guid: 521a74a6a29e7a9498aa209e87531e91,
+    type: 3}
+  m_PrefabInstance: {fileID: 8658503085873583456}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1273939916357747471 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7603447485938243183, guid: 521a74a6a29e7a9498aa209e87531e91,
     type: 3}
   m_PrefabInstance: {fileID: 8658503085873583456}
   m_PrefabAsset: {fileID: 0}
@@ -4309,3 +4744,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 2.42, y: 2.46, z: 1}
   m_Center: {x: -1.21, y: 0.7839432, z: 0}
+--- !u!114 &3792190152542738151
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1938273206129498549}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 492392c310a924d4291d26c3c333296b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  markerSprite: {fileID: 21300000, guid: c221874c423ae084dae24b1dccf4915c, type: 3}
+  markerSize: 15
+  isActive: 1

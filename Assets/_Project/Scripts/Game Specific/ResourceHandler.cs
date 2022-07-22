@@ -119,5 +119,17 @@ public class ResourceHandler : MonoBehaviour
     void UpdateModelLevel(int _val) {
 
         anim.SetInteger("State", _val);
+
+
+        if(anim.GetInteger("State")==0)
+        {
+            
+            this.gameObject.GetComponent<MapMarker>().isActive = false;
+        }
+        else if(anim.GetInteger("State")>0)
+        {
+            this.gameObject.GetComponent<MapMarker>().isActive = true;
+
+        }
     }
 }

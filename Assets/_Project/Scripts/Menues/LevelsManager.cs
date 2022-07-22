@@ -45,7 +45,17 @@ public class LevelsManager : MonoBehaviour
         SpawnPlayer();
         ExtraHandling();
 
-        Toolbox.Soundmanager.PlayBGSound(Toolbox.Soundmanager.gameBG);
+        
+        if (Toolbox.DB.prefs.LastSelectedLevel == 2 || Toolbox.DB.prefs.LastSelectedLevel == 5 || Toolbox.DB.prefs.LastSelectedLevel == 8 || Toolbox.DB.prefs.LastSelectedLevel == 11 || Toolbox.DB.prefs.LastSelectedLevel == 14)
+        {
+            Toolbox.Soundmanager.PlayBGSound(Toolbox.Soundmanager.BonusLevelMusic);
+           
+        }
+        else
+        {
+            Toolbox.Soundmanager.PlayBGSound(Toolbox.Soundmanager.gameBG);
+
+        }
         Toolbox.GameManager.Analytics_LevelStart();
 
     }

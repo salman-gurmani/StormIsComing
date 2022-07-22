@@ -12,6 +12,7 @@ public class SoundManager : MonoBehaviour {
 	[Header("BG Clips")]
 	public AudioClip menuBG;
 	public AudioClip gameBG;
+	public AudioClip BonusLevelMusic;
 	public AudioClip[] weatherBG;
 
 	[Header("Sound Clips")]
@@ -59,6 +60,12 @@ public class SoundManager : MonoBehaviour {
 	//public AudioClip[] normalmode;
 
 	void Start () {
+
+		if (Toolbox.DB.prefs.LastSelectedLevel == 2 || Toolbox.DB.prefs.LastSelectedLevel == 5 || Toolbox.DB.prefs.LastSelectedLevel == 8 || Toolbox.DB.prefs.LastSelectedLevel == 11 || Toolbox.DB.prefs.LastSelectedLevel == 14)
+		{
+			bgMusicSource.clip = BonusLevelMusic;
+			bgMusicSource.Play();
+		}
 
 		PlayBGSound(menuBG);
 	

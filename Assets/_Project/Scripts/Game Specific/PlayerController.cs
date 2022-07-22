@@ -205,17 +205,21 @@ public class PlayerController : MonoBehaviour
                 this.transform.parent = other.transform;
                 break;
             case "Coin":
+                other.gameObject.GetComponent<MapMarker>().isActive = false;
                 Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.coinsSound);
                 Toolbox.DB.prefs.GoldCoins = Toolbox.DB.prefs.GoldCoins + 1;
                 FindObjectOfType<HUDListner>().UpdateTxt();
                 other.gameObject.SetActive(false);
                 break;
             case "Chest":
+                other.gameObject.GetComponent<MapMarker>().isActive = false;
+
                 Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.chestSound);
                 Toolbox.DB.prefs.GoldCoins = Toolbox.DB.prefs.GoldCoins + 10;
                 Toolbox.GameManager.Instantiate_RewardAnim();
                 FindObjectOfType<HUDListner>().UpdateTxt();
                 other.gameObject.SetActive(false);
+
                 break;
 
             default:
