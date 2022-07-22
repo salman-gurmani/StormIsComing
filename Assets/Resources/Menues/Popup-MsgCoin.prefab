@@ -15,8 +15,9 @@ GameObject:
   - component: {fileID: 4531382801865060894}
   - component: {fileID: 4098663233098264051}
   - component: {fileID: 1034621907520214407}
+  - component: {fileID: 2697830156633338414}
   m_Layer: 5
-  m_Name: Popup-Msg
+  m_Name: Popup-MsgCoin
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34,7 +35,6 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 5368969503060660117}
-  - {fileID: 5915393699067704358}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -154,6 +154,25 @@ MonoBehaviour:
   msgTxt: {fileID: 8932264968931222535}
   unlockBtn: {fileID: 0}
   isPopupMsg: 1
+--- !u!95 &2697830156633338414
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1663884813863118}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: b87e053a56e7fdc43a7ddc42f22f0537, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1505089113716924895
 GameObject:
   m_ObjectHideFlags: 0
@@ -232,7 +251,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Please rate and help us get better
+  m_Text: Collect the coins and chestbox to increase the coins.
 --- !u!1 &2848121933881208952
 GameObject:
   m_ObjectHideFlags: 0
@@ -323,7 +342,6 @@ GameObject:
   - component: {fileID: 5368969503060660117}
   - component: {fileID: 8238722806383085648}
   - component: {fileID: 4381647618035656672}
-  - component: {fileID: 8606194279178257324}
   m_Layer: 5
   m_Name: BG (1)
   m_TagString: Untagged
@@ -344,6 +362,7 @@ RectTransform:
   m_Children:
   - {fileID: 2044297566192704458}
   - {fileID: 2285688368600636926}
+  - {fileID: 5915393699067704358}
   m_Father: {fileID: 224597669614352918}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -390,25 +409,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!95 &8606194279178257324
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3921623026848934398}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 22444df55a878a748a5cfe88d809a333, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &7842381531864526927
 GameObject:
   m_ObjectHideFlags: 0
@@ -440,12 +440,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7720685336692714475}
-  m_Father: {fileID: 224597669614352918}
-  m_RootOrder: 1
+  m_Father: {fileID: 5368969503060660117}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 662.5}
+  m_AnchoredPosition: {x: 0, y: -43}
   m_SizeDelta: {x: 234, y: 129}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!222 &3059258070057937416

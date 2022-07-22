@@ -30,6 +30,10 @@ public class LevelsManager : MonoBehaviour
 
 
         }
+        if(Toolbox.DB.prefs.LastSelectedLevel == 2)
+        {
+            Toolbox.GameManager.InstantiatePopup_Message2("Collect the coins and chestboxs to increase the coins.");
+        }
 
         if (testMode)
         {
