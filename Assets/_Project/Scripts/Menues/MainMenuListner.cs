@@ -17,7 +17,7 @@ public class MainMenuListner : MonoBehaviour {
     private void Start()
     {
 		Toolbox.HUDListner.DisableHUD();
-
+		lvlTxt.text = "Level " + (Toolbox.DB.prefs.LastSelectedLevel + 1).ToString();
 	}
 	public void PurchaseCheck() {
 
@@ -27,7 +27,7 @@ public class MainMenuListner : MonoBehaviour {
 
     public void UpdateTxt(){
 
-		lvlTxt.text = "Level " + (Toolbox.DB.prefs.LastSelectedLevel + 1).ToString();
+		
 		goldTxt.text = Toolbox.DB.prefs.GoldCoins.ToString();
 
 	}

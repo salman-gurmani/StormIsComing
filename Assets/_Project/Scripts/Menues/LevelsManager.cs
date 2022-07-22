@@ -26,7 +26,7 @@ public class LevelsManager : MonoBehaviour
         if (Toolbox.DB.prefs.LastSelectedLevel > 14)
         {
             //Arooj
-            Toolbox.DB.prefs.LastSelectedLevel = 14;
+            Toolbox.DB.prefs.LastSelectedLevel = 0;
 
 
         }
