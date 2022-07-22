@@ -78,7 +78,15 @@ public class LevelCompleteListner : MonoBehaviour {
 
 	private void EarningsHandling()
     {
-		rewardAmount = (Toolbox.DB.prefs.LastSelectedLevel + 1) * 100;
+		if(Toolbox.HUDListner.progress > 0.5f && Toolbox.HUDListner.progress == 1f)
+        {
+			rewardAmount = (Toolbox.DB.prefs.LastSelectedLevel + 1) * 200;
+		}
+		else if(Toolbox.HUDListner.progress > 0.5f && Toolbox.HUDListner.progress < 1f)
+        {
+			rewardAmount = (Toolbox.DB.prefs.LastSelectedLevel + 1) * 100;
+		}
+		
 		levelEarningTxt.text = "+" + rewardAmount.ToString();
 		Toolbox.GameplayScript.IncrementGoldCoins(rewardAmount);
     }
