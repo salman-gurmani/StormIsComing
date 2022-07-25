@@ -17,7 +17,11 @@ public class MainMenuListner : MonoBehaviour {
     private void Start()
     {
 		Toolbox.HUDListner.DisableHUD();
-		lvlTxt.text = "Level " + (Toolbox.DB.prefs.LastSelectedLevel + 1).ToString();
+		if (Toolbox.DB.prefs.LastSelectedLevel == 2 || Toolbox.DB.prefs.LastSelectedLevel == 5 || Toolbox.DB.prefs.LastSelectedLevel == 8 || Toolbox.DB.prefs.LastSelectedLevel == 11 || Toolbox.DB.prefs.LastSelectedLevel == 14)
+			lvlTxt.text = "Bonus Level";
+		else
+			lvlTxt.text = "Level " + (Toolbox.DB.prefs.LastSelectedLevel + 1).ToString();
+
 	}
 	public void PurchaseCheck() {
 
