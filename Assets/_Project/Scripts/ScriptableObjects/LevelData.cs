@@ -9,7 +9,7 @@ public class LevelData : ScriptableObject
     public bool ShowTutorial = false;
 
     public float time = 60;
-
+    public string LevelTxt;
     public ResourceType[] hasResources;
     public DisasterType disaster;
 

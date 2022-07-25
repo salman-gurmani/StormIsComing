@@ -15,7 +15,9 @@ public class LevelFailListner : MonoBehaviour {
 		Time.timeScale = 1;
 
 		Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.fail);
-		lvlTxt.text = "Level " + (Toolbox.DB.prefs.LastSelectedLevel + 1).ToString();
+		string path = Constants.PrefabFolderPath + Constants.LevelsScriptablesFolderPath + Toolbox.DB.prefs.LastSelectedMode.ToString() + "/" + Toolbox.DB.prefs.LastSelectedLevel.ToString();
+		LevelData curLevelData = (LevelData)Resources.Load(path);
+		lvlTxt.text = curLevelData.LevelTxt;
 		coinTxt.text = Toolbox.DB.prefs.GoldCoins.ToString();
 		Toolbox.GameManager.Analytics_LevelFail();
 		Toolbox.GameManager.curLevelFailed++;

@@ -27,9 +27,10 @@ public class LevelCompleteListner : MonoBehaviour {
 	//public Sprite[] vehicleImages;
 
 	private void Start()
-    { 
-        Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.complete);
-		lvlTxt.text = "Level " + (Toolbox.DB.prefs.LastSelectedLevel + 1).ToString();
+    {
+		string path = Constants.PrefabFolderPath + Constants.LevelsScriptablesFolderPath + Toolbox.DB.prefs.LastSelectedMode.ToString() + "/" + Toolbox.DB.prefs.LastSelectedLevel.ToString();
+		LevelData curLevelData = (LevelData)Resources.Load(path);
+		lvlTxt.text = curLevelData.LevelTxt;
 		Invoke("ShowNoThanksBtb",1f);
 		Time.timeScale = 1;
 		Toolbox.GameManager.Analytics_LevelComplete();

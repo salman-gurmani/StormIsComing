@@ -5,8 +5,9 @@ public class MainMenuListner : MonoBehaviour {
 
 	public Text goldTxt;
 	public Text lvlTxt;
-	public GameObject noAdsBtn;
-    private void OnEnable()
+	public GameObject noAdsBtn; 
+
+	private void OnEnable()
     {
 		UpdateTxt();
 
@@ -17,11 +18,9 @@ public class MainMenuListner : MonoBehaviour {
     private void Start()
     {
 		Toolbox.HUDListner.DisableHUD();
-		if (Toolbox.DB.prefs.LastSelectedLevel == 2 || Toolbox.DB.prefs.LastSelectedLevel == 5 || Toolbox.DB.prefs.LastSelectedLevel == 8 || Toolbox.DB.prefs.LastSelectedLevel == 11 || Toolbox.DB.prefs.LastSelectedLevel == 14)
-			lvlTxt.text = "Bonus Level";
-		else
-			lvlTxt.text = "Level " + (Toolbox.DB.prefs.LastSelectedLevel + 1).ToString();
-
+		string path = Constants.PrefabFolderPath + Constants.LevelsScriptablesFolderPath + Toolbox.DB.prefs.LastSelectedMode.ToString() + "/" + Toolbox.DB.prefs.LastSelectedLevel.ToString(); 
+		LevelData curLevelData = (LevelData)Resources.Load(path); 
+		lvlTxt.text = curLevelData.LevelTxt;  
 	}
 	public void PurchaseCheck() {
 
