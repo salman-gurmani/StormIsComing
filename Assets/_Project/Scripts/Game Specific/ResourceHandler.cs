@@ -121,15 +121,15 @@ public class ResourceHandler : MonoBehaviour
         anim.SetInteger("State", _val);
 
 
-        if(anim.GetInteger("State")==0)
-        {
+        //if(anim.GetInteger("State")==0)
+        //{
             
-            this.gameObject.GetComponent<MapMarker>().isActive = false;
-        }
-        else if(anim.GetInteger("State")>0)
-        {
-            this.gameObject.GetComponent<MapMarker>().isActive = true;
+        //    this.gameObject.GetComponent<MapMarker>().isActive = false;
+        //}
+        //else if(anim.GetInteger("State")>0)
+        //{
+        //    this.gameObject.GetComponent<MapMarker>().isActive = true;
 
-        }
+        //}
     }
 }
