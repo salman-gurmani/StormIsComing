@@ -79,7 +79,8 @@ public class MenuHandler : MonoBehaviour {
 
 			Toolbox.Soundmanager.Stop_PlayingBGSound();
 
-			AdsManager.instance.ShowAd(AdsManager.AdType.INTERSTITIAL);
+			//--
+			//AdsManager.instance.ShowAd(AdsManager.AdType.INTERSTITIAL);
 
 			Toolbox.GameManager.LoadScene(Toolbox.GameManager.GetCurrentLevelGameScene(), true, 0);
         }

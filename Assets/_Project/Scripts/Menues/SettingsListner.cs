@@ -124,7 +124,9 @@ public class SettingsListner: MonoBehaviour {
     public void Press_RateUs() {
 
         Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.buttonPressYes);
-        Application.OpenURL(Constants.appLink);
+        
+        //--
+        //Application.OpenURL(Constants.appLink);
     }
 
     public void Press_PrivacyPolicy()

@@ -61,7 +61,9 @@ public class MainMenuListner : MonoBehaviour {
 	public void OnPress_RateUs()
 	{
 		Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.Select);
-		Application.OpenURL(Constants.appLink);
+		
+		//--
+		//Application.OpenURL(Constants.appLink);
 	}
 	public void OnPress_RemoveAds()
 	{
@@ -78,7 +80,9 @@ public class MainMenuListner : MonoBehaviour {
 	public void OnPress_MoreGames()
 	{
 		Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.Select);
-		Application.OpenURL(Constants.moreGamesLink);
+		
+		//--
+		//Application.OpenURL(Constants.moreGamesLink);
 	}
 
 	public void OnPress_Back()

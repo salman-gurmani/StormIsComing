@@ -173,7 +173,9 @@ public class LevelCompleteListner : MonoBehaviour {
 
 		Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.buttonPressYes);
         Toolbox.GameManager.LoadScene(Toolbox.GameManager.GetCurrentLevelGameScene(), false, 0);
-		AdsManager.instance.ShowAd(AdsManager.AdType.INTERSTITIAL);
+		
+		//--
+		//AdsManager.instance.ShowAd(AdsManager.AdType.INTERSTITIAL);
 
 		//Toolbox.GameManager.directShowVehicleSel = true;
 		//Toolbox.GameManager.LoadScene(Constants.sceneIndex_Menu, true, 0);
@@ -185,7 +187,9 @@ public class LevelCompleteListner : MonoBehaviour {
 	{
 		Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.buttonPressYes);
 		Toolbox.GameManager.LoadScene(Toolbox.GameManager.GetCurrentLevelGameScene(), false, 0);
-		AdsManager.instance.ShowAd(AdsManager.AdType.INTERSTITIAL);
+		
+		//--
+		//AdsManager.instance.ShowAd(AdsManager.AdType.INTERSTITIAL);
 
 
 		Destroy(this.gameObject);
@@ -196,7 +200,9 @@ public class LevelCompleteListner : MonoBehaviour {
 
 		Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.buttonPressYes);
 		Toolbox.GameManager.LoadScene(Constants.sceneIndex_Menu, false, 0);
-		AdsManager.instance.ShowAd(AdsManager.AdType.INTERSTITIAL);
+		
+		//--
+		//AdsManager.instance.ShowAd(AdsManager.AdType.INTERSTITIAL);
 
 		Destroy(this.gameObject);
 	}
@@ -204,7 +210,9 @@ public class LevelCompleteListner : MonoBehaviour {
 	public void Press_2XReward()
 	{
 		Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.buttonPressYes);
-		AdsManager.instance.SetNShowRewardedAd(AdsManager.RewardType.DOUBLEREWARD, rewardAmount);
+		
+		//--
+		//AdsManager.instance.SetNShowRewardedAd(AdsManager.RewardType.DOUBLEREWARD, rewardAmount);
 
 		doubleRewardButton.SetActive(false);
 	}

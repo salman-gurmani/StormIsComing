@@ -50,6 +50,7 @@ GameObject:
   - component: {fileID: 2913354170011294817}
   - component: {fileID: 847008990394467840}
   - component: {fileID: 3509294008428730413}
+  - component: {fileID: 6454098563415155885}
   m_Layer: 5
   m_Name: Back
   m_TagString: Untagged
@@ -74,9 +75,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -19, y: -24}
+  m_AnchoredPosition: {x: -0.26635742, y: 0.035614014}
   m_SizeDelta: {x: 70, y: 73}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0.7676235, y: 0.8292555}
 --- !u!222 &2913354170011294817
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -171,6 +172,53 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &6454098563415155885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 32601831899544248}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 489298d2578a6ad45b94106bba45e3ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnShow:
+    m_PersistentCalls:
+      m_Calls: []
+  OnHide:
+    m_PersistentCalls:
+      m_Calls: []
+  OnShowComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  OnHideComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  showItemOnMenuEnable: 1
+  showAnimationType: 2
+  hideAnimationType: 0
+  animationFromCornerType: 0
+  animationToCornerType: 0
+  pivotWhileRotating: 6
+  animationFromCornerStartFromType: 0
+  fadeChildren: 0
+  animationShowDuration: 0.5
+  animationHideDuration: 0.5
+  withDelay: 1
+  showDelay: 0.5
+  hideDelay: 0
+  elasticityPower: 1
+  rotateFrom: {x: 0, y: 0, z: 90}
+  rotateTo: {x: 0, y: 0, z: 0}
+  initialWorldPosition: {x: 0, y: 0, z: 0}
+  initialLocalPosition: {x: 0, y: 0, z: 0}
+  initialAnchoredPosition: {x: 0, y: 0, z: 0}
+  initialColorsOfChildren: []
+  initialScale: {x: 0, y: 0, z: 0}
+  initialRotation: {x: 0, y: 0, z: 0, w: 0}
+  initialPivot: {x: 0, y: 0}
 --- !u!1 &409765290056175819
 GameObject:
   m_ObjectHideFlags: 0
@@ -1014,6 +1062,7 @@ GameObject:
   - component: {fileID: 291857707364221974}
   - component: {fileID: 482759405654783857}
   - component: {fileID: 5043904117242128271}
+  - component: {fileID: 149077674753816456}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -1082,6 +1131,53 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 8.8
   m_Text: Settings
+--- !u!114 &149077674753816456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3287330925320589071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 489298d2578a6ad45b94106bba45e3ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnShow:
+    m_PersistentCalls:
+      m_Calls: []
+  OnHide:
+    m_PersistentCalls:
+      m_Calls: []
+  OnShowComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  OnHideComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  showItemOnMenuEnable: 1
+  showAnimationType: 4
+  hideAnimationType: 4
+  animationFromCornerType: 0
+  animationToCornerType: 0
+  pivotWhileRotating: 0
+  animationFromCornerStartFromType: 0
+  fadeChildren: 0
+  animationShowDuration: 0.5
+  animationHideDuration: 0.5
+  withDelay: 1
+  showDelay: 0.5
+  hideDelay: 0
+  elasticityPower: 1
+  rotateFrom: {x: 0, y: 0, z: 0}
+  rotateTo: {x: 0, y: 0, z: 0}
+  initialWorldPosition: {x: 0, y: 0, z: 0}
+  initialLocalPosition: {x: 0, y: 0, z: 0}
+  initialAnchoredPosition: {x: 0, y: 0, z: 0}
+  initialColorsOfChildren: []
+  initialScale: {x: 0, y: 0, z: 0}
+  initialRotation: {x: 0, y: 0, z: 0, w: 0}
+  initialPivot: {x: 0, y: 0}
 --- !u!1 &3903140287339431631
 GameObject:
   m_ObjectHideFlags: 0
@@ -1853,6 +1949,7 @@ GameObject:
   - component: {fileID: 3224776576931651614}
   - component: {fileID: 4555501633624502594}
   - component: {fileID: 3217274161005005399}
+  - component: {fileID: 1587251739948388397}
   m_Layer: 5
   m_Name: PP
   m_TagString: Untagged
@@ -1975,6 +2072,53 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1587251739948388397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7199157067153842690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 489298d2578a6ad45b94106bba45e3ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnShow:
+    m_PersistentCalls:
+      m_Calls: []
+  OnHide:
+    m_PersistentCalls:
+      m_Calls: []
+  OnShowComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  OnHideComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  showItemOnMenuEnable: 1
+  showAnimationType: 4
+  hideAnimationType: 4
+  animationFromCornerType: 1
+  animationToCornerType: 1
+  pivotWhileRotating: 0
+  animationFromCornerStartFromType: 0
+  fadeChildren: 0
+  animationShowDuration: 0.5
+  animationHideDuration: 0.5
+  withDelay: 1
+  showDelay: 0.5
+  hideDelay: 0
+  elasticityPower: 1
+  rotateFrom: {x: 0, y: 0, z: 0}
+  rotateTo: {x: 0, y: 0, z: 0}
+  initialWorldPosition: {x: 0, y: 0, z: 0}
+  initialLocalPosition: {x: 0, y: 0, z: 0}
+  initialAnchoredPosition: {x: 0, y: 0, z: 0}
+  initialColorsOfChildren: []
+  initialScale: {x: 0, y: 0, z: 0}
+  initialRotation: {x: 0, y: 0, z: 0, w: 0}
+  initialPivot: {x: 0, y: 0}
 --- !u!1 &7363246395430082095
 GameObject:
   m_ObjectHideFlags: 0
@@ -1986,6 +2130,7 @@ GameObject:
   - component: {fileID: 5116367084342714476}
   - component: {fileID: 9070185121950179826}
   - component: {fileID: 4426130668215400058}
+  - component: {fileID: 4910461652264264419}
   m_Layer: 5
   m_Name: Music
   m_TagString: Untagged
@@ -2052,6 +2197,53 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &4910461652264264419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7363246395430082095}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 489298d2578a6ad45b94106bba45e3ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnShow:
+    m_PersistentCalls:
+      m_Calls: []
+  OnHide:
+    m_PersistentCalls:
+      m_Calls: []
+  OnShowComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  OnHideComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  showItemOnMenuEnable: 1
+  showAnimationType: 4
+  hideAnimationType: 4
+  animationFromCornerType: 3
+  animationToCornerType: 3
+  pivotWhileRotating: 0
+  animationFromCornerStartFromType: 0
+  fadeChildren: 0
+  animationShowDuration: 0.5
+  animationHideDuration: 0.5
+  withDelay: 1
+  showDelay: 0.5
+  hideDelay: 0
+  elasticityPower: 1
+  rotateFrom: {x: 0, y: 0, z: 0}
+  rotateTo: {x: 0, y: 0, z: 0}
+  initialWorldPosition: {x: 0, y: 0, z: 0}
+  initialLocalPosition: {x: 0, y: 0, z: 0}
+  initialAnchoredPosition: {x: 0, y: 0, z: 0}
+  initialColorsOfChildren: []
+  initialScale: {x: 0, y: 0, z: 0}
+  initialRotation: {x: 0, y: 0, z: 0, w: 0}
+  initialPivot: {x: 0, y: 0}
 --- !u!1 &7541043229344651193
 GameObject:
   m_ObjectHideFlags: 0
@@ -2294,6 +2486,7 @@ GameObject:
   - component: {fileID: 2195133329844764606}
   - component: {fileID: 6788179839316222834}
   - component: {fileID: 73742494326583356}
+  - component: {fileID: 7316725793913829521}
   m_Layer: 5
   m_Name: Audio
   m_TagString: Untagged
@@ -2360,6 +2553,53 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &7316725793913829521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8797487111202516349}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 489298d2578a6ad45b94106bba45e3ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnShow:
+    m_PersistentCalls:
+      m_Calls: []
+  OnHide:
+    m_PersistentCalls:
+      m_Calls: []
+  OnShowComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  OnHideComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  showItemOnMenuEnable: 1
+  showAnimationType: 4
+  hideAnimationType: 4
+  animationFromCornerType: 2
+  animationToCornerType: 2
+  pivotWhileRotating: 0
+  animationFromCornerStartFromType: 0
+  fadeChildren: 0
+  animationShowDuration: 0.5
+  animationHideDuration: 0.5
+  withDelay: 1
+  showDelay: 0.5
+  hideDelay: 0
+  elasticityPower: 1
+  rotateFrom: {x: 0, y: 0, z: 0}
+  rotateTo: {x: 0, y: 0, z: 0}
+  initialWorldPosition: {x: 0, y: 0, z: 0}
+  initialLocalPosition: {x: 0, y: 0, z: 0}
+  initialAnchoredPosition: {x: 0, y: 0, z: 0}
+  initialColorsOfChildren: []
+  initialScale: {x: 0, y: 0, z: 0}
+  initialRotation: {x: 0, y: 0, z: 0, w: 0}
+  initialPivot: {x: 0, y: 0}
 --- !u!1 &8847399890439320068
 GameObject:
   m_ObjectHideFlags: 0

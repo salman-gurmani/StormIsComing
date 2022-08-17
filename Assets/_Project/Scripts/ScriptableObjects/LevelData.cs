@@ -4,7 +4,7 @@
 [CreateAssetMenu(fileName = "LevelData", menuName = ("Level Data"))]
 public class LevelData : ScriptableObject
 {
-    [Range(0, 2)]
+    [Range(0, 4)]
     public int environmentNumber = 0;
     public bool ShowTutorial = false;
 

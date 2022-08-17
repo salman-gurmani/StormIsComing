@@ -213,7 +213,9 @@ public class PlayerObjSelectionListner : MonoBehaviour
 		if (Toolbox.DB.prefs.PlayerObjectBought[curIndex])
 			Toolbox.DB.prefs.LastSelectedPlayerObj = curIndex;
 
-		AdsManager.instance.ShowAd(AdsManager.AdType.INTERSTITIAL);
+		//--
+		//AdsManager.instance.ShowAd(AdsManager.AdType.INTERSTITIAL);
+		
 		Toolbox.MenuHandler.Show_NextUI();
 	}
 
