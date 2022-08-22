@@ -606,17 +606,17 @@ MonoBehaviour:
       m_Calls: []
   showItemOnMenuEnable: 1
   showAnimationType: 3
-  hideAnimationType: 0
+  hideAnimationType: 3
   animationFromCornerType: 0
   animationToCornerType: 0
   pivotWhileRotating: 0
   animationFromCornerStartFromType: 0
-  fadeChildren: 1
+  fadeChildren: 0
   animationShowDuration: 2
-  animationHideDuration: 0.5
+  animationHideDuration: 2
   withDelay: 1
   showDelay: 5
-  hideDelay: 0
+  hideDelay: 5
   elasticityPower: 1
   rotateFrom: {x: 0, y: 0, z: 0}
   rotateTo: {x: 0, y: 0, z: 0}
@@ -1591,17 +1591,17 @@ MonoBehaviour:
       m_Calls: []
   showItemOnMenuEnable: 1
   showAnimationType: 4
-  hideAnimationType: 0
+  hideAnimationType: 4
   animationFromCornerType: 1
-  animationToCornerType: 0
+  animationToCornerType: 1
   pivotWhileRotating: 0
   animationFromCornerStartFromType: 0
   fadeChildren: 0
   animationShowDuration: 0.5
   animationHideDuration: 0.5
-  withDelay: 0
+  withDelay: 1
   showDelay: 0
-  hideDelay: 0
+  hideDelay: 2
   elasticityPower: 1
   rotateFrom: {x: 0, y: 0, z: 0}
   rotateTo: {x: 0, y: 0, z: 0}
@@ -2834,17 +2834,17 @@ MonoBehaviour:
       m_Calls: []
   showItemOnMenuEnable: 1
   showAnimationType: 3
-  hideAnimationType: 0
+  hideAnimationType: 3
   animationFromCornerType: 3
   animationToCornerType: 0
   pivotWhileRotating: 0
   animationFromCornerStartFromType: 0
-  fadeChildren: 1
+  fadeChildren: 0
   animationShowDuration: 0.4
   animationHideDuration: 0.5
-  withDelay: 0
+  withDelay: 1
   showDelay: 0
-  hideDelay: 0
+  hideDelay: 2
   elasticityPower: 1
   rotateFrom: {x: 0, y: 0, z: 0}
   rotateTo: {x: 0, y: 0, z: 0}
@@ -5287,6 +5287,7 @@ GameObject:
   - component: {fileID: 6904103338358623087}
   - component: {fileID: 1464393660659031776}
   - component: {fileID: 5696203436259737445}
+  - component: {fileID: 4157454145900600897}
   m_Layer: 5
   m_Name: Title
   m_TagString: Untagged
@@ -5353,6 +5354,53 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &4157454145900600897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2924093107298898140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 489298d2578a6ad45b94106bba45e3ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnShow:
+    m_PersistentCalls:
+      m_Calls: []
+  OnHide:
+    m_PersistentCalls:
+      m_Calls: []
+  OnShowComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  OnHideComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  showItemOnMenuEnable: 1
+  showAnimationType: 4
+  hideAnimationType: 4
+  animationFromCornerType: 0
+  animationToCornerType: 0
+  pivotWhileRotating: 0
+  animationFromCornerStartFromType: 0
+  fadeChildren: 0
+  animationShowDuration: 0.5
+  animationHideDuration: 0.5
+  withDelay: 1
+  showDelay: 0.2
+  hideDelay: 0.4
+  elasticityPower: 1
+  rotateFrom: {x: 0, y: 0, z: 0}
+  rotateTo: {x: 0, y: 0, z: 0}
+  initialWorldPosition: {x: 0, y: 0, z: 0}
+  initialLocalPosition: {x: 0, y: 0, z: 0}
+  initialAnchoredPosition: {x: 0, y: 0, z: 0}
+  initialColorsOfChildren: []
+  initialScale: {x: 0, y: 0, z: 0}
+  initialRotation: {x: 0, y: 0, z: 0, w: 0}
+  initialPivot: {x: 0, y: 0}
 --- !u!1 &2959889895550198097
 GameObject:
   m_ObjectHideFlags: 0
@@ -6260,6 +6308,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2437347706698456790}
+        m_TargetAssemblyTypeName: AiryUIAnimationManager, Assembly-CSharp
+        m_MethodName: HideMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &399416152271956833
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6286,9 +6346,9 @@ MonoBehaviour:
       m_Calls: []
   showItemOnMenuEnable: 1
   showAnimationType: 4
-  hideAnimationType: 0
+  hideAnimationType: 4
   animationFromCornerType: 1
-  animationToCornerType: 0
+  animationToCornerType: 1
   pivotWhileRotating: 0
   animationFromCornerStartFromType: 0
   fadeChildren: 0
@@ -6296,7 +6356,7 @@ MonoBehaviour:
   animationHideDuration: 0.5
   withDelay: 1
   showDelay: 1
-  hideDelay: 0
+  hideDelay: 1
   elasticityPower: 1
   rotateFrom: {x: 0, y: 0, z: 0}
   rotateTo: {x: 0, y: 0, z: 0}
@@ -7087,9 +7147,9 @@ MonoBehaviour:
       m_Calls: []
   showItemOnMenuEnable: 1
   showAnimationType: 4
-  hideAnimationType: 0
+  hideAnimationType: 4
   animationFromCornerType: 3
-  animationToCornerType: 0
+  animationToCornerType: 3
   pivotWhileRotating: 0
   animationFromCornerStartFromType: 0
   fadeChildren: 0
@@ -7097,7 +7157,7 @@ MonoBehaviour:
   animationHideDuration: 0.5
   withDelay: 1
   showDelay: 0.6
-  hideDelay: 0
+  hideDelay: 2
   elasticityPower: 1
   rotateFrom: {x: 0, y: 0, z: 0}
   rotateTo: {x: 0, y: 0, z: 0}
@@ -8668,7 +8728,7 @@ MonoBehaviour:
   animationHideDuration: 0.5
   withDelay: 1
   showDelay: 1.6
-  hideDelay: 0
+  hideDelay: 0.5
   elasticityPower: 1
   rotateFrom: {x: 0, y: 0, z: 0}
   rotateTo: {x: 0, y: 0, z: 0}
@@ -9662,7 +9722,7 @@ MonoBehaviour:
   animationHideDuration: 0.5
   withDelay: 1
   showDelay: 2.2
-  hideDelay: 0
+  hideDelay: 0.2
   elasticityPower: 1
   rotateFrom: {x: 0, y: 0, z: 0}
   rotateTo: {x: 0, y: 0, z: 0}
@@ -10039,7 +10099,7 @@ MonoBehaviour:
   animationHideDuration: 0.5
   withDelay: 1
   showDelay: 1.8
-  hideDelay: 0
+  hideDelay: 0.4
   elasticityPower: 1
   rotateFrom: {x: 0, y: 0, z: 0}
   rotateTo: {x: 0, y: 0, z: 0}
@@ -11035,7 +11095,7 @@ RectTransform:
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0, y: 1}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &5885837628749305672
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11080,7 +11140,7 @@ MonoBehaviour:
   animationHideDuration: 0.5
   withDelay: 1
   showDelay: 0.2
-  hideDelay: 0
+  hideDelay: 1.2
   elasticityPower: 1
   rotateFrom: {x: 0, y: 0, z: 0}
   rotateTo: {x: 0, y: 0, z: 0}
@@ -11194,7 +11254,7 @@ MonoBehaviour:
       m_Calls: []
   showItemOnMenuEnable: 1
   showAnimationType: 4
-  hideAnimationType: 0
+  hideAnimationType: 4
   animationFromCornerType: 0
   animationToCornerType: 0
   pivotWhileRotating: 0
@@ -11202,9 +11262,9 @@ MonoBehaviour:
   fadeChildren: 0
   animationShowDuration: 0.5
   animationHideDuration: 0.5
-  withDelay: 0
+  withDelay: 1
   showDelay: 0
-  hideDelay: 0
+  hideDelay: 2
   elasticityPower: 1
   rotateFrom: {x: 0, y: 0, z: 0}
   rotateTo: {x: 0, y: 0, z: 0}
@@ -11297,7 +11357,7 @@ MonoBehaviour:
   animationHideDuration: 0.5
   withDelay: 1
   showDelay: 0.6
-  hideDelay: 0
+  hideDelay: 1
   elasticityPower: 1
   rotateFrom: {x: 0, y: 0, z: 0}
   rotateTo: {x: 0, y: 0, z: 0}
@@ -11390,7 +11450,7 @@ MonoBehaviour:
   animationHideDuration: 0.5
   withDelay: 1
   showDelay: 0.4
-  hideDelay: 0
+  hideDelay: 1.1
   elasticityPower: 1
   rotateFrom: {x: 0, y: 0, z: 0}
   rotateTo: {x: 0, y: 0, z: 0}
@@ -12648,17 +12708,17 @@ MonoBehaviour:
       m_Calls: []
   showItemOnMenuEnable: 1
   showAnimationType: 4
-  hideAnimationType: 0
+  hideAnimationType: 4
   animationFromCornerType: 1
   animationToCornerType: 1
   pivotWhileRotating: 0
-  animationFromCornerStartFromType: 1
+  animationFromCornerStartFromType: 0
   fadeChildren: 0
   animationShowDuration: 1
   animationHideDuration: 1
-  withDelay: 0
+  withDelay: 1
   showDelay: 0
-  hideDelay: 0
+  hideDelay: 2
   elasticityPower: 1
   rotateFrom: {x: 0, y: 0, z: 0}
   rotateTo: {x: 0, y: 0, z: 0}
@@ -13292,7 +13352,7 @@ MonoBehaviour:
   animationHideDuration: 0.5
   withDelay: 1
   showDelay: 0.8
-  hideDelay: 0
+  hideDelay: 0.9
   elasticityPower: 1
   rotateFrom: {x: 0, y: 0, z: 0}
   rotateTo: {x: 0, y: 0, z: 0}
@@ -13385,7 +13445,7 @@ MonoBehaviour:
   animationHideDuration: 0.5
   withDelay: 1
   showDelay: 1.2
-  hideDelay: 0
+  hideDelay: 0.7
   elasticityPower: 1
   rotateFrom: {x: 0, y: 0, z: 0}
   rotateTo: {x: 0, y: 0, z: 0}
@@ -13862,7 +13922,7 @@ MonoBehaviour:
   animationHideDuration: 0.5
   withDelay: 1
   showDelay: 1
-  hideDelay: 0
+  hideDelay: 0.8
   elasticityPower: 1
   rotateFrom: {x: 0, y: 0, z: 0}
   rotateTo: {x: 0, y: 0, z: 0}
@@ -14763,7 +14823,7 @@ MonoBehaviour:
   animationHideDuration: 0.5
   withDelay: 1
   showDelay: 2
-  hideDelay: 0
+  hideDelay: 0.3
   elasticityPower: 1
   rotateFrom: {x: 0, y: 0, z: 0}
   rotateTo: {x: 0, y: 0, z: 0}
@@ -18010,7 +18070,7 @@ MonoBehaviour:
   animationHideDuration: 0.5
   withDelay: 1
   showDelay: 1.4
-  hideDelay: 0
+  hideDelay: 0.6
   elasticityPower: 1
   rotateFrom: {x: 0, y: 0, z: 0}
   rotateTo: {x: 0, y: 0, z: 0}

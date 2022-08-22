@@ -37,7 +37,7 @@ public class SettingsListner: MonoBehaviour {
     public void OnPress_Close()
     {
         Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.buttonPressNo);
-        Destroy(this.gameObject);
+        Destroy(this.gameObject,2f);
     }
     public void OnMusicToggle()
     {      

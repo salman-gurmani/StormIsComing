@@ -14,10 +14,16 @@ public class PauseListner : MonoBehaviour {
 	}
     private void Start()
     {
-		Time.timeScale = 0;
+		Invoke("TimePause", 2f);
+		//Time.timeScale = 0;
 	}
 
-    void Update(){
+	public void TimePause()
+    {
+		Time.timeScale = 0;
+
+	}
+	void Update(){
 
 		if (Input.GetKeyDown (KeyCode.Escape)) {
 
@@ -30,9 +36,11 @@ public class PauseListner : MonoBehaviour {
 		Toolbox.HUDListner.EnableHUD();
 
 
-		Destroy(this.gameObject);
+		Destroy(this.gameObject,2f);
+		Time.timeScale = 1;
+
 	}
-	
+
 	public void Press_Restart()
 	{
 		Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.buttonPressYes);

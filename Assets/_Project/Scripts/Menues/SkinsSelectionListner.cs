@@ -303,7 +303,7 @@ public class SkinsSelectionListner : MonoBehaviour
     {
         Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.buttonPressNo);
         Toolbox.GameplayScript.player.GetComponent<PlayerController>().EnableCharacter(Toolbox.DB.prefs.LastSelectedPlayerObj);
-        Destroy(this.gameObject);
+        Destroy(this.gameObject,2.5f);
     }
 
     public void OnPressApply(int _value)

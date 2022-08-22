@@ -15,6 +15,7 @@ public class HUDListner : MonoBehaviour {
     [HideInInspector]public float progress;
     [Tooltip("Should be in the order of resources")]
     public Text[] resourcesTxts;
+    public GameObject MiniMap;
 
     public RectTransform [] resourcePosition;
     float reportTime = 10;
