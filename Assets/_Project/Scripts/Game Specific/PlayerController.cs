@@ -4,7 +4,9 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public CharacterController controller;
+    public GameObject ChangeTool;
     private Animator anim;
+    private LevelData curLevelData;
     public GameObject[] models;
     private int index = 0;
     private bool run = false;
@@ -110,12 +112,24 @@ public class PlayerController : MonoBehaviour
 
     private void ResourceGatherHandling()
     {
-        if (!isGathering && resourceInTrigger.Count > 0) {
-           
+        if (!isGathering && resourceInTrigger.Count > 0) { 
             isGathering = true;
-            anim.SetTrigger("Attack");
+            switch(FindObjectOfType<ResourceHandler>().type)
+            {
+                case ResourceType.WOOD_LOG:
+                    ChangeTool.SetActive(true);
+                    anim.SetTrigger("Attack");
+                    break;
+                case ResourceType.STONE_BLOCK:
+                    ChangeTool.SetActive(false);
+                    anim.SetTrigger("Attack 2");
+                    break; 
+            }
+
             time = gatherDelay;
         }
+        
+
     }
 
     public void GatherRequestHandling() {

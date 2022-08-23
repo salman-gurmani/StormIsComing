@@ -10,6 +10,7 @@ public enum ResourceType
     CEMENT_SACK,
     IRON_BLOCK,
     STEEL_ROD,
+    WOOD_PLANK,
     COINS_BOX  //Arooj
 
         
@@ -18,7 +19,8 @@ public enum ResourceStructure
 {
     CHIMNEY,
     CEMENT_MACHINE,
-    IRON_MACHINE
+    IRON_MACHINE,
+    PLANK_MACHINE
 }
 
 public enum DisasterType
