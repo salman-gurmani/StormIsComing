@@ -4,7 +4,9 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     public CharacterController controller;
+    public GameObject ChangeTool;
     private Animator anim;
+    private LevelData curLevelData;
     public GameObject[] models;
     private int index = 0;
     private bool run = false;
@@ -53,6 +55,7 @@ public class PlayerController : MonoBehaviour
         ResourceGatherHandling();
 
         GatherTimeHandling();
+        Debug.Log(resourceInTrigger[0].name);
     }
 
     private void GatherTimeHandling()
@@ -110,10 +113,20 @@ public class PlayerController : MonoBehaviour
 
     private void ResourceGatherHandling()
     {
-        if (!isGathering && resourceInTrigger.Count > 0) {
-           
+        if (!isGathering && resourceInTrigger.Count > 0) { 
             isGathering = true;
-            anim.SetTrigger("Attack");
+            switch(resourceInTrigger[0].type)
+            {
+                case ResourceType.WOOD_LOG:
+                    ChangeTool.SetActive(true);
+                    anim.SetTrigger("Attack");
+                    break;
+                case ResourceType.STONE_BLOCK:
+                    ChangeTool.SetActive(false);
+                    anim.SetTrigger("Attack 3");
+                    break; 
+            }
+
             time = gatherDelay;
         }
     }
@@ -187,14 +200,12 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        //Debug.LogError("Trigger = " + other.gameObject.tag.ToString());
         switch (other.tag)
         {
             case "Resource":
                 ResourceHandler handler = other.GetComponent<ResourceHandler>();
                 if (!isResourceHandlerAvailable(handler))
                     AddResource(handler);
-
                 break;
 
             case "ResourceStructure":
@@ -204,6 +215,7 @@ public class PlayerController : MonoBehaviour
             case "Lift":
                 this.transform.parent = other.transform;
                 break;
+
             case "Coin":
                 other.gameObject.GetComponent<MapMarker>().isActive = false;
                 Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.coinsSound);
@@ -211,15 +223,19 @@ public class PlayerController : MonoBehaviour
                 FindObjectOfType<HUDListner>().UpdateTxt();
                 other.gameObject.SetActive(false);
                 break;
+
             case "Chest":
                 other.gameObject.GetComponent<MapMarker>().isActive = false;
-
                 Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.chestSound);
                 Toolbox.DB.prefs.GoldCoins = Toolbox.DB.prefs.GoldCoins + 10;
                 Toolbox.GameManager.Instantiate_RewardAnim();
                 FindObjectOfType<HUDListner>().UpdateTxt();
                 other.gameObject.SetActive(false);
+                break;
 
+            case "QuestionShop":
+                QuestionShopHandler riddleShopHandler = other.GetComponentInParent<QuestionShopHandler>();
+                riddleShopHandler.GenerateNextQuestion();
                 break;
 
             default:
@@ -232,23 +248,18 @@ public class PlayerController : MonoBehaviour
         switch (other.tag)
         {
             case "Resource":
-
                 RemoveResource(other.GetComponent<ResourceHandler>());
-
                 break;
 
             case "Lift":
-
                 this.transform.parent = playerParent;
-
                 break;
-
-            
 
             default:
                 break;
         }
     }
+
     private void OnTriggerStay(Collider other)
     {
         //Debug.LogError("Trigger = " + other.gameObject.tag.ToString());

@@ -3,8 +3,7 @@ using UnityEngine;
 public class ResourceHandler : MonoBehaviour
 {
     public ResourceType type;
-    private BoxCollider collider;
-
+    private BoxCollider collider; 
     [Tooltip("This many times user will get resource from this Object")]
     public int defaultResouceQuantity = 3;
     [SerializeField] private int curResouceQuantity = 3;
@@ -51,8 +50,7 @@ public class ResourceHandler : MonoBehaviour
 
     private void PlayerDistanceCheck()
     {
-        if (distanceCheck) {
-
+        if (distanceCheck) { 
             if (!player)
                 player = Toolbox.GameplayScript.player.transform;
 
