@@ -22,11 +22,14 @@ public class ResourceHandler : MonoBehaviour
     private Transform player;
     private bool distanceCheck = false;
     public float gatherDistance = 5;
+    private string resourceName;
+    public GameObject TreeStump;
 
     private void Start()
     {
         resourceVal = (int)type;
         collider = this.GetComponent<BoxCollider>();
+        resourceName = type.ToString();
     }
 
     private void Update()
@@ -99,10 +102,21 @@ public class ResourceHandler : MonoBehaviour
 
             //Debug.LogError(Toolbox.DB.prefs.ResourceAmount[resourceVal].name + " Respawning");
             Toolbox.GameplayScript.player.RemoveResource(this);
-            time = respawnTime;
-            DistanceCheckStatus(false);
 
-            SetRespawnStatus(true);
+            if(resourceName=="WOOD_LOG")
+            {
+                Instantiate(TreeStump, this.gameObject.transform.position, Quaternion.identity);
+            }
+
+
+
+            Destroy(this.gameObject);
+
+
+            //time = respawnTime;
+            //DistanceCheckStatus(false);
+
+            //SetRespawnStatus(true);
         }
     }
 

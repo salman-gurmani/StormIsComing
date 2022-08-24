@@ -243,10 +243,10 @@ public class PlayerController : MonoBehaviour
                 other.gameObject.SetActive(false);
                 break;
 
-            /*case "QuestionShop":
+            case "QuestionShop":
                 QuestionShopHandler riddleShopHandler = other.GetComponentInParent<QuestionShopHandler>();
                 riddleShopHandler.GenerateNextQuestion();
-                break;*/
+                break;
 
             default:
                 break;
