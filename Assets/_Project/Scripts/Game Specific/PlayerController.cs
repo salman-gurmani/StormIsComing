@@ -13,7 +13,9 @@ public class PlayerController : MonoBehaviour
     private bool groundedPlayer;
     [SerializeField] private float playerSpeed = 2.0f;
     private float gravityValue = -9.81f;
-
+    bool drunk = false; 
+  public GameObject hitEffect; 
+    public GameObject hitEffect2; 
     public GameObject [] resourcesObjs;
     public PlayerResourceHandler [] resourcesHandler;
     public Transform playerParent;
@@ -95,21 +97,56 @@ public class PlayerController : MonoBehaviour
 
 
     private void UpdateMovement(Vector3 _mov) {
-
-        if (_mov.x != 0 || _mov.z != 0)
+        if (!drunk)
         {
-            run = true;
-            //Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.running);
-        }
-        else {
+            if (anim.GetBool("Walk"))
+            {
+                anim.SetBool("Walk", false);
+            }
+            if (_mov.x != 0 || _mov.z != 0)
+            {
+                run = true;
+                //Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.running);
+            }
+            else
+            {
 
-            run = false;
-        }
+                run = false;
+            }
 
-        anim.SetBool("Run", run);
+            anim.SetBool("Run", run);
+        }
+        else
+        {
+            if (anim.GetBool("Run"))
+            {
+                anim.SetBool("Run", false);
+            }
+            if (_mov.x != 0 || _mov.z != 0)
+            {
+                run = true;
+                //Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.running);
+            }
+            else
+            {
+
+                //anim.SetBool("Run", run);
+                run = false;
+            }
+
+            anim.SetBool("Walk", run);
+        
 
     }
 
+
+}
+    public void ReturnBackToNormal()
+    {
+        playerSpeed = 4f;
+        drunk = false;
+        hitEffect2.SetActive(false);
+    }
     private void ResourceGatherHandling()
     {
         if (!isGathering && resourceInTrigger.Count > 0) { 
@@ -217,7 +254,17 @@ public class PlayerController : MonoBehaviour
                 if (!isResourceHandlerAvailable(handler))
                     AddResource(handler);
                 break;
+            case "Traffic":
+                Debug.Log("PlayerCrashed In Car");
+                playerSpeed = 0.5f;
+                drunk = true;
+                hitEffect2.SetActive(true);
+                Instantiate(hitEffect, new Vector3(transform.position.x, transform.position.y + 1f, transform.position.z), Quaternion.identity);
 
+
+
+                Invoke("ReturnBackToNormal", 15);
+                break;
             case "ResourceStructure":
                 other.GetComponent<ResourceStructureHandling>().InitProcessing();
                 break;

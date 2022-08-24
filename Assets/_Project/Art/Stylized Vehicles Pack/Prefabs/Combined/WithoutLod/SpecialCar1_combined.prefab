@@ -388,9 +388,10 @@ GameObject:
   - component: {fileID: 6721447595105194383}
   - component: {fileID: 6721447595103900079}
   - component: {fileID: 6721447595102901103}
+  - component: {fileID: 2579382152946127564}
   m_Layer: 0
   m_Name: SpecialCar1
-  m_TagString: Untagged
+  m_TagString: Traffic
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -464,3 +465,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &2579382152946127564
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6721447595104898479}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300008, guid: 17c773bf0146b6d4a97abde89b853b84, type: 3}

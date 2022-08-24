@@ -336,6 +336,7 @@ GameObject:
   - component: {fileID: 1652624030984929160}
   - component: {fileID: 1642963743277939330}
   - component: {fileID: 1628553258764115530}
+  - component: {fileID: 5156418485270571116}
   m_Layer: 0
   m_Name: SM_Veh_Pickup_01
   m_TagString: Untagged
@@ -429,6 +430,20 @@ MonoBehaviour:
   maxSpeedRange: 6
   initPoint: {fileID: 0}
   endPoint: {fileID: 0}
+--- !u!64 &5156418485270571116
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1629733627658156966}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 24b138e6eab4bc748b4dbc57fe3cb01e, type: 3}
 --- !u!1 &1630203611605092060
 GameObject:
   m_ObjectHideFlags: 0
