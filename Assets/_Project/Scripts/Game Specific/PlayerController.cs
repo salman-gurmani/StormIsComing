@@ -232,11 +232,11 @@ public class PlayerController : MonoBehaviour
                 FindObjectOfType<HUDListner>().UpdateTxt();
                 other.gameObject.SetActive(false);
                 break;
-
+/*
             case "QuestionShop":
                 QuestionShopHandler riddleShopHandler = other.GetComponentInParent<QuestionShopHandler>();
                 riddleShopHandler.GenerateNextQuestion();
-                break;
+                break;*/
 
             default:
                 break;
