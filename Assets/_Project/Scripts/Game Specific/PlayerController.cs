@@ -3,8 +3,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public CharacterController controller;
-    public GameObject ChangeTool;
+    public CharacterController controller; 
     private Animator anim;
     private LevelData curLevelData;
     public GameObject[] models;
@@ -118,13 +117,24 @@ public class PlayerController : MonoBehaviour
             switch(resourceInTrigger[0].type)
             {
                 case ResourceType.WOOD_LOG:
-                    ChangeTool.SetActive(true);
+                    FindObjectOfType<PlayerReader>().woodAxe();
                     anim.SetTrigger("Attack");
                     break;
+
                 case ResourceType.STONE_BLOCK:
-                    ChangeTool.SetActive(false);
+                case ResourceType.IRON_BLOCK:
+                    FindObjectOfType<PlayerReader>().pickAxe();
+                    //ChangeTool.SetActive(false);
                     anim.SetTrigger("Attack 3");
-                    break; 
+                    break;
+
+                case ResourceType.MUD_BLOCK:
+                case ResourceType.CEMENT_BLOCK:
+                    FindObjectOfType<PlayerReader>().pickShovel();
+                    //ChangeTool.SetActive(false);
+                    anim.SetTrigger("Attack 2");
+                    break;
+
             }
 
             time = gatherDelay;
@@ -233,10 +243,10 @@ public class PlayerController : MonoBehaviour
                 other.gameObject.SetActive(false);
                 break;
 
-            case "QuestionShop":
+            /*case "QuestionShop":
                 QuestionShopHandler riddleShopHandler = other.GetComponentInParent<QuestionShopHandler>();
                 riddleShopHandler.GenerateNextQuestion();
-                break;
+                break;*/
 
             default:
                 break;
