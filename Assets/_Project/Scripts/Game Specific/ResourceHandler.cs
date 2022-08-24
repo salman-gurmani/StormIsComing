@@ -5,8 +5,8 @@ public class ResourceHandler : MonoBehaviour
     public ResourceType type;
     private BoxCollider collider; 
     [Tooltip("This many times user will get resource from this Object")]
-    public int defaultResouceQuantity = 3;
-    [SerializeField] private int curResouceQuantity = 3;
+    public int defaultResouceQuantity ;
+    [SerializeField] private int curResouceQuantity ;
     private int resourceVal = 0;
 
     [Space(10)]
@@ -130,6 +130,7 @@ public class ResourceHandler : MonoBehaviour
 
     void UpdateModelLevel(int _val) {
 
+        Debug.Log(_val);
         anim.SetInteger("State", _val);
 
 

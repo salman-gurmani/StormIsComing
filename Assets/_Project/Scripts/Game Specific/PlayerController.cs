@@ -54,7 +54,7 @@ public class PlayerController : MonoBehaviour
         ResourceGatherHandling();
 
         GatherTimeHandling();
-        Debug.Log(resourceInTrigger[0].name);
+        //Debug.Log(resourceInTrigger[0].name);
     }
 
     private void GatherTimeHandling()
@@ -243,10 +243,10 @@ public class PlayerController : MonoBehaviour
                 other.gameObject.SetActive(false);
                 break;
 
-            case "QuestionShop":
-                QuestionShopHandler riddleShopHandler = other.GetComponentInParent<QuestionShopHandler>();
-                riddleShopHandler.GenerateNextQuestion();
-                break;
+            //case "QuestionShop":
+            //    QuestionShopHandler riddleShopHandler = other.GetComponentInParent<QuestionShopHandler>();
+            //    riddleShopHandler.GenerateNextQuestion();
+            //    break;
 
             default:
                 break;
