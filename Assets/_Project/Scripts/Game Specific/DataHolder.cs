@@ -10,8 +10,7 @@ public enum ResourceType
     CEMENT_SACK,
     IRON_BLOCK,
     STEEL_ROD,
-    WOOD_PLANK,
-    COINS_BOX  //Arooj
+    WOOD_PLANK //Arooj
 
         
 }
