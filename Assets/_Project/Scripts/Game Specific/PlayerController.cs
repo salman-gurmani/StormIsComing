@@ -260,7 +260,7 @@ public class PlayerController : MonoBehaviour
                 drunk = true;
                 hitEffect2.SetActive(true);
                 Instantiate(hitEffect, new Vector3(transform.position.x, transform.position.y + 1f, transform.position.z), Quaternion.identity);
-
+                Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.carCrash);
 
 
                 Invoke("ReturnBackToNormal", 3);
