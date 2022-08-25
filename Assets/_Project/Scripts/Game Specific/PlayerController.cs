@@ -263,7 +263,7 @@ public class PlayerController : MonoBehaviour
 
 
 
-                Invoke("ReturnBackToNormal", 15);
+                Invoke("ReturnBackToNormal", 3);
                 break;
             case "ResourceStructure":
                 other.GetComponent<ResourceStructureHandling>().InitProcessing();
