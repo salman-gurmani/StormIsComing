@@ -236,7 +236,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   markerSprite: {fileID: 21300000, guid: daf294dddd7cd4d4aa64aa09dcfc4472, type: 3}
-  markerSize: 25
+  markerSize: 15
   isActive: 1
 --- !u!1 &458258572182208413
 GameObject:
@@ -778,7 +778,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   markerSprite: {fileID: 21300006, guid: dfc49c10f931cd74fb08bf0ab16659b0, type: 3}
-  markerSize: 25
+  markerSize: 15
   isActive: 1
 --- !u!1 &853850342513921082
 GameObject:
@@ -1063,7 +1063,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   markerSprite: {fileID: 21300006, guid: dfc49c10f931cd74fb08bf0ab16659b0, type: 3}
-  markerSize: 25
+  markerSize: 15
   isActive: 1
 --- !u!1 &1232618937759779649
 GameObject:
@@ -1074,6 +1074,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1232618937759779648}
+  - component: {fileID: 7089896242991874551}
   m_Layer: 0
   m_Name: Stucture Area
   m_TagString: Untagged
@@ -1096,6 +1097,21 @@ Transform:
   m_Father: {fileID: 7969159731662810970}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7089896242991874551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1232618937759779649}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 492392c310a924d4291d26c3c333296b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  markerSprite: {fileID: 21300000, guid: a6c1754033bbc964b956f91dd3d3d6ee, type: 3}
+  markerSize: 40
+  isActive: 1
 --- !u!1 &1244361813479598189
 GameObject:
   m_ObjectHideFlags: 0
@@ -1548,7 +1564,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   markerSprite: {fileID: 21300000, guid: daf294dddd7cd4d4aa64aa09dcfc4472, type: 3}
-  markerSize: 25
+  markerSize: 15
   isActive: 1
 --- !u!1 &1601156364610254190
 GameObject:
@@ -2141,7 +2157,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   markerSprite: {fileID: 21300000, guid: daf294dddd7cd4d4aa64aa09dcfc4472, type: 3}
-  markerSize: 25
+  markerSize: 15
   isActive: 1
 --- !u!1 &2850891861286493207
 GameObject:
@@ -21298,7 +21314,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   markerSprite: {fileID: 21300006, guid: dfc49c10f931cd74fb08bf0ab16659b0, type: 3}
-  markerSize: 25
+  markerSize: 15
   isActive: 1
 --- !u!1 &3114843551637378726
 GameObject:
@@ -21436,7 +21452,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   markerSprite: {fileID: 21300000, guid: daf294dddd7cd4d4aa64aa09dcfc4472, type: 3}
-  markerSize: 25
+  markerSize: 15
   isActive: 1
 --- !u!1 &3114843551767072843
 GameObject:
@@ -21615,7 +21631,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   markerSprite: {fileID: 21300000, guid: daf294dddd7cd4d4aa64aa09dcfc4472, type: 3}
-  markerSize: 25
+  markerSize: 15
   isActive: 1
 --- !u!1 &3114843551935067128
 GameObject:
@@ -21922,7 +21938,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   markerSprite: {fileID: 21300000, guid: daf294dddd7cd4d4aa64aa09dcfc4472, type: 3}
-  markerSize: 25
+  markerSize: 15
   isActive: 1
 --- !u!1 &3114843552438707078
 GameObject:
@@ -22039,7 +22055,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   markerSprite: {fileID: 21300000, guid: daf294dddd7cd4d4aa64aa09dcfc4472, type: 3}
-  markerSize: 25
+  markerSize: 15
   isActive: 1
 --- !u!1 &3114843552771937880
 GameObject:
@@ -22594,7 +22610,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   markerSprite: {fileID: 21300000, guid: daf294dddd7cd4d4aa64aa09dcfc4472, type: 3}
-  markerSize: 25
+  markerSize: 15
   isActive: 1
 --- !u!1 &3492300838433388818
 GameObject:
@@ -23083,7 +23099,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   markerSprite: {fileID: 21300000, guid: daf294dddd7cd4d4aa64aa09dcfc4472, type: 3}
-  markerSize: 25
+  markerSize: 15
   isActive: 1
 --- !u!1 &3826810515330518213
 GameObject:
@@ -23667,7 +23683,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   markerSprite: {fileID: 21300000, guid: daf294dddd7cd4d4aa64aa09dcfc4472, type: 3}
-  markerSize: 25
+  markerSize: 15
   isActive: 1
 --- !u!1 &4822665529652783920
 GameObject:
@@ -24166,7 +24182,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   markerSprite: {fileID: 21300000, guid: daf294dddd7cd4d4aa64aa09dcfc4472, type: 3}
-  markerSize: 25
+  markerSize: 15
   isActive: 1
 --- !u!1 &5214882699855884777
 GameObject:
@@ -24833,7 +24849,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   markerSprite: {fileID: 21300000, guid: daf294dddd7cd4d4aa64aa09dcfc4472, type: 3}
-  markerSize: 25
+  markerSize: 15
   isActive: 1
 --- !u!1 &5804093704677380447
 GameObject:
@@ -25251,7 +25267,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   markerSprite: {fileID: 21300000, guid: 7a8cb318ae453ce4290a1a8fea027ca1, type: 3}
-  markerSize: 25
+  markerSize: 15
   isActive: 1
 --- !u!1 &5987339418844818900
 GameObject:
@@ -26093,7 +26109,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   markerSprite: {fileID: 21300000, guid: daf294dddd7cd4d4aa64aa09dcfc4472, type: 3}
-  markerSize: 25
+  markerSize: 15
   isActive: 1
 --- !u!1 &7698764301821268231
 GameObject:
@@ -26210,7 +26226,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   markerSprite: {fileID: 21300000, guid: daf294dddd7cd4d4aa64aa09dcfc4472, type: 3}
-  markerSize: 25
+  markerSize: 15
   isActive: 1
 --- !u!1 &7870383619948668193
 GameObject:
@@ -29073,7 +29089,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   markerSprite: {fileID: 21300000, guid: daf294dddd7cd4d4aa64aa09dcfc4472, type: 3}
-  markerSize: 25
+  markerSize: 15
   isActive: 1
 --- !u!1 &8883671108930352615
 GameObject:
@@ -29306,7 +29322,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   markerSprite: {fileID: 21300000, guid: daf294dddd7cd4d4aa64aa09dcfc4472, type: 3}
-  markerSize: 25
+  markerSize: 15
   isActive: 1
 --- !u!1001 &107596069747693084
 PrefabInstance:
