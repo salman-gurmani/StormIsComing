@@ -16,9 +16,9 @@ public class HUDListner : MonoBehaviour {
     [Tooltip("Should be in the order of resources")]
     public Text[] resourcesTxts;
     public GameObject MiniMap;
-
-    public RectTransform [] resourcePosition;
-    float reportTime = 10;
+    public RectTransform[] resourcePosition;
+    public int maxAmountPlayerCanCarry = 3;
+    float reportTime = 20;
 
     public bool startTime { get; set; }
     public float tempTime { get; private set; }
@@ -128,7 +128,7 @@ public class HUDListner : MonoBehaviour {
 
     public void UpdateResourceTxt(int _index) {
 
-        resourcesTxts[_index].text = Toolbox.DB.prefs.ResourceAmount[_index].value.ToString();    
+        resourcesTxts[_index].text = Toolbox.DB.prefs.ResourceAmount[_index].value.ToString() + "/" + maxAmountPlayerCanCarry;    
     }
 
     public void Press_Pause() {

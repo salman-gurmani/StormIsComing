@@ -7,7 +7,7 @@ public class ResourceHandler : MonoBehaviour
     [Tooltip("This many times user will get resource from this Object")]
     public int defaultResouceQuantity ;
     [SerializeField] private int curResouceQuantity ;
-    private int resourceVal = 0;
+    public int resourceVal = 0;
 
     [Space(10)]
     public Transform [] effectInitPoints;
@@ -27,6 +27,7 @@ public class ResourceHandler : MonoBehaviour
 
     private void Start()
     {
+        player = Toolbox.GameplayScript.player.transform;
         resourceVal = (int)type;
         collider = this.GetComponent<BoxCollider>();
         resourceName = type.ToString();
@@ -130,7 +131,6 @@ public class ResourceHandler : MonoBehaviour
 
     void UpdateModelLevel(int _val) {
 
-        Debug.Log(_val);
         anim.SetInteger("State", _val);
 
 

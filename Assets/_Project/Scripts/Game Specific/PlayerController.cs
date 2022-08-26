@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
@@ -14,24 +15,22 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float playerSpeed = 2.0f;
     private float gravityValue = -9.81f;
     bool drunk = false; 
-  public GameObject hitEffect; 
+    public GameObject hitEffect; 
     public GameObject hitEffect2; 
     public GameObject [] resourcesObjs;
     public PlayerResourceHandler [] resourcesHandler;
     public Transform playerParent;
     //public PlayerResources[] resources;
-
     public GameObject [] resourceSendEffect;
-
-
     [Space(10)]
     public List<ResourceHandler> resourceInTrigger;
     [SerializeField] private bool isGathering = false;
 
+    [SerializeField] Canvas dialogueCanvas;
+    [SerializeField] TextMeshProUGUI dialogueText;
     float time = 0;
     float gatherDelay = 0.8f;
     int resourceAvailableInLevel = 0;
-
 
     private void Start()
     {
@@ -54,9 +53,7 @@ public class PlayerController : MonoBehaviour
     {
         PlayerMovement();
         ResourceGatherHandling();
-
         GatherTimeHandling();
-        //Debug.Log(resourceInTrigger[0].name);
     }
 
     private void GatherTimeHandling()
@@ -149,7 +146,14 @@ public class PlayerController : MonoBehaviour
     }
     private void ResourceGatherHandling()
     {
-        if (!isGathering && resourceInTrigger.Count > 0) { 
+        if (!isGathering && resourceInTrigger.Count > 0)
+        {
+            if (Toolbox.DB.prefs.ResourceAmount[resourceInTrigger[0].resourceVal].value >= Toolbox.HUDListner.maxAmountPlayerCanCarry)
+            {
+                EnableDialogue(Toolbox.DB.prefs.ResourceAmount[resourceInTrigger[0].resourceVal].name + " limit reached");
+                return;
+            }
+
             isGathering = true;
             switch(resourceInTrigger[0].type)
             {
@@ -385,5 +389,18 @@ public class PlayerController : MonoBehaviour
 
         GameObject sendEffect = Instantiate(resourceSendEffect[(int)_type], this.transform.position /*+ new Vector3(this.transform.position.x, this.transform.position.y + 2, this.transform.position.z)*/, Quaternion.identity);
         sendEffect.GetComponent<MoveTO>().EnableMovement(_point);
+    }
+
+    private void EnableDialogue(string dialogueString)
+    {
+        dialogueCanvas.gameObject.SetActive(true);
+        dialogueText.text = dialogueString;
+        Invoke(nameof(DisableDialogue), 4f);
+    }
+
+    private void DisableDialogue()
+    {
+        dialogueCanvas.gameObject.SetActive(false);
+        dialogueText.text = "";
     }
 }
