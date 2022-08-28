@@ -150,7 +150,7 @@ public class PlayerController : MonoBehaviour
         {
             if (Toolbox.DB.prefs.ResourceAmount[resourceInTrigger[0].resourceVal].value >= Toolbox.HUDListner.maxAmountPlayerCanCarry)
             {
-                EnableDialogue(Toolbox.DB.prefs.ResourceAmount[resourceInTrigger[0].resourceVal].name + " limit reached");
+                EnableDialogue("Can't carry anymore " + Toolbox.DB.prefs.ResourceAmount[resourceInTrigger[0].resourceVal].name);
                 return;
             }
 
@@ -258,6 +258,7 @@ public class PlayerController : MonoBehaviour
                 if (!isResourceHandlerAvailable(handler))
                     AddResource(handler);
                 break;
+
             case "Traffic":
                 Debug.Log("PlayerCrashed In Car");
                 playerSpeed = 0.5f;
@@ -265,10 +266,9 @@ public class PlayerController : MonoBehaviour
                 hitEffect2.SetActive(true);
                 Instantiate(hitEffect, new Vector3(transform.position.x, transform.position.y + 1f, transform.position.z), Quaternion.identity);
                 Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.carCrash);
-
-
                 Invoke("ReturnBackToNormal", 3);
                 break;
+
             case "ResourceStructure":
                 other.GetComponent<ResourceStructureHandling>().InitProcessing();
                 break;
@@ -294,10 +294,10 @@ public class PlayerController : MonoBehaviour
                 other.gameObject.SetActive(false);
                 break;
 
-            //case "QuestionShop":
-            //    QuestionShopHandler riddleShopHandler = other.GetComponentInParent<QuestionShopHandler>();
-            //    riddleShopHandler.GenerateNextQuestion();
-            //    break;
+            case "QuestionShop":
+                QuestionShopHandler riddleShopHandler = other.GetComponentInParent<QuestionShopHandler>();
+                riddleShopHandler.TryToOpenShop();
+                break;
 
             default:
                 break;
