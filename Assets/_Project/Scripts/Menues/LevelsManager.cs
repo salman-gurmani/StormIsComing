@@ -36,7 +36,7 @@ public class LevelsManager : MonoBehaviour
         }
         if (Toolbox.DB.prefs.LastSelectedLevel == 0)
         {
-            Toolbox.GameManager.InstantiatePopup_RewardInfo("build 50% house to pass the level. build 100% house to earn 2x rewards.");
+            //Toolbox.GameManager.InstantiatePopup_RewardInfo("build 50% house to pass the level. build 100% house to earn 2x rewards.");
         }
 
         if (testMode)

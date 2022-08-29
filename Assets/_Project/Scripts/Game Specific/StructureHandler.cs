@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using DialogueEditor;
 
 public class StructureHandler : MonoBehaviour
 {
@@ -115,6 +116,17 @@ public class StructureHandler : MonoBehaviour
 
         //Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.paint);
         partsBuild++;
+
+        //This is just for the tutorial in level 1
+        if (ConversationManager.Instance)
+        {
+            if (partsBuild == 3)
+            {
+                ConversationManager.Instance.PressSelectedOption();
+                ConversationManager.Instance.OptionsPanel.gameObject.SetActive(true);
+            }
+        }
+
         curAreaPartsBuilt++;
         progress = ((float)partsBuild / (float)totalParts);
         Toolbox.HUDListner.SetProgressBarFill(progress);

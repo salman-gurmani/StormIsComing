@@ -1,6 +1,7 @@
 ﻿using System;
 using UnityEngine;
 using UnityEngine.UI;
+using DialogueEditor;
 
 public class HUDListner : MonoBehaviour {
 
@@ -19,7 +20,7 @@ public class HUDListner : MonoBehaviour {
     public RectTransform[] resourcePosition;
     public int maxAmountPlayerCanCarry = 3;
     float reportTime = 20;
-
+    public NPCConversation tutorialConversation;
     public bool startTime { get; set; }
     public float tempTime { get; private set; }
 
@@ -41,6 +42,24 @@ public class HUDListner : MonoBehaviour {
             CoinsCollect.SetActive(false);
         }
         //AdsManager.instance.RequestBannerWithSpecs( Tapdaq.TDMBannerSize.TDMBannerStandard, Tapdaq.TDBannerPosition.Top);
+    }
+
+    private void Start()
+    {
+        if (Toolbox.DB.prefs.LastSelectedLevel == 0)
+        {
+            ConversationManager.Instance.StartConversation(tutorialConversation);
+        }
+    }
+
+    public void DisableTutorialDialogueOptions()
+    {
+        ConversationManager.Instance.OptionsPanel.gameObject.SetActive(false);
+    }
+
+    public void GoToNextDialogue()
+    {
+        ConversationManager.Instance.PressSelectedOption();
     }
 
     public void DisableHUD() 

@@ -1,4 +1,5 @@
 using UnityEngine;
+using DialogueEditor;
 
 public class ResourceHandler : MonoBehaviour
 {
@@ -90,6 +91,12 @@ public class ResourceHandler : MonoBehaviour
         for (int i = 0; i < (Toolbox.DB.prefs.ResourceGatherLevel + 1); i++)
         {
             Toolbox.GameplayScript.player.AddResourceOnBack(type);
+        }
+
+        if (Toolbox.DB.prefs.LastSelectedLevel == 0)
+        {
+            if (Toolbox.DB.prefs.ResourceAmount[0].value == 10)
+                ConversationManager.Instance.PressSelectedOption();
         }
 
         Toolbox.HUDListner.UpdateResourceTxt(resourceVal);
