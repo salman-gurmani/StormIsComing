@@ -14,20 +14,15 @@ public class TradeShopController : MonoBehaviour
     public GameObject pnl;
     public GameObject btn;
     public int amount;
-    // Start is called before the first frame update
+
     void Start()
     {
-        
+        Type1Int = (int)type1;
+        Type2Int = (int)type2;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     public void ShowPnl()
     {
         pnl.SetActive(true);
     }
-    
 }
