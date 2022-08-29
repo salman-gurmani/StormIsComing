@@ -32,6 +32,8 @@ public class PlayerController : MonoBehaviour
     float gatherDelay = 0.8f;
     int resourceAvailableInLevel = 0;
 
+    public GameObject DustEffect;
+
     private void Start()
     {
         index = Toolbox.DB.prefs.LastSelectedPlayerObj;
@@ -89,6 +91,14 @@ public class PlayerController : MonoBehaviour
         playerVelocity.y += gravityValue * Time.deltaTime;
         controller.Move(playerVelocity * Time.deltaTime);
 
+        string path = Constants.PrefabFolderPath + Constants.LevelsScriptablesFolderPath + Toolbox.DB.prefs.LastSelectedMode.ToString() + "/" + Toolbox.DB.prefs.LastSelectedLevel.ToString();
+        LevelData curLevelData = (LevelData)Resources.Load(path);
+        if (curLevelData.environmentNumber==3)
+        {
+            DustEffect.SetActive(true);
+            DustEffect.GetComponent<ParticleSystem>().Play();
+        }
+
         UpdateMovement(move);
     }
 
@@ -109,6 +119,8 @@ public class PlayerController : MonoBehaviour
             {
 
                 run = false;
+                DustEffect.GetComponent<ParticleSystem>().Stop();
+
             }
 
             anim.SetBool("Run", run);
@@ -129,6 +141,9 @@ public class PlayerController : MonoBehaviour
 
                 //anim.SetBool("Run", run);
                 run = false;
+
+                DustEffect.GetComponent<ParticleSystem>().Stop();
+
             }
 
             anim.SetBool("Walk", run);
