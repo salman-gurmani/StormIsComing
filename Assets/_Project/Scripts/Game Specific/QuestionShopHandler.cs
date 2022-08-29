@@ -10,7 +10,7 @@ public class QuestionShopHandler : MonoBehaviour
 
     [Header("Adjustables")]
     [SerializeField] private int rewardAmountOfEachResource = 0;
-    [SerializeField] private float cooldown = 30f;
+    [SerializeField] private float coolDownTime = 30f;
     [Space]
     [Header("Assignables")]
     [SerializeField] private TextMeshProUGUI questionText;
@@ -21,6 +21,7 @@ public class QuestionShopHandler : MonoBehaviour
 
     private int currentQnAIndex = 0;
     private bool isShopOpen = false;
+    private bool onCoolDown = false;
 
     private void Awake()
     {
@@ -31,7 +32,11 @@ public class QuestionShopHandler : MonoBehaviour
     {
         if (isShopOpen)
             return;
+        if (onCoolDown)
+            return;
 
+        onCoolDown = true;
+        coolDownTime = 5f;
         shopCanvas.gameObject.SetActive(true);
         GenerateNextQuestion();
         isShopOpen = true;
@@ -45,7 +50,7 @@ public class QuestionShopHandler : MonoBehaviour
         resultPanel.SetActive(true);
         resultPanel.GetComponentInChildren<TextMeshProUGUI>().text = "Correct!\nCome back in 30 seconds and try again!";
         GiveRewards();
-        Invoke(nameof(GenerateNextQuestion), cooldown);
+        isShopOpen = false;
     }
 
     public void WrongAnswer()
@@ -55,7 +60,17 @@ public class QuestionShopHandler : MonoBehaviour
         questionPanel.SetActive(false);
         resultPanel.SetActive(true);
         resultPanel.GetComponentInChildren<TextMeshProUGUI>().text = "Wrong!\nCome back in 30 seconds and try again!";
-        Invoke(nameof(GenerateNextQuestion), cooldown);
+        isShopOpen = false;
+    }
+
+    private void Update()
+    {
+        if (onCoolDown)
+        {
+            coolDownTime -= Time.deltaTime;
+            if (coolDownTime <= 0)
+                onCoolDown = false;
+        }
     }
 
     private void SetAnswers()
