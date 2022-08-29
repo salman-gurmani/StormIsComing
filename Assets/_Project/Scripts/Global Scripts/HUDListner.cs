@@ -147,7 +147,7 @@ public class HUDListner : MonoBehaviour {
 
     public void UpdateResourceTxt(int _index) {
 
-        resourcesTxts[_index].text = Toolbox.DB.prefs.ResourceAmount[_index].value.ToString() + "/" + maxAmountPlayerCanCarry;    
+        resourcesTxts[_index].text = Toolbox.DB.prefs.ResourceAmount[_index].value.ToString() + "/" + maxAmountPlayerCanCarry;
     }
 
     public void Press_Pause() {

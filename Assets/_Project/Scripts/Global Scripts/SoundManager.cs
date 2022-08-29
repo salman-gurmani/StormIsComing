@@ -16,6 +16,8 @@ public class SoundManager : MonoBehaviour {
 	public AudioClip[] weatherBG;
 
 	[Header("Sound Clips")]
+	public AudioClip questionSuccess;
+	public AudioClip questionFailure;
 	public AudioClip carCrash;
     public AudioClip Select;
 	public AudioClip Play;

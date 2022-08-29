@@ -39,6 +39,7 @@ public class QuestionShopHandler : MonoBehaviour
 
     public void CorrectAnswer()
     {
+        Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.questionSuccess);
         questionsAndAnswers.Remove(questionsAndAnswers[currentQnAIndex]);
         questionPanel.SetActive(false);
         resultPanel.SetActive(true);
@@ -49,6 +50,7 @@ public class QuestionShopHandler : MonoBehaviour
 
     public void WrongAnswer()
     {
+        Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.questionFailure);
         questionsAndAnswers.Remove(questionsAndAnswers[currentQnAIndex]);
         questionPanel.SetActive(false);
         resultPanel.SetActive(true);
