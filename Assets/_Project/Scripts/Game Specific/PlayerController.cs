@@ -326,7 +326,9 @@ public class PlayerController : MonoBehaviour
             case "Resource":
                 RemoveResource(other.GetComponent<ResourceHandler>());
                 break;
-
+            case "TradeShop":
+                other.GetComponentInParent<TradeShopController>().btn.SetActive(false);
+                break;
             case "Lift":
                 this.transform.parent = playerParent;
                 break;
@@ -338,6 +340,12 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
+        switch (other.tag)
+        {
+            case "TradeShop":
+                other.GetComponentInParent<TradeShopController>().btn.SetActive(true);
+                break;
+        }
         //Debug.LogError("Trigger = " + other.gameObject.tag.ToString());
 
         //switch (other.tag)
