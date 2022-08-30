@@ -85,71 +85,78 @@ public class TradeShopCanvus : MonoBehaviour
     {
         
     }
-    public void Tranfer1()
+    public void Tranfer2()
     {
         if (Toolbox.DB.prefs.ResourceAmount[tradeshop.Type2Int].value >= tradeshop.amount)
         {
-            switch (type1)
+            if (Toolbox.DB.prefs.ResourceAmount[tradeshop.Type1Int].value + tradeshop.amount <= 20)
             {
-                case "WOOD_LOG":
-                    Instantiate(tradeshop.effects[0], transform.position, Quaternion.identity);
-                    Toolbox.DB.prefs.ResourceAmount[0].value = Toolbox.DB.prefs.ResourceAmount[0].value + tradeshop.amount;
-                    break;
-                case "STONE_BLOCK":
-                    Instantiate(tradeshop.effects[1], transform.position, Quaternion.identity);
-                    Toolbox.DB.prefs.ResourceAmount[1].value = Toolbox.DB.prefs.ResourceAmount[1].value + tradeshop.amount;
-                    break;
-                case "MUD_BLOCK":
-                    Instantiate(tradeshop.effects[2], transform.position, Quaternion.identity);
-                    Toolbox.DB.prefs.ResourceAmount[2].value = Toolbox.DB.prefs.ResourceAmount[2].value + tradeshop.amount;
-                    break;
-                case "CEMENT_BLOCK":
-                    Instantiate(tradeshop.effects[3], transform.position, Quaternion.identity);
-                    Toolbox.DB.prefs.ResourceAmount[4].value = Toolbox.DB.prefs.ResourceAmount[4].value + tradeshop.amount;
-                    break;
-                case "STEEL_ROD":
-                    Instantiate(tradeshop.effects[4], transform.position, Quaternion.identity);
-                    Toolbox.DB.prefs.ResourceAmount[6].value = Toolbox.DB.prefs.ResourceAmount[6].value + tradeshop.amount;
-                    break;
+                switch (type1)
+                {
+                    case "WOOD_LOG":
+                        Instantiate(tradeshop.effects[0], transform.position, Quaternion.identity);
+                        Toolbox.DB.prefs.ResourceAmount[0].value = Toolbox.DB.prefs.ResourceAmount[0].value + tradeshop.amount;
+                        break;
+                    case "STONE_BLOCK":
+                        Instantiate(tradeshop.effects[1], transform.position, Quaternion.identity);
+                        Toolbox.DB.prefs.ResourceAmount[1].value = Toolbox.DB.prefs.ResourceAmount[1].value + tradeshop.amount;
+                        break;
+                    case "MUD_BLOCK":
+                        Instantiate(tradeshop.effects[2], transform.position, Quaternion.identity);
+                        Toolbox.DB.prefs.ResourceAmount[2].value = Toolbox.DB.prefs.ResourceAmount[2].value + tradeshop.amount;
+                        break;
+                    case "CEMENT_BLOCK":
+                        Instantiate(tradeshop.effects[3], transform.position, Quaternion.identity);
+                        Toolbox.DB.prefs.ResourceAmount[4].value = Toolbox.DB.prefs.ResourceAmount[4].value + tradeshop.amount;
+                        break;
+                    case "STEEL_ROD":
+                        Instantiate(tradeshop.effects[4], transform.position, Quaternion.identity);
+                        Toolbox.DB.prefs.ResourceAmount[6].value = Toolbox.DB.prefs.ResourceAmount[6].value + tradeshop.amount;
+                        break;
+                }
+                switch (type2)
+                {
+                    case "WOOD_LOG":
+                        Instantiate(tradeshop.effects[0], player.transform.position, Quaternion.identity);
+                        Toolbox.DB.prefs.ResourceAmount[0].value = Toolbox.DB.prefs.ResourceAmount[0].value - tradeshop.amount;
+                        break;
+                    case "STONE_BLOCK":
+                        Instantiate(tradeshop.effects[1], player.transform.position, Quaternion.identity);
+                        Toolbox.DB.prefs.ResourceAmount[1].value = Toolbox.DB.prefs.ResourceAmount[1].value - tradeshop.amount;
+                        break;
+                    case "MUD_BLOCK":
+                        Instantiate(tradeshop.effects[2], player.transform.position, Quaternion.identity);
+                        Toolbox.DB.prefs.ResourceAmount[2].value = Toolbox.DB.prefs.ResourceAmount[2].value - tradeshop.amount;
+                        break;
+                    case "CEMENT_BLOCK":
+                        Instantiate(tradeshop.effects[3], player.transform.position, Quaternion.identity);
+                        Toolbox.DB.prefs.ResourceAmount[4].value = Toolbox.DB.prefs.ResourceAmount[4].value - tradeshop.amount;
+                        break;
+                    case "STEEL_ROD":
+                        Instantiate(tradeshop.effects[4], player.transform.position, Quaternion.identity);
+                        Toolbox.DB.prefs.ResourceAmount[6].value = Toolbox.DB.prefs.ResourceAmount[6].value - tradeshop.amount;
+                        break;
+
+                }
+                tradeshop.pnl.SetActive(false);
+
+
+
+
+                foreach (ResourceType resourceType in (ResourceType[])Enum.GetValues(typeof(ResourceType)))
+                {
+
+                    Toolbox.HUDListner.UpdateResourceTxt((int)resourceType);
+
+                }
+
+
             }
-            switch (type2)
+            else
             {
-                case "WOOD_LOG":
-                    Instantiate(tradeshop.effects[0], player.transform.position, Quaternion.identity);
-                    Toolbox.DB.prefs.ResourceAmount[0].value = Toolbox.DB.prefs.ResourceAmount[0].value - tradeshop.amount;
-                    break;
-                case "STONE_BLOCK":
-                    Instantiate(tradeshop.effects[1], player.transform.position, Quaternion.identity);
-                    Toolbox.DB.prefs.ResourceAmount[1].value = Toolbox.DB.prefs.ResourceAmount[1].value - tradeshop.amount;
-                    break;
-                case "MUD_BLOCK":
-                    Instantiate(tradeshop.effects[2], player.transform.position, Quaternion.identity);
-                    Toolbox.DB.prefs.ResourceAmount[2].value = Toolbox.DB.prefs.ResourceAmount[2].value - tradeshop.amount;
-                    break;
-                case "CEMENT_BLOCK":
-                    Instantiate(tradeshop.effects[3], player.transform.position, Quaternion.identity);
-                    Toolbox.DB.prefs.ResourceAmount[4].value = Toolbox.DB.prefs.ResourceAmount[4].value - tradeshop.amount;
-                    break;
-                case "STEEL_ROD":
-                    Instantiate(tradeshop.effects[4], player.transform.position, Quaternion.identity);
-                    Toolbox.DB.prefs.ResourceAmount[6].value = Toolbox.DB.prefs.ResourceAmount[6].value - tradeshop.amount;
-                    break;
-
+                Debug.Log("Your Pack Is Full");
+                tradeshop.pnl.SetActive(false);
             }
-            tradeshop.pnl.SetActive(false);
-
-
-
-
-            foreach (ResourceType resourceType in (ResourceType[])Enum.GetValues(typeof(ResourceType)))
-            {
-            
-                Toolbox.HUDListner.UpdateResourceTxt((int)resourceType);
-                
-            }
-
-
-
 
 
 
@@ -161,62 +168,70 @@ public class TradeShopCanvus : MonoBehaviour
             tradeshop.pnl.SetActive(false);
         }
     }
-    public void Tranfer2()
+    public void Tranfer1()
     {
         if (Toolbox.DB.prefs.ResourceAmount[tradeshop.Type1Int].value >= tradeshop.amount)
         {
-            switch (type2)
+            if (Toolbox.DB.prefs.ResourceAmount[tradeshop.Type2Int].value + tradeshop.amount <= 20)
             {
-                case "WOOD_LOG":
-                    Instantiate(tradeshop.effects[0], transform.position, Quaternion.identity);
-                    Toolbox.DB.prefs.ResourceAmount[0].value = Toolbox.DB.prefs.ResourceAmount[0].value + tradeshop.amount;
-                    break;
-                case "STONE_BLOCK":
-                    Instantiate(tradeshop.effects[1], transform.position, Quaternion.identity);
-                    Toolbox.DB.prefs.ResourceAmount[1].value = Toolbox.DB.prefs.ResourceAmount[1].value + tradeshop.amount;
-                    break;
-                case "MUD_BLOCK":
-                    Instantiate(tradeshop.effects[2], transform.position, Quaternion.identity);
-                    Toolbox.DB.prefs.ResourceAmount[2].value = Toolbox.DB.prefs.ResourceAmount[2].value + tradeshop.amount;
-                    break;
-                case "CEMENT_BLOCK":
-                    Instantiate(tradeshop.effects[3], transform.position, Quaternion.identity);
-                    Toolbox.DB.prefs.ResourceAmount[4].value = Toolbox.DB.prefs.ResourceAmount[4].value + tradeshop.amount;
-                    break;
-                case "STEEL_ROD":
-                    Instantiate(tradeshop.effects[4], transform.position, Quaternion.identity);
-                    Toolbox.DB.prefs.ResourceAmount[6].value = Toolbox.DB.prefs.ResourceAmount[6].value + tradeshop.amount;
-                    break;
-            }
-            switch (type1)
-            {
-                case "WOOD_LOG":
-                    Instantiate(tradeshop.effects[0], player.transform.position, Quaternion.identity);
-                    Toolbox.DB.prefs.ResourceAmount[0].value = Toolbox.DB.prefs.ResourceAmount[0].value - tradeshop.amount;
-                    break;
-                case "STONE_BLOCK":
-                    Instantiate(tradeshop.effects[1], player.transform.position, Quaternion.identity);
-                    Toolbox.DB.prefs.ResourceAmount[1].value = Toolbox.DB.prefs.ResourceAmount[1].value - tradeshop.amount;
-                    break;
-                case "MUD_BLOCK":
-                    Instantiate(tradeshop.effects[2], player.transform.position, Quaternion.identity);
-                    Toolbox.DB.prefs.ResourceAmount[2].value = Toolbox.DB.prefs.ResourceAmount[2].value - tradeshop.amount;
-                    break;
-                case "CEMENT_BLOCK":
-                    Instantiate(tradeshop.effects[3], player.transform.position, Quaternion.identity);
-                    Toolbox.DB.prefs.ResourceAmount[4].value = Toolbox.DB.prefs.ResourceAmount[4].value - tradeshop.amount;
-                    break;
-                case "STEEL_ROD":
-                    Instantiate(tradeshop.effects[4], player.transform.position, Quaternion.identity);
-                    Toolbox.DB.prefs.ResourceAmount[6].value = Toolbox.DB.prefs.ResourceAmount[6].value - tradeshop.amount;
-                    break;
-            }
-            tradeshop.pnl.SetActive(false);
-            foreach (ResourceType resourceType in (ResourceType[])Enum.GetValues(typeof(ResourceType)))
-            {
+                switch (type2)
+                {
+                    case "WOOD_LOG":
+                        Instantiate(tradeshop.effects[0], transform.position, Quaternion.identity);
+                        Toolbox.DB.prefs.ResourceAmount[0].value = Toolbox.DB.prefs.ResourceAmount[0].value + tradeshop.amount;
+                        break;
+                    case "STONE_BLOCK":
+                        Instantiate(tradeshop.effects[1], transform.position, Quaternion.identity);
+                        Toolbox.DB.prefs.ResourceAmount[1].value = Toolbox.DB.prefs.ResourceAmount[1].value + tradeshop.amount;
+                        break;
+                    case "MUD_BLOCK":
+                        Instantiate(tradeshop.effects[2], transform.position, Quaternion.identity);
+                        Toolbox.DB.prefs.ResourceAmount[2].value = Toolbox.DB.prefs.ResourceAmount[2].value + tradeshop.amount;
+                        break;
+                    case "CEMENT_BLOCK":
+                        Instantiate(tradeshop.effects[3], transform.position, Quaternion.identity);
+                        Toolbox.DB.prefs.ResourceAmount[4].value = Toolbox.DB.prefs.ResourceAmount[4].value + tradeshop.amount;
+                        break;
+                    case "STEEL_ROD":
+                        Instantiate(tradeshop.effects[4], transform.position, Quaternion.identity);
+                        Toolbox.DB.prefs.ResourceAmount[6].value = Toolbox.DB.prefs.ResourceAmount[6].value + tradeshop.amount;
+                        break;
+                }
+                switch (type1)
+                {
+                    case "WOOD_LOG":
+                        Instantiate(tradeshop.effects[0], player.transform.position, Quaternion.identity);
+                        Toolbox.DB.prefs.ResourceAmount[0].value = Toolbox.DB.prefs.ResourceAmount[0].value - tradeshop.amount;
+                        break;
+                    case "STONE_BLOCK":
+                        Instantiate(tradeshop.effects[1], player.transform.position, Quaternion.identity);
+                        Toolbox.DB.prefs.ResourceAmount[1].value = Toolbox.DB.prefs.ResourceAmount[1].value - tradeshop.amount;
+                        break;
+                    case "MUD_BLOCK":
+                        Instantiate(tradeshop.effects[2], player.transform.position, Quaternion.identity);
+                        Toolbox.DB.prefs.ResourceAmount[2].value = Toolbox.DB.prefs.ResourceAmount[2].value - tradeshop.amount;
+                        break;
+                    case "CEMENT_BLOCK":
+                        Instantiate(tradeshop.effects[3], player.transform.position, Quaternion.identity);
+                        Toolbox.DB.prefs.ResourceAmount[4].value = Toolbox.DB.prefs.ResourceAmount[4].value - tradeshop.amount;
+                        break;
+                    case "STEEL_ROD":
+                        Instantiate(tradeshop.effects[4], player.transform.position, Quaternion.identity);
+                        Toolbox.DB.prefs.ResourceAmount[6].value = Toolbox.DB.prefs.ResourceAmount[6].value - tradeshop.amount;
+                        break;
+                }
+                tradeshop.pnl.SetActive(false);
+                foreach (ResourceType resourceType in (ResourceType[])Enum.GetValues(typeof(ResourceType)))
+                {
 
-                Toolbox.HUDListner.UpdateResourceTxt((int)resourceType);
+                    Toolbox.HUDListner.UpdateResourceTxt((int)resourceType);
 
+                }
+            }
+            else
+            {
+                Debug.Log("Your Pack Is Full");
+                tradeshop.pnl.SetActive(false);
             }
         }
         else
