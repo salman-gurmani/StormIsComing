@@ -93,13 +93,13 @@ public class PlayerController : MonoBehaviour
         playerVelocity.y += gravityValue * Time.deltaTime;
         controller.Move(playerVelocity * Time.deltaTime);
 
-        string path = Constants.PrefabFolderPath + Constants.LevelsScriptablesFolderPath + Toolbox.DB.prefs.LastSelectedMode.ToString() + "/" + Toolbox.DB.prefs.LastSelectedLevel.ToString();
-        LevelData curLevelData = (LevelData)Resources.Load(path);
-        if (curLevelData.environmentNumber==3)
-        {
-            DustEffect.SetActive(true);
-            DustEffect.GetComponent<ParticleSystem>().Play();
-        }
+        //string path = Constants.PrefabFolderPath + Constants.LevelsScriptablesFolderPath + Toolbox.DB.prefs.LastSelectedMode.ToString() + "/" + Toolbox.DB.prefs.LastSelectedLevel.ToString();
+        //LevelData curLevelData = (LevelData)Resources.Load(path);
+        //if (curLevelData.environmentNumber==3)
+        //{
+            
+        //    DustEffect.GetComponent<ParticleSystem>().Play();
+        //}
 
         UpdateMovement(move);
     }
@@ -115,6 +115,7 @@ public class PlayerController : MonoBehaviour
             if (_mov.x != 0 || _mov.z != 0)
             {
                 run = true;
+                CreateDust();
                 //Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.running);
             }
             else
@@ -136,6 +137,7 @@ public class PlayerController : MonoBehaviour
             if (_mov.x != 0 || _mov.z != 0)
             {
                 run = true;
+                CreateDust();
                 //Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.running);
             }
             else
@@ -155,6 +157,17 @@ public class PlayerController : MonoBehaviour
 
 
 }
+
+    public void CreateDust()
+    {
+        string path = Constants.PrefabFolderPath + Constants.LevelsScriptablesFolderPath + Toolbox.DB.prefs.LastSelectedMode.ToString() + "/" + Toolbox.DB.prefs.LastSelectedLevel.ToString();
+        LevelData curLevelData = (LevelData)Resources.Load(path);
+        if (curLevelData.environmentNumber == 3)
+        {
+
+            DustEffect.GetComponent<ParticleSystem>().Play();
+        }
+    }
     public void ReturnBackToNormal()
     {
         playerSpeed = 4f;

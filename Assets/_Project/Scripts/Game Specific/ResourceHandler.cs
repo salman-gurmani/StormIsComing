@@ -25,6 +25,11 @@ public class ResourceHandler : MonoBehaviour
     public float gatherDistance = 5;
     private string resourceName;
     public GameObject TreeStump;
+    public GameObject LeftRocks;
+    public GameObject LeftCement;
+    public GameObject LeftMud;
+    //public GameObject EmptySandContainer;
+
 
     private void Start()
     {
@@ -114,6 +119,18 @@ public class ResourceHandler : MonoBehaviour
             if(resourceName=="WOOD_LOG")
             {
                 Instantiate(TreeStump, this.gameObject.transform.position, Quaternion.identity);
+            }
+            else if (resourceName == "STONE_BLOCK")
+            {
+                Instantiate(LeftRocks, this.gameObject.transform.position, transform.rotation);
+            }
+            else if (resourceName == "CEMENT_BLOCK")
+            {
+                Instantiate(LeftCement, this.gameObject.transform.position, transform.rotation);
+            } 
+            else if (resourceName == "MUD_BLOCK")
+            {
+                Instantiate(LeftMud, this.gameObject.transform.position, transform.rotation);
             }
 
 
