@@ -33,7 +33,7 @@ public class PlayerController : MonoBehaviour
     float time = 0;
     float gatherDelay = 0.8f;
     int resourceAvailableInLevel = 0;
-
+    private bool isPlayerDialogueActive = false;
     public GameObject DustEffect;
 
     private void Start()
@@ -167,7 +167,7 @@ public class PlayerController : MonoBehaviour
         {
             if (Toolbox.DB.prefs.ResourceAmount[resourceInTrigger[0].resourceVal].value >= Toolbox.HUDListner.maxAmountPlayerCanCarry)
             {
-                EnableDialogue("Can't carry anymore " + Toolbox.DB.prefs.ResourceAmount[resourceInTrigger[0].resourceVal].name);
+                TryToEnableDialogue("Can't carry anymore " + Toolbox.DB.prefs.ResourceAmount[resourceInTrigger[0].resourceVal].name);
                 return;
             }
 
@@ -424,8 +424,12 @@ public class PlayerController : MonoBehaviour
         sendEffect.GetComponent<MoveTO>().EnableMovement(_point);
     }
 
-    private void EnableDialogue(string dialogueString)
+    private void TryToEnableDialogue(string dialogueString)
     {
+        if (isPlayerDialogueActive)
+            return;
+
+        isPlayerDialogueActive = true;
         dialogueCanvas.gameObject.SetActive(true);
         dialogueText.text = dialogueString;
         Invoke(nameof(DisableDialogue), 4f);
@@ -433,6 +437,7 @@ public class PlayerController : MonoBehaviour
 
     private void DisableDialogue()
     {
+        isPlayerDialogueActive = false;
         dialogueCanvas.gameObject.SetActive(false);
         dialogueText.text = "";
     }

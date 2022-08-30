@@ -325,8 +325,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.1719418, y: 0.517298, z: 0.6089203}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1.9717565, y: 1.1427772, z: 0.6004677}
+  m_Center: {x: 0, y: -0.0084524155, z: -0.7733965}
 --- !u!1 &2749989386309665121
 GameObject:
   m_ObjectHideFlags: 0
@@ -407,7 +407,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 411f4f011ee49734aa473f831d8a2eea, type: 2}
   - {fileID: 11400000, guid: 75f5971c07112f544a6484c033db40fe, type: 2}
   rewardAmountOfEachResource: 20
-  cooldown: 30
+  coolDownTime: 30
   questionText: {fileID: 4756335588115073334}
   shopCanvas: {fileID: 9138992529140661664}
   questionPanel: {fileID: 5662179290102128536}
@@ -428,8 +428,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.96430814, y: 1.4111698, z: 1.1015232}
-  m_Center: {x: 0, y: 0.428936, z: 0.58375907}
+  m_Size: {x: 2.0142124, y: 1.2236934, z: 1.3358687}
+  m_Center: {x: 0, y: -0.002259612, z: -0.11459035}
 --- !u!1 &3408862079282594133
 GameObject:
   m_ObjectHideFlags: 0
@@ -837,7 +837,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_TargetDisplay: 0
 --- !u!114 &2382036537597229615
 MonoBehaviour:
@@ -2164,17 +2164,17 @@ PrefabInstance:
     - target: {fileID: 8328188689377886901, guid: cb9857d30ee56471293ab0de2a02d4b9,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.9
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8328188689377886901, guid: cb9857d30ee56471293ab0de2a02d4b9,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.9
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8328188689377886901, guid: cb9857d30ee56471293ab0de2a02d4b9,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.9
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8328188689377886901, guid: cb9857d30ee56471293ab0de2a02d4b9,
         type: 3}
@@ -2254,17 +2254,17 @@ PrefabInstance:
     - target: {fileID: 4717970442270327667, guid: 8dec47f5c6823e34ca51fbb24b8c211b,
         type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.5
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 4717970442270327667, guid: 8dec47f5c6823e34ca51fbb24b8c211b,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.5
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 4717970442270327667, guid: 8dec47f5c6823e34ca51fbb24b8c211b,
         type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.5
+      value: 0.7
       objectReference: {fileID: 0}
     - target: {fileID: 4717970442270327667, guid: 8dec47f5c6823e34ca51fbb24b8c211b,
         type: 3}
@@ -2274,12 +2274,12 @@ PrefabInstance:
     - target: {fileID: 4717970442270327667, guid: 8dec47f5c6823e34ca51fbb24b8c211b,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.264
+      value: -0.53
       objectReference: {fileID: 0}
     - target: {fileID: 4717970442270327667, guid: 8dec47f5c6823e34ca51fbb24b8c211b,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.667
+      value: 0.344
       objectReference: {fileID: 0}
     - target: {fileID: 4717970442270327667, guid: 8dec47f5c6823e34ca51fbb24b8c211b,
         type: 3}

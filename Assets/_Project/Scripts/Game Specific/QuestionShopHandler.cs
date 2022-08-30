@@ -36,7 +36,6 @@ public class QuestionShopHandler : MonoBehaviour
             return;
 
         onCoolDown = true;
-        coolDownTime = 5f;
         shopCanvas.gameObject.SetActive(true);
         GenerateNextQuestion();
         isShopOpen = true;
@@ -69,7 +68,10 @@ public class QuestionShopHandler : MonoBehaviour
         {
             coolDownTime -= Time.deltaTime;
             if (coolDownTime <= 0)
+            {
                 onCoolDown = false;
+                coolDownTime = 30f;
+            }
         }
     }
 
