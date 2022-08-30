@@ -34,7 +34,7 @@ public class HUDListner : MonoBehaviour {
         Toolbox.Set_HudListner(this.GetComponent<HUDListner>());
         if (Toolbox.DB.prefs.LastSelectedLevel == 2 || Toolbox.DB.prefs.LastSelectedLevel == 5 || Toolbox.DB.prefs.LastSelectedLevel == 8 || Toolbox.DB.prefs.LastSelectedLevel == 11 || Toolbox.DB.prefs.LastSelectedLevel == 14)
         {
-            Bar.SetActive(false);
+           // Bar.SetActive(false);
             CoinsCollect.SetActive(true);
         }
         else
@@ -50,6 +50,13 @@ public class HUDListner : MonoBehaviour {
         {
             ConversationManager.Instance.StartConversation(tutorialConversation);
         }
+
+
+        if(Toolbox.GameplayScript.levelsManager.CurLevelData.isBonus)
+        {
+
+        }
+
     }
 
     public void DisableTutorialDialogueOptions()

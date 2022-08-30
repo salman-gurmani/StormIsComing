@@ -12,7 +12,8 @@ public class LevelData : ScriptableObject
     public string LevelTxt;
     public ResourceType[] hasResources;
     public DisasterType disaster;
-
+    public bool isBonus;
+    public int noOfBonusThings;
     public enum Weather { 
     
         SUNNY,

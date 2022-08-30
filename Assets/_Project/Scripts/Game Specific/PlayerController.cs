@@ -4,6 +4,8 @@ using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
+    int coinAndChest = 0;
+    float progress;
     public CharacterController controller; 
     private Animator anim;
     private LevelData curLevelData;
@@ -298,6 +300,11 @@ public class PlayerController : MonoBehaviour
                 Toolbox.DB.prefs.GoldCoins = Toolbox.DB.prefs.GoldCoins + 1;
                 FindObjectOfType<HUDListner>().UpdateTxt();
                 other.gameObject.SetActive(false);
+                coinAndChest++;
+                progress = ((float)coinAndChest / (float)Toolbox.GameplayScript.levelsManager.CurLevelData.noOfBonusThings);
+                Toolbox.HUDListner.SetProgressBarFill(progress);
+
+
                 break;
 
             case "Chest":
@@ -307,6 +314,9 @@ public class PlayerController : MonoBehaviour
                 Toolbox.GameManager.Instantiate_RewardAnim();
                 FindObjectOfType<HUDListner>().UpdateTxt();
                 other.gameObject.SetActive(false);
+                coinAndChest++;
+                progress = ((float)coinAndChest / (float)Toolbox.GameplayScript.levelsManager.CurLevelData.noOfBonusThings);
+                Toolbox.HUDListner.SetProgressBarFill(progress);
                 break;
 
             case "QuestionShop":
