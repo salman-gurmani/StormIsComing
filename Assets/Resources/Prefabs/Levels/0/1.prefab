@@ -1201,6 +1201,7 @@ GameObject:
   - component: {fileID: 726220778446052942}
   - component: {fileID: 736302572757512512}
   - component: {fileID: 758618718183524470}
+  - component: {fileID: 5950471846030105644}
   m_Layer: 0
   m_Name: sand-bucket (3)
   m_TagString: Untagged
@@ -1283,9 +1284,25 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 3d4770f82ee5d493b82f92b980b683d6, type: 3}
+--- !u!54 &5950471846030105644
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 749455411906316272}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &801338635744880209
 GameObject:
   m_ObjectHideFlags: 0
@@ -2583,6 +2600,7 @@ GameObject:
   - component: {fileID: 1720001921316241325}
   - component: {fileID: 1727736940346869297}
   - component: {fileID: 1617931634474254253}
+  - component: {fileID: 8884831650500328914}
   m_Layer: 0
   m_Name: ball-beach
   m_TagString: Untagged
@@ -2669,6 +2687,22 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.25829315
   m_Center: {x: 0.000000014901161, y: -0.000000029802322, z: 0}
+--- !u!54 &8884831650500328914
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1704643749748473893}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1807750943314447138
 GameObject:
   m_ObjectHideFlags: 0
@@ -3098,6 +3132,7 @@ GameObject:
   - component: {fileID: 1988556708727981982}
   - component: {fileID: 1998559195540667906}
   - component: {fileID: 1887682621745186718}
+  - component: {fileID: 1066769692191153324}
   m_Layer: 0
   m_Name: ball-beach (1)
   m_TagString: Untagged
@@ -3184,6 +3219,22 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.25829315
   m_Center: {x: 0.000000014901161, y: -0.000000029802322, z: 0}
+--- !u!54 &1066769692191153324
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2012674852877613078}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &2012852650759238203
 GameObject:
   m_ObjectHideFlags: 0
@@ -3196,6 +3247,7 @@ GameObject:
   - component: {fileID: 1988803251823896613}
   - component: {fileID: 1998803493835177093}
   - component: {fileID: 1949993766013056485}
+  - component: {fileID: 3250741549855123279}
   m_Layer: 0
   m_Name: lifebuoy
   m_TagString: Untagged
@@ -3278,9 +3330,25 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300002, guid: 9f0f331b0ef336c4b8a5ef07d9431d42, type: 3}
+--- !u!54 &3250741549855123279
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2012852650759238203}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &2053754011150016329
 GameObject:
   m_ObjectHideFlags: 0
@@ -3436,6 +3504,7 @@ GameObject:
   - component: {fileID: 2156444049221811115}
   - component: {fileID: 2148162522609807287}
   - component: {fileID: 2122157415815408833}
+  - component: {fileID: 7702221249535437505}
   m_Layer: 0
   m_Name: beach-bag (3)
   m_TagString: Untagged
@@ -3520,6 +3589,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.3041784, y: 0.39382637, z: 0.62677777}
   m_Center: {x: 0, y: 0.19889253, z: 0.0038253665}
+--- !u!54 &7702221249535437505
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2134604485773442181}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &2193290480138499354
 GameObject:
   m_ObjectHideFlags: 0
@@ -3814,6 +3899,7 @@ GameObject:
   - component: {fileID: 2377427594766161434}
   - component: {fileID: 2367949800035811846}
   - component: {fileID: 2332866049378222448}
+  - component: {fileID: 5903860808994269348}
   m_Layer: 0
   m_Name: beach-bag
   m_TagString: Untagged
@@ -3898,6 +3984,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.3041784, y: 0.39382637, z: 0.62677777}
   m_Center: {x: 0, y: 0.19889253, z: 0.0038253665}
+--- !u!54 &5903860808994269348
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2345470346806317364}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &2382041033115432229
 GameObject:
   m_ObjectHideFlags: 0
@@ -4701,6 +4803,7 @@ GameObject:
   - component: {fileID: 2966478914681257807}
   - component: {fileID: 2956857666261028929}
   - component: {fileID: 3006195203292883319}
+  - component: {fileID: 3908579666251081754}
   m_Layer: 0
   m_Name: sand-bucket (4)
   m_TagString: Untagged
@@ -4783,9 +4886,25 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 3d4770f82ee5d493b82f92b980b683d6, type: 3}
+--- !u!54 &3908579666251081754
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2979580379723228913}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &3015411371026159415
 GameObject:
   m_ObjectHideFlags: 0
@@ -4798,6 +4917,7 @@ GameObject:
   - component: {fileID: 3002350355520802841}
   - component: {fileID: 2992793397032240133}
   - component: {fileID: 2969047803837826931}
+  - component: {fileID: 7563465611943577064}
   m_Layer: 0
   m_Name: beach-bag (4)
   m_TagString: Untagged
@@ -4882,6 +5002,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.3041784, y: 0.39382637, z: 0.62677777}
   m_Center: {x: 0, y: 0.19889253, z: 0.0038253665}
+--- !u!54 &7563465611943577064
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3015411371026159415}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &3020403443565817068
 GameObject:
   m_ObjectHideFlags: 0
@@ -4894,6 +5030,7 @@ GameObject:
   - component: {fileID: 2998289295979362034}
   - component: {fileID: 3006323242621510226}
   - component: {fileID: 2957302275166530354}
+  - component: {fileID: 3014492615721081836}
   m_Layer: 0
   m_Name: lifebuoy (1)
   m_TagString: Untagged
@@ -4976,9 +5113,25 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300002, guid: 9f0f331b0ef336c4b8a5ef07d9431d42, type: 3}
+--- !u!54 &3014492615721081836
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3020403443565817068}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &3079085120043875546
 GameObject:
   m_ObjectHideFlags: 0
@@ -5532,6 +5685,7 @@ GameObject:
   - component: {fileID: 3581484325356083771}
   - component: {fileID: 3573454784545066651}
   - component: {fileID: 3541412595889031163}
+  - component: {fileID: 925593695780804176}
   m_Layer: 0
   m_Name: lifebuoy (1)
   m_TagString: Untagged
@@ -5614,9 +5768,25 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300002, guid: 9f0f331b0ef336c4b8a5ef07d9431d42, type: 3}
+--- !u!54 &925593695780804176
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3586358250357211173}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &3635528253506124418
 GameObject:
   m_ObjectHideFlags: 0
@@ -5978,6 +6148,7 @@ GameObject:
   - component: {fileID: 4140197864560853555}
   - component: {fileID: 4129936306807182995}
   - component: {fileID: 4171057829761703923}
+  - component: {fileID: 1616404405615787684}
   m_Layer: 0
   m_Name: lifebuoy (3)
   m_TagString: Untagged
@@ -6060,9 +6231,25 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300002, guid: 9f0f331b0ef336c4b8a5ef07d9431d42, type: 3}
+--- !u!54 &1616404405615787684
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4107917084297844781}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &4189394952655971629
 GameObject:
   m_ObjectHideFlags: 0
@@ -11158,6 +11345,7 @@ GameObject:
   - component: {fileID: 4439041708991221069}
   - component: {fileID: 4449046119936799953}
   - component: {fileID: 4336971354418957645}
+  - component: {fileID: 5824161618593112872}
   m_Layer: 0
   m_Name: ball-beach (3)
   m_TagString: Untagged
@@ -11244,6 +11432,22 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.25829315
   m_Center: {x: 0.000000014901161, y: -0.000000029802322, z: 0}
+--- !u!54 &5824161618593112872
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4461963584498479813}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &4502002382636530283
 GameObject:
   m_ObjectHideFlags: 0
@@ -11287,6 +11491,7 @@ GameObject:
   - component: {fileID: 4539211303116238721}
   - component: {fileID: 4529871477743042703}
   - component: {fileID: 4498443907090889145}
+  - component: {fileID: 3809996436270397507}
   m_Layer: 0
   m_Name: sand-bucket (2)
   m_TagString: Untagged
@@ -11369,9 +11574,25 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 3d4770f82ee5d493b82f92b980b683d6, type: 3}
+--- !u!54 &3809996436270397507
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4506995932164601407}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &4507778890760308770
 GameObject:
   m_ObjectHideFlags: 0
@@ -11512,6 +11733,7 @@ GameObject:
   - component: {fileID: 4630700222434832508}
   - component: {fileID: 4638813083076058994}
   - component: {fileID: 4670416528344000068}
+  - component: {fileID: 717810996038839209}
   m_Layer: 0
   m_Name: sand-bucket (1)
   m_TagString: Untagged
@@ -11594,9 +11816,25 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 3d4770f82ee5d493b82f92b980b683d6, type: 3}
+--- !u!54 &717810996038839209
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4625505900032928194}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &4645277883776592615
 GameObject:
   m_ObjectHideFlags: 0
@@ -13948,6 +14186,7 @@ GameObject:
   - component: {fileID: 5732615382054055391}
   - component: {fileID: 5741143189208545731}
   - component: {fileID: 5697062134894574261}
+  - component: {fileID: 5488278488787800415}
   m_Layer: 0
   m_Name: beach-bag (2)
   m_TagString: Untagged
@@ -14032,6 +14271,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.3041784, y: 0.39382637, z: 0.62677777}
   m_Center: {x: 0, y: 0.19889253, z: 0.0038253665}
+--- !u!54 &5488278488787800415
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5763708425802377969}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &5772857687511150083
 GameObject:
   m_ObjectHideFlags: 0
@@ -16235,6 +16490,7 @@ GameObject:
   - component: {fileID: 7547752644471568667}
   - component: {fileID: 7537770406183054779}
   - component: {fileID: 7505640139826914523}
+  - component: {fileID: 5760716804978300780}
   m_Layer: 0
   m_Name: lifebuoy
   m_TagString: Untagged
@@ -16317,9 +16573,25 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300002, guid: 9f0f331b0ef336c4b8a5ef07d9431d42, type: 3}
+--- !u!54 &5760716804978300780
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7550761813589222149}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &7581522589521190604
 GameObject:
   m_ObjectHideFlags: 0
@@ -16878,6 +17150,7 @@ GameObject:
   - component: {fileID: 7936458619486778145}
   - component: {fileID: 7926620192865560381}
   - component: {fileID: 7979718361382986827}
+  - component: {fileID: 2222571958002455324}
   m_Layer: 0
   m_Name: beach-bag (1)
   m_TagString: Untagged
@@ -16962,6 +17235,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.3041784, y: 0.39382637, z: 0.62677777}
   m_Center: {x: 0, y: 0.19889253, z: 0.0038253665}
+--- !u!54 &2222571958002455324
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7949255793910313999}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &7970792290713188702
 GameObject:
   m_ObjectHideFlags: 0
@@ -17744,6 +18033,7 @@ GameObject:
   - component: {fileID: 8424884837517372318}
   - component: {fileID: 8415229503750407312}
   - component: {fileID: 8392491270442745254}
+  - component: {fileID: 1487828064670335434}
   m_Layer: 0
   m_Name: sand-bucket
   m_TagString: Untagged
@@ -17826,9 +18116,25 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 3d4770f82ee5d493b82f92b980b683d6, type: 3}
+--- !u!54 &1487828064670335434
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8401922870454743584}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &8431247340543043195
 GameObject:
   m_ObjectHideFlags: 0
@@ -18504,6 +18810,7 @@ GameObject:
   - component: {fileID: 8784860836902840931}
   - component: {fileID: 8777114724042839039}
   - component: {fileID: 8665129086981171811}
+  - component: {fileID: 140371207925324191}
   m_Layer: 0
   m_Name: ball-beach (2)
   m_TagString: Untagged
@@ -18590,6 +18897,22 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.25829315
   m_Center: {x: 0.000000014901161, y: -0.000000029802322, z: 0}
+--- !u!54 &140371207925324191
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8763064466163602923}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &8815198560534356743
 GameObject:
   m_ObjectHideFlags: 0
@@ -18854,6 +19177,7 @@ GameObject:
   - component: {fileID: 8969506036096284512}
   - component: {fileID: 8961772943063229376}
   - component: {fileID: 9001698179901057696}
+  - component: {fileID: 5215215463117054281}
   m_Layer: 0
   m_Name: lifebuoy (2)
   m_TagString: Untagged
@@ -18936,9 +19260,25 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300002, guid: 9f0f331b0ef336c4b8a5ef07d9431d42, type: 3}
+--- !u!54 &5215215463117054281
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8938702845127060862}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &8940228739793479368
 GameObject:
   m_ObjectHideFlags: 0
@@ -19080,6 +19420,7 @@ GameObject:
   - component: {fileID: 8947831705150059880}
   - component: {fileID: 8937849425935158516}
   - component: {fileID: 9045397502249743720}
+  - component: {fileID: 8269956240198286980}
   m_Layer: 0
   m_Name: ball-beach (4)
   m_TagString: Untagged
@@ -19166,6 +19507,22 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.25829315
   m_Center: {x: 0.000000014901161, y: -0.000000029802322, z: 0}
+--- !u!54 &8269956240198286980
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8960937647373568736}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &8968875765297003944
 GameObject:
   m_ObjectHideFlags: 0
