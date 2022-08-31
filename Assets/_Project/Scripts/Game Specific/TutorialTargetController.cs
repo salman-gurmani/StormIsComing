@@ -33,5 +33,9 @@ public class TutorialTargetController : MonoBehaviour
     private void Update()
     {
         tutorialArrow.transform.LookAt(currentTarget.transform);
+        if (Vector3.Distance(transform.position, currentTarget.transform.position) < 3f)
+            tutorialArrow.GetComponentInChildren<MeshRenderer>().enabled = false;
+        else
+            tutorialArrow.GetComponentInChildren<MeshRenderer>().enabled = true;
     }
 }
