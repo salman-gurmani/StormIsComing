@@ -2,6 +2,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using DialogueEditor;
+using TMPro;
 
 public class HUDListner : MonoBehaviour {
 
@@ -20,9 +21,16 @@ public class HUDListner : MonoBehaviour {
     public RectTransform[] resourcePosition;
     public int maxAmountPlayerCanCarry = 3;
     float reportTime = 20;
-    public NPCConversation tutorialConversation;
+    [Space]
+    public NPCConversation levelZeroTutorialConversation;
+    public NPCConversation levelOneTutorialConversation;
+    public NPCConversation levelTwoTutorialConversation;
+    public NPCConversation levelThreeTutorialConversation;
+    public NPCConversation levelFourTutorialConversation;
     public bool startTime { get; set; }
     public float tempTime { get; private set; }
+
+    private bool isGamePaused = false;
 
     private void OnEnable()
     {
@@ -46,27 +54,39 @@ public class HUDListner : MonoBehaviour {
 
     private void Start()
     {
-        if (Toolbox.DB.prefs.LastSelectedLevel == 0)
+        switch (Toolbox.DB.prefs.LastSelectedLevel)
         {
-            ConversationManager.Instance.StartConversation(tutorialConversation);
+            case 0:
+                ConversationManager.Instance.StartConversation(levelZeroTutorialConversation);
+                break;
+            case 1:
+                ConversationManager.Instance.StartConversation(levelOneTutorialConversation);
+                break;
+            case 2:
+                ConversationManager.Instance.StartConversation(levelTwoTutorialConversation);
+                break;
+            case 3:
+                ConversationManager.Instance.StartConversation(levelThreeTutorialConversation);
+                break;
+            case 4:
+                ConversationManager.Instance.StartConversation(levelFourTutorialConversation);
+                break;
         }
 
-
-        if(Toolbox.GameplayScript.levelsManager.CurLevelData.isBonus)
+        if (Toolbox.GameplayScript.levelsManager.CurLevelData.isBonus)
         {
 
         }
-
     }
 
-    public void DisableTutorialDialogueOptions()
+    public void SetIsGamePaused(bool _isGamePaused)
     {
-        ConversationManager.Instance.OptionsPanel.gameObject.SetActive(false);
+        isGamePaused = _isGamePaused;
     }
 
-    public void GoToNextDialogue()
+    public void SetTutorialDialogueOptions(bool _isActive)
     {
-        ConversationManager.Instance.PressSelectedOption();
+        ConversationManager.Instance.OptionsPanel.gameObject.SetActive(_isActive);
     }
 
     public void DisableHUD() 
@@ -97,6 +117,9 @@ public class HUDListner : MonoBehaviour {
 
     private void HandleTime()
     {
+        if (isGamePaused)
+            return;
+
         if (startTime)
         {
             reportTime -= Time.deltaTime;

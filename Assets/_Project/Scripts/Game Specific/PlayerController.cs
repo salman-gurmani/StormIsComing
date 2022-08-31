@@ -332,10 +332,7 @@ public class PlayerController : MonoBehaviour
                 Toolbox.HUDListner.SetProgressBarFill(progress);
                 break;
 
-            case "QuestionShop":
-                QuestionShopHandler riddleShopHandler = other.GetComponentInParent<QuestionShopHandler>();
-                riddleShopHandler.TryToOpenShop();
-                break;
+           
 
             default:
                 break;
@@ -355,7 +352,10 @@ public class PlayerController : MonoBehaviour
             case "Lift":
                 this.transform.parent = playerParent;
                 break;
-
+            case "QuestionShop":
+                other.GetComponentInParent<QuestionShopHandler>().btn.SetActive(false);
+              
+                break;
             default:
                 break;
         }
@@ -365,6 +365,10 @@ public class PlayerController : MonoBehaviour
     {
         switch (other.tag)
         {
+            case "QuestionShop":
+                other.GetComponentInParent<QuestionShopHandler>().btn.SetActive(true);
+              
+                break;
             case "TradeShop":
                 other.GetComponentInParent<TradeShopController>().btn.SetActive(true);
                 break;

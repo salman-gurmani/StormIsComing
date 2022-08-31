@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System;
+using DialogueEditor;
+
 public class TradeShopCanvus : MonoBehaviour
 {
     public TradeShopController tradeshop;
@@ -158,9 +160,10 @@ public class TradeShopCanvus : MonoBehaviour
                 tradeshop.pnl.SetActive(false);
             }
 
-
-
-
+            if (Toolbox.DB.prefs.LastSelectedLevel == 4)
+            {
+                ConversationManager.Instance.PressSelectedOption();
+            }
         }
         else
         {

@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using System;
+using DialogueEditor;
 
 public class QuestionShopHandler : MonoBehaviour
 {
     public List<QuestionAndAnswer> questionsAndAnswers;
-
+    public GameObject btn;
     [Header("Adjustables")]
     [SerializeField] private int rewardAmountOfEachResource = 0;
     [SerializeField] private float coolDownTime = 30f;
@@ -50,6 +51,11 @@ public class QuestionShopHandler : MonoBehaviour
         resultPanel.GetComponentInChildren<TextMeshProUGUI>().text = "Correct!\nCome back in 30 seconds and try again!";
         GiveRewards();
         isShopOpen = false;
+
+        if (Toolbox.DB.prefs.LastSelectedLevel == 3)
+        {
+            ConversationManager.Instance.PressSelectedOption();
+        }
     }
 
     public void WrongAnswer()
@@ -60,6 +66,11 @@ public class QuestionShopHandler : MonoBehaviour
         resultPanel.SetActive(true);
         resultPanel.GetComponentInChildren<TextMeshProUGUI>().text = "Wrong!\nCome back in 30 seconds and try again!";
         isShopOpen = false;
+
+        if (Toolbox.DB.prefs.LastSelectedLevel == 3)
+        {
+            ConversationManager.Instance.PressSelectedOption();
+        }
     }
 
     private void Update()
@@ -110,5 +121,9 @@ public class QuestionShopHandler : MonoBehaviour
                 Toolbox.GameplayScript.player.AddResourceOnBack(resourceType);
             }
         }
+    }
+    public void ShowBtn()
+    {
+        btn.SetActive(true);
     }
 }

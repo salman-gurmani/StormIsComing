@@ -1,3 +1,4 @@
+using DialogueEditor;
 using UnityEngine;
 
 public class ResourceStructureHandling : MonoBehaviour
@@ -149,6 +150,14 @@ public class ResourceStructureHandling : MonoBehaviour
         if (Toolbox.DB.prefs.ResourceAmount[requirementResourceVal].value <= 0) {
 
             StopProcessing();
+        }
+
+        if (Toolbox.DB.prefs.LastSelectedLevel == 1)
+        {
+            if (Toolbox.DB.prefs.ResourceAmount[(int)ResourceType.WOOD_PLANK].value == 10)
+            {
+                ConversationManager.Instance.PressSelectedOption();
+            }
         }
     }
 

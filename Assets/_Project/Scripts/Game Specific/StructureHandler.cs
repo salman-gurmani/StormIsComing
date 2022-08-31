@@ -118,7 +118,7 @@ public class StructureHandler : MonoBehaviour
         partsBuild++;
 
         //This is just for the tutorial in level 1
-        if (ConversationManager.Instance)
+        if (Toolbox.DB.prefs.LastSelectedLevel == 0)
         {
             if (partsBuild == 3)
             {
