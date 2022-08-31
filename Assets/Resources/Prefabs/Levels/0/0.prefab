@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 387594747}
+  - component: {fileID: 9197065309786252181}
   m_Layer: 0
   m_Name: Stucture Area
   m_TagString: Untagged
@@ -31,6 +32,19 @@ Transform:
   m_Father: {fileID: 9188188665687743969}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9197065309786252181
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 387594746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8457e19866875674abb3eb2bb54a0e65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  orderIndex: 1
 --- !u!1 &1688245794
 GameObject:
   m_ObjectHideFlags: 0
@@ -136,7 +150,7 @@ GameObject:
   - component: {fileID: 5123431616461880771}
   - component: {fileID: 762888252261099641}
   - component: {fileID: 6374160474836002502}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SM_Generic_Tree_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -328,7 +342,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6304809424917883272}
   - component: {fileID: 3829429661650212793}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -383,7 +397,7 @@ GameObject:
   - component: {fileID: 3430440570114635734}
   - component: {fileID: 176948986827853125}
   - component: {fileID: 769924566281355028}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -645,7 +659,7 @@ GameObject:
   - component: {fileID: 1987912194699995538}
   - component: {fileID: 6357532408106379078}
   - component: {fileID: 708220010113182921}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SM_Generic_Tree_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -939,7 +953,7 @@ GameObject:
   - component: {fileID: 705279638137259940}
   - component: {fileID: 8252568149734686995}
   - component: {fileID: 6768456515856883369}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1462,7 +1476,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6826941588033301023}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1749,7 +1763,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8376709828229864659}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1783,7 +1797,7 @@ GameObject:
   - component: {fileID: 3220200327628799001}
   - component: {fileID: 1948105852104763261}
   - component: {fileID: 6635529920714884385}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1914,7 +1928,7 @@ GameObject:
   - component: {fileID: 2029646829430072359}
   - component: {fileID: 7088192036316846302}
   - component: {fileID: 7098717905915443832}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SM_Generic_Tree_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1996,7 +2010,7 @@ GameObject:
   - component: {fileID: 1930873228776425289}
   - component: {fileID: 4785505284990126324}
   - component: {fileID: 8263881876583159899}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Normal Tree (3 wood) (5)
   m_TagString: Resource
   m_Icon: {fileID: 0}
@@ -2057,6 +2071,10 @@ MonoBehaviour:
   gatherDistance: 2
   TreeStump: {fileID: 6825347055637215205, guid: 048682065fea647aebde257ad3605da0,
     type: 3}
+  LeftRocks: {fileID: 0}
+  LeftCement: {fileID: 0}
+  LeftMud: {fileID: 0}
+  LeftIron: {fileID: 0}
 --- !u!114 &8263881876583159899
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2084,7 +2102,7 @@ GameObject:
   - component: {fileID: 8448771121465779929}
   - component: {fileID: 1663166525794463138}
   - component: {fileID: 4719208606272349409}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Normal Tree (3 wood) (9)
   m_TagString: Resource
   m_Icon: {fileID: 0}
@@ -2145,6 +2163,10 @@ MonoBehaviour:
   gatherDistance: 2
   TreeStump: {fileID: 6825347055637215205, guid: 048682065fea647aebde257ad3605da0,
     type: 3}
+  LeftRocks: {fileID: 0}
+  LeftCement: {fileID: 0}
+  LeftMud: {fileID: 0}
+  LeftIron: {fileID: 0}
 --- !u!114 &4719208606272349409
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2169,7 +2191,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1727509169139677809}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2201,7 +2223,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5872963321580407728}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2234,7 +2256,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3696267866104235572}
   - component: {fileID: 6745797200524935319}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2575,7 +2597,7 @@ GameObject:
   - component: {fileID: 5234068566309920291}
   - component: {fileID: 748421483807583005}
   - component: {fileID: 2107844063989286223}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SM_Generic_Tree_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2735,7 +2757,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8331719719928564607}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3174,7 +3196,7 @@ GameObject:
   - component: {fileID: 1012551821663519236}
   - component: {fileID: 9138631823705338334}
   - component: {fileID: 5013757721658877249}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Normal Tree (1 wood) (6)
   m_TagString: Resource
   m_Icon: {fileID: 0}
@@ -3235,6 +3257,10 @@ MonoBehaviour:
   gatherDistance: 2
   TreeStump: {fileID: 6825347055637215205, guid: f23a8cf8cf2271847b8c0c8dee44de08,
     type: 3}
+  LeftRocks: {fileID: 0}
+  LeftCement: {fileID: 0}
+  LeftMud: {fileID: 0}
+  LeftIron: {fileID: 0}
 --- !u!114 &5013757721658877249
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3262,7 +3288,7 @@ GameObject:
   - component: {fileID: 1520481966471422819}
   - component: {fileID: 6516236072448810436}
   - component: {fileID: 2996563174160572862}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3653,7 +3679,7 @@ GameObject:
   - component: {fileID: 7584444563319900430}
   - component: {fileID: 2982145074626582846}
   - component: {fileID: 5949126834923877168}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Normal Tree (1 wood) (5)
   m_TagString: Resource
   m_Icon: {fileID: 0}
@@ -3714,6 +3740,10 @@ MonoBehaviour:
   gatherDistance: 2
   TreeStump: {fileID: 6825347055637215205, guid: f23a8cf8cf2271847b8c0c8dee44de08,
     type: 3}
+  LeftRocks: {fileID: 0}
+  LeftCement: {fileID: 0}
+  LeftMud: {fileID: 0}
+  LeftIron: {fileID: 0}
 --- !u!114 &5949126834923877168
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3740,7 +3770,7 @@ GameObject:
   - component: {fileID: 5468782033035285041}
   - component: {fileID: 3895002685560811033}
   - component: {fileID: 3724449490619249034}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SM_Generic_Tree_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3984,7 +4014,7 @@ GameObject:
   - component: {fileID: 5740324320166767157}
   - component: {fileID: 4346646045559060641}
   - component: {fileID: 547432928666079069}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Normal Tree (1 wood) (8)
   m_TagString: Resource
   m_Icon: {fileID: 0}
@@ -4045,6 +4075,10 @@ MonoBehaviour:
   gatherDistance: 2
   TreeStump: {fileID: 6825347055637215205, guid: f23a8cf8cf2271847b8c0c8dee44de08,
     type: 3}
+  LeftRocks: {fileID: 0}
+  LeftCement: {fileID: 0}
+  LeftMud: {fileID: 0}
+  LeftIron: {fileID: 0}
 --- !u!114 &547432928666079069
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4069,7 +4103,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7063562721942715883}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4102,7 +4136,7 @@ GameObject:
   - component: {fileID: 927508931592407527}
   - component: {fileID: 3462402689402888378}
   - component: {fileID: 3926646488031291764}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SM_Generic_Tree_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5042,7 +5076,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 827652594886621535}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5312,7 +5346,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1013743618632010409}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5612,7 +5646,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 657946907488284468}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5820,7 +5854,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1421145653778734415}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5851,7 +5885,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1981269565407510402}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5885,7 +5919,7 @@ GameObject:
   - component: {fileID: 5693180502398611637}
   - component: {fileID: 6058096389178936893}
   - component: {fileID: 4766653398029909355}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Normal Tree (1 wood) (4)
   m_TagString: Resource
   m_Icon: {fileID: 0}
@@ -5946,6 +5980,10 @@ MonoBehaviour:
   gatherDistance: 2
   TreeStump: {fileID: 6825347055637215205, guid: f23a8cf8cf2271847b8c0c8dee44de08,
     type: 3}
+  LeftRocks: {fileID: 0}
+  LeftCement: {fileID: 0}
+  LeftMud: {fileID: 0}
+  LeftIron: {fileID: 0}
 --- !u!114 &4766653398029909355
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5973,7 +6011,7 @@ GameObject:
   - component: {fileID: 5196176150496018425}
   - component: {fileID: 517718625980778665}
   - component: {fileID: 5167267649169045940}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Normal Tree (3 wood) (10)
   m_TagString: Resource
   m_Icon: {fileID: 0}
@@ -6034,6 +6072,10 @@ MonoBehaviour:
   gatherDistance: 2
   TreeStump: {fileID: 6825347055637215205, guid: 048682065fea647aebde257ad3605da0,
     type: 3}
+  LeftRocks: {fileID: 0}
+  LeftCement: {fileID: 0}
+  LeftMud: {fileID: 0}
+  LeftIron: {fileID: 0}
 --- !u!114 &5167267649169045940
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6301,7 +6343,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7402697281380122144}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6334,7 +6376,7 @@ GameObject:
   - component: {fileID: 9169976963281133556}
   - component: {fileID: 3862755128921163740}
   - component: {fileID: 2084829498885045684}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SM_Generic_Tree_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6593,7 +6635,7 @@ GameObject:
   - component: {fileID: 8826786085184306209}
   - component: {fileID: 7319627518434977472}
   - component: {fileID: 7951648308899722143}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SM_Generic_Tree_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6791,7 +6833,7 @@ GameObject:
   - component: {fileID: 5076965478408730293}
   - component: {fileID: 6062192306200943283}
   - component: {fileID: 8476993035048323295}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Normal Tree (3 wood) (2)
   m_TagString: Resource
   m_Icon: {fileID: 0}
@@ -6852,6 +6894,10 @@ MonoBehaviour:
   gatherDistance: 2
   TreeStump: {fileID: 6825347055637215205, guid: 048682065fea647aebde257ad3605da0,
     type: 3}
+  LeftRocks: {fileID: 0}
+  LeftCement: {fileID: 0}
+  LeftMud: {fileID: 0}
+  LeftIron: {fileID: 0}
 --- !u!114 &8476993035048323295
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6876,7 +6922,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1181293539656056855}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7323,7 +7369,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1503724023575239598}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7420,7 +7466,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 885235484054731275}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7571,7 +7617,7 @@ GameObject:
   - component: {fileID: 5209868814153677502}
   - component: {fileID: 3441792039911148054}
   - component: {fileID: 6352182903873776386}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8139,7 +8185,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6003899551932941171}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8381,7 +8427,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6197972018257945490}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8416,7 +8462,7 @@ GameObject:
   - component: {fileID: 8095502628562075280}
   - component: {fileID: 5557648286045325123}
   - component: {fileID: 2066861467700220150}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Normal Tree (1 wood) (7)
   m_TagString: Resource
   m_Icon: {fileID: 0}
@@ -8477,6 +8523,10 @@ MonoBehaviour:
   gatherDistance: 2
   TreeStump: {fileID: 6825347055637215205, guid: f23a8cf8cf2271847b8c0c8dee44de08,
     type: 3}
+  LeftRocks: {fileID: 0}
+  LeftCement: {fileID: 0}
+  LeftMud: {fileID: 0}
+  LeftIron: {fileID: 0}
 --- !u!114 &2066861467700220150
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8504,7 +8554,7 @@ GameObject:
   - component: {fileID: 1882691746994522561}
   - component: {fileID: 2725782679949801189}
   - component: {fileID: 5386146370799469057}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8604,7 +8654,7 @@ GameObject:
   - component: {fileID: 2469738480913757986}
   - component: {fileID: 4625770308025098645}
   - component: {fileID: 2739340380015982410}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SM_Generic_Tree_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8683,7 +8733,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 961521747958290793}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8832,7 +8882,7 @@ GameObject:
   - component: {fileID: 8847297548818788798}
   - component: {fileID: 2923106061327069116}
   - component: {fileID: 9215337759985868893}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SM_Generic_Tree_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8914,7 +8964,7 @@ GameObject:
   - component: {fileID: 6733610293275051283}
   - component: {fileID: 7599795750034737963}
   - component: {fileID: 6292737613741340192}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9096,7 +9146,7 @@ GameObject:
   - component: {fileID: 2944473546907155749}
   - component: {fileID: 7480420317823248000}
   - component: {fileID: 2887486032386342733}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Normal Tree (1 wood) (1)
   m_TagString: Resource
   m_Icon: {fileID: 0}
@@ -9157,6 +9207,10 @@ MonoBehaviour:
   gatherDistance: 2
   TreeStump: {fileID: 6825347055637215205, guid: f23a8cf8cf2271847b8c0c8dee44de08,
     type: 3}
+  LeftRocks: {fileID: 0}
+  LeftCement: {fileID: 0}
+  LeftMud: {fileID: 0}
+  LeftIron: {fileID: 0}
 --- !u!114 &2887486032386342733
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9265,7 +9319,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1121644994884398286}
   - component: {fileID: 1164032799998354407}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9400,7 +9454,7 @@ GameObject:
   - component: {fileID: 4194252257974377377}
   - component: {fileID: 1496969206466122667}
   - component: {fileID: 4820038140068384904}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SM_Generic_Tree_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9479,7 +9533,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 22612355662258441}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9513,7 +9567,7 @@ GameObject:
   - component: {fileID: 8035806856497786535}
   - component: {fileID: 8914363201242660065}
   - component: {fileID: 2374453377046042027}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SM_Generic_Tree_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9592,7 +9646,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1037798001444860818}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9625,7 +9679,7 @@ GameObject:
   - component: {fileID: 6428676414687420662}
   - component: {fileID: 6883680163388062825}
   - component: {fileID: 5047147228134964750}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SM_Generic_Tree_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9704,7 +9758,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3928733483962553534}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10081,7 +10135,7 @@ GameObject:
   - component: {fileID: 1465999230935354072}
   - component: {fileID: 8342014189515012786}
   - component: {fileID: 5473302454653203257}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SM_Generic_Tree_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10482,7 +10536,7 @@ GameObject:
   - component: {fileID: 1847933573562090515}
   - component: {fileID: 4350900552726985659}
   - component: {fileID: 1885882686359322693}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SM_Generic_Tree_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10644,7 +10698,7 @@ GameObject:
   - component: {fileID: 3879774734937827355}
   - component: {fileID: 7683321715082754205}
   - component: {fileID: 6522984014293922269}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SM_Generic_Tree_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10837,7 +10891,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 872908993421508057}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11048,7 +11102,7 @@ GameObject:
   - component: {fileID: 2921817521218302973}
   - component: {fileID: 1213199067616534599}
   - component: {fileID: 24181266362373655}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SM_Generic_Tree_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11127,7 +11181,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7328359164062528301}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11205,7 +11259,7 @@ GameObject:
   - component: {fileID: 2729052781964519503}
   - component: {fileID: 7854257206144263769}
   - component: {fileID: 7140921037252960997}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Normal Tree (3 wood) (7)
   m_TagString: Resource
   m_Icon: {fileID: 0}
@@ -11266,6 +11320,10 @@ MonoBehaviour:
   gatherDistance: 2
   TreeStump: {fileID: 6825347055637215205, guid: 048682065fea647aebde257ad3605da0,
     type: 3}
+  LeftRocks: {fileID: 0}
+  LeftCement: {fileID: 0}
+  LeftMud: {fileID: 0}
+  LeftIron: {fileID: 0}
 --- !u!114 &7140921037252960997
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11290,7 +11348,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7720304153770085732}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11324,7 +11382,7 @@ GameObject:
   - component: {fileID: 3076493968830684346}
   - component: {fileID: 4270805145217683492}
   - component: {fileID: 4953850429069964694}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Normal Tree (3 wood) (4)
   m_TagString: Resource
   m_Icon: {fileID: 0}
@@ -11385,6 +11443,10 @@ MonoBehaviour:
   gatherDistance: 2
   TreeStump: {fileID: 6825347055637215205, guid: 048682065fea647aebde257ad3605da0,
     type: 3}
+  LeftRocks: {fileID: 0}
+  LeftCement: {fileID: 0}
+  LeftMud: {fileID: 0}
+  LeftIron: {fileID: 0}
 --- !u!114 &4953850429069964694
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11670,7 +11732,7 @@ GameObject:
   - component: {fileID: 6600519944122903697}
   - component: {fileID: 9007896880736974845}
   - component: {fileID: 2318841685717428618}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SM_Generic_Tree_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11751,7 +11813,7 @@ GameObject:
   - component: {fileID: 7325422522954323937}
   - component: {fileID: 984850841464533140}
   - component: {fileID: 9132944639067538795}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SM_Generic_Tree_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11832,7 +11894,7 @@ GameObject:
   - component: {fileID: 439879255727117716}
   - component: {fileID: 1062471541983397399}
   - component: {fileID: 3149650713804926837}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SM_Generic_Tree_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11912,7 +11974,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3075186064878660983}
   - component: {fileID: 1952458109239918247}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11965,7 +12027,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6119801209048416860}
   - component: {fileID: 2711619414595472852}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12328,7 +12390,7 @@ GameObject:
   - component: {fileID: 368228706505214307}
   - component: {fileID: 2407519927159025938}
   - component: {fileID: 6607938051053864417}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SM_Generic_Tree_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12582,7 +12644,7 @@ GameObject:
   - component: {fileID: 987334299420999823}
   - component: {fileID: 8073111130604691510}
   - component: {fileID: 4857347905585773813}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Normal Tree (3 wood) (1)
   m_TagString: Resource
   m_Icon: {fileID: 0}
@@ -12643,6 +12705,10 @@ MonoBehaviour:
   gatherDistance: 2
   TreeStump: {fileID: 6825347055637215205, guid: 048682065fea647aebde257ad3605da0,
     type: 3}
+  LeftRocks: {fileID: 0}
+  LeftCement: {fileID: 0}
+  LeftMud: {fileID: 0}
+  LeftIron: {fileID: 0}
 --- !u!114 &4857347905585773813
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12669,7 +12735,7 @@ GameObject:
   - component: {fileID: 4187451616702272711}
   - component: {fileID: 4776448938787109492}
   - component: {fileID: 1223393967341300256}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SM_Generic_Tree_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12750,7 +12816,7 @@ GameObject:
   - component: {fileID: 6492663838377584467}
   - component: {fileID: 3177611770870479598}
   - component: {fileID: 7699841840602241260}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SM_Generic_Tree_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12830,7 +12896,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1859715011496113531}
   - component: {fileID: 4198989399877662972}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12998,7 +13064,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3809776364736621762}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Wood
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13039,6 +13105,7 @@ Transform:
   - {fileID: 1317610313142889890}
   - {fileID: 7856896347025762452}
   - {fileID: 8748898198231865230}
+  - {fileID: 7250689877583760795}
   m_Father: {fileID: 3809776365808900314}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -13051,7 +13118,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3809776365808900314}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Resources
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13592,7 +13659,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8789617727656024838}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13626,7 +13693,7 @@ GameObject:
   - component: {fileID: 1085129153740029705}
   - component: {fileID: 4215229384271253987}
   - component: {fileID: 5081870467199398381}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13843,7 +13910,7 @@ GameObject:
   - component: {fileID: 4409577855261106802}
   - component: {fileID: 8566363497258164208}
   - component: {fileID: 7227414266233509874}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14072,7 +14139,7 @@ GameObject:
   - component: {fileID: 4847966428553893720}
   - component: {fileID: 1660597836099083834}
   - component: {fileID: 9166707898960014189}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Normal Tree (3 wood) (6)
   m_TagString: Resource
   m_Icon: {fileID: 0}
@@ -14133,6 +14200,10 @@ MonoBehaviour:
   gatherDistance: 2
   TreeStump: {fileID: 6825347055637215205, guid: 048682065fea647aebde257ad3605da0,
     type: 3}
+  LeftRocks: {fileID: 0}
+  LeftCement: {fileID: 0}
+  LeftMud: {fileID: 0}
+  LeftIron: {fileID: 0}
 --- !u!114 &9166707898960014189
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14159,7 +14230,7 @@ GameObject:
   - component: {fileID: 7722913623921274750}
   - component: {fileID: 4572399630468830296}
   - component: {fileID: 35171311663483569}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SM_Generic_Tree_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14352,7 +14423,7 @@ GameObject:
   - component: {fileID: 7744794372993333175}
   - component: {fileID: 5607243210755610737}
   - component: {fileID: 5894277134953882578}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SM_Generic_Tree_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14433,7 +14504,7 @@ GameObject:
   - component: {fileID: 7424400600556205164}
   - component: {fileID: 2987219979893943902}
   - component: {fileID: 470291333448544721}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SM_Generic_Tree_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14512,7 +14583,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4393741374004054837}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14545,7 +14616,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3329980417609571521}
   - component: {fileID: 6498805526514458348}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14600,7 +14671,7 @@ GameObject:
   - component: {fileID: 967720921165914579}
   - component: {fileID: 3753363709393796480}
   - component: {fileID: 3321748381262251236}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14698,7 +14769,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7258160825241153960}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15064,7 +15135,7 @@ GameObject:
   m_Component:
   - component: {fileID: 129357451090007595}
   - component: {fileID: 3405320022479179415}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15119,7 +15190,7 @@ GameObject:
   - component: {fileID: 2819360281053499702}
   - component: {fileID: 3757452007110735210}
   - component: {fileID: 8386925003280055233}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Normal Tree (1 wood) (9)
   m_TagString: Resource
   m_Icon: {fileID: 0}
@@ -15180,6 +15251,10 @@ MonoBehaviour:
   gatherDistance: 2
   TreeStump: {fileID: 6825347055637215205, guid: f23a8cf8cf2271847b8c0c8dee44de08,
     type: 3}
+  LeftRocks: {fileID: 0}
+  LeftCement: {fileID: 0}
+  LeftMud: {fileID: 0}
+  LeftIron: {fileID: 0}
 --- !u!114 &8386925003280055233
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15204,7 +15279,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2499581582367789966}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15443,7 +15518,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6125359191268063567}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15474,7 +15549,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6812828987595498567}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15507,7 +15582,7 @@ GameObject:
   - component: {fileID: 75433206141368106}
   - component: {fileID: 1903698792362972256}
   - component: {fileID: 8685013258274660310}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SM_Generic_Tree_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15872,7 +15947,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4376136542993779896}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16146,7 +16221,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4245667408568783473}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16178,7 +16253,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3624987432955022959}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16327,7 +16402,7 @@ GameObject:
   - component: {fileID: 9026263978944906202}
   - component: {fileID: 3066856020397166005}
   - component: {fileID: 6481674144593536060}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Normal Tree (1 wood) (10)
   m_TagString: Resource
   m_Icon: {fileID: 0}
@@ -16388,6 +16463,10 @@ MonoBehaviour:
   gatherDistance: 2
   TreeStump: {fileID: 6825347055637215205, guid: f23a8cf8cf2271847b8c0c8dee44de08,
     type: 3}
+  LeftRocks: {fileID: 0}
+  LeftCement: {fileID: 0}
+  LeftMud: {fileID: 0}
+  LeftIron: {fileID: 0}
 --- !u!114 &6481674144593536060
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16415,7 +16494,7 @@ GameObject:
   - component: {fileID: 5787519318314363426}
   - component: {fileID: 8831234527025497}
   - component: {fileID: 6904616134929689000}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16611,7 +16690,7 @@ GameObject:
   - component: {fileID: 8414233585045120629}
   - component: {fileID: 7070151787535266293}
   - component: {fileID: 3628893152505075240}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SM_Generic_Tree_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16692,7 +16771,7 @@ GameObject:
   - component: {fileID: 578778681793627936}
   - component: {fileID: 7778824760742248413}
   - component: {fileID: 2570745792980653375}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SM_Generic_Tree_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16901,7 +16980,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2204347648681252837}
   - component: {fileID: 7196030946802503629}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16953,7 +17032,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 198871531186377062}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17084,7 +17163,7 @@ GameObject:
   - component: {fileID: 23344575051097171}
   - component: {fileID: 691600146576529247}
   - component: {fileID: 5834057889055121932}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Normal Tree (3 wood) (3)
   m_TagString: Resource
   m_Icon: {fileID: 0}
@@ -17145,6 +17224,10 @@ MonoBehaviour:
   gatherDistance: 2
   TreeStump: {fileID: 6825347055637215205, guid: 048682065fea647aebde257ad3605da0,
     type: 3}
+  LeftRocks: {fileID: 0}
+  LeftCement: {fileID: 0}
+  LeftMud: {fileID: 0}
+  LeftIron: {fileID: 0}
 --- !u!114 &5834057889055121932
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17358,7 +17441,7 @@ GameObject:
   - component: {fileID: 7679823001116475292}
   - component: {fileID: 397562635586444353}
   - component: {fileID: 2122504119242665325}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SM_Generic_Tree_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17566,7 +17649,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5755837630558116997}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17597,7 +17680,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 225627874760142625}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17630,7 +17713,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3897703161594309822}
   - component: {fileID: 8252128619469694467}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17685,7 +17768,7 @@ GameObject:
   - component: {fileID: 1998844228581687409}
   - component: {fileID: 822808484548727256}
   - component: {fileID: 9109038908716886292}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Normal Tree (3 wood) (8)
   m_TagString: Resource
   m_Icon: {fileID: 0}
@@ -17746,6 +17829,10 @@ MonoBehaviour:
   gatherDistance: 2
   TreeStump: {fileID: 6825347055637215205, guid: 048682065fea647aebde257ad3605da0,
     type: 3}
+  LeftRocks: {fileID: 0}
+  LeftCement: {fileID: 0}
+  LeftMud: {fileID: 0}
+  LeftIron: {fileID: 0}
 --- !u!114 &9109038908716886292
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17773,7 +17860,7 @@ GameObject:
   - component: {fileID: 3315513117243976651}
   - component: {fileID: 485069312930470899}
   - component: {fileID: 7967050818133913448}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Normal Tree (3 wood) (11)
   m_TagString: Resource
   m_Icon: {fileID: 0}
@@ -17834,6 +17921,10 @@ MonoBehaviour:
   gatherDistance: 2
   TreeStump: {fileID: 6825347055637215205, guid: 048682065fea647aebde257ad3605da0,
     type: 3}
+  LeftRocks: {fileID: 0}
+  LeftCement: {fileID: 0}
+  LeftMud: {fileID: 0}
+  LeftIron: {fileID: 0}
 --- !u!114 &7967050818133913448
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18118,7 +18209,7 @@ GameObject:
   - component: {fileID: 2491267106996931568}
   - component: {fileID: 4945306228389331685}
   - component: {fileID: 908571464250280902}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18605,7 +18696,7 @@ GameObject:
   - component: {fileID: 6055910195377110310}
   - component: {fileID: 5219146514349222798}
   - component: {fileID: 4708710122097938600}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18703,7 +18794,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4059450209895372786}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18965,7 +19056,7 @@ GameObject:
   - component: {fileID: 6258936246567986866}
   - component: {fileID: 6723470689536648327}
   - component: {fileID: 888528860235358852}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SM_Generic_Tree_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19174,7 +19265,7 @@ GameObject:
   - component: {fileID: 8870114738353373117}
   - component: {fileID: 5692717435136779445}
   - component: {fileID: 3240021951561474936}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SM_Generic_Tree_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19256,7 +19347,7 @@ GameObject:
   - component: {fileID: 5175016292222009073}
   - component: {fileID: 5649407430918570000}
   - component: {fileID: 3029228700370550578}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19357,7 +19448,7 @@ GameObject:
   - component: {fileID: 3086431256311891988}
   - component: {fileID: 4086407663929855246}
   - component: {fileID: 2019961349022060824}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19491,7 +19582,7 @@ GameObject:
   - component: {fileID: 576563004270066963}
   - component: {fileID: 2118395436803067314}
   - component: {fileID: 1916788410257941506}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19592,7 +19683,7 @@ GameObject:
   - component: {fileID: 2256708442903299907}
   - component: {fileID: 4674009353937592394}
   - component: {fileID: 5047112227549506569}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Normal Tree (5 wood) (2)
   m_TagString: Resource
   m_Icon: {fileID: 0}
@@ -19653,6 +19744,10 @@ MonoBehaviour:
   gatherDistance: 2
   TreeStump: {fileID: 6825347055637215205, guid: 57ab2ad73ea690946b1ed4bff02b3b21,
     type: 3}
+  LeftRocks: {fileID: 0}
+  LeftCement: {fileID: 0}
+  LeftMud: {fileID: 0}
+  LeftIron: {fileID: 0}
 --- !u!114 &5047112227549506569
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20029,7 +20124,7 @@ GameObject:
   - component: {fileID: 747255434815819950}
   - component: {fileID: 1048113573618592773}
   - component: {fileID: 804238019542856668}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SM_Generic_Tree_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20108,7 +20203,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9126446331501835272}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20141,7 +20236,7 @@ GameObject:
   m_Component:
   - component: {fileID: 921820648868330090}
   - component: {fileID: 1015017588893045841}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20352,7 +20447,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2163388069192073870}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20386,7 +20481,7 @@ GameObject:
   - component: {fileID: 1053649798425033654}
   - component: {fileID: 3663017145229593271}
   - component: {fileID: 6304852827074380783}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20831,7 +20926,7 @@ GameObject:
   - component: {fileID: 2369953754576407792}
   - component: {fileID: 3314536696168042966}
   - component: {fileID: 6659074675361896595}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SM_Generic_Tree_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21025,7 +21120,7 @@ GameObject:
   - component: {fileID: 4661992868236341429}
   - component: {fileID: 7247376195313859991}
   - component: {fileID: 1037150726565236342}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Normal Tree (1 wood) (3)
   m_TagString: Resource
   m_Icon: {fileID: 0}
@@ -21086,6 +21181,10 @@ MonoBehaviour:
   gatherDistance: 2
   TreeStump: {fileID: 6825347055637215205, guid: f23a8cf8cf2271847b8c0c8dee44de08,
     type: 3}
+  LeftRocks: {fileID: 0}
+  LeftCement: {fileID: 0}
+  LeftMud: {fileID: 0}
+  LeftIron: {fileID: 0}
 --- !u!114 &1037150726565236342
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21110,7 +21209,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1787042449231723490}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21174,7 +21273,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 17669533489177370}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21270,7 +21369,7 @@ GameObject:
   - component: {fileID: 618472088254190317}
   - component: {fileID: 6334824298195930847}
   - component: {fileID: 7657310374337100136}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SM_Generic_Tree_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21349,7 +21448,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3812131722706332054}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21380,7 +21479,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6154887495406302234}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21412,7 +21511,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8446729047276302543}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22099,7 +22198,7 @@ GameObject:
   - component: {fileID: 4161124373313848392}
   - component: {fileID: 356831627175046138}
   - component: {fileID: 3304662997309124939}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SM_Generic_Tree_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22178,7 +22277,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8256884109334878651}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22356,7 +22455,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2552416312787012150}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22388,7 +22487,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3357285130785696449}
   - component: {fileID: 3727850860585442399}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22431,6 +22530,50 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1 &6886814305230197864
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7250689877583760795}
+  - component: {fileID: 4160375881783023121}
+  m_Layer: 0
+  m_Name: Tutorial Target
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7250689877583760795
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6886814305230197864}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.2, y: 3.5, z: -6.21}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3809776364736621762}
+  m_RootOrder: 23
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4160375881783023121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6886814305230197864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8457e19866875674abb3eb2bb54a0e65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  orderIndex: 0
 --- !u!1 &6942363731852969412
 GameObject:
   m_ObjectHideFlags: 0
@@ -22441,7 +22584,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1254601512084494622}
   - component: {fileID: 3987709472431889256}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22493,7 +22636,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9167035948457320093}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22902,7 +23045,7 @@ GameObject:
   - component: {fileID: 5333025603476761933}
   - component: {fileID: 3951010195580334450}
   - component: {fileID: 3812882074289305118}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23003,7 +23146,7 @@ GameObject:
   - component: {fileID: 7848779003777795483}
   - component: {fileID: 8244917817847218059}
   - component: {fileID: 7513700368183198370}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23101,7 +23244,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 190802390312373025}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23228,7 +23371,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3755196588969012354}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23503,7 +23646,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1991338365741902664}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23632,7 +23775,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2753676382320956730}
   - component: {fileID: 6146169742906799513}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23879,7 +24022,7 @@ GameObject:
   - component: {fileID: 4144416737506246459}
   - component: {fileID: 1608806190278294764}
   - component: {fileID: 7868109531460869780}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SM_Generic_Tree_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23958,7 +24101,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2798426027308902022}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24201,7 +24344,7 @@ GameObject:
   - component: {fileID: 7467453202923685165}
   - component: {fileID: 7003821668739924799}
   - component: {fileID: 4750855656965975281}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SM_Generic_Tree_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24282,7 +24425,7 @@ GameObject:
   - component: {fileID: 6149345235306894126}
   - component: {fileID: 3148786144043470701}
   - component: {fileID: 5057611361993439607}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SM_Generic_Tree_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24363,7 +24506,7 @@ GameObject:
   - component: {fileID: 1813152872329009456}
   - component: {fileID: 2445191810749617786}
   - component: {fileID: 8284354562561951778}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SM_Generic_Tree_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24604,7 +24747,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 145038156307865124}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24666,7 +24809,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7963238513612784503}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24780,7 +24923,7 @@ GameObject:
   - component: {fileID: 6394917529329627913}
   - component: {fileID: 8188551970300591240}
   - component: {fileID: 8391906403365039061}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SM_Generic_Tree_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24860,7 +25003,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1899246368687564966}
   - component: {fileID: 6429765007374672560}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24913,7 +25056,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5536016461508822560}
   - component: {fileID: 5004125358776551609}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25046,7 +25189,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4643998060260352912}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25173,7 +25316,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5769299906513021219}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25302,7 +25445,7 @@ GameObject:
   - component: {fileID: 2469531710952693364}
   - component: {fileID: 501184944010524831}
   - component: {fileID: 1449855943149786821}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SM_Generic_Tree_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25412,7 +25555,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3619062363601968224}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25624,7 +25767,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6546069295037198832}
   - component: {fileID: 2728752546758991323}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25676,7 +25819,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4040842989478061525}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25707,7 +25850,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6332868260872738172}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25742,7 +25885,7 @@ GameObject:
   - component: {fileID: 7040548374938901584}
   - component: {fileID: 3967210267140528695}
   - component: {fileID: 5415228380633450989}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Normal Tree (5 wood) (1)
   m_TagString: Resource
   m_Icon: {fileID: 0}
@@ -25803,6 +25946,10 @@ MonoBehaviour:
   gatherDistance: 2
   TreeStump: {fileID: 6825347055637215205, guid: 57ab2ad73ea690946b1ed4bff02b3b21,
     type: 3}
+  LeftRocks: {fileID: 0}
+  LeftCement: {fileID: 0}
+  LeftMud: {fileID: 0}
+  LeftIron: {fileID: 0}
 --- !u!114 &5415228380633450989
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25827,7 +25974,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8341507869628503124}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25861,7 +26008,7 @@ GameObject:
   - component: {fileID: 6305829769068805910}
   - component: {fileID: 5022082604343055655}
   - component: {fileID: 125114678121706829}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26217,7 +26364,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6520306156098278087}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26248,7 +26395,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4405427959375537082}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26282,7 +26429,7 @@ GameObject:
   - component: {fileID: 7011943312942732714}
   - component: {fileID: 1705144165399361904}
   - component: {fileID: 1678277683409201711}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SM_Generic_Tree_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26364,7 +26511,7 @@ GameObject:
   - component: {fileID: 7065053316154824776}
   - component: {fileID: 3766947996920172139}
   - component: {fileID: 4152694863124615773}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26463,7 +26610,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5491908110211381042}
   - component: {fileID: 9171137338601219143}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26517,7 +26664,7 @@ GameObject:
   - component: {fileID: 8738404036903782493}
   - component: {fileID: 3913009962080645795}
   - component: {fileID: 5302137467425160992}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SM_Generic_Tree_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26708,7 +26855,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1722215037166106564}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26739,7 +26886,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6763246139827484751}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26771,7 +26918,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8953706613870615696}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26804,7 +26951,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1265849568999041677}
   - component: {fileID: 5461672632976021008}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27005,7 +27152,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1902828808531774759}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27236,7 +27383,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3180015877274625074}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27268,7 +27415,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2890067693061011766}
   - component: {fileID: 4449237666250292469}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27689,7 +27836,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3651266078667565383}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27755,7 +27902,7 @@ GameObject:
   - component: {fileID: 4315360709279811415}
   - component: {fileID: 1588207065205909394}
   - component: {fileID: 2157659007482089529}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SM_Generic_Tree_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27936,7 +28083,7 @@ GameObject:
   - component: {fileID: 2803734751483790140}
   - component: {fileID: 7163486553570778746}
   - component: {fileID: 8230458245010886322}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Normal Tree (1 wood) (2)
   m_TagString: Resource
   m_Icon: {fileID: 0}
@@ -27997,6 +28144,10 @@ MonoBehaviour:
   gatherDistance: 2
   TreeStump: {fileID: 6825347055637215205, guid: f23a8cf8cf2271847b8c0c8dee44de08,
     type: 3}
+  LeftRocks: {fileID: 0}
+  LeftCement: {fileID: 0}
+  LeftMud: {fileID: 0}
+  LeftIron: {fileID: 0}
 --- !u!114 &8230458245010886322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28022,7 +28173,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7852231845892035974}
   - component: {fileID: 537477275261929772}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28546,7 +28697,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1047160176316176140}
   - component: {fileID: 6341162738480416489}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29000,7 +29151,7 @@ GameObject:
   - component: {fileID: 2440218830381918414}
   - component: {fileID: 6976972872135847707}
   - component: {fileID: 6455618433916391783}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SM_Generic_Tree_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29079,7 +29230,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2681161910023362341}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29110,7 +29261,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6941506105864075921}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29144,7 +29295,7 @@ GameObject:
   - component: {fileID: 4817300659931354150}
   - component: {fileID: 1557300353315307212}
   - component: {fileID: 1068137383081454354}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29245,7 +29396,7 @@ GameObject:
   - component: {fileID: 3974085791946886829}
   - component: {fileID: 3993534483280444427}
   - component: {fileID: 3700932760282817756}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29344,7 +29495,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1919050499507334714}
   - component: {fileID: 1498702371305534378}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30588,15 +30739,15 @@ PrefabInstance:
       objectReference: {fileID: 3620810701351557418}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b88938124ebf6f242963984ba7bada23, type: 3}
---- !u!4 &3679661585890265024 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2397477375128171421, guid: b88938124ebf6f242963984ba7bada23,
-    type: 3}
-  m_PrefabInstance: {fileID: 1321037172285846621}
-  m_PrefabAsset: {fileID: 0}
 --- !u!102 &3620810701351557418 stripped
 TextMesh:
   m_CorrespondingSourceObject: {fileID: 2335943691477265783, guid: b88938124ebf6f242963984ba7bada23,
+    type: 3}
+  m_PrefabInstance: {fileID: 1321037172285846621}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &3679661585890265024 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2397477375128171421, guid: b88938124ebf6f242963984ba7bada23,
     type: 3}
   m_PrefabInstance: {fileID: 1321037172285846621}
   m_PrefabAsset: {fileID: 0}
@@ -31049,15 +31200,15 @@ PrefabInstance:
       objectReference: {fileID: 4104969018566596638}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b88938124ebf6f242963984ba7bada23, type: 3}
---- !u!4 &4168287079273891572 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2397477375128171421, guid: b88938124ebf6f242963984ba7bada23,
-    type: 3}
-  m_PrefabInstance: {fileID: 1773635383665653097}
-  m_PrefabAsset: {fileID: 0}
 --- !u!102 &4104969018566596638 stripped
 TextMesh:
   m_CorrespondingSourceObject: {fileID: 2335943691477265783, guid: b88938124ebf6f242963984ba7bada23,
+    type: 3}
+  m_PrefabInstance: {fileID: 1773635383665653097}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &4168287079273891572 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2397477375128171421, guid: b88938124ebf6f242963984ba7bada23,
     type: 3}
   m_PrefabInstance: {fileID: 1773635383665653097}
   m_PrefabAsset: {fileID: 0}
@@ -31150,15 +31301,15 @@ PrefabInstance:
       objectReference: {fileID: 4223670474814919764}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b88938124ebf6f242963984ba7bada23, type: 3}
---- !u!102 &4223670474814919764 stripped
-TextMesh:
-  m_CorrespondingSourceObject: {fileID: 2335943691477265783, guid: b88938124ebf6f242963984ba7bada23,
-    type: 3}
-  m_PrefabInstance: {fileID: 1943177353760291107}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &4301502219334437566 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2397477375128171421, guid: b88938124ebf6f242963984ba7bada23,
+    type: 3}
+  m_PrefabInstance: {fileID: 1943177353760291107}
+  m_PrefabAsset: {fileID: 0}
+--- !u!102 &4223670474814919764 stripped
+TextMesh:
+  m_CorrespondingSourceObject: {fileID: 2335943691477265783, guid: b88938124ebf6f242963984ba7bada23,
     type: 3}
   m_PrefabInstance: {fileID: 1943177353760291107}
   m_PrefabAsset: {fileID: 0}
@@ -31251,15 +31402,15 @@ PrefabInstance:
       objectReference: {fileID: 4272739913761215016}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b88938124ebf6f242963984ba7bada23, type: 3}
---- !u!4 &4207680096175328450 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2397477375128171421, guid: b88938124ebf6f242963984ba7bada23,
-    type: 3}
-  m_PrefabInstance: {fileID: 1954881343352471391}
-  m_PrefabAsset: {fileID: 0}
 --- !u!102 &4272739913761215016 stripped
 TextMesh:
   m_CorrespondingSourceObject: {fileID: 2335943691477265783, guid: b88938124ebf6f242963984ba7bada23,
+    type: 3}
+  m_PrefabInstance: {fileID: 1954881343352471391}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &4207680096175328450 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2397477375128171421, guid: b88938124ebf6f242963984ba7bada23,
     type: 3}
   m_PrefabInstance: {fileID: 1954881343352471391}
   m_PrefabAsset: {fileID: 0}
@@ -31442,15 +31593,15 @@ PrefabInstance:
       objectReference: {fileID: 4361620146570352117}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b88938124ebf6f242963984ba7bada23, type: 3}
---- !u!4 &4443059397330897695 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2397477375128171421, guid: b88938124ebf6f242963984ba7bada23,
-    type: 3}
-  m_PrefabInstance: {fileID: 2084434366155618434}
-  m_PrefabAsset: {fileID: 0}
 --- !u!102 &4361620146570352117 stripped
 TextMesh:
   m_CorrespondingSourceObject: {fileID: 2335943691477265783, guid: b88938124ebf6f242963984ba7bada23,
+    type: 3}
+  m_PrefabInstance: {fileID: 2084434366155618434}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &4443059397330897695 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2397477375128171421, guid: b88938124ebf6f242963984ba7bada23,
     type: 3}
   m_PrefabInstance: {fileID: 2084434366155618434}
   m_PrefabAsset: {fileID: 0}
@@ -34590,15 +34741,15 @@ PrefabInstance:
       objectReference: {fileID: 7806062573014831872}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b88938124ebf6f242963984ba7bada23, type: 3}
---- !u!4 &7889119195312983530 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2397477375128171421, guid: b88938124ebf6f242963984ba7bada23,
-    type: 3}
-  m_PrefabInstance: {fileID: 5493904343609671287}
-  m_PrefabAsset: {fileID: 0}
 --- !u!102 &7806062573014831872 stripped
 TextMesh:
   m_CorrespondingSourceObject: {fileID: 2335943691477265783, guid: b88938124ebf6f242963984ba7bada23,
+    type: 3}
+  m_PrefabInstance: {fileID: 5493904343609671287}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &7889119195312983530 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2397477375128171421, guid: b88938124ebf6f242963984ba7bada23,
     type: 3}
   m_PrefabInstance: {fileID: 5493904343609671287}
   m_PrefabAsset: {fileID: 0}
@@ -34961,15 +35112,15 @@ PrefabInstance:
       objectReference: {fileID: 8209865516978727288}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b88938124ebf6f242963984ba7bada23, type: 3}
---- !u!4 &8124548299587008402 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2397477375128171421, guid: b88938124ebf6f242963984ba7bada23,
-    type: 3}
-  m_PrefabInstance: {fileID: 5874309481490269199}
-  m_PrefabAsset: {fileID: 0}
 --- !u!102 &8209865516978727288 stripped
 TextMesh:
   m_CorrespondingSourceObject: {fileID: 2335943691477265783, guid: b88938124ebf6f242963984ba7bada23,
+    type: 3}
+  m_PrefabInstance: {fileID: 5874309481490269199}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8124548299587008402 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2397477375128171421, guid: b88938124ebf6f242963984ba7bada23,
     type: 3}
   m_PrefabInstance: {fileID: 5874309481490269199}
   m_PrefabAsset: {fileID: 0}
@@ -35152,15 +35303,15 @@ PrefabInstance:
       objectReference: {fileID: 8347075769805631230}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b88938124ebf6f242963984ba7bada23, type: 3}
---- !u!4 &8284857091753324564 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2397477375128171421, guid: b88938124ebf6f242963984ba7bada23,
-    type: 3}
-  m_PrefabInstance: {fileID: 6033756257764623241}
-  m_PrefabAsset: {fileID: 0}
 --- !u!102 &8347075769805631230 stripped
 TextMesh:
   m_CorrespondingSourceObject: {fileID: 2335943691477265783, guid: b88938124ebf6f242963984ba7bada23,
+    type: 3}
+  m_PrefabInstance: {fileID: 6033756257764623241}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8284857091753324564 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2397477375128171421, guid: b88938124ebf6f242963984ba7bada23,
     type: 3}
   m_PrefabInstance: {fileID: 6033756257764623241}
   m_PrefabAsset: {fileID: 0}
@@ -37799,15 +37950,15 @@ PrefabInstance:
       objectReference: {fileID: 6462299508934705855}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b88938124ebf6f242963984ba7bada23, type: 3}
---- !u!102 &6462299508934705855 stripped
-TextMesh:
-  m_CorrespondingSourceObject: {fileID: 2335943691477265783, guid: b88938124ebf6f242963984ba7bada23,
-    type: 3}
-  m_PrefabInstance: {fileID: 8774211929602076616}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6377606951452400725 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2397477375128171421, guid: b88938124ebf6f242963984ba7bada23,
+    type: 3}
+  m_PrefabInstance: {fileID: 8774211929602076616}
+  m_PrefabAsset: {fileID: 0}
+--- !u!102 &6462299508934705855 stripped
+TextMesh:
+  m_CorrespondingSourceObject: {fileID: 2335943691477265783, guid: b88938124ebf6f242963984ba7bada23,
     type: 3}
   m_PrefabInstance: {fileID: 8774211929602076616}
   m_PrefabAsset: {fileID: 0}

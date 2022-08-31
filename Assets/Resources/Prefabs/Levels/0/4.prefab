@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 239264378828223136}
   - component: {fileID: 7693140696513816829}
   - component: {fileID: 415110697884505616}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Raw stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -171,7 +171,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6761701336682528737}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Depleted Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -204,7 +204,7 @@ GameObject:
   - component: {fileID: 5124930628514101686}
   - component: {fileID: 8876855715337879749}
   - component: {fileID: 8031438278435022174}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Raw stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -362,7 +362,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2666154119458482233}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Levels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -393,7 +393,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5036518798182695883}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Depleted Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -424,7 +424,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5682716952380608052}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Levels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -537,7 +537,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1754308608093237333}
   - component: {fileID: 5270211121797068120}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -589,7 +589,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9109092439322823593}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Levels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -622,7 +622,7 @@ GameObject:
   - component: {fileID: 5693883028437886599}
   - component: {fileID: 2967009684834193962}
   - component: {fileID: 5738234368594904300}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Raw stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -692,6 +692,50 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &233105919509545326
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 677665540656020474}
+  - component: {fileID: 5778543804342968964}
+  m_Layer: 0
+  m_Name: Tutorial Target
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &677665540656020474
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 233105919509545326}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 10.53, y: 3.452891, z: -6.5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 541255833001067341}
+  m_RootOrder: 49
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5778543804342968964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 233105919509545326}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8457e19866875674abb3eb2bb54a0e65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  orderIndex: 0
 --- !u!1 &271360046329794882
 GameObject:
   m_ObjectHideFlags: 0
@@ -782,7 +826,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7633730338513924690}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Levels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -813,7 +857,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 838575517061482152}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Real Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -845,7 +889,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1230511789187493361}
   - component: {fileID: 5394131143126297914}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -930,7 +974,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5429676501835786149}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Levels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1211,7 +1255,7 @@ GameObject:
   - component: {fileID: 2477073982027827488}
   - component: {fileID: 8637174329126959618}
   - component: {fileID: 5067084363672850178}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Stone (57)
   m_TagString: Resource
   m_Icon: {fileID: 0}
@@ -1273,6 +1317,9 @@ MonoBehaviour:
   TreeStump: {fileID: 0}
   LeftRocks: {fileID: 7642231180595543065, guid: 3e09047fc075ad9408ae1785bc819367,
     type: 3}
+  LeftCement: {fileID: 0}
+  LeftMud: {fileID: 0}
+  LeftIron: {fileID: 0}
 --- !u!114 &5067084363672850178
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1298,7 +1345,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4561237898356937776}
   - component: {fileID: 8435367371446936586}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1352,7 +1399,7 @@ GameObject:
   - component: {fileID: 8550019498564676096}
   - component: {fileID: 8815248501474966918}
   - component: {fileID: 6445106756896174902}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Raw stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1434,7 +1481,7 @@ GameObject:
   - component: {fileID: 1803277730359725038}
   - component: {fileID: 3470106943900579448}
   - component: {fileID: 7410834112650546386}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Stone (86)
   m_TagString: Resource
   m_Icon: {fileID: 0}
@@ -1496,6 +1543,9 @@ MonoBehaviour:
   TreeStump: {fileID: 0}
   LeftRocks: {fileID: 7642231180595543065, guid: 3e09047fc075ad9408ae1785bc819367,
     type: 3}
+  LeftCement: {fileID: 0}
+  LeftMud: {fileID: 0}
+  LeftIron: {fileID: 0}
 --- !u!114 &7410834112650546386
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1684,7 +1734,7 @@ GameObject:
   - component: {fileID: 4711703915534449541}
   - component: {fileID: 8587517325982737104}
   - component: {fileID: 4513677150089865846}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Raw stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1765,7 +1815,7 @@ GameObject:
   - component: {fileID: 921633619136781193}
   - component: {fileID: 4279993534749840428}
   - component: {fileID: 2054028700532039910}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Raw stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1846,7 +1896,7 @@ GameObject:
   - component: {fileID: 921633620055387076}
   - component: {fileID: 4279993535668315233}
   - component: {fileID: 2054028700108361899}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Raw stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1925,7 +1975,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 541255831264962018}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Resources
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1956,7 +2006,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 541255833001067341}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2022,6 +2072,8 @@ Transform:
   - {fileID: 6790509632832057961}
   - {fileID: 6931076874554233942}
   - {fileID: 6670755517435294933}
+  - {fileID: 6095062725415988181}
+  - {fileID: 677665540656020474}
   m_Father: {fileID: 541255831264962018}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2036,7 +2088,7 @@ GameObject:
   - component: {fileID: 6314265633048243293}
   - component: {fileID: 6746258009240360239}
   - component: {fileID: 6534585275428594531}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Raw stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2115,7 +2167,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1532281766442879171}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Levels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2146,7 +2198,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3430076658002338226}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Depleted Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2258,7 +2310,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8952433347711860339}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Real Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2289,7 +2341,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1553904883434885332}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Levels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2323,7 +2375,7 @@ GameObject:
   - component: {fileID: 6341646192159147892}
   - component: {fileID: 7787220828396241145}
   - component: {fileID: 626663948036070543}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Stone (64)
   m_TagString: Resource
   m_Icon: {fileID: 0}
@@ -2385,6 +2437,9 @@ MonoBehaviour:
   TreeStump: {fileID: 0}
   LeftRocks: {fileID: 7642231180595543065, guid: 3e09047fc075ad9408ae1785bc819367,
     type: 3}
+  LeftCement: {fileID: 0}
+  LeftMud: {fileID: 0}
+  LeftIron: {fileID: 0}
 --- !u!114 &626663948036070543
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2411,7 +2466,7 @@ GameObject:
   - component: {fileID: 386595510847526115}
   - component: {fileID: 2145673175951125721}
   - component: {fileID: 5666002917867658841}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Raw stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2572,7 +2627,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5085177406500897209}
   - component: {fileID: 1732275748579451081}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2707,7 +2762,7 @@ GameObject:
   - component: {fileID: 1263525826152562414}
   - component: {fileID: 6217074538396242651}
   - component: {fileID: 4428565782232779219}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Raw stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2788,7 +2843,7 @@ GameObject:
   - component: {fileID: 5794040561316585494}
   - component: {fileID: 7930304549028391552}
   - component: {fileID: 1294083511714032224}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Raw stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2869,7 +2924,7 @@ GameObject:
   - component: {fileID: 831995049693944202}
   - component: {fileID: 1949265963672850942}
   - component: {fileID: 3178585450679627488}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Raw stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2951,7 +3006,7 @@ GameObject:
   - component: {fileID: 7538156576029496154}
   - component: {fileID: 963869358412062758}
   - component: {fileID: 1283637775624371490}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Stone (61)
   m_TagString: Resource
   m_Icon: {fileID: 0}
@@ -3013,6 +3068,9 @@ MonoBehaviour:
   TreeStump: {fileID: 0}
   LeftRocks: {fileID: 7642231180595543065, guid: 3e09047fc075ad9408ae1785bc819367,
     type: 3}
+  LeftCement: {fileID: 0}
+  LeftMud: {fileID: 0}
+  LeftIron: {fileID: 0}
 --- !u!114 &1283637775624371490
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3039,7 +3097,7 @@ GameObject:
   - component: {fileID: 6525450646432381768}
   - component: {fileID: 8782592052812824469}
   - component: {fileID: 4127561580828138681}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Raw stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3199,7 +3257,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3714062709029716430}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Real Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3443,7 +3501,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2987669833642942037}
   - component: {fileID: 3010092105581337138}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3497,7 +3555,7 @@ GameObject:
   - component: {fileID: 8301798657693490176}
   - component: {fileID: 6745713058850608400}
   - component: {fileID: 4154476707480695589}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Raw stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3576,7 +3634,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3389463343790101979}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Depleted Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3607,7 +3665,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2981841827875681968}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Depleted Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3638,7 +3696,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6695613844269203845}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Real Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3671,7 +3729,7 @@ GameObject:
   - component: {fileID: 2073666465968109915}
   - component: {fileID: 1042480365361814472}
   - component: {fileID: 6048998247617577247}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Raw stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3833,7 +3891,7 @@ GameObject:
   - component: {fileID: 5169181548050571110}
   - component: {fileID: 5467998656006439335}
   - component: {fileID: 3527965165297980727}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Raw stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3912,7 +3970,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4674699064762797788}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Levels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3946,7 +4004,7 @@ GameObject:
   - component: {fileID: 5372260932088366319}
   - component: {fileID: 6369623730132856337}
   - component: {fileID: 5878641650575976142}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Stone (81)
   m_TagString: Resource
   m_Icon: {fileID: 0}
@@ -4008,6 +4066,9 @@ MonoBehaviour:
   TreeStump: {fileID: 0}
   LeftRocks: {fileID: 7642231180595543065, guid: 3e09047fc075ad9408ae1785bc819367,
     type: 3}
+  LeftCement: {fileID: 0}
+  LeftMud: {fileID: 0}
+  LeftIron: {fileID: 0}
 --- !u!114 &5878641650575976142
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4116,7 +4177,7 @@ GameObject:
   - component: {fileID: 3661808368697122401}
   - component: {fileID: 18241872263594581}
   - component: {fileID: 7276816102866200280}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Stone (71)
   m_TagString: Resource
   m_Icon: {fileID: 0}
@@ -4178,6 +4239,9 @@ MonoBehaviour:
   TreeStump: {fileID: 0}
   LeftRocks: {fileID: 7642231180595543065, guid: 3e09047fc075ad9408ae1785bc819367,
     type: 3}
+  LeftCement: {fileID: 0}
+  LeftMud: {fileID: 0}
+  LeftIron: {fileID: 0}
 --- !u!114 &7276816102866200280
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4205,7 +4269,7 @@ GameObject:
   - component: {fileID: 4912747068187214607}
   - component: {fileID: 1105034606475405501}
   - component: {fileID: 564224022615052620}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Stone (75)
   m_TagString: Resource
   m_Icon: {fileID: 0}
@@ -4267,6 +4331,9 @@ MonoBehaviour:
   TreeStump: {fileID: 0}
   LeftRocks: {fileID: 7642231180595543065, guid: 3e09047fc075ad9408ae1785bc819367,
     type: 3}
+  LeftCement: {fileID: 0}
+  LeftMud: {fileID: 0}
+  LeftIron: {fileID: 0}
 --- !u!114 &564224022615052620
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4294,7 +4361,7 @@ GameObject:
   - component: {fileID: 1012425313282820104}
   - component: {fileID: 7499547473608516635}
   - component: {fileID: 910444618004513626}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Stone (68)
   m_TagString: Resource
   m_Icon: {fileID: 0}
@@ -4356,6 +4423,9 @@ MonoBehaviour:
   TreeStump: {fileID: 0}
   LeftRocks: {fileID: 7642231180595543065, guid: 3e09047fc075ad9408ae1785bc819367,
     type: 3}
+  LeftCement: {fileID: 0}
+  LeftMud: {fileID: 0}
+  LeftIron: {fileID: 0}
 --- !u!114 &910444618004513626
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4674,7 +4744,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4044349887887107236}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Real Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4740,7 +4810,7 @@ GameObject:
   - component: {fileID: 6855691514713193214}
   - component: {fileID: 4030864652579468691}
   - component: {fileID: 8578397921063806752}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Raw stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4819,7 +4889,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6936321471032837434}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Real Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4851,7 +4921,7 @@ GameObject:
   m_Component:
   - component: {fileID: 680558593292181070}
   - component: {fileID: 8751685539558278712}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4906,7 +4976,7 @@ GameObject:
   - component: {fileID: 3765736494972042200}
   - component: {fileID: 8772271607137096967}
   - component: {fileID: 4102676995468314755}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Stone (70)
   m_TagString: Resource
   m_Icon: {fileID: 0}
@@ -4968,6 +5038,9 @@ MonoBehaviour:
   TreeStump: {fileID: 0}
   LeftRocks: {fileID: 7642231180595543065, guid: 3e09047fc075ad9408ae1785bc819367,
     type: 3}
+  LeftCement: {fileID: 0}
+  LeftMud: {fileID: 0}
+  LeftIron: {fileID: 0}
 --- !u!114 &4102676995468314755
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4992,7 +5065,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4145106863356019618}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Depleted Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5298,7 +5371,7 @@ GameObject:
   - component: {fileID: 8344313177201538232}
   - component: {fileID: 6280059614771088928}
   - component: {fileID: 6794071350481247264}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Raw stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5377,7 +5450,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5819374823143300660}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Depleted Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5410,7 +5483,7 @@ GameObject:
   - component: {fileID: 4036963866762816863}
   - component: {fileID: 3070226610759475384}
   - component: {fileID: 8873080940660087028}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Raw stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5492,7 +5565,7 @@ GameObject:
   - component: {fileID: 7335902226978673194}
   - component: {fileID: 8565212128037583607}
   - component: {fileID: 6500093422728949545}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Stone (58)
   m_TagString: Resource
   m_Icon: {fileID: 0}
@@ -5554,6 +5627,9 @@ MonoBehaviour:
   TreeStump: {fileID: 0}
   LeftRocks: {fileID: 7642231180595543065, guid: 3e09047fc075ad9408ae1785bc819367,
     type: 3}
+  LeftCement: {fileID: 0}
+  LeftMud: {fileID: 0}
+  LeftIron: {fileID: 0}
 --- !u!114 &6500093422728949545
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5580,7 +5656,7 @@ GameObject:
   - component: {fileID: 5976960049978101852}
   - component: {fileID: 9218207996119894477}
   - component: {fileID: 5997747330763639520}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Raw stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6035,7 +6111,7 @@ GameObject:
   - component: {fileID: 2536667722820603372}
   - component: {fileID: 7828048587206303408}
   - component: {fileID: 2249436045723476109}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Raw stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6117,7 +6193,7 @@ GameObject:
   - component: {fileID: 2531840142043067146}
   - component: {fileID: 7238431694531612963}
   - component: {fileID: 5751987406958577025}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Stone (60)
   m_TagString: Resource
   m_Icon: {fileID: 0}
@@ -6179,6 +6255,9 @@ MonoBehaviour:
   TreeStump: {fileID: 0}
   LeftRocks: {fileID: 7642231180595543065, guid: 3e09047fc075ad9408ae1785bc819367,
     type: 3}
+  LeftCement: {fileID: 0}
+  LeftMud: {fileID: 0}
+  LeftIron: {fileID: 0}
 --- !u!114 &5751987406958577025
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6284,7 +6363,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 188488427560676978}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Depleted Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6318,7 +6397,7 @@ GameObject:
   - component: {fileID: 4204896051632763851}
   - component: {fileID: 8664443955442258122}
   - component: {fileID: 6956131041710739106}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Stone (90)
   m_TagString: Resource
   m_Icon: {fileID: 0}
@@ -6380,6 +6459,9 @@ MonoBehaviour:
   TreeStump: {fileID: 0}
   LeftRocks: {fileID: 7642231180595543065, guid: 3e09047fc075ad9408ae1785bc819367,
     type: 3}
+  LeftCement: {fileID: 0}
+  LeftMud: {fileID: 0}
+  LeftIron: {fileID: 0}
 --- !u!114 &6956131041710739106
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6568,7 +6650,7 @@ GameObject:
   - component: {fileID: 1884297441934862455}
   - component: {fileID: 8304346306554215091}
   - component: {fileID: 398414122614412447}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Raw stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6649,7 +6731,7 @@ GameObject:
   - component: {fileID: 5521035313785621301}
   - component: {fileID: 3213572973883578471}
   - component: {fileID: 5279866374298336640}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Raw stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6809,7 +6891,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 268621647763757225}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Real Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6922,7 +7004,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3267402444068611279}
   - component: {fileID: 1057784437027847235}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6974,7 +7056,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4312670395939278379}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Real Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7039,7 +7121,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9213356414214112825}
   - component: {fileID: 5799317314341694714}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7091,7 +7173,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5704997861015840745}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Depleted Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7124,7 +7206,7 @@ GameObject:
   - component: {fileID: 5597133205787586488}
   - component: {fileID: 7084403415929041891}
   - component: {fileID: 1845627504938774027}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Raw stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7203,7 +7285,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8907938305229352676}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Levels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7510,7 +7592,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7468646913287387320}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Real Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7542,7 +7624,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6541254902325058494}
   - component: {fileID: 3413973457084784155}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7678,7 +7760,7 @@ GameObject:
   - component: {fileID: 5147886870707470289}
   - component: {fileID: 5596963990518983896}
   - component: {fileID: 3100710905479992933}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Stone (65)
   m_TagString: Resource
   m_Icon: {fileID: 0}
@@ -7740,6 +7822,9 @@ MonoBehaviour:
   TreeStump: {fileID: 0}
   LeftRocks: {fileID: 7642231180595543065, guid: 3e09047fc075ad9408ae1785bc819367,
     type: 3}
+  LeftCement: {fileID: 0}
+  LeftMud: {fileID: 0}
+  LeftIron: {fileID: 0}
 --- !u!114 &3100710905479992933
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7755,6 +7840,39 @@ MonoBehaviour:
   markerSprite: {fileID: 21300000, guid: 2a1d7b82d9cb0034698aac6db22e449c, type: 3}
   markerSize: 25
   isActive: 1
+--- !u!1 &1747528544634670970
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4077898896446805185}
+  m_Layer: 0
+  m_Name: stone pile
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4077898896446805185
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1747528544634670970}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0, y: 0.516, z: 0}
+  m_LocalScale: {x: 2.1281965, y: 2.1281965, z: 2.1281965}
+  m_Children:
+  - {fileID: 7357604321495362427}
+  - {fileID: 7600245987540957909}
+  - {fileID: 1112689403263471899}
+  m_Father: {fileID: 5838293919895292965}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1749505566866939301
 GameObject:
   m_ObjectHideFlags: 0
@@ -7848,7 +7966,7 @@ GameObject:
   - component: {fileID: 6762696575942589238}
   - component: {fileID: 7391534026756376851}
   - component: {fileID: 1740703565012563923}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Stone (63)
   m_TagString: Resource
   m_Icon: {fileID: 0}
@@ -7910,6 +8028,9 @@ MonoBehaviour:
   TreeStump: {fileID: 0}
   LeftRocks: {fileID: 7642231180595543065, guid: 3e09047fc075ad9408ae1785bc819367,
     type: 3}
+  LeftCement: {fileID: 0}
+  LeftMud: {fileID: 0}
+  LeftIron: {fileID: 0}
 --- !u!114 &1740703565012563923
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8033,7 +8154,7 @@ GameObject:
   - component: {fileID: 629958312311953390}
   - component: {fileID: 2911239493112727834}
   - component: {fileID: 8874832558512034396}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Stone (76)
   m_TagString: Resource
   m_Icon: {fileID: 0}
@@ -8095,6 +8216,9 @@ MonoBehaviour:
   TreeStump: {fileID: 0}
   LeftRocks: {fileID: 7642231180595543065, guid: 3e09047fc075ad9408ae1785bc819367,
     type: 3}
+  LeftCement: {fileID: 0}
+  LeftMud: {fileID: 0}
+  LeftIron: {fileID: 0}
 --- !u!114 &8874832558512034396
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8122,7 +8246,7 @@ GameObject:
   - component: {fileID: 9041061071740632167}
   - component: {fileID: 5564692369631327124}
   - component: {fileID: 1665710479166593307}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Stone (74)
   m_TagString: Resource
   m_Icon: {fileID: 0}
@@ -8184,6 +8308,9 @@ MonoBehaviour:
   TreeStump: {fileID: 0}
   LeftRocks: {fileID: 7642231180595543065, guid: 3e09047fc075ad9408ae1785bc819367,
     type: 3}
+  LeftCement: {fileID: 0}
+  LeftMud: {fileID: 0}
+  LeftIron: {fileID: 0}
 --- !u!114 &1665710479166593307
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8210,7 +8337,7 @@ GameObject:
   - component: {fileID: 3511137973650409835}
   - component: {fileID: 5000316885203721581}
   - component: {fileID: 4189955487018072686}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Raw stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8370,7 +8497,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7137527283085348865}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Real Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8403,7 +8530,7 @@ GameObject:
   - component: {fileID: 9017024430893158465}
   - component: {fileID: 8438860025068581864}
   - component: {fileID: 4432548651617663402}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Raw stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8482,7 +8609,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3533953973088707961}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Real Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8513,7 +8640,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3889039851433831902}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Depleted Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8577,7 +8704,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4376789296878740730}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Real Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8608,7 +8735,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6200913067412911337}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Real Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8639,7 +8766,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2267090337255101992}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Real Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8754,7 +8881,7 @@ GameObject:
   - component: {fileID: 724390549104346647}
   - component: {fileID: 8232259959748334238}
   - component: {fileID: 4753993923206758687}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Stone (69)
   m_TagString: Resource
   m_Icon: {fileID: 0}
@@ -8816,6 +8943,9 @@ MonoBehaviour:
   TreeStump: {fileID: 0}
   LeftRocks: {fileID: 7642231180595543065, guid: 3e09047fc075ad9408ae1785bc819367,
     type: 3}
+  LeftCement: {fileID: 0}
+  LeftMud: {fileID: 0}
+  LeftIron: {fileID: 0}
 --- !u!114 &4753993923206758687
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8841,7 +8971,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2518400510350934047}
   - component: {fileID: 7238665815471771671}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8976,7 +9106,7 @@ GameObject:
   - component: {fileID: 6166292283698711139}
   - component: {fileID: 3633993912169099029}
   - component: {fileID: 6307894078006519742}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Raw stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9249,7 +9379,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8631547091492957811}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Levels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9313,7 +9443,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2398046528468271434}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Depleted Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9427,7 +9557,7 @@ GameObject:
   - component: {fileID: 909485309543434344}
   - component: {fileID: 9146368564084291426}
   - component: {fileID: 3044757863079226509}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Raw stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9604,7 +9734,7 @@ GameObject:
   - component: {fileID: 8151742967090133425}
   - component: {fileID: 8470877842276127727}
   - component: {fileID: 2573603718867225732}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Raw stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9764,7 +9894,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 841879098913898280}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Levels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -9878,7 +10008,7 @@ GameObject:
   - component: {fileID: 4427671695654689500}
   - component: {fileID: 2710647675974284865}
   - component: {fileID: 3534859143527100718}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Raw stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10038,7 +10168,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7002721920303845482}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Depleted Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10070,7 +10200,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7512360147497060495}
   - component: {fileID: 6388906186471147170}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10124,7 +10254,7 @@ GameObject:
   - component: {fileID: 4183492236154873394}
   - component: {fileID: 2331273718206466470}
   - component: {fileID: 1955826317592491212}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Raw stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10205,7 +10335,7 @@ GameObject:
   - component: {fileID: 6800638112112729079}
   - component: {fileID: 8465932411044680367}
   - component: {fileID: 4553531175205611912}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Raw stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10319,7 +10449,7 @@ GameObject:
   - component: {fileID: 8896554601860034065}
   - component: {fileID: 1238316380085286328}
   - component: {fileID: 2231263646630261982}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Raw stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10389,6 +10519,87 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &2442612737417955873
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7647677386843310378}
+  - component: {fileID: 7008943320316149659}
+  - component: {fileID: 6954362944827888995}
+  m_Layer: 0
+  m_Name: Raw stone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7647677386843310378
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2442612737417955873}
+  m_LocalRotation: {x: -0.47270814, y: -0, z: -0, w: 0.8812191}
+  m_LocalPosition: {x: 0, y: 0.423, z: 0}
+  m_LocalScale: {x: 1.3866588, y: 3.2345302, z: 2.1451654}
+  m_Children: []
+  m_Father: {fileID: 2612930985017390106}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: -56.42, y: 0, z: 0}
+--- !u!33 &7008943320316149659
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2442612737417955873}
+  m_Mesh: {fileID: -8756119856722892863, guid: fda98d37edb15d04b8edc103793e4bb1, type: 3}
+--- !u!23 &6954362944827888995
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2442612737417955873}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: fcfe1a270a7efe944abaa413ca2260b5, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &2467319167022829938
 GameObject:
   m_ObjectHideFlags: 0
@@ -10398,7 +10609,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7302686563593644520}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Real Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10460,7 +10671,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1695886861468229585}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Levels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10575,7 +10786,7 @@ GameObject:
   - component: {fileID: 1213668594013744261}
   - component: {fileID: 8018076030343106114}
   - component: {fileID: 3196563811193368659}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Stone (54)
   m_TagString: Resource
   m_Icon: {fileID: 0}
@@ -10637,6 +10848,9 @@ MonoBehaviour:
   TreeStump: {fileID: 0}
   LeftRocks: {fileID: 7642231180595543065, guid: 3e09047fc075ad9408ae1785bc819367,
     type: 3}
+  LeftCement: {fileID: 0}
+  LeftMud: {fileID: 0}
+  LeftIron: {fileID: 0}
 --- !u!114 &3196563811193368659
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10661,7 +10875,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 962800767636474497}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Levels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10854,7 +11068,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5492990405057073751}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Real Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10918,7 +11132,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2633688800077543853}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Levels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10950,7 +11164,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2633688800540774653}
   - component: {fileID: 2633688800540774652}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11002,7 +11216,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2633688800657692079}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Depleted Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11036,7 +11250,7 @@ GameObject:
   - component: {fileID: 2633688801034669168}
   - component: {fileID: 2633688801034669169}
   - component: {fileID: 2633688801034669171}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Stone (1)
   m_TagString: Resource
   m_Icon: {fileID: 0}
@@ -11098,6 +11312,9 @@ MonoBehaviour:
   TreeStump: {fileID: 0}
   LeftRocks: {fileID: 7642231180595543065, guid: 3e09047fc075ad9408ae1785bc819367,
     type: 3}
+  LeftCement: {fileID: 0}
+  LeftMud: {fileID: 0}
+  LeftIron: {fileID: 0}
 --- !u!114 &2633688801034669171
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11122,7 +11339,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2633688801235802427}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Real Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11250,7 +11467,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2184415209088093402}
   - component: {fileID: 6589990151649041995}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11472,6 +11689,98 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300002, guid: 4df105262e90db842972afbdc705b0e9, type: 3}
+--- !u!1 &2770294583234663327
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6095062725415988181}
+  - component: {fileID: 5648067051543428535}
+  - component: {fileID: 7403348960747249638}
+  - component: {fileID: 8683114172987305015}
+  m_Layer: 0
+  m_Name: Stone (95)
+  m_TagString: Resource
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6095062725415988181
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2770294583234663327}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 10.33, y: 3.4528913, z: -7.8}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 6585986661552529526}
+  m_Father: {fileID: 541255833001067341}
+  m_RootOrder: 48
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &5648067051543428535
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2770294583234663327}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0.5, z: 0}
+--- !u!114 &7403348960747249638
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2770294583234663327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9996f27f0b6e06b4e9302e4c87a26700, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 1
+  defaultResouceQuantity: 3
+  curResouceQuantity: 3
+  resourceVal: 0
+  effectInitPoints: []
+  effectPrefab: {fileID: 1059967587465715723, guid: 2c8029a3743db4a46bdfa0f86f58c55f,
+    type: 3}
+  anim: {fileID: 6989611929370223807}
+  time: 0
+  respawnTime: 5
+  GatherSound: {fileID: 8300000, guid: 82629037cd93c974480841917c3cd23d, type: 3}
+  gatherDistance: 2
+  TreeStump: {fileID: 0}
+  LeftRocks: {fileID: 7642231180595543065, guid: 3e09047fc075ad9408ae1785bc819367,
+    type: 3}
+  LeftCement: {fileID: 0}
+  LeftMud: {fileID: 0}
+  LeftIron: {fileID: 0}
+--- !u!114 &8683114172987305015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2770294583234663327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 492392c310a924d4291d26c3c333296b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  markerSprite: {fileID: 21300000, guid: 2a1d7b82d9cb0034698aac6db22e449c, type: 3}
+  markerSize: 25
+  isActive: 1
 --- !u!1 &2770670195469894933
 GameObject:
   m_ObjectHideFlags: 0
@@ -11481,7 +11790,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 229519224576631049}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Real Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11512,7 +11821,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3333833443787817449}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Depleted Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11706,7 +12015,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4569891258539682656}
   - component: {fileID: 2185165773665608566}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11940,7 +12249,7 @@ GameObject:
   - component: {fileID: 4927889159118093209}
   - component: {fileID: 7165694595093994764}
   - component: {fileID: 1348597644289566741}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Stone (91)
   m_TagString: Resource
   m_Icon: {fileID: 0}
@@ -12002,6 +12311,9 @@ MonoBehaviour:
   TreeStump: {fileID: 0}
   LeftRocks: {fileID: 7642231180595543065, guid: 3e09047fc075ad9408ae1785bc819367,
     type: 3}
+  LeftCement: {fileID: 0}
+  LeftMud: {fileID: 0}
+  LeftIron: {fileID: 0}
 --- !u!114 &1348597644289566741
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12027,7 +12339,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4450790229431766509}
   - component: {fileID: 747518794857814294}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12081,7 +12393,7 @@ GameObject:
   - component: {fileID: 7800516882953946626}
   - component: {fileID: 7068813099026444540}
   - component: {fileID: 5997125546777019866}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Raw stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12162,7 +12474,7 @@ GameObject:
   - component: {fileID: 1687686376921550517}
   - component: {fileID: 1662491314653230636}
   - component: {fileID: 1540016848711221330}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Raw stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12242,7 +12554,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6560393740395106665}
   - component: {fileID: 7333267200677652122}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12377,7 +12689,7 @@ GameObject:
   - component: {fileID: 8234007144550149337}
   - component: {fileID: 7147790194056401633}
   - component: {fileID: 5751556799347185960}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Raw stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12539,7 +12851,7 @@ GameObject:
   - component: {fileID: 4827713708342480559}
   - component: {fileID: 7057245641347285488}
   - component: {fileID: 2309205262003371947}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Raw stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12715,7 +13027,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2364166639747771186}
   - component: {fileID: 7011937892961797771}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12769,7 +13081,7 @@ GameObject:
   - component: {fileID: 2084986799723415498}
   - component: {fileID: 8500225100876916407}
   - component: {fileID: 1606210691480582089}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Raw stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12851,7 +13163,7 @@ GameObject:
   - component: {fileID: 780325384935218340}
   - component: {fileID: 7267531107441665755}
   - component: {fileID: 3313419652107904313}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Stone (94)
   m_TagString: Resource
   m_Icon: {fileID: 0}
@@ -12913,6 +13225,9 @@ MonoBehaviour:
   TreeStump: {fileID: 0}
   LeftRocks: {fileID: 7642231180595543065, guid: 3e09047fc075ad9408ae1785bc819367,
     type: 3}
+  LeftCement: {fileID: 0}
+  LeftMud: {fileID: 0}
+  LeftIron: {fileID: 0}
 --- !u!114 &3313419652107904313
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12939,7 +13254,7 @@ GameObject:
   - component: {fileID: 2375245881277421977}
   - component: {fileID: 8326494931352472048}
   - component: {fileID: 3149279864753206631}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Raw stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13326,7 +13641,7 @@ GameObject:
   - component: {fileID: 6199466031313320746}
   - component: {fileID: 7764451261119260310}
   - component: {fileID: 3435516658765891654}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Raw stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13488,7 +13803,7 @@ GameObject:
   - component: {fileID: 5357522678451622248}
   - component: {fileID: 2906950166764703061}
   - component: {fileID: 7127014334506569442}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Raw stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13701,7 +14016,7 @@ GameObject:
   - component: {fileID: 6481731191353435755}
   - component: {fileID: 8485528817375719963}
   - component: {fileID: 1104505071889105341}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Stone (85)
   m_TagString: Resource
   m_Icon: {fileID: 0}
@@ -13763,6 +14078,9 @@ MonoBehaviour:
   TreeStump: {fileID: 0}
   LeftRocks: {fileID: 7642231180595543065, guid: 3e09047fc075ad9408ae1785bc819367,
     type: 3}
+  LeftCement: {fileID: 0}
+  LeftMud: {fileID: 0}
+  LeftIron: {fileID: 0}
 --- !u!114 &1104505071889105341
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14080,7 +14398,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6653822745510350358}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Levels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14111,7 +14429,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5427604442871425134}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Depleted Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14321,7 +14639,7 @@ GameObject:
   - component: {fileID: 6251578623911895940}
   - component: {fileID: 4817133218655546952}
   - component: {fileID: 1962438440804996669}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Raw stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14491,7 +14809,7 @@ GameObject:
   - component: {fileID: 4509407974102015992}
   - component: {fileID: 674160541931140760}
   - component: {fileID: 9005371006212576399}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Raw stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14572,7 +14890,7 @@ GameObject:
   - component: {fileID: 4898616781388383329}
   - component: {fileID: 2537552735357830641}
   - component: {fileID: 3828210573724015858}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Raw stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14621,6 +14939,87 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: fcfe1a270a7efe944abaa413ca2260b5, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &3445907391952889293
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1112689403263471899}
+  - component: {fileID: 5703663477668228946}
+  - component: {fileID: 3978571484908122843}
+  m_Layer: 0
+  m_Name: Raw_stone__2_
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1112689403263471899
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3445907391952889293}
+  m_LocalRotation: {x: -0.28132212, y: -0.6557679, z: -0.35754243, w: 0.6024863}
+  m_LocalPosition: {x: 0.21805757, y: -0.10059738, z: 0.12731552}
+  m_LocalScale: {x: 0.3874523, y: 0.903774, z: 0.5993899}
+  m_Children: []
+  m_Father: {fileID: 4077898896446805185}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &5703663477668228946
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3445907391952889293}
+  m_Mesh: {fileID: -551882445197027737, guid: 943bb7d74365cfe4980359da85c8f14e, type: 3}
+--- !u!23 &3978571484908122843
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3445907391952889293}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 5dc80d07e7d42cb489afb9759d051db5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -14734,7 +15133,7 @@ GameObject:
   - component: {fileID: 2994838618302315694}
   - component: {fileID: 6305202968737094743}
   - component: {fileID: 4892873008447229005}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Raw stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15056,7 +15455,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8403474754075084838}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Levels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15396,7 +15795,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5365983519221012055}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Real Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15427,7 +15826,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1300753869508736700}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Depleted Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15461,7 +15860,7 @@ GameObject:
   - component: {fileID: 377976697372610575}
   - component: {fileID: 3941614365631593236}
   - component: {fileID: 4251148764824119167}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Stone (78)
   m_TagString: Resource
   m_Icon: {fileID: 0}
@@ -15523,6 +15922,9 @@ MonoBehaviour:
   TreeStump: {fileID: 0}
   LeftRocks: {fileID: 7642231180595543065, guid: 3e09047fc075ad9408ae1785bc819367,
     type: 3}
+  LeftCement: {fileID: 0}
+  LeftMud: {fileID: 0}
+  LeftIron: {fileID: 0}
 --- !u!114 &4251148764824119167
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15571,6 +15973,87 @@ Transform:
   m_Father: {fileID: 863559305580946266}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &3678634193627113043
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8077037036484204324}
+  - component: {fileID: 6851613974253152852}
+  - component: {fileID: 8798167081166118792}
+  m_Layer: 0
+  m_Name: Raw stone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8077037036484204324
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3678634193627113043}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.028, z: 0}
+  m_LocalScale: {x: 0.4, y: 0.16561656, z: 0.4}
+  m_Children: []
+  m_Father: {fileID: 6762035866154738975}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &6851613974253152852
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3678634193627113043}
+  m_Mesh: {fileID: -8756119856722892863, guid: fda98d37edb15d04b8edc103793e4bb1, type: 3}
+--- !u!23 &8798167081166118792
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3678634193627113043}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: fcfe1a270a7efe944abaa413ca2260b5, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &3693581146927056991
 GameObject:
   m_ObjectHideFlags: 0
@@ -15583,7 +16066,7 @@ GameObject:
   - component: {fileID: 8154873863067805912}
   - component: {fileID: 6616553648722272527}
   - component: {fileID: 7176161990238485773}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Stone (87)
   m_TagString: Resource
   m_Icon: {fileID: 0}
@@ -15645,6 +16128,9 @@ MonoBehaviour:
   TreeStump: {fileID: 0}
   LeftRocks: {fileID: 7642231180595543065, guid: 3e09047fc075ad9408ae1785bc819367,
     type: 3}
+  LeftCement: {fileID: 0}
+  LeftMud: {fileID: 0}
+  LeftIron: {fileID: 0}
 --- !u!114 &7176161990238485773
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15851,7 +16337,7 @@ GameObject:
   - component: {fileID: 2170780273809264248}
   - component: {fileID: 5230599558043351016}
   - component: {fileID: 6055985552561724017}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Stone (88)
   m_TagString: Resource
   m_Icon: {fileID: 0}
@@ -15913,6 +16399,9 @@ MonoBehaviour:
   TreeStump: {fileID: 0}
   LeftRocks: {fileID: 7642231180595543065, guid: 3e09047fc075ad9408ae1785bc819367,
     type: 3}
+  LeftCement: {fileID: 0}
+  LeftMud: {fileID: 0}
+  LeftIron: {fileID: 0}
 --- !u!114 &6055985552561724017
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16214,7 +16703,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4779372747992311753}
   - component: {fileID: 3398904791244794836}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16347,7 +16836,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3522353892756629024}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Depleted Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16459,7 +16948,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5784937415738304219}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Levels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16492,7 +16981,7 @@ GameObject:
   - component: {fileID: 4988481960907105152}
   - component: {fileID: 8643291601170554160}
   - component: {fileID: 6478071858546218839}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Raw stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16751,7 +17240,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3767925521946845287}
   - component: {fileID: 644549528811635214}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17015,7 +17504,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2748950814565443186}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Depleted Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17046,7 +17535,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4945859492507221849}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Levels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17077,7 +17566,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3552160360119306671}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Real Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17108,7 +17597,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8531361616086002447}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Real Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17140,7 +17629,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2257314233440497466}
   - component: {fileID: 6512341260442036457}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17194,7 +17683,7 @@ GameObject:
   - component: {fileID: 6544217714479882301}
   - component: {fileID: 1539649445963177228}
   - component: {fileID: 6241722425549384223}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Raw stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17274,7 +17763,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5245345653162123442}
   - component: {fileID: 1443617615931791903}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17539,7 +18028,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5404730702107211081}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Levels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17734,7 +18223,7 @@ GameObject:
   - component: {fileID: 1334775107214030130}
   - component: {fileID: 6215843136569139411}
   - component: {fileID: 8391316486256452987}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Raw stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17894,7 +18383,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4841754571704847970}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Real Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18087,7 +18576,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2851735019761348844}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Levels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18785,7 +19274,7 @@ GameObject:
   - component: {fileID: 797487930844973224}
   - component: {fileID: 2853624681247761930}
   - component: {fileID: 5396677225952735460}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Raw stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18864,7 +19353,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 996425066954651076}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Real Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18896,7 +19385,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5959641287877341639}
   - component: {fileID: 3036312745820633618}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19029,7 +19518,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9018460947389972870}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Depleted Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19060,7 +19549,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3151162853112790497}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Depleted Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19270,7 +19759,7 @@ GameObject:
   - component: {fileID: 6187619760433575564}
   - component: {fileID: 7236620536969798260}
   - component: {fileID: 2569049411382651642}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Raw stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19349,7 +19838,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8715720518815401219}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Real Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19476,7 +19965,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5516917938171040051}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Depleted Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19509,7 +19998,7 @@ GameObject:
   - component: {fileID: 2547153210462988123}
   - component: {fileID: 383998679605945395}
   - component: {fileID: 6188823745174746416}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Raw stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19670,7 +20159,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4464695640339018780}
   - component: {fileID: 3582771470415038802}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19821,7 +20310,7 @@ GameObject:
   - component: {fileID: 3159495964988016922}
   - component: {fileID: 8410666335230877514}
   - component: {fileID: 1024073675568892304}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Stone (52)
   m_TagString: Resource
   m_Icon: {fileID: 0}
@@ -19883,6 +20372,9 @@ MonoBehaviour:
   TreeStump: {fileID: 0}
   LeftRocks: {fileID: 7642231180595543065, guid: 3e09047fc075ad9408ae1785bc819367,
     type: 3}
+  LeftCement: {fileID: 0}
+  LeftMud: {fileID: 0}
+  LeftIron: {fileID: 0}
 --- !u!114 &1024073675568892304
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19908,7 +20400,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1377649307807899482}
   - component: {fileID: 5112510276181261211}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19960,7 +20452,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2962746991183022063}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Depleted Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20188,7 +20680,7 @@ GameObject:
   - component: {fileID: 3466652055809676004}
   - component: {fileID: 6338582996022623504}
   - component: {fileID: 81975157612685258}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Raw stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20462,7 +20954,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 477923690673977768}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Levels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20591,7 +21083,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3706574886699116394}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Levels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20622,7 +21114,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7861070884891728629}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Levels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20656,7 +21148,7 @@ GameObject:
   - component: {fileID: 6852965426732619393}
   - component: {fileID: 3951970958054101770}
   - component: {fileID: 6202873395181487712}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Stone (55)
   m_TagString: Resource
   m_Icon: {fileID: 0}
@@ -20718,6 +21210,9 @@ MonoBehaviour:
   TreeStump: {fileID: 0}
   LeftRocks: {fileID: 7642231180595543065, guid: 3e09047fc075ad9408ae1785bc819367,
     type: 3}
+  LeftCement: {fileID: 0}
+  LeftMud: {fileID: 0}
+  LeftIron: {fileID: 0}
 --- !u!114 &6202873395181487712
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20742,7 +21237,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7629991725762824204}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Levels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20774,7 +21269,7 @@ GameObject:
   m_Component:
   - component: {fileID: 863559305580946266}
   - component: {fileID: 3041498714628113562}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20826,7 +21321,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8665209456495486069}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Depleted Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20857,7 +21352,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5277201741490474071}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Levels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20888,7 +21383,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 886760810893489017}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Real Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20921,7 +21416,7 @@ GameObject:
   - component: {fileID: 74135309627625362}
   - component: {fileID: 5514356701522315603}
   - component: {fileID: 2105571504357651850}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Raw stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21081,7 +21576,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8234813742861827307}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Levels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21145,7 +21640,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7447693609159019725}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Real Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21453,7 +21948,7 @@ GameObject:
   - component: {fileID: 4754791655955817361}
   - component: {fileID: 6467155881545088145}
   - component: {fileID: 2342716177307381785}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Raw stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21532,7 +22027,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8507512328602901801}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Levels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21565,7 +22060,7 @@ GameObject:
   - component: {fileID: 8818163180868354768}
   - component: {fileID: 6064743638178106384}
   - component: {fileID: 2789507920763262056}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Raw stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21728,7 +22223,7 @@ GameObject:
   - component: {fileID: 6639666181968219720}
   - component: {fileID: 8070718058938255043}
   - component: {fileID: 1418532434528124424}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Stone (92)
   m_TagString: Resource
   m_Icon: {fileID: 0}
@@ -21790,6 +22285,9 @@ MonoBehaviour:
   TreeStump: {fileID: 0}
   LeftRocks: {fileID: 7642231180595543065, guid: 3e09047fc075ad9408ae1785bc819367,
     type: 3}
+  LeftCement: {fileID: 0}
+  LeftMud: {fileID: 0}
+  LeftIron: {fileID: 0}
 --- !u!114 &1418532434528124424
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21816,7 +22314,7 @@ GameObject:
   - component: {fileID: 318879527087008532}
   - component: {fileID: 1418879045547325313}
   - component: {fileID: 1333496039959309338}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Raw stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -21897,7 +22395,7 @@ GameObject:
   - component: {fileID: 5430649270977782771}
   - component: {fileID: 2796537460211463898}
   - component: {fileID: 8923116964130644456}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Raw stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22072,7 +22570,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7855894011727495540}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Depleted Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22103,7 +22601,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2641205720617997407}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Real Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22230,7 +22728,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7654890025172264851}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Real Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22357,7 +22855,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8231087748682787308}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Depleted Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22391,7 +22889,7 @@ GameObject:
   - component: {fileID: 1240673553629672970}
   - component: {fileID: 2796333175545084758}
   - component: {fileID: 975569050835696767}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Stone (89)
   m_TagString: Resource
   m_Icon: {fileID: 0}
@@ -22453,6 +22951,9 @@ MonoBehaviour:
   TreeStump: {fileID: 0}
   LeftRocks: {fileID: 7642231180595543065, guid: 3e09047fc075ad9408ae1785bc819367,
     type: 3}
+  LeftCement: {fileID: 0}
+  LeftMud: {fileID: 0}
+  LeftIron: {fileID: 0}
 --- !u!114 &975569050835696767
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22479,7 +22980,7 @@ GameObject:
   - component: {fileID: 8207917061557968380}
   - component: {fileID: 8270408166906882272}
   - component: {fileID: 8478960654902725310}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Raw stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22592,7 +23093,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6841213962795111526}
   - component: {fileID: 1771711929010493306}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22647,7 +23148,7 @@ GameObject:
   - component: {fileID: 4985024629442780617}
   - component: {fileID: 2303423203645985030}
   - component: {fileID: 3117724972767174188}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Stone (79)
   m_TagString: Resource
   m_Icon: {fileID: 0}
@@ -22709,6 +23210,9 @@ MonoBehaviour:
   TreeStump: {fileID: 0}
   LeftRocks: {fileID: 7642231180595543065, guid: 3e09047fc075ad9408ae1785bc819367,
     type: 3}
+  LeftCement: {fileID: 0}
+  LeftMud: {fileID: 0}
+  LeftIron: {fileID: 0}
 --- !u!114 &3117724972767174188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22733,7 +23237,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6753308406183284981}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Levels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22766,7 +23270,7 @@ GameObject:
   - component: {fileID: 7735651451115442996}
   - component: {fileID: 2065339901343917}
   - component: {fileID: 6070079705588505044}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Raw stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22927,7 +23431,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7909368230600096005}
   - component: {fileID: 6306265036469274009}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23191,7 +23695,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 426549899164428159}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Levels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23222,7 +23726,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6142029360465584099}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Real Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23244,6 +23748,87 @@ Transform:
   m_Father: {fileID: 680558593292181070}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &5462689089915665684
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7357604321495362427}
+  - component: {fileID: 6743033502865075205}
+  - component: {fileID: 2000526927110699860}
+  m_Layer: 0
+  m_Name: Raw_stone
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7357604321495362427
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5462689089915665684}
+  m_LocalRotation: {x: -0.28132212, y: -0.6557679, z: -0.35754243, w: 0.6024863}
+  m_LocalPosition: {x: -0, y: 0, z: 0}
+  m_LocalScale: {x: 0.56345224, y: 1.3143127, z: 0.8716623}
+  m_Children: []
+  m_Father: {fileID: 4077898896446805185}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &6743033502865075205
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5462689089915665684}
+  m_Mesh: {fileID: -551882445197027737, guid: 943bb7d74365cfe4980359da85c8f14e, type: 3}
+--- !u!23 &2000526927110699860
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5462689089915665684}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 5dc80d07e7d42cb489afb9759d051db5, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &5506395366038950118
 GameObject:
   m_ObjectHideFlags: 0
@@ -23255,7 +23840,7 @@ GameObject:
   - component: {fileID: 8313509632173483736}
   - component: {fileID: 3973757700481643889}
   - component: {fileID: 3447854774661518691}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Raw stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23334,7 +23919,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9170895496971921002}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Real Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23446,7 +24031,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4367593853689537975}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Real Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23641,7 +24226,7 @@ GameObject:
   - component: {fileID: 1881108279956175668}
   - component: {fileID: 9129674895207751818}
   - component: {fileID: 8188036627543385653}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Raw stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23755,7 +24340,7 @@ GameObject:
   - component: {fileID: 8410657693483403272}
   - component: {fileID: 4951592066934177547}
   - component: {fileID: 4579397861099321766}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Raw stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23835,7 +24420,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2613885832277862000}
   - component: {fileID: 7846681620232946366}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -23889,7 +24474,7 @@ GameObject:
   - component: {fileID: 3474304512096833227}
   - component: {fileID: 1991191795172046319}
   - component: {fileID: 5148752184041714470}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Raw stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24068,7 +24653,7 @@ GameObject:
   - component: {fileID: 7806833517618138867}
   - component: {fileID: 6436087728637693125}
   - component: {fileID: 3404203285396714072}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Raw stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24244,7 +24829,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3256142614632732097}
   - component: {fileID: 7770383172567952887}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24475,7 +25060,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5879249977233215486}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Depleted Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24508,7 +25093,7 @@ GameObject:
   - component: {fileID: 4043366086151582926}
   - component: {fileID: 3180753869927516542}
   - component: {fileID: 709672108223258036}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Raw stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24735,7 +25320,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3431484542543672680}
   - component: {fileID: 5463251197845998649}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24868,7 +25453,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5515105280442526936}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Real Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24900,7 +25485,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8936341256813028845}
   - component: {fileID: 129632873347876102}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24954,7 +25539,7 @@ GameObject:
   - component: {fileID: 6504372759769642248}
   - component: {fileID: 2027271876413477621}
   - component: {fileID: 2564876755036571423}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Raw stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25033,7 +25618,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7353356915461365588}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Levels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25245,7 +25830,7 @@ GameObject:
   - component: {fileID: 3087883515142138623}
   - component: {fileID: 7753721957339450038}
   - component: {fileID: 8255856239077834301}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Raw stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25405,7 +25990,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6800471147553529917}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Real Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25436,7 +26021,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7490296612800703262}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Depleted Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25467,7 +26052,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3213798827100134395}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Real Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25498,7 +26083,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8315087042888994449}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Depleted Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25708,7 +26293,7 @@ GameObject:
   - component: {fileID: 2811771842046297949}
   - component: {fileID: 3536487526346250474}
   - component: {fileID: 297892472600894230}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Raw stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25788,7 +26373,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4839720514268549249}
   - component: {fileID: 7387260023548684200}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25831,6 +26416,37 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!1 &6051807966678204506
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2612930985017390106}
+  m_Layer: 0
+  m_Name: Real Mesh
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &2612930985017390106
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6051807966678204506}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 7647677386843310378}
+  m_Father: {fileID: 5838293919895292965}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6055360595283619311
 GameObject:
   m_ObjectHideFlags: 0
@@ -25840,7 +26456,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8425825230748461132}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Levels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26067,7 +26683,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7387201158693439082}
   - component: {fileID: 266067522650244976}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26298,7 +26914,7 @@ GameObject:
   - component: {fileID: 7680900655277409747}
   - component: {fileID: 8870873063489952511}
   - component: {fileID: 1010784898016957708}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Raw stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26379,7 +26995,7 @@ GameObject:
   - component: {fileID: 4304911029706243050}
   - component: {fileID: 8610678177854440879}
   - component: {fileID: 4153354700469780653}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Raw stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26458,7 +27074,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4145850254875127924}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Real Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26492,7 +27108,7 @@ GameObject:
   - component: {fileID: 6300742447685856528}
   - component: {fileID: 349600544842999509}
   - component: {fileID: 3628378877475983083}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Stone (82)
   m_TagString: Resource
   m_Icon: {fileID: 0}
@@ -26554,6 +27170,9 @@ MonoBehaviour:
   TreeStump: {fileID: 0}
   LeftRocks: {fileID: 7642231180595543065, guid: 3e09047fc075ad9408ae1785bc819367,
     type: 3}
+  LeftCement: {fileID: 0}
+  LeftMud: {fileID: 0}
+  LeftIron: {fileID: 0}
 --- !u!114 &3628378877475983083
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26659,7 +27278,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8699395028585328027}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Levels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26690,7 +27309,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1004038083894194203}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Depleted Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26721,7 +27340,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7709131633583117921}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Levels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26743,6 +27362,37 @@ Transform:
   m_Father: {fileID: 3755177253559835367}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &6372835849132330871
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6585986661552529526}
+  m_Layer: 0
+  m_Name: Levels
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6585986661552529526
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6372835849132330871}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -0.0971086, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 5838293919895292965}
+  m_Father: {fileID: 6095062725415988181}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &6440565915401882117
 GameObject:
   m_ObjectHideFlags: 0
@@ -26753,7 +27403,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1491147022755549123}
   - component: {fileID: 5039154509667521097}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26807,7 +27457,7 @@ GameObject:
   - component: {fileID: 8648256758890018719}
   - component: {fileID: 469323694271262094}
   - component: {fileID: 1139711234029056382}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Raw stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26887,7 +27537,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2788652774044421008}
   - component: {fileID: 6779629172477588718}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26939,7 +27589,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8377430877481849434}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Real Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34907,7 +35557,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3678360998284358924}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Levels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34938,7 +35588,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 489179845683657342}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Real Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -34972,7 +35622,7 @@ GameObject:
   - component: {fileID: 5374637463317147271}
   - component: {fileID: 8244846126076307611}
   - component: {fileID: 2450665827179832068}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Stone (84)
   m_TagString: Resource
   m_Icon: {fileID: 0}
@@ -35034,6 +35684,9 @@ MonoBehaviour:
   TreeStump: {fileID: 0}
   LeftRocks: {fileID: 7642231180595543065, guid: 3e09047fc075ad9408ae1785bc819367,
     type: 3}
+  LeftCement: {fileID: 0}
+  LeftMud: {fileID: 0}
+  LeftIron: {fileID: 0}
 --- !u!114 &2450665827179832068
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35059,7 +35712,7 @@ GameObject:
   m_Component:
   - component: {fileID: 997548986914792819}
   - component: {fileID: 8729728832821031194}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35113,7 +35766,7 @@ GameObject:
   - component: {fileID: 6053930150319203153}
   - component: {fileID: 5786321781645562172}
   - component: {fileID: 348194935212078482}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Raw stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35192,7 +35845,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5273461820183645917}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Depleted Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35226,7 +35879,7 @@ GameObject:
   - component: {fileID: 5061960941377904450}
   - component: {fileID: 814946127734951972}
   - component: {fileID: 5560123278436303105}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Stone (66)
   m_TagString: Resource
   m_Icon: {fileID: 0}
@@ -35288,6 +35941,9 @@ MonoBehaviour:
   TreeStump: {fileID: 0}
   LeftRocks: {fileID: 7642231180595543065, guid: 3e09047fc075ad9408ae1785bc819367,
     type: 3}
+  LeftCement: {fileID: 0}
+  LeftMud: {fileID: 0}
+  LeftIron: {fileID: 0}
 --- !u!114 &5560123278436303105
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35312,7 +35968,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8361321506905631135}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Levels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35346,7 +36002,7 @@ GameObject:
   - component: {fileID: 1975714998474612553}
   - component: {fileID: 4535550785950687808}
   - component: {fileID: 1427174400299369833}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Stone (48)
   m_TagString: Resource
   m_Icon: {fileID: 0}
@@ -35408,6 +36064,9 @@ MonoBehaviour:
   TreeStump: {fileID: 0}
   LeftRocks: {fileID: 7642231180595543065, guid: 3e09047fc075ad9408ae1785bc819367,
     type: 3}
+  LeftCement: {fileID: 0}
+  LeftMud: {fileID: 0}
+  LeftIron: {fileID: 0}
 --- !u!114 &1427174400299369833
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -35644,7 +36303,7 @@ GameObject:
   - component: {fileID: 7721487722665478577}
   - component: {fileID: 3185595326923382696}
   - component: {fileID: 5299055286123546548}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Raw stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35902,7 +36561,7 @@ GameObject:
   - component: {fileID: 3932977337260241982}
   - component: {fileID: 1926388050251376943}
   - component: {fileID: 4124671244220787385}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Raw stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -35983,7 +36642,7 @@ GameObject:
   - component: {fileID: 2412085262048884704}
   - component: {fileID: 1304137766806997876}
   - component: {fileID: 4807139553388413877}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Raw stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36065,7 +36724,7 @@ GameObject:
   - component: {fileID: 4217942858521787338}
   - component: {fileID: 7347869400494744352}
   - component: {fileID: 8299109183319500304}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Stone (49)
   m_TagString: Resource
   m_Icon: {fileID: 0}
@@ -36127,6 +36786,9 @@ MonoBehaviour:
   TreeStump: {fileID: 0}
   LeftRocks: {fileID: 7642231180595543065, guid: 3e09047fc075ad9408ae1785bc819367,
     type: 3}
+  LeftCement: {fileID: 0}
+  LeftMud: {fileID: 0}
+  LeftIron: {fileID: 0}
 --- !u!114 &8299109183319500304
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36232,7 +36894,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6296541897004071354}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Depleted Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36263,7 +36925,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1062475233928023209}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Depleted Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36377,7 +37039,7 @@ GameObject:
   - component: {fileID: 7472132910391935701}
   - component: {fileID: 5364496681785996143}
   - component: {fileID: 4148039280444627506}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Raw stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36447,6 +37109,59 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &6881921838477705219
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5838293919895292965}
+  - component: {fileID: 6989611929370223807}
+  m_Layer: 0
+  m_Name: Model
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5838293919895292965
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6881921838477705219}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 4077898896446805185}
+  - {fileID: 2612930985017390106}
+  - {fileID: 6762035866154738975}
+  m_Father: {fileID: 6585986661552529526}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &6989611929370223807
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6881921838477705219}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e1300582b6c64124c8c8c4fa69eb2937, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &6884368878451576238
 GameObject:
   m_ObjectHideFlags: 0
@@ -36733,7 +37448,7 @@ GameObject:
   m_Component:
   - component: {fileID: 706774386277774945}
   - component: {fileID: 8027005722033277647}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36786,7 +37501,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7939998051244747978}
   - component: {fileID: 8033382358160685729}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36921,7 +37636,7 @@ GameObject:
   - component: {fileID: 3036089646568110040}
   - component: {fileID: 6655453722427392415}
   - component: {fileID: 4041755456113820609}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Raw stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37195,7 +37910,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2822750176978647524}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Depleted Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37226,7 +37941,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1787477740723349700}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Levels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37247,6 +37962,37 @@ Transform:
   - {fileID: 997548986914792819}
   m_Father: {fileID: 6115402640508216530}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &7115167635037301295
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6762035866154738975}
+  m_Layer: 0
+  m_Name: Depleted Mesh
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &6762035866154738975
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7115167635037301295}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 1}
+  m_Children:
+  - {fileID: 8077037036484204324}
+  m_Father: {fileID: 5838293919895292965}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7115650199568634802
 GameObject:
@@ -37341,7 +38087,7 @@ GameObject:
   - component: {fileID: 1448612600363612743}
   - component: {fileID: 4360729344397619881}
   - component: {fileID: 5629573729582025019}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Stone (73)
   m_TagString: Resource
   m_Icon: {fileID: 0}
@@ -37403,6 +38149,9 @@ MonoBehaviour:
   TreeStump: {fileID: 0}
   LeftRocks: {fileID: 7642231180595543065, guid: 3e09047fc075ad9408ae1785bc819367,
     type: 3}
+  LeftCement: {fileID: 0}
+  LeftMud: {fileID: 0}
+  LeftIron: {fileID: 0}
 --- !u!114 &5629573729582025019
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37623,7 +38372,7 @@ GameObject:
   - component: {fileID: 667807091857173778}
   - component: {fileID: 1450154921515344965}
   - component: {fileID: 7738625756782556636}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Raw stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37702,7 +38451,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1067873518419063590}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Depleted Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37831,7 +38580,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8095820758154830151}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Depleted Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37960,7 +38709,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5693419295041431860}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Levels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38155,7 +38904,7 @@ GameObject:
   - component: {fileID: 3567700950033580736}
   - component: {fileID: 7462089277166868526}
   - component: {fileID: 5677379068804908149}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Raw stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38234,7 +38983,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6796133345243629920}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Depleted Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38268,7 +39017,7 @@ GameObject:
   - component: {fileID: 7285604565500915004}
   - component: {fileID: 6761188081023015467}
   - component: {fileID: 8939264684143274990}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Stone (80)
   m_TagString: Resource
   m_Icon: {fileID: 0}
@@ -38330,6 +39079,9 @@ MonoBehaviour:
   TreeStump: {fileID: 0}
   LeftRocks: {fileID: 7642231180595543065, guid: 3e09047fc075ad9408ae1785bc819367,
     type: 3}
+  LeftCement: {fileID: 0}
+  LeftMud: {fileID: 0}
+  LeftIron: {fileID: 0}
 --- !u!114 &8939264684143274990
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38355,7 +39107,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2812003318325375859}
   - component: {fileID: 6864762658523701499}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38504,7 +39256,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7755440371593539447}
   - component: {fileID: 5042066048368075537}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38640,7 +39392,7 @@ GameObject:
   - component: {fileID: 8622602612111729943}
   - component: {fileID: 4686432076372971070}
   - component: {fileID: 8267807234030209858}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Stone (50)
   m_TagString: Resource
   m_Icon: {fileID: 0}
@@ -38702,6 +39454,9 @@ MonoBehaviour:
   TreeStump: {fileID: 0}
   LeftRocks: {fileID: 7642231180595543065, guid: 3e09047fc075ad9408ae1785bc819367,
     type: 3}
+  LeftCement: {fileID: 0}
+  LeftMud: {fileID: 0}
+  LeftIron: {fileID: 0}
 --- !u!114 &8267807234030209858
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38727,7 +39482,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5653748626873416848}
   - component: {fileID: 5995203108643728386}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38781,7 +39536,7 @@ GameObject:
   - component: {fileID: 3757953092588441172}
   - component: {fileID: 2882797181002855445}
   - component: {fileID: 3385266952338603006}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Raw stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38861,7 +39616,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2161021957199964766}
   - component: {fileID: 4153854559628521043}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38915,7 +39670,7 @@ GameObject:
   - component: {fileID: 8463228399537315800}
   - component: {fileID: 6688673867868797590}
   - component: {fileID: 3942774584522018825}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Raw stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38994,7 +39749,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4950714393154650134}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Depleted Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39028,7 +39783,7 @@ GameObject:
   - component: {fileID: 4229782659138792770}
   - component: {fileID: 4812274508679977792}
   - component: {fileID: 7511699297966339022}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Stone (72)
   m_TagString: Resource
   m_Icon: {fileID: 0}
@@ -39090,6 +39845,9 @@ MonoBehaviour:
   TreeStump: {fileID: 0}
   LeftRocks: {fileID: 7642231180595543065, guid: 3e09047fc075ad9408ae1785bc819367,
     type: 3}
+  LeftCement: {fileID: 0}
+  LeftMud: {fileID: 0}
+  LeftIron: {fileID: 0}
 --- !u!114 &7511699297966339022
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39195,7 +39953,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2736171414726986961}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Real Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39229,7 +39987,7 @@ GameObject:
   - component: {fileID: 6223963681610653848}
   - component: {fileID: 8065837709385323914}
   - component: {fileID: 5946210604827690210}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Stone (83)
   m_TagString: Resource
   m_Icon: {fileID: 0}
@@ -39291,6 +40049,9 @@ MonoBehaviour:
   TreeStump: {fileID: 0}
   LeftRocks: {fileID: 7642231180595543065, guid: 3e09047fc075ad9408ae1785bc819367,
     type: 3}
+  LeftCement: {fileID: 0}
+  LeftMud: {fileID: 0}
+  LeftIron: {fileID: 0}
 --- !u!114 &5946210604827690210
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39315,7 +40076,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5699417308713980515}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Levels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39348,7 +40109,7 @@ GameObject:
   - component: {fileID: 3399491306120598540}
   - component: {fileID: 5281903171903110062}
   - component: {fileID: 9221261356230038303}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Raw stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39427,7 +40188,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 83345115770707627}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Depleted Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39540,7 +40301,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1317168137835911497}
   - component: {fileID: 2591790137363876952}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39594,7 +40355,7 @@ GameObject:
   - component: {fileID: 2577125507686373536}
   - component: {fileID: 8339953028073736391}
   - component: {fileID: 3204011212539074958}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Raw stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39673,7 +40434,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4215264482775856584}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Depleted Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -39740,7 +40501,7 @@ GameObject:
   - component: {fileID: 6603362819652019936}
   - component: {fileID: 3614304211684605594}
   - component: {fileID: 3609066875786153463}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Stone (53)
   m_TagString: Resource
   m_Icon: {fileID: 0}
@@ -39802,6 +40563,9 @@ MonoBehaviour:
   TreeStump: {fileID: 0}
   LeftRocks: {fileID: 7642231180595543065, guid: 3e09047fc075ad9408ae1785bc819367,
     type: 3}
+  LeftCement: {fileID: 0}
+  LeftMud: {fileID: 0}
+  LeftIron: {fileID: 0}
 --- !u!114 &3609066875786153463
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39907,7 +40671,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1233909290248481804}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Levels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40036,7 +40800,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 821382466070901638}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Depleted Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40069,7 +40833,7 @@ GameObject:
   - component: {fileID: 6740045692096321283}
   - component: {fileID: 4231596654010529700}
   - component: {fileID: 3820960890017065859}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Raw stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40150,7 +40914,7 @@ GameObject:
   - component: {fileID: 5230836608475024403}
   - component: {fileID: 5108386533104777691}
   - component: {fileID: 8947091204621044814}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Raw stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40232,7 +40996,7 @@ GameObject:
   - component: {fileID: 711798554765696600}
   - component: {fileID: 8375860880451206613}
   - component: {fileID: 8936762838064399221}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Stone (67)
   m_TagString: Resource
   m_Icon: {fileID: 0}
@@ -40294,6 +41058,9 @@ MonoBehaviour:
   TreeStump: {fileID: 0}
   LeftRocks: {fileID: 7642231180595543065, guid: 3e09047fc075ad9408ae1785bc819367,
     type: 3}
+  LeftCement: {fileID: 0}
+  LeftMud: {fileID: 0}
+  LeftIron: {fileID: 0}
 --- !u!114 &8936762838064399221
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40309,6 +41076,87 @@ MonoBehaviour:
   markerSprite: {fileID: 21300000, guid: 2a1d7b82d9cb0034698aac6db22e449c, type: 3}
   markerSize: 25
   isActive: 1
+--- !u!1 &7739863989246408870
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7600245987540957909}
+  - component: {fileID: 1410729306934836104}
+  - component: {fileID: 3185522579844352361}
+  m_Layer: 0
+  m_Name: Raw_stone__1_
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7600245987540957909
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7739863989246408870}
+  m_LocalRotation: {x: -0.28132212, y: -0.6557679, z: -0.35754243, w: 0.6024863}
+  m_LocalPosition: {x: -0.2669425, y: -0.10059738, z: 0}
+  m_LocalScale: {x: 0.3874523, y: 0.903774, z: 0.5993899}
+  m_Children: []
+  m_Father: {fileID: 4077898896446805185}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &1410729306934836104
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7739863989246408870}
+  m_Mesh: {fileID: -551882445197027737, guid: 943bb7d74365cfe4980359da85c8f14e, type: 3}
+--- !u!23 &3185522579844352361
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7739863989246408870}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 5dc80d07e7d42cb489afb9759d051db5, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!1 &7743280021397973357
 GameObject:
   m_ObjectHideFlags: 0
@@ -40482,7 +41330,7 @@ GameObject:
   - component: {fileID: 4807978230340680592}
   - component: {fileID: 6274777893849063381}
   - component: {fileID: 5160003715921112978}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Raw stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40561,7 +41409,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2375042760065372090}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Levels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40592,7 +41440,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2356090895631896995}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Depleted Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40625,7 +41473,7 @@ GameObject:
   - component: {fileID: 3721245692548365071}
   - component: {fileID: 7392450022279878714}
   - component: {fileID: 5352778641257737685}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Raw stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40704,7 +41552,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6120027635678461487}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Real Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40735,7 +41583,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5787160861805330466}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Depleted Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40769,7 +41617,7 @@ GameObject:
   - component: {fileID: 5844229522018209679}
   - component: {fileID: 5778874235156115089}
   - component: {fileID: 4845949391741057499}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Stone (62)
   m_TagString: Resource
   m_Icon: {fileID: 0}
@@ -40831,6 +41679,9 @@ MonoBehaviour:
   TreeStump: {fileID: 0}
   LeftRocks: {fileID: 7642231180595543065, guid: 3e09047fc075ad9408ae1785bc819367,
     type: 3}
+  LeftCement: {fileID: 0}
+  LeftMud: {fileID: 0}
+  LeftIron: {fileID: 0}
 --- !u!114 &4845949391741057499
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40856,7 +41707,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2114386681285517812}
   - component: {fileID: 5773143077191829167}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41071,7 +41922,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7270448001394077613}
   - component: {fileID: 1384638579506791689}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41221,7 +42072,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6662223721545010729}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Depleted Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41285,7 +42136,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 157941473856661583}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Levels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41316,7 +42167,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 749733814820805067}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Real Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41510,7 +42361,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6200155815988933505}
   - component: {fileID: 2671016026208310057}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41903,7 +42754,7 @@ GameObject:
   - component: {fileID: 8498549818671319661}
   - component: {fileID: 7772421961057991235}
   - component: {fileID: 224175889118642916}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Raw stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41982,7 +42833,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7954814144745676212}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Real Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42335,7 +43186,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4800991404725181049}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Real Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42366,7 +43217,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6770482663763072430}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Real Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42560,7 +43411,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7760111801945457959}
   - component: {fileID: 1016489415554428453}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42824,7 +43675,7 @@ GameObject:
   - component: {fileID: 7325073381115335998}
   - component: {fileID: 9076961255979595252}
   - component: {fileID: 8990186361992593694}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Raw stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42906,7 +43757,7 @@ GameObject:
   - component: {fileID: 5422589151435032665}
   - component: {fileID: 4362008580658621370}
   - component: {fileID: 4148058471142024344}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Stone (51)
   m_TagString: Resource
   m_Icon: {fileID: 0}
@@ -42968,6 +43819,9 @@ MonoBehaviour:
   TreeStump: {fileID: 0}
   LeftRocks: {fileID: 7642231180595543065, guid: 3e09047fc075ad9408ae1785bc819367,
     type: 3}
+  LeftCement: {fileID: 0}
+  LeftMud: {fileID: 0}
+  LeftIron: {fileID: 0}
 --- !u!114 &4148058471142024344
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42994,7 +43848,7 @@ GameObject:
   - component: {fileID: 3927331518536031127}
   - component: {fileID: 6349125162493507898}
   - component: {fileID: 838091835748476757}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Raw stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43076,7 +43930,7 @@ GameObject:
   - component: {fileID: 7767676227114935347}
   - component: {fileID: 8786405850441350860}
   - component: {fileID: 441262332216270348}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Stone (56)
   m_TagString: Resource
   m_Icon: {fileID: 0}
@@ -43138,6 +43992,9 @@ MonoBehaviour:
   TreeStump: {fileID: 0}
   LeftRocks: {fileID: 7642231180595543065, guid: 3e09047fc075ad9408ae1785bc819367,
     type: 3}
+  LeftCement: {fileID: 0}
+  LeftMud: {fileID: 0}
+  LeftIron: {fileID: 0}
 --- !u!114 &441262332216270348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43164,7 +44021,7 @@ GameObject:
   - component: {fileID: 1506254866410057144}
   - component: {fileID: 9217918606029850648}
   - component: {fileID: 2216022852252657030}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Raw stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43243,7 +44100,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5268270323060117605}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Real Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43355,7 +44212,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5380389829106012426}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Levels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43386,7 +44243,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6055730232389747424}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Levels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43417,7 +44274,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3904167618131842169}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Depleted Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43627,7 +44484,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8222514148544069360}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Depleted Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43921,7 +44778,7 @@ GameObject:
   - component: {fileID: 6327379253429426969}
   - component: {fileID: 6236018715711684376}
   - component: {fileID: 5126098822432819926}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Stone (93)
   m_TagString: Resource
   m_Icon: {fileID: 0}
@@ -43983,6 +44840,9 @@ MonoBehaviour:
   TreeStump: {fileID: 0}
   LeftRocks: {fileID: 7642231180595543065, guid: 3e09047fc075ad9408ae1785bc819367,
     type: 3}
+  LeftCement: {fileID: 0}
+  LeftMud: {fileID: 0}
+  LeftIron: {fileID: 0}
 --- !u!114 &5126098822432819926
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44009,7 +44869,7 @@ GameObject:
   - component: {fileID: 2551396164912296209}
   - component: {fileID: 7796891571184032833}
   - component: {fileID: 7253900034619268763}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Raw stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44090,7 +44950,7 @@ GameObject:
   - component: {fileID: 1114195282883266938}
   - component: {fileID: 3757428840480222202}
   - component: {fileID: 6142434560881011700}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Raw stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44169,7 +45029,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2763139540346774208}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Levels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44281,7 +45141,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2575105344269948320}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Levels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44312,7 +45172,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1369144845500196660}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Depleted Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44603,7 +45463,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7594221043956789329}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Real Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44830,7 +45690,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7023943142879856212}
   - component: {fileID: 7609491434189431417}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -44885,7 +45745,7 @@ GameObject:
   - component: {fileID: 4449533764090509190}
   - component: {fileID: 522930657056850004}
   - component: {fileID: 4228617046691058840}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Stone (77)
   m_TagString: Resource
   m_Icon: {fileID: 0}
@@ -44947,6 +45807,9 @@ MonoBehaviour:
   TreeStump: {fileID: 0}
   LeftRocks: {fileID: 7642231180595543065, guid: 3e09047fc075ad9408ae1785bc819367,
     type: 3}
+  LeftCement: {fileID: 0}
+  LeftMud: {fileID: 0}
+  LeftIron: {fileID: 0}
 --- !u!114 &4228617046691058840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44974,7 +45837,7 @@ GameObject:
   - component: {fileID: 845062205096005376}
   - component: {fileID: 2450154802934328864}
   - component: {fileID: 603791319063176194}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Stone (59)
   m_TagString: Resource
   m_Icon: {fileID: 0}
@@ -45036,6 +45899,9 @@ MonoBehaviour:
   TreeStump: {fileID: 0}
   LeftRocks: {fileID: 7642231180595543065, guid: 3e09047fc075ad9408ae1785bc819367,
     type: 3}
+  LeftCement: {fileID: 0}
+  LeftMud: {fileID: 0}
+  LeftIron: {fileID: 0}
 --- !u!114 &603791319063176194
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -45062,7 +45928,7 @@ GameObject:
   - component: {fileID: 437639715738227795}
   - component: {fileID: 1824558587217285887}
   - component: {fileID: 3315547555513443824}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Raw stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45237,7 +46103,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 65058826854816489}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Real Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45349,7 +46215,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7290033227848737328}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Levels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45382,7 +46248,7 @@ GameObject:
   - component: {fileID: 3702077966636178452}
   - component: {fileID: 83444857202817206}
   - component: {fileID: 9176672705401463351}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Raw stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45542,7 +46408,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 774607885851676271}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Depleted Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45573,7 +46439,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6670521132644566668}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Levels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45991,7 +46857,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2868466568720765160}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Depleted Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46184,7 +47050,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9094536857486069193}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Real Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46217,7 +47083,7 @@ GameObject:
   - component: {fileID: 7415319005791954872}
   - component: {fileID: 2638996793430337625}
   - component: {fileID: 2418366139348149214}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Raw stone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46458,7 +47324,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8811279343928922607}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Real Mesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46489,7 +47355,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1808463349351708992}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Levels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -48581,6 +49447,25 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2627561108684909756}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &4197472661365753899 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2177089980098487447, guid: 9c2999b58a6d9274a9f58a278f4c6457,
+    type: 3}
+  m_PrefabInstance: {fileID: 2627561108684909756}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4550403469418485251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4197472661365753899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8457e19866875674abb3eb2bb54a0e65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  orderIndex: 1
 --- !u!1001 &2676917052238146945
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7621362774545297595}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42,7 +42,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2340841469537351899}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -78,7 +78,7 @@ GameObject:
   - component: {fileID: 156736211624388128}
   - component: {fileID: 156736211624388129}
   - component: {fileID: 156736211624388131}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Palm Tree Normal (3 wood)
   m_TagString: Resource
   m_Icon: {fileID: 0}
@@ -139,6 +139,10 @@ MonoBehaviour:
   gatherDistance: 2
   TreeStump: {fileID: 2794556798533195785, guid: 8c3950ececbe24e2f8b535219f2d6b71,
     type: 3}
+  LeftRocks: {fileID: 0}
+  LeftCement: {fileID: 0}
+  LeftMud: {fileID: 0}
+  LeftIron: {fileID: 0}
 --- !u!114 &156736211624388131
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -163,7 +167,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 156736211659426097}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Resources
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -195,7 +199,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 156736211660446879}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -228,7 +232,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 156736211718099393}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -262,7 +266,7 @@ GameObject:
   - component: {fileID: 156736211858035685}
   - component: {fileID: 156736211856931929}
   - component: {fileID: 156736211864438081}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -361,7 +365,7 @@ GameObject:
   m_Component:
   - component: {fileID: 156736212162768940}
   - component: {fileID: 156736212162768943}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -415,7 +419,7 @@ GameObject:
   - component: {fileID: 156736212182119040}
   - component: {fileID: 156736212182119042}
   - component: {fileID: 156736212182119043}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SM_Generic_Tree_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -494,7 +498,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 156736212728511785}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Wood
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -527,6 +531,7 @@ Transform:
   - {fileID: 1738304496452191412}
   - {fileID: 200216136749956150}
   - {fileID: 1301453732249399134}
+  - {fileID: 4262801064075049135}
   - {fileID: 8304108005899980932}
   m_Father: {fileID: 156736211659426097}
   m_RootOrder: 0
@@ -542,7 +547,7 @@ GameObject:
   - component: {fileID: 156736212729876446}
   - component: {fileID: 156736212729876440}
   - component: {fileID: 156736212729876441}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SM_Generic_Tree_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -621,7 +626,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 156736212772408069}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -654,7 +659,7 @@ GameObject:
   - component: {fileID: 176889482953177678}
   - component: {fileID: 6898038314956645326}
   - component: {fileID: 8346187787819480812}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SM_Generic_Tree_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -733,7 +738,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6392464273632193209}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -944,7 +949,7 @@ GameObject:
   - component: {fileID: 1625311375114548967}
   - component: {fileID: 159868068019430654}
   - component: {fileID: 5292753896954960359}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SM_Generic_Tree_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1165,7 +1170,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8225373990527312482}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1315,7 +1320,7 @@ GameObject:
   - component: {fileID: 8458646368190364381}
   - component: {fileID: 1234867027557547645}
   - component: {fileID: 3951873937434476797}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1540,7 +1545,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5861426862930073573}
   - component: {fileID: 2825759527097738152}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1769,7 +1774,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4492258046503982151}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1855,7 +1860,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6078391550480066178}
   - component: {fileID: 5946830303617875716}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1989,7 +1994,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3594572026012894787}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2023,7 +2028,7 @@ GameObject:
   - component: {fileID: 2342645058950955475}
   - component: {fileID: 4272115975809956886}
   - component: {fileID: 6638753216510956206}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Palm Tree Normal (3)
   m_TagString: Resource
   m_Icon: {fileID: 0}
@@ -2084,6 +2089,10 @@ MonoBehaviour:
   gatherDistance: 2
   TreeStump: {fileID: 2794556798533195785, guid: 8c3950ececbe24e2f8b535219f2d6b71,
     type: 3}
+  LeftRocks: {fileID: 0}
+  LeftCement: {fileID: 0}
+  LeftMud: {fileID: 0}
+  LeftIron: {fileID: 0}
 --- !u!114 &6638753216510956206
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2111,7 +2120,7 @@ GameObject:
   - component: {fileID: 7392809083965595929}
   - component: {fileID: 7432374233418213550}
   - component: {fileID: 456941134939839600}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2209,7 +2218,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5007622613640737625}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2242,7 +2251,7 @@ GameObject:
   - component: {fileID: 3966812651111607772}
   - component: {fileID: 4613557746827463347}
   - component: {fileID: 7648179427890048191}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SM_Generic_Tree_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2402,7 +2411,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3208915750995015850}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2435,7 +2444,7 @@ GameObject:
   - component: {fileID: 6270992545150066549}
   - component: {fileID: 6938408823466505134}
   - component: {fileID: 2455469567352690383}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SM_Generic_Tree_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2515,7 +2524,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3971465092281099755}
   - component: {fileID: 6388528641903426493}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2713,7 +2722,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6560251982248173257}
   - component: {fileID: 2600641470583681432}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2767,7 +2776,7 @@ GameObject:
   - component: {fileID: 5840393489307024373}
   - component: {fileID: 3398487117282542859}
   - component: {fileID: 5700615161125684428}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SM_Generic_Tree_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2944,7 +2953,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1283973958126489367}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2978,7 +2987,7 @@ GameObject:
   - component: {fileID: 3217232266355411859}
   - component: {fileID: 4135967789322289590}
   - component: {fileID: 439302011259876121}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Palm Tree Normal (3 wood)
   m_TagString: Resource
   m_Icon: {fileID: 0}
@@ -3039,6 +3048,10 @@ MonoBehaviour:
   gatherDistance: 2
   TreeStump: {fileID: 2794556798533195785, guid: 8c3950ececbe24e2f8b535219f2d6b71,
     type: 3}
+  LeftRocks: {fileID: 0}
+  LeftCement: {fileID: 0}
+  LeftMud: {fileID: 0}
+  LeftIron: {fileID: 0}
 --- !u!114 &439302011259876121
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3063,7 +3076,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2078587442289986414}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3096,7 +3109,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5964200107465493920}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3360,7 +3373,7 @@ GameObject:
   - component: {fileID: 8975221915356213855}
   - component: {fileID: 7077205460879939782}
   - component: {fileID: 3860705399333859004}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SM_Generic_Tree_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3439,7 +3452,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4400207372298181222}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3470,7 +3483,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4615007827097334921}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3715,7 +3728,7 @@ GameObject:
   - component: {fileID: 7703972720816642908}
   - component: {fileID: 7192505972022719994}
   - component: {fileID: 5298530273843790560}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Palm Tree Normal (2 wood)
   m_TagString: Resource
   m_Icon: {fileID: 0}
@@ -3776,6 +3789,10 @@ MonoBehaviour:
   gatherDistance: 2
   TreeStump: {fileID: 2794556798533195785, guid: 733eb975170e5894084a0fc657167bec,
     type: 3}
+  LeftRocks: {fileID: 0}
+  LeftCement: {fileID: 0}
+  LeftMud: {fileID: 0}
+  LeftIron: {fileID: 0}
 --- !u!114 &5298530273843790560
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4009,7 +4026,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5469482386678380592}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4040,7 +4057,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8739477313739825043}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4106,7 +4123,7 @@ GameObject:
   - component: {fileID: 7199811614060972026}
   - component: {fileID: 2755088100104290177}
   - component: {fileID: 2212616004148979571}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Palm Tree Normal (3 wood)
   m_TagString: Resource
   m_Icon: {fileID: 0}
@@ -4167,6 +4184,10 @@ MonoBehaviour:
   gatherDistance: 2
   TreeStump: {fileID: 2794556798533195785, guid: 8c3950ececbe24e2f8b535219f2d6b71,
     type: 3}
+  LeftRocks: {fileID: 0}
+  LeftCement: {fileID: 0}
+  LeftMud: {fileID: 0}
+  LeftIron: {fileID: 0}
 --- !u!114 &2212616004148979571
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4384,7 +4405,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8080416533906576162}
   - component: {fileID: 2381432932919819030}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4439,7 +4460,7 @@ GameObject:
   - component: {fileID: 7837201689579224184}
   - component: {fileID: 7542436705425004334}
   - component: {fileID: 2425180349937632989}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4540,7 +4561,7 @@ GameObject:
   - component: {fileID: 3460175326122720629}
   - component: {fileID: 3340256894893049727}
   - component: {fileID: 6206595292824840236}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4640,7 +4661,7 @@ GameObject:
   - component: {fileID: 2870636788213513127}
   - component: {fileID: 8906589360866135790}
   - component: {fileID: 3860077321187067273}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SM_Generic_Tree_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4721,7 +4742,7 @@ GameObject:
   - component: {fileID: 5244843799379888972}
   - component: {fileID: 5198452890840458938}
   - component: {fileID: 1693940455983580361}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SM_Generic_Tree_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5268,7 +5289,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1922804741276822464}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5302,7 +5323,7 @@ GameObject:
   - component: {fileID: 4544195322652833689}
   - component: {fileID: 3576778673502740117}
   - component: {fileID: 8984870370822832527}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Palm Tree Normal (5 wood
   m_TagString: Resource
   m_Icon: {fileID: 0}
@@ -5363,6 +5384,10 @@ MonoBehaviour:
   gatherDistance: 2
   TreeStump: {fileID: 2794556798533195785, guid: b82809cdb867d5242a8ea5beaef3d471,
     type: 3}
+  LeftRocks: {fileID: 0}
+  LeftCement: {fileID: 0}
+  LeftMud: {fileID: 0}
+  LeftIron: {fileID: 0}
 --- !u!114 &8984870370822832527
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5389,7 +5414,7 @@ GameObject:
   - component: {fileID: 2281503255397447949}
   - component: {fileID: 901374976689690509}
   - component: {fileID: 3188871851564852825}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SM_Generic_Tree_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5469,7 +5494,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7073553822648818284}
   - component: {fileID: 2338488221229986340}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5524,7 +5549,7 @@ GameObject:
   - component: {fileID: 3821960893723963023}
   - component: {fileID: 2524624691256217962}
   - component: {fileID: 4523105311912915088}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5798,7 +5823,7 @@ GameObject:
   - component: {fileID: 2817009101079452027}
   - component: {fileID: 275009357864438175}
   - component: {fileID: 3072273249153123792}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SM_Generic_Tree_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5940,7 +5965,7 @@ GameObject:
   - component: {fileID: 1644297042458509169}
   - component: {fileID: 3056195317811043716}
   - component: {fileID: 7036750839056038313}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SM_Generic_Tree_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6010,6 +6035,50 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!1 &3920030145765199010
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4262801064075049135}
+  - component: {fileID: 2503756596377974858}
+  m_Layer: 0
+  m_Name: Tutorial Target
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4262801064075049135
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3920030145765199010}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -11.73, y: 3.325999, z: -4.31}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 156736212728511785}
+  m_RootOrder: 15
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2503756596377974858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3920030145765199010}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8457e19866875674abb3eb2bb54a0e65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  orderIndex: 0
 --- !u!1 &4029892065836490538
 GameObject:
   m_ObjectHideFlags: 0
@@ -6262,7 +6331,7 @@ GameObject:
   - component: {fileID: 2952630977885304004}
   - component: {fileID: 3058439545321979338}
   - component: {fileID: 1126545109009335082}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11233,7 +11302,7 @@ GameObject:
   - component: {fileID: 3842798994186383911}
   - component: {fileID: 4968746943311559834}
   - component: {fileID: 7047528483433479108}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SM_Generic_Tree_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11699,7 +11768,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1411168065932041637}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11844,7 +11913,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2025797894794732124}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11875,7 +11944,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6793165030473426892}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11939,7 +12008,7 @@ Transform:
   - {fileID: 6722007132575226096}
   - {fileID: 8262616963990222538}
   m_Father: {fileID: 156736212728511785}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 270.57098, z: 0}
 --- !u!1 &4697855133300104432
 GameObject:
@@ -11953,7 +12022,7 @@ GameObject:
   - component: {fileID: 350567214565393905}
   - component: {fileID: 6745406743912728414}
   - component: {fileID: 827388621068655362}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12246,7 +12315,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8052957160833735398}
   - component: {fileID: 2655102839044339905}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12298,7 +12367,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 617013002497600354}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12332,7 +12401,7 @@ GameObject:
   - component: {fileID: 5969453192159887880}
   - component: {fileID: 199838250196789327}
   - component: {fileID: 551832316245033262}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Palm Tree Normal (2 wood)
   m_TagString: Resource
   m_Icon: {fileID: 0}
@@ -12393,6 +12462,10 @@ MonoBehaviour:
   gatherDistance: 2
   TreeStump: {fileID: 2794556798533195785, guid: 733eb975170e5894084a0fc657167bec,
     type: 3}
+  LeftRocks: {fileID: 0}
+  LeftCement: {fileID: 0}
+  LeftMud: {fileID: 0}
+  LeftIron: {fileID: 0}
 --- !u!114 &551832316245033262
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12596,7 +12669,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8447961409586355954}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12629,7 +12702,7 @@ GameObject:
   - component: {fileID: 5624868509021888033}
   - component: {fileID: 6537188461911919952}
   - component: {fileID: 8383449461454753955}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SM_Generic_Tree_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12804,7 +12877,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 881674169200551087}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12865,7 +12938,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6918987351187432461}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -12896,7 +12969,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8663557681979432979}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13139,7 +13212,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8921941295414042803}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13172,7 +13245,7 @@ GameObject:
   - component: {fileID: 2280482353897279278}
   - component: {fileID: 2170501391006369723}
   - component: {fileID: 6614834981223078006}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SM_Generic_Tree_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13336,7 +13409,7 @@ GameObject:
   - component: {fileID: 2933587567840504676}
   - component: {fileID: 3418076310843369368}
   - component: {fileID: 1964389006079465699}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Palm Tree Normal (2 wood)
   m_TagString: Resource
   m_Icon: {fileID: 0}
@@ -13397,6 +13470,10 @@ MonoBehaviour:
   gatherDistance: 2
   TreeStump: {fileID: 2794556798533195785, guid: 733eb975170e5894084a0fc657167bec,
     type: 3}
+  LeftRocks: {fileID: 0}
+  LeftCement: {fileID: 0}
+  LeftMud: {fileID: 0}
+  LeftIron: {fileID: 0}
 --- !u!114 &1964389006079465699
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13651,7 +13728,7 @@ GameObject:
   - component: {fileID: 7744916981702131989}
   - component: {fileID: 5345144045240774560}
   - component: {fileID: 5319468861122677560}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13752,7 +13829,7 @@ GameObject:
   - component: {fileID: 6843387316176949500}
   - component: {fileID: 6660713317290711008}
   - component: {fileID: 4752740765160926137}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Palm Tree Normal (3 wood)
   m_TagString: Resource
   m_Icon: {fileID: 0}
@@ -13813,6 +13890,10 @@ MonoBehaviour:
   gatherDistance: 2
   TreeStump: {fileID: 2794556798533195785, guid: 8c3950ececbe24e2f8b535219f2d6b71,
     type: 3}
+  LeftRocks: {fileID: 0}
+  LeftCement: {fileID: 0}
+  LeftMud: {fileID: 0}
+  LeftIron: {fileID: 0}
 --- !u!114 &4752740765160926137
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13839,7 +13920,7 @@ GameObject:
   - component: {fileID: 2065768224668494119}
   - component: {fileID: 1305718493695564593}
   - component: {fileID: 1559597053440729155}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SM_Generic_Tree_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -13921,7 +14002,7 @@ GameObject:
   - component: {fileID: 1198914021304630445}
   - component: {fileID: 6392438006757936522}
   - component: {fileID: 3063618402929755357}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Palm Tree Normal (2 wood)
   m_TagString: Resource
   m_Icon: {fileID: 0}
@@ -13982,6 +14063,10 @@ MonoBehaviour:
   gatherDistance: 2
   TreeStump: {fileID: 2794556798533195785, guid: 733eb975170e5894084a0fc657167bec,
     type: 3}
+  LeftRocks: {fileID: 0}
+  LeftCement: {fileID: 0}
+  LeftMud: {fileID: 0}
+  LeftIron: {fileID: 0}
 --- !u!114 &3063618402929755357
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14008,7 +14093,7 @@ GameObject:
   - component: {fileID: 5376819637381392866}
   - component: {fileID: 3930195213817146535}
   - component: {fileID: 7621097600320720448}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SM_Generic_Tree_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14397,7 +14482,7 @@ GameObject:
   - component: {fileID: 6767210277123774276}
   - component: {fileID: 1275213759884954912}
   - component: {fileID: 1222320778803381480}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14606,7 +14691,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6303008565981085817}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14639,7 +14724,7 @@ GameObject:
   - component: {fileID: 7281461800780944745}
   - component: {fileID: 8305560894279156055}
   - component: {fileID: 7636870612780104087}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SM_Generic_Tree_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14718,7 +14803,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7321187680826029995}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14861,7 +14946,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1054841102392245900}
   - component: {fileID: 4036465041503699251}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14916,7 +15001,7 @@ GameObject:
   - component: {fileID: 5703877370054621646}
   - component: {fileID: 1824194829606878789}
   - component: {fileID: 6702882121983465825}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Palm Tree Normal (5 wood)
   m_TagString: Resource
   m_Icon: {fileID: 0}
@@ -14977,6 +15062,10 @@ MonoBehaviour:
   gatherDistance: 2
   TreeStump: {fileID: 2794556798533195785, guid: b82809cdb867d5242a8ea5beaef3d471,
     type: 3}
+  LeftRocks: {fileID: 0}
+  LeftCement: {fileID: 0}
+  LeftMud: {fileID: 0}
+  LeftIron: {fileID: 0}
 --- !u!114 &6702882121983465825
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15004,7 +15093,7 @@ GameObject:
   - component: {fileID: 1764361365454756953}
   - component: {fileID: 3273877825611731848}
   - component: {fileID: 1959360704926905157}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15102,7 +15191,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8595667338068033045}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15232,7 +15321,7 @@ GameObject:
   - component: {fileID: 5940401487618068489}
   - component: {fileID: 3028747550425330261}
   - component: {fileID: 8580597773093520325}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Palm Tree Normal (3 wood)
   m_TagString: Resource
   m_Icon: {fileID: 0}
@@ -15293,6 +15382,10 @@ MonoBehaviour:
   gatherDistance: 2
   TreeStump: {fileID: 2794556798533195785, guid: 8c3950ececbe24e2f8b535219f2d6b71,
     type: 3}
+  LeftRocks: {fileID: 0}
+  LeftCement: {fileID: 0}
+  LeftMud: {fileID: 0}
+  LeftIron: {fileID: 0}
 --- !u!114 &8580597773093520325
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15512,7 +15605,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2652560166615964731}
   - component: {fileID: 5507655620720495328}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15566,7 +15659,7 @@ GameObject:
   - component: {fileID: 6594003637101683310}
   - component: {fileID: 3729280345406447133}
   - component: {fileID: 6979208163223026111}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SM_Generic_Tree_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15647,7 +15740,7 @@ GameObject:
   - component: {fileID: 3707129769425541471}
   - component: {fileID: 8339872160609706017}
   - component: {fileID: 318470402324379287}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SM_Generic_Tree_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15727,7 +15820,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9177526921250977011}
   - component: {fileID: 1641414248958903343}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -15863,7 +15956,7 @@ GameObject:
   - component: {fileID: 7607572380293561634}
   - component: {fileID: 391332076583249851}
   - component: {fileID: 3469430249081871909}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Palm Tree Normal (5 wood)
   m_TagString: Resource
   m_Icon: {fileID: 0}
@@ -15924,6 +16017,10 @@ MonoBehaviour:
   gatherDistance: 2
   TreeStump: {fileID: 2794556798533195785, guid: b82809cdb867d5242a8ea5beaef3d471,
     type: 3}
+  LeftRocks: {fileID: 0}
+  LeftCement: {fileID: 0}
+  LeftMud: {fileID: 0}
+  LeftIron: {fileID: 0}
 --- !u!114 &3469430249081871909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16010,7 +16107,7 @@ GameObject:
   - component: {fileID: 5956732550724552370}
   - component: {fileID: 8927807959494435995}
   - component: {fileID: 2754803432994427203}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SM_Generic_Tree_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16187,7 +16284,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6472659544852917630}
   - component: {fileID: 7832955285660335584}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16242,7 +16339,7 @@ GameObject:
   - component: {fileID: 4105222892751917568}
   - component: {fileID: 5527517760839948214}
   - component: {fileID: 7922377861035239580}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16340,7 +16437,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3397369711581320495}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16375,7 +16472,7 @@ GameObject:
   - component: {fileID: 7527443924695990899}
   - component: {fileID: 2263607698631045940}
   - component: {fileID: 3297957879329210918}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SM_Generic_Tree_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16454,7 +16551,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5099866327696126677}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16602,7 +16699,7 @@ GameObject:
   m_Component:
   - component: {fileID: 656232037072251191}
   - component: {fileID: 5607300464179945880}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -16784,7 +16881,7 @@ GameObject:
   - component: {fileID: 730310356954791308}
   - component: {fileID: 4762519336332223458}
   - component: {fileID: 6959680874920438050}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Palm Tree Normal (3 wood)
   m_TagString: Resource
   m_Icon: {fileID: 0}
@@ -16845,6 +16942,10 @@ MonoBehaviour:
   gatherDistance: 2
   TreeStump: {fileID: 2794556798533195785, guid: 8c3950ececbe24e2f8b535219f2d6b71,
     type: 3}
+  LeftRocks: {fileID: 0}
+  LeftCement: {fileID: 0}
+  LeftMud: {fileID: 0}
+  LeftIron: {fileID: 0}
 --- !u!114 &6959680874920438050
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16967,7 +17068,7 @@ GameObject:
   - component: {fileID: 501495104354319351}
   - component: {fileID: 7593544563082256837}
   - component: {fileID: 1700946439948981633}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SM_Generic_Tree_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17049,7 +17150,7 @@ GameObject:
   - component: {fileID: 6885737751878703725}
   - component: {fileID: 5168085267482314294}
   - component: {fileID: 7957436263011383500}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17260,7 +17361,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7400256298445250717}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17293,7 +17394,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6409563298243999163}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17326,7 +17427,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4685747527997992551}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17360,7 +17461,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6104186154797316130}
   - component: {fileID: 5214269422839628565}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17412,7 +17513,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6518528297395004575}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17445,7 +17546,7 @@ GameObject:
   - component: {fileID: 1368743810289725132}
   - component: {fileID: 5858862453932652110}
   - component: {fileID: 6815273420528550145}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SM_Generic_Tree_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17524,7 +17625,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2528717981352108298}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17585,7 +17686,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7409748373395768512}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17616,7 +17717,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1263351338099578172}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17693,7 +17794,7 @@ GameObject:
   - component: {fileID: 725522800858744279}
   - component: {fileID: 2824420376784074129}
   - component: {fileID: 4618660035917790333}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SM_Generic_Tree_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17870,7 +17971,7 @@ GameObject:
   - component: {fileID: 8771254368680287900}
   - component: {fileID: 4951796699121447009}
   - component: {fileID: 328927298158020434}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SM_Generic_Tree_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -17951,7 +18052,7 @@ GameObject:
   - component: {fileID: 1847346040136869382}
   - component: {fileID: 248527216066062531}
   - component: {fileID: 3403325037672185056}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SM_Generic_Tree_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18146,7 +18247,7 @@ GameObject:
   - component: {fileID: 372066868340736969}
   - component: {fileID: 804099800599672354}
   - component: {fileID: 7570627614003984724}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SM_Generic_Tree_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18228,7 +18329,7 @@ GameObject:
   - component: {fileID: 6637039358874339721}
   - component: {fileID: 6662418619357062933}
   - component: {fileID: 8008376829681161639}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Palm Tree Normal (3 wood)
   m_TagString: Resource
   m_Icon: {fileID: 0}
@@ -18289,6 +18390,10 @@ MonoBehaviour:
   gatherDistance: 2
   TreeStump: {fileID: 2794556798533195785, guid: 8c3950ececbe24e2f8b535219f2d6b71,
     type: 3}
+  LeftRocks: {fileID: 0}
+  LeftCement: {fileID: 0}
+  LeftMud: {fileID: 0}
+  LeftIron: {fileID: 0}
 --- !u!114 &8008376829681161639
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18313,7 +18418,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7030346919427884129}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18347,7 +18452,7 @@ GameObject:
   - component: {fileID: 4921234926254004083}
   - component: {fileID: 1869112342839115054}
   - component: {fileID: 4720757826886742391}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18476,7 +18581,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 285003922272803811}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18633,7 +18738,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1123843436900514614}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -18923,7 +19028,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6328548779790376730}
   - component: {fileID: 2170911956614373236}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: Model
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19076,7 +19181,7 @@ GameObject:
   - component: {fileID: 232571644615483830}
   - component: {fileID: 5480399187640153308}
   - component: {fileID: 531279135747970307}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19288,7 +19393,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2525410202321703630}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19740,7 +19845,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4352961477741244555}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: 1 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -19773,7 +19878,7 @@ GameObject:
   - component: {fileID: 5571609754288135803}
   - component: {fileID: 8254293383578570921}
   - component: {fileID: 3976430086038048576}
-  m_Layer: 5
+  m_Layer: 0
   m_Name: SM_Generic_Tree_03
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26975,6 +27080,25 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 6473301635401709447}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &4333506220981109682 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7347197800269263925, guid: 0445d8f7e6ac4b847b0b39202da24f6b,
+    type: 3}
+  m_PrefabInstance: {fileID: 6473301635401709447}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2115697155299270307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4333506220981109682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8457e19866875674abb3eb2bb54a0e65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  orderIndex: 1
 --- !u!1001 &6721273875130063414
 PrefabInstance:
   m_ObjectHideFlags: 0
