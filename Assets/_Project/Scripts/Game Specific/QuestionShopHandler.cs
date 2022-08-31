@@ -7,7 +7,7 @@ using System;
 public class QuestionShopHandler : MonoBehaviour
 {
     public List<QuestionAndAnswer> questionsAndAnswers;
-
+    public GameObject btn;
     [Header("Adjustables")]
     [SerializeField] private int rewardAmountOfEachResource = 0;
     [SerializeField] private float coolDownTime = 30f;
@@ -110,5 +110,9 @@ public class QuestionShopHandler : MonoBehaviour
                 Toolbox.GameplayScript.player.AddResourceOnBack(resourceType);
             }
         }
+    }
+    public void ShowBtn()
+    {
+        btn.SetActive(true);
     }
 }
