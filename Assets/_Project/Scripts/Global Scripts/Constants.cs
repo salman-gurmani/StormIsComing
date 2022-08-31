@@ -14,7 +14,7 @@ public static class Constants{
 #endif
 
 
-    public const string privacyPolicy = "https://docs.google.com/document/d/1Gf1rEWPgCMXkmyJzdQcoTZyyWAVbtbEW/edit";
+    public const string privacyPolicy = "https://ideegames.com/privacy-policy-rivalwheels/";
     public const string fb = "";
 
     public const string serverPrefsLink = "";
