@@ -28,6 +28,7 @@ public class ResourceHandler : MonoBehaviour
     public GameObject LeftRocks;
     public GameObject LeftCement;
     public GameObject LeftMud;
+    public GameObject LeftIron;
     //public GameObject EmptySandContainer;
 
 
@@ -134,14 +135,18 @@ public class ResourceHandler : MonoBehaviour
             {
                 Instantiate(LeftRocks, this.gameObject.transform.position, transform.rotation);
             }
-            else if (resourceName == "CEMENT_BLOCK")
-            {
-                Instantiate(LeftCement, this.gameObject.transform.position, transform.rotation);
-            } 
-            else if (resourceName == "MUD_BLOCK")
-            {
-                Instantiate(LeftMud, this.gameObject.transform.position, transform.rotation);
-            }
+            //else if (resourceName == "CEMENT_BLOCK")
+            //{
+            //    Instantiate(LeftCement, this.gameObject.transform.position, transform.rotation);
+            //} 
+            //else if (resourceName == "MUD_BLOCK")
+            //{
+            //    Instantiate(LeftMud, this.gameObject.transform.position, transform.rotation);
+            //} 
+            //else if (resourceName == "IRON_BLOCK")
+            //{
+            //    Instantiate(LeftIron, this.gameObject.transform.position, transform.rotation);
+            //}
 
 
 
