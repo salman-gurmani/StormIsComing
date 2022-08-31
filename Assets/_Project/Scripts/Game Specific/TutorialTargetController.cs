@@ -14,6 +14,9 @@ public class TutorialTargetController : MonoBehaviour
     private void Start()
     {
         targetsInThisLevel = FindObjectsOfType<TutorialTarget>();
+        if (targetsInThisLevel.Length == 0)
+            return;
+
         Array.Sort(targetsInThisLevel, delegate (TutorialTarget x, TutorialTarget y) { return x.orderIndex.CompareTo(y.orderIndex); });
         currentTargetIndex = 0;
         currentTarget = targetsInThisLevel[currentTargetIndex];
@@ -32,6 +35,9 @@ public class TutorialTargetController : MonoBehaviour
 
     private void Update()
     {
+        if (!currentTarget)
+            return;
+
         tutorialArrow.transform.LookAt(currentTarget.transform);
         if (Vector3.Distance(transform.position, currentTarget.transform.position) < 3f)
             tutorialArrow.GetComponentInChildren<MeshRenderer>().enabled = false;
