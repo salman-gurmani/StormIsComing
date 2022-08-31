@@ -441,7 +441,7 @@ public class PlayerController : MonoBehaviour
         sendEffect.GetComponent<MoveTO>().EnableMovement(_point);
     }
 
-    private void TryToEnableDialogue(string dialogueString)
+    public void TryToEnableDialogue(string dialogueString)
     {
         if (isPlayerDialogueActive)
             return;

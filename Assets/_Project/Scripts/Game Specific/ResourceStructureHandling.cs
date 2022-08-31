@@ -83,6 +83,15 @@ public class ResourceStructureHandling : MonoBehaviour
 
         if (Toolbox.DB.prefs.ResourceAmount[requirementResourceVal].value > 0) {
 
+            if (Toolbox.DB.prefs.ResourceAmount[productionResourceVal].value >= Toolbox.HUDListner.maxAmountPlayerCanCarry)
+            {
+                if (!player)
+                    player = Toolbox.GameplayScript.player.transform;
+
+                player.GetComponent<PlayerController>().TryToEnableDialogue("Can't carry anymore " + Toolbox.DB.prefs.ResourceAmount[productionResourceVal].name);
+                return;
+            }
+
             startProcessing = true;
 
             effects.SetActive(true);
@@ -114,8 +123,6 @@ public class ResourceStructureHandling : MonoBehaviour
     }
 
     private void TransferResource() {
-
-
 
         int resourceAmount = 1;
 
