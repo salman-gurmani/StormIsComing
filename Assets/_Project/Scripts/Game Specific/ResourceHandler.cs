@@ -100,7 +100,17 @@ public class ResourceHandler : MonoBehaviour
 
         if (Toolbox.DB.prefs.LastSelectedLevel == 0)
         {
-            if (Toolbox.DB.prefs.ResourceAmount[0].value == 10)
+            if (Toolbox.DB.prefs.ResourceAmount[(int)ResourceType.WOOD_LOG].value == 10)
+                ConversationManager.Instance.PressSelectedOption();
+        }
+        else if (Toolbox.DB.prefs.LastSelectedLevel == 1)
+        {
+            if (Toolbox.DB.prefs.ResourceAmount[(int)ResourceType.WOOD_LOG].value == 10)
+                ConversationManager.Instance.PressSelectedOption();
+        }
+        else if (Toolbox.DB.prefs.LastSelectedLevel == 4)
+        {
+            if (Toolbox.DB.prefs.ResourceAmount[(int)ResourceType.STONE_BLOCK].value == 20)
                 ConversationManager.Instance.PressSelectedOption();
         }
 

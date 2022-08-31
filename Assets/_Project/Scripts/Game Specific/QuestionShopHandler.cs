@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using System;
+using DialogueEditor;
 
 public class QuestionShopHandler : MonoBehaviour
 {
@@ -50,6 +51,11 @@ public class QuestionShopHandler : MonoBehaviour
         resultPanel.GetComponentInChildren<TextMeshProUGUI>().text = "Correct!\nCome back in 30 seconds and try again!";
         GiveRewards();
         isShopOpen = false;
+
+        if (Toolbox.DB.prefs.LastSelectedLevel == 3)
+        {
+            ConversationManager.Instance.PressSelectedOption();
+        }
     }
 
     public void WrongAnswer()
@@ -60,6 +66,11 @@ public class QuestionShopHandler : MonoBehaviour
         resultPanel.SetActive(true);
         resultPanel.GetComponentInChildren<TextMeshProUGUI>().text = "Wrong!\nCome back in 30 seconds and try again!";
         isShopOpen = false;
+
+        if (Toolbox.DB.prefs.LastSelectedLevel == 3)
+        {
+            ConversationManager.Instance.PressSelectedOption();
+        }
     }
 
     private void Update()
