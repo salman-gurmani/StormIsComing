@@ -225,7 +225,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: PP_Mushroom_Fantasy_Orange_10 (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8954726919292774954, guid: eae42a57b046b1a42a79ae6319bccca3, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: eae42a57b046b1a42a79ae6319bccca3, type: 3}
 --- !u!4 &8556541635772658483 stripped
 Transform:
@@ -233,6 +234,26 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 121796563490243492}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &9076197887584627081 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8954726919292774957, guid: eae42a57b046b1a42a79ae6319bccca3,
+    type: 3}
+  m_PrefabInstance: {fileID: 121796563490243492}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &3257259192189317465
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9076197887584627081}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.103707425
+  m_Height: 0.39903262
+  m_Direction: 1
+  m_Center: {x: 0.0031253735, y: 0.19951631, z: -0.0014061277}
 --- !u!1001 &194936570663441518
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -543,14 +564,35 @@ PrefabInstance:
       propertyPath: m_Name
       value: PP_Mushroom_Fantasy_Purple_05 (6)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7749838506462483411, guid: d354c41a99993964baca0254487708d1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d354c41a99993964baca0254487708d1, type: 3}
+--- !u!1 &7956340905973607140 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7749838506462483410, guid: d354c41a99993964baca0254487708d1,
+    type: 3}
+  m_PrefabInstance: {fileID: 425146966710712630}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7287186257976176734 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6973583930937526632, guid: d354c41a99993964baca0254487708d1,
     type: 3}
   m_PrefabInstance: {fileID: 425146966710712630}
   m_PrefabAsset: {fileID: 0}
+--- !u!136 &4427526535856974504
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7956340905973607140}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.07045952
+  m_Height: 0.29796177
+  m_Direction: 1
+  m_Center: {x: -0.00067907496, y: 0.14898089, z: 0.0022263497}
 --- !u!1001 &464274083119285932
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -873,7 +915,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: PP_Mushroom_Fantasy_Orange_09 (2)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7570405467501425084, guid: 0ab22827d0f3f0b40a97e9430d684283, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0ab22827d0f3f0b40a97e9430d684283, type: 3}
 --- !u!4 &8058299355598401165 stripped
 Transform:
@@ -881,6 +924,26 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 977421395365135754}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &7250518585708377143 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7570405467501425085, guid: 0ab22827d0f3f0b40a97e9430d684283,
+    type: 3}
+  m_PrefabInstance: {fileID: 977421395365135754}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &294788017659486950
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7250518585708377143}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.10613094
+  m_Height: 0.3673261
+  m_Direction: 1
+  m_Center: {x: -0.020936254, y: 0.18366306, z: -0.002583649}
 --- !u!1001 &1168195341417673888
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1101,14 +1164,35 @@ PrefabInstance:
       propertyPath: m_Name
       value: PP_Mushroom_Fantasy_Orange_10 (2)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8954726919292774954, guid: eae42a57b046b1a42a79ae6319bccca3, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: eae42a57b046b1a42a79ae6319bccca3, type: 3}
+--- !u!1 &7882676362454007208 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8954726919292774957, guid: eae42a57b046b1a42a79ae6319bccca3,
+    type: 3}
+  m_PrefabInstance: {fileID: 1234391826335700869}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7363161982486193938 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8578869230586474647, guid: eae42a57b046b1a42a79ae6319bccca3,
     type: 3}
   m_PrefabInstance: {fileID: 1234391826335700869}
   m_PrefabAsset: {fileID: 0}
+--- !u!136 &434275250137155249
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7882676362454007208}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.09862818
+  m_Height: 0.39903262
+  m_Direction: 1
+  m_Center: {x: -0.0019537474, y: 0.19951631, z: -0.0014061278}
 --- !u!1001 &1403957246225411446
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1254,7 +1338,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: PP_Mushroom_Fantasy_Orange_09 (3)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7570405467501425084, guid: 0ab22827d0f3f0b40a97e9430d684283, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0ab22827d0f3f0b40a97e9430d684283, type: 3}
 --- !u!4 &8521842484772446840 stripped
 Transform:
@@ -1262,6 +1347,26 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1443123940663298431}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &9009585445188794562 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7570405467501425085, guid: 0ab22827d0f3f0b40a97e9430d684283,
+    type: 3}
+  m_PrefabInstance: {fileID: 1443123940663298431}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &6629435135926234667
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9009585445188794562}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.10613094
+  m_Height: 0.3673261
+  m_Direction: 1
+  m_Center: {x: -0.020936254, y: 0.18366306, z: -0.002583649}
 --- !u!1001 &1481862725936710312
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1848,14 +1953,35 @@ PrefabInstance:
       propertyPath: m_Name
       value: PP_Mushroom_Fantasy_Orange_10
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8954726919292774954, guid: eae42a57b046b1a42a79ae6319bccca3, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: eae42a57b046b1a42a79ae6319bccca3, type: 3}
+--- !u!1 &7416383281263511306 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8954726919292774957, guid: eae42a57b046b1a42a79ae6319bccca3,
+    type: 3}
+  m_PrefabInstance: {fileID: 1921310793283497255}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &7901453260465888688 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8578869230586474647, guid: eae42a57b046b1a42a79ae6319bccca3,
     type: 3}
   m_PrefabInstance: {fileID: 1921310793283497255}
   m_PrefabAsset: {fileID: 0}
+--- !u!136 &5968105244943635806
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7416383281263511306}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.10133561
+  m_Height: 0.39903262
+  m_Direction: 1
+  m_Center: {x: 0.00075368135, y: 0.19951631, z: -0.0014061277}
 --- !u!1001 &1930634468700638773
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3813,7 +3939,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: PP_Mushroom_Fantasy_Orange_10 (4)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8954726919292774954, guid: eae42a57b046b1a42a79ae6319bccca3, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: eae42a57b046b1a42a79ae6319bccca3, type: 3}
 --- !u!4 &5096961548709562369 stripped
 Transform:
@@ -3821,6 +3948,26 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 3581012180164294806}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &5618200035919975099 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8954726919292774957, guid: eae42a57b046b1a42a79ae6319bccca3,
+    type: 3}
+  m_PrefabInstance: {fileID: 3581012180164294806}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &8229282228924028591
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5618200035919975099}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.09989793
+  m_Height: 0.39903262
+  m_Direction: 1
+  m_Center: {x: -0.00068399817, y: 0.19951631, z: -0.0014063754}
 --- !u!1001 &3841503442858644400
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3903,7 +4050,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: PP_Mushroom_Fantasy_Purple_05 (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7749838506462483411, guid: d354c41a99993964baca0254487708d1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d354c41a99993964baca0254487708d1, type: 3}
 --- !u!4 &6163429682204170968 stripped
 Transform:
@@ -3911,6 +4059,26 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 3841503442858644400}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &6828360870684295266 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7749838506462483410, guid: d354c41a99993964baca0254487708d1,
+    type: 3}
+  m_PrefabInstance: {fileID: 3841503442858644400}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &877701586118181173
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6828360870684295266}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.065487936
+  m_Height: 0.29796177
+  m_Direction: 1
+  m_Center: {x: 0.00429251, y: 0.14898089, z: 0.0022263497}
 --- !u!1001 &3844527617099611979
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3993,14 +4161,35 @@ PrefabInstance:
       propertyPath: m_Name
       value: PP_Mushroom_Fantasy_Orange_09
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7570405467501425084, guid: 0ab22827d0f3f0b40a97e9430d684283, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0ab22827d0f3f0b40a97e9430d684283, type: 3}
+--- !u!1 &6653499821984206582 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7570405467501425085, guid: 0ab22827d0f3f0b40a97e9430d684283,
+    type: 3}
+  m_PrefabInstance: {fileID: 3844527617099611979}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6277501636236416076 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7080972552677927687, guid: 0ab22827d0f3f0b40a97e9430d684283,
     type: 3}
   m_PrefabInstance: {fileID: 3844527617099611979}
   m_PrefabAsset: {fileID: 0}
+--- !u!136 &6375722491930560825
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6653499821984206582}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.10613094
+  m_Height: 0.3673261
+  m_Direction: 1
+  m_Center: {x: -0.020936247, y: 0.18366306, z: -0.002583649}
 --- !u!1001 &3937197735142333009
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4083,7 +4272,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: PP_Mushroom_Fantasy_Purple_05 (8)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7749838506462483411, guid: d354c41a99993964baca0254487708d1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d354c41a99993964baca0254487708d1, type: 3}
 --- !u!4 &6225269746167108409 stripped
 Transform:
@@ -4091,6 +4281,26 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 3937197735142333009}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &6714666338204682627 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7749838506462483410, guid: d354c41a99993964baca0254487708d1,
+    type: 3}
+  m_PrefabInstance: {fileID: 3937197735142333009}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &8202796791147110144
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6714666338204682627}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.070948526
+  m_Height: 0.29796177
+  m_Direction: 1
+  m_Center: {x: -0.0011680807, y: 0.14898089, z: 0.0022263497}
 --- !u!1001 &3979411636082465711
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4311,14 +4521,35 @@ PrefabInstance:
       propertyPath: m_Name
       value: PP_Mushroom_Fantasy_Purple_05 (3)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7749838506462483411, guid: d354c41a99993964baca0254487708d1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d354c41a99993964baca0254487708d1, type: 3}
+--- !u!1 &5890723003965007211 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7749838506462483410, guid: d354c41a99993964baca0254487708d1,
+    type: 3}
+  m_PrefabInstance: {fileID: 4201005588699248313}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6524552508092596177 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6973583930937526632, guid: d354c41a99993964baca0254487708d1,
     type: 3}
   m_PrefabInstance: {fileID: 4201005588699248313}
   m_PrefabAsset: {fileID: 0}
+--- !u!136 &4669221159862632557
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5890723003965007211}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.07094847
+  m_Height: 0.29796177
+  m_Direction: 1
+  m_Center: {x: -0.0011680188, y: 0.14898089, z: 0.0022263497}
 --- !u!1001 &4247655473088622425
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5172,14 +5403,35 @@ PrefabInstance:
       propertyPath: m_Name
       value: PP_Mushroom_Fantasy_Purple_05
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7749838506462483411, guid: d354c41a99993964baca0254487708d1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d354c41a99993964baca0254487708d1, type: 3}
+--- !u!1 &3376654249167786756 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7749838506462483410, guid: d354c41a99993964baca0254487708d1,
+    type: 3}
+  m_PrefabInstance: {fileID: 4994698873560793302}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &2708802521560107454 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6973583930937526632, guid: d354c41a99993964baca0254487708d1,
     type: 3}
   m_PrefabInstance: {fileID: 4994698873560793302}
   m_PrefabAsset: {fileID: 0}
+--- !u!136 &5686963767234968334
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3376654249167786756}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.0675257
+  m_Height: 0.29796177
+  m_Direction: 1
+  m_Center: {x: 0.0022547431, y: 0.14898089, z: 0.0022263497}
 --- !u!1001 &5029406458500053449
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5400,7 +5652,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: PP_Mushroom_Fantasy_Purple_05 (7)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7749838506462483411, guid: d354c41a99993964baca0254487708d1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d354c41a99993964baca0254487708d1, type: 3}
 --- !u!4 &2865023066741883085 stripped
 Transform:
@@ -5408,6 +5661,26 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 5117706487440083365}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &3209179635673930359 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7749838506462483410, guid: d354c41a99993964baca0254487708d1,
+    type: 3}
+  m_PrefabInstance: {fileID: 5117706487440083365}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &1762093381766890799
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3209179635673930359}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.07437117
+  m_Height: 0.29796177
+  m_Direction: 1
+  m_Center: {x: -0.004590719, y: 0.14898089, z: 0.0022263497}
 --- !u!1001 &5160250497066836026
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6405,7 +6678,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: PP_Mushroom_Fantasy_Purple_05 (5)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7749838506462483411, guid: d354c41a99993964baca0254487708d1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d354c41a99993964baca0254487708d1, type: 3}
 --- !u!4 &4506164985939605547 stripped
 Transform:
@@ -6413,6 +6687,26 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 6795431066541551939}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &3873884590079468177 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7749838506462483410, guid: d354c41a99993964baca0254487708d1,
+    type: 3}
+  m_PrefabInstance: {fileID: 6795431066541551939}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &8456028449831413052
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3873884590079468177}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.0729043
+  m_Height: 0.29796177
+  m_Direction: 1
+  m_Center: {x: -0.0031238408, y: 0.14898089, z: 0.0022263497}
 --- !u!1001 &6798723167792275577
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7167,14 +7461,35 @@ PrefabInstance:
       propertyPath: m_Name
       value: PP_Mushroom_Fantasy_Orange_09 (1)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7570405467501425084, guid: 0ab22827d0f3f0b40a97e9430d684283, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0ab22827d0f3f0b40a97e9430d684283, type: 3}
+--- !u!1 &32517398535383995 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7570405467501425085, guid: 0ab22827d0f3f0b40a97e9430d684283,
+    type: 3}
+  m_PrefabInstance: {fileID: 7601229338417060358}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &808491560005595393 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7080972552677927687, guid: 0ab22827d0f3f0b40a97e9430d684283,
     type: 3}
   m_PrefabInstance: {fileID: 7601229338417060358}
   m_PrefabAsset: {fileID: 0}
+--- !u!136 &7537336973913071613
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 32517398535383995}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.10613094
+  m_Height: 0.3673261
+  m_Direction: 1
+  m_Center: {x: -0.020936254, y: 0.18366306, z: -0.002583649}
 --- !u!1001 &7634875646323085172
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7971,14 +8286,35 @@ PrefabInstance:
       propertyPath: m_Name
       value: PP_Mushroom_Fantasy_Purple_05 (4)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7749838506462483411, guid: d354c41a99993964baca0254487708d1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d354c41a99993964baca0254487708d1, type: 3}
+--- !u!1 &2010377538115392799 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7749838506462483410, guid: d354c41a99993964baca0254487708d1,
+    type: 3}
+  m_PrefabInstance: {fileID: 8100496575175706317}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1201787188824149925 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6973583930937526632, guid: d354c41a99993964baca0254487708d1,
     type: 3}
   m_PrefabInstance: {fileID: 8100496575175706317}
   m_PrefabAsset: {fileID: 0}
+--- !u!136 &3091065817375774492
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2010377538115392799}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.07290424
+  m_Height: 0.29796177
+  m_Direction: 1
+  m_Center: {x: -0.0031237942, y: 0.14898089, z: 0.0022263497}
 --- !u!1001 &8356094916942645909
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8061,14 +8397,35 @@ PrefabInstance:
       propertyPath: m_Name
       value: PP_Mushroom_Fantasy_Purple_05 (2)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7749838506462483411, guid: d354c41a99993964baca0254487708d1, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d354c41a99993964baca0254487708d1, type: 3}
+--- !u!1 &1763762896158284103 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7749838506462483410, guid: d354c41a99993964baca0254487708d1,
+    type: 3}
+  m_PrefabInstance: {fileID: 8356094916942645909}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1383156691594839037 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6973583930937526632, guid: d354c41a99993964baca0254487708d1,
     type: 3}
   m_PrefabInstance: {fileID: 8356094916942645909}
   m_PrefabAsset: {fileID: 0}
+--- !u!136 &1488341009599838482
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1763762896158284103}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.073882185
+  m_Height: 0.29796177
+  m_Direction: 1
+  m_Center: {x: -0.004101744, y: 0.14898089, z: 0.0022263497}
 --- !u!1001 &8395324722860435024
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8226,14 +8583,35 @@ PrefabInstance:
       propertyPath: m_Name
       value: PP_Mushroom_Fantasy_Orange_09 (4)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7570405467501425084, guid: 0ab22827d0f3f0b40a97e9430d684283, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 0ab22827d0f3f0b40a97e9430d684283, type: 3}
+--- !u!1 &2158595168865269898 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7570405467501425085, guid: 0ab22827d0f3f0b40a97e9430d684283,
+    type: 3}
+  m_PrefabInstance: {fileID: 8429513058980612407}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1639044672521691696 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7080972552677927687, guid: 0ab22827d0f3f0b40a97e9430d684283,
     type: 3}
   m_PrefabInstance: {fileID: 8429513058980612407}
   m_PrefabAsset: {fileID: 0}
+--- !u!136 &8982521886867750129
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2158595168865269898}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.10613094
+  m_Height: 0.3673261
+  m_Direction: 1
+  m_Center: {x: -0.020936254, y: 0.18366306, z: -0.002583649}
 --- !u!1001 &8443763931159892656
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8481,14 +8859,35 @@ PrefabInstance:
       propertyPath: m_Name
       value: PP_Mushroom_Fantasy_Orange_10 (3)
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 8954726919292774954, guid: eae42a57b046b1a42a79ae6319bccca3, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: eae42a57b046b1a42a79ae6319bccca3, type: 3}
+--- !u!1 &772651252602236925 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8954726919292774957, guid: eae42a57b046b1a42a79ae6319bccca3,
+    type: 3}
+  m_PrefabInstance: {fileID: 8573893302197093840}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &140406075461317959 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8578869230586474647, guid: eae42a57b046b1a42a79ae6319bccca3,
     type: 3}
   m_PrefabInstance: {fileID: 8573893302197093840}
   m_PrefabAsset: {fileID: 0}
+--- !u!136 &1066621823750899036
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 772651252602236925}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.098628275
+  m_Height: 0.39903262
+  m_Direction: 1
+  m_Center: {x: -0.0019536545, y: 0.19951631, z: -0.0014061278}
 --- !u!1001 &8772626858981309848
 PrefabInstance:
   m_ObjectHideFlags: 0
