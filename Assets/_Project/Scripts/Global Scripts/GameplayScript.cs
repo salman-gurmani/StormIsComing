@@ -17,8 +17,11 @@ public class GameplayScript : MonoBehaviour {
     public GameObject [] resourceObjects;
     public StructureHandler buildStructureHandler;
     public GameObject traffic;
-
     public float finalDecisionDelay = 0;
+
+    [HideInInspector] public bool hasCollectedCement = false;
+    [HideInInspector] public bool hasCollectedMud = false;
+    [HideInInspector] public bool hasCollectedIron = false;
 
     [HideInInspector]
     private int levelCompleteTime = 0;

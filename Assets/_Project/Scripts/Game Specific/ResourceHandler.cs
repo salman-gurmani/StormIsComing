@@ -18,12 +18,8 @@ public class ResourceHandler : MonoBehaviour
 
     [SerializeField]private float time = 0;
     public float respawnTime = 5;
-    private bool isRespawning = false;
     public AudioClip GatherSound;
-    private Transform player;
-    private bool distanceCheck = false;
     public float gatherDistance = 5;
-    private string resourceName;
     public GameObject TreeStump;
     public GameObject LeftRocks;
     public GameObject LeftCement;
@@ -31,6 +27,10 @@ public class ResourceHandler : MonoBehaviour
     public GameObject LeftIron;
     //public GameObject EmptySandContainer;
 
+    private string resourceName;
+    private bool distanceCheck = false;
+    private bool isRespawning = false;
+    private Transform player;
 
     private void Start()
     {
@@ -113,6 +113,39 @@ public class ResourceHandler : MonoBehaviour
         {
             if (Toolbox.DB.prefs.ResourceAmount[(int)ResourceType.STONE_BLOCK].value == 20)
                 ConversationManager.Instance.PressSelectedOption();
+        }
+        else if (Toolbox.DB.prefs.LastSelectedLevel == 6)
+        {
+            if (type == ResourceType.CEMENT_BLOCK)
+            {
+                if (!Toolbox.GameplayScript.hasCollectedCement)
+                {
+                    Toolbox.GameplayScript.hasCollectedCement = true;
+                    Toolbox.GameManager.InstantiatPopup_Cement_Tutorial();
+                }
+            }
+        }
+        else if (Toolbox.DB.prefs.LastSelectedLevel == 7)
+        {
+            if (type == ResourceType.MUD_BLOCK)
+            {
+                if (!Toolbox.GameplayScript.hasCollectedMud)
+                {
+                    Toolbox.GameplayScript.hasCollectedMud = true;
+                    Toolbox.GameManager.InstantiatPopup_Brick_Tutorial();
+                }
+            }
+        }
+        else if (Toolbox.DB.prefs.LastSelectedLevel == 12)
+        {
+            if (type == ResourceType.IRON_BLOCK)
+            {
+                if (!Toolbox.GameplayScript.hasCollectedIron)
+                {
+                    Toolbox.GameplayScript.hasCollectedIron = true;
+                    Toolbox.GameManager.InstantiatPopup_Iron_Tutorial();
+                }
+            }
         }
 
         Toolbox.HUDListner.UpdateResourceTxt(resourceVal);

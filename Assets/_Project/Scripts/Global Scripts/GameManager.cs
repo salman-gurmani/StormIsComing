@@ -294,6 +294,21 @@ public class GameManager : MonoBehaviour {
         obj.GetComponent<TutorialListner>().UpdateMsg(str, charac);
     }
 
+	public void InstantiatPopup_Cement_Tutorial()
+    {
+		GameObject obj = Instantiate((GameObject)Resources.Load(Constants.menuFolderPath + "Popup-Cement_Tutorial"));
+    }
+	
+	public void InstantiatPopup_Brick_Tutorial()
+    {
+		GameObject obj = Instantiate((GameObject)Resources.Load(Constants.menuFolderPath + "Popup-Brick_Tutorial"));
+    }
+	
+	public void InstantiatPopup_Iron_Tutorial()
+    {
+		GameObject obj = Instantiate((GameObject)Resources.Load(Constants.menuFolderPath + "Popup-Iron_Tutorial"));
+    }
+
     public void Instantiate_Leaderboard()
     {
         Instantiate((GameObject)Resources.Load(Constants.menuFolderPath + "Leaderboard"));
