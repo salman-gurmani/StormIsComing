@@ -111,7 +111,7 @@ public class TradeShopCanvus : MonoBehaviour
                         Instantiate(tradeshop.effects[3], transform.position, Quaternion.identity);
                         Toolbox.DB.prefs.ResourceAmount[4].value = Toolbox.DB.prefs.ResourceAmount[4].value + tradeshop.amountExchange;
                         break;
-                    case "STEEL_ROD":
+                    case "IRON_BLOCK":
                         Instantiate(tradeshop.effects[4], transform.position, Quaternion.identity);
                         Toolbox.DB.prefs.ResourceAmount[6].value = Toolbox.DB.prefs.ResourceAmount[6].value + tradeshop.amountExchange;
                         break;
@@ -134,7 +134,7 @@ public class TradeShopCanvus : MonoBehaviour
                         Instantiate(tradeshop.effects[3], player.transform.position, Quaternion.identity);
                         Toolbox.DB.prefs.ResourceAmount[4].value = Toolbox.DB.prefs.ResourceAmount[4].value - tradeshop.amountExchange;
                         break;
-                    case "STEEL_ROD":
+                    case "IRON_BLOCK":
                         Instantiate(tradeshop.effects[4], player.transform.position, Quaternion.identity);
                         Toolbox.DB.prefs.ResourceAmount[6].value = Toolbox.DB.prefs.ResourceAmount[6].value - tradeshop.amountExchange;
                         break;
@@ -205,7 +205,7 @@ public class TradeShopCanvus : MonoBehaviour
                         Instantiate(tradeshop.effects[3], transform.position, Quaternion.identity);
                         Toolbox.DB.prefs.ResourceAmount[4].value = Toolbox.DB.prefs.ResourceAmount[4].value + tradeshop.amountExchange;
                         break;
-                    case "STEEL_ROD":
+                    case "IRON_BLOCK":
                         Instantiate(tradeshop.effects[4], transform.position, Quaternion.identity);
                         Toolbox.DB.prefs.ResourceAmount[6].value = Toolbox.DB.prefs.ResourceAmount[6].value + tradeshop.amountExchange;
                         break;
@@ -228,7 +228,7 @@ public class TradeShopCanvus : MonoBehaviour
                         Instantiate(tradeshop.effects[3], player.transform.position, Quaternion.identity);
                         Toolbox.DB.prefs.ResourceAmount[4].value = Toolbox.DB.prefs.ResourceAmount[4].value - tradeshop.amountExchange;
                         break;
-                    case "STEEL_ROD":
+                    case "IRON_BLOCK":
                         Instantiate(tradeshop.effects[4], player.transform.position, Quaternion.identity);
                         Toolbox.DB.prefs.ResourceAmount[6].value = Toolbox.DB.prefs.ResourceAmount[6].value - tradeshop.amountExchange;
                         break;
