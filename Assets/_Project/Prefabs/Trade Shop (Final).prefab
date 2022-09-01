@@ -2034,6 +2034,7 @@ GameObject:
   - component: {fileID: 2319376214810681392}
   - component: {fileID: 2319376214810681395}
   - component: {fileID: 2690400074969497113}
+  - component: {fileID: -3572623549424686532}
   m_Layer: 0
   m_Name: Trade Shop (Final)
   m_TagString: Untagged
@@ -2099,6 +2100,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   orderIndex: 1
+--- !u!114 &-3572623549424686532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2319376214810681393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 492392c310a924d4291d26c3c333296b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  markerSprite: {fileID: 21300000, guid: 3c44cd1749981234db4cc83dad98de2a, type: 3}
+  markerSize: 25
+  isActive: 1
 --- !u!1 &2319376214831264844
 GameObject:
   m_ObjectHideFlags: 0
