@@ -40,6 +40,9 @@ public class PlayerController : MonoBehaviour
     {
         index = Toolbox.DB.prefs.LastSelectedPlayerObj;
         EnableCharacter(index);
+
+        string path = Constants.PrefabFolderPath + Constants.LevelsScriptablesFolderPath + Toolbox.DB.prefs.LastSelectedMode.ToString() + "/" + Toolbox.DB.prefs.LastSelectedLevel.ToString();
+        LevelData curLevelData = (LevelData)Resources.Load(path);
     }
 
    public void EnableCharacter(int index) {
@@ -178,7 +181,7 @@ public class PlayerController : MonoBehaviour
     {
         if (!isGathering && resourceInTrigger.Count > 0)
         {
-            if (Toolbox.DB.prefs.ResourceAmount[resourceInTrigger[0].resourceVal].value >= Toolbox.HUDListner.maxAmountPlayerCanCarry)
+            if (Toolbox.DB.prefs.ResourceAmount[resourceInTrigger[0].resourceVal].value >= Toolbox.GameplayScript.levelsManager.CurLevelData.MaxAmountPlayerCanCarry)
             {
                 TryToEnableDialogue("Can't carry anymore " + Toolbox.DB.prefs.ResourceAmount[resourceInTrigger[0].resourceVal].name);
                 return;

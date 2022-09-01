@@ -19,7 +19,7 @@ public class HUDListner : MonoBehaviour {
     public Text[] resourcesTxts;
     public GameObject MiniMap;
     public RectTransform[] resourcePosition;
-    public int maxAmountPlayerCanCarry = 3;
+    //public int maxAmountPlayerCanCarry = 3;
     float reportTime = 20;
     [Space]
     public NPCConversation levelZeroTutorialConversation;
@@ -31,6 +31,8 @@ public class HUDListner : MonoBehaviour {
     public float tempTime { get; private set; }
 
     private bool isGamePaused = false;
+    private LevelData curLevelData;
+
 
     private void OnEnable()
     {
@@ -49,6 +51,8 @@ public class HUDListner : MonoBehaviour {
         {
             CoinsCollect.SetActive(false);
         }
+        string path = Constants.PrefabFolderPath + Constants.LevelsScriptablesFolderPath + Toolbox.DB.prefs.LastSelectedMode.ToString() + "/" + Toolbox.DB.prefs.LastSelectedLevel.ToString();
+        LevelData curLevelData = (LevelData)Resources.Load(path);
         //AdsManager.instance.RequestBannerWithSpecs( Tapdaq.TDMBannerSize.TDMBannerStandard, Tapdaq.TDBannerPosition.Top);
     }
 
@@ -177,7 +181,7 @@ public class HUDListner : MonoBehaviour {
 
     public void UpdateResourceTxt(int _index) {
 
-        resourcesTxts[_index].text = Toolbox.DB.prefs.ResourceAmount[_index].value.ToString() + "/" + maxAmountPlayerCanCarry;
+        resourcesTxts[_index].text = Toolbox.DB.prefs.ResourceAmount[_index].value.ToString() + "/" + Toolbox.GameplayScript.levelsManager.CurLevelData.MaxAmountPlayerCanCarry;
     }
 
     public void Press_Pause() {

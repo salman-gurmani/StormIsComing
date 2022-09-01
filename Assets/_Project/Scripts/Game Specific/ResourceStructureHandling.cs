@@ -13,6 +13,7 @@ public class ResourceStructureHandling : MonoBehaviour
     private float time = 0;
     private float convertResourceDelay = 0.3f;
 
+    private LevelData curLevelData;
     private bool startProcessing = false;
     private int requirementResourceVal = 0;
     private int productionResourceVal = 0;
@@ -25,6 +26,7 @@ public class ResourceStructureHandling : MonoBehaviour
     {
         requirementResourceVal = (int)requireType;
         productionResourceVal = (int)productionType;
+        GetLevelData();
 
     }
     private void Update()
@@ -79,11 +81,17 @@ public class ResourceStructureHandling : MonoBehaviour
         }        
     }
 
+    public void GetLevelData()
+    {
+        string path = Constants.PrefabFolderPath + Constants.LevelsScriptablesFolderPath + Toolbox.DB.prefs.LastSelectedMode.ToString() + "/" + Toolbox.DB.prefs.LastSelectedLevel.ToString();
+        LevelData curLevelData = (LevelData)Resources.Load(path);
+    }
+
     public void InitProcessing() {
 
         if (Toolbox.DB.prefs.ResourceAmount[requirementResourceVal].value > 0) {
 
-            if (Toolbox.DB.prefs.ResourceAmount[productionResourceVal].value >= Toolbox.HUDListner.maxAmountPlayerCanCarry)
+            if (Toolbox.DB.prefs.ResourceAmount[productionResourceVal].value >= Toolbox.GameplayScript.levelsManager.CurLevelData.MaxAmountPlayerCanCarry)
             {
                 if (!player)
                     player = Toolbox.GameplayScript.player.transform;

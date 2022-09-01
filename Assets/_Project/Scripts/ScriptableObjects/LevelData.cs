@@ -14,6 +14,7 @@ public class LevelData : ScriptableObject
     public DisasterType disaster;
     public bool isBonus;
     public int noOfBonusThings;
+    public int MaxAmountPlayerCanCarry;
     public enum Weather { 
     
         SUNNY,

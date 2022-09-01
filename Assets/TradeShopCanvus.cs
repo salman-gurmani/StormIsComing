@@ -52,7 +52,7 @@ public class TradeShopCanvus : MonoBehaviour
                 img1.sprite = resourcesImgs[3];
                 img4.sprite = resourcesImgs[3];
                 break;
-            case "STEEL_ROD":
+            case "IRON_BLOCK":
                 img1.sprite = resourcesImgs[4];
                 img4.sprite = resourcesImgs[4];
                 break;
@@ -75,7 +75,7 @@ public class TradeShopCanvus : MonoBehaviour
                 img2.sprite = resourcesImgs[3];
                 img3.sprite = resourcesImgs[3];
                 break;
-            case "STEEL_ROD":
+            case "IRON_BLOCK":
                 img2.sprite = resourcesImgs[4];
                 img3.sprite = resourcesImgs[4];
                 break;
