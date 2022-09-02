@@ -173,26 +173,26 @@ public class LevelCompleteListner : MonoBehaviour {
 
 		Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.buttonPressYes);
         Toolbox.GameManager.LoadScene(Toolbox.GameManager.GetCurrentLevelGameScene(), false, 0);
-		
-		//--
-		//AdsManager.instance.ShowAd(AdsManager.AdType.INTERSTITIAL);
 
-		//Toolbox.GameManager.directShowVehicleSel = true;
-		//Toolbox.GameManager.LoadScene(Constants.sceneIndex_Menu, true, 0);
+        //--
+        AdsManager.instance.ShowAd(AdsManager.AdType.INTERSTITIAL);
 
-		Destroy(this.gameObject);
+        //Toolbox.GameManager.directShowVehicleSel = true;
+        //Toolbox.GameManager.LoadScene(Constants.sceneIndex_Menu, true, 0);
+
+        Destroy(this.gameObject);
 	}
 
 	public void Press_Restart()
 	{
 		Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.buttonPressYes);
 		Toolbox.GameManager.LoadScene(Toolbox.GameManager.GetCurrentLevelGameScene(), false, 0);
-		
-		//--
-		//AdsManager.instance.ShowAd(AdsManager.AdType.INTERSTITIAL);
+
+        //--
+        AdsManager.instance.ShowAd(AdsManager.AdType.INTERSTITIAL);
 
 
-		Destroy(this.gameObject);
+        Destroy(this.gameObject);
 	}
 
 	public void Press_Home()
@@ -200,21 +200,21 @@ public class LevelCompleteListner : MonoBehaviour {
 
 		Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.buttonPressYes);
 		Toolbox.GameManager.LoadScene(Constants.sceneIndex_Menu, false, 0);
-		
-		//--
-		//AdsManager.instance.ShowAd(AdsManager.AdType.INTERSTITIAL);
 
-		Destroy(this.gameObject);
+        //--
+        AdsManager.instance.ShowAd(AdsManager.AdType.INTERSTITIAL);
+
+        Destroy(this.gameObject);
 	}
 
 	public void Press_2XReward()
 	{
 		Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.buttonPressYes);
-		
-		//--
-		//AdsManager.instance.SetNShowRewardedAd(AdsManager.RewardType.DOUBLEREWARD, rewardAmount);
 
-		doubleRewardButton.SetActive(false);
+        //--
+        AdsManager.instance.SetNShowRewardedAd(AdsManager.RewardType.DOUBLEREWARD, rewardAmount);
+
+        doubleRewardButton.SetActive(false);
 	}
 	public void Press_NoThanks()
     {

@@ -24,9 +24,9 @@ public class ShopListner : MonoBehaviour
     public void OnPress_FreeCoins()
     {
         Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.buttonPressNo);
-        
+
         //--
-        //AdsManager.instance.SetNShowRewardedAd(AdsManager.RewardType.FREECOINS, 100);
+        AdsManager.instance.SetNShowRewardedAd(AdsManager.RewardType.FREECOINS, 100);
     }
 
     public void PurchaseProduct(int _val)

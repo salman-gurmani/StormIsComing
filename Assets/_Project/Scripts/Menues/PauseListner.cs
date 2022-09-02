@@ -45,22 +45,22 @@ public class PauseListner : MonoBehaviour {
 	{
 		Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.buttonPressYes);
 		Toolbox.GameManager.LoadScene(Toolbox.GameManager.GetCurrentLevelGameScene(), true, 0);
-		
-		//--
-		//AdsManager.instance.ShowAd(AdsManager.AdType.INTERSTITIAL);
 
-		Destroy(this.gameObject);
+        //--
+        AdsManager.instance.ShowAd(AdsManager.AdType.INTERSTITIAL);
+
+        Destroy(this.gameObject);
 	}
 
 	public void Press_Home(){
 
 		Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.buttonPressYes);
 		Toolbox.GameManager.LoadScene(Constants.sceneIndex_Menu, true, 0);
-		
-		//--
-		//AdsManager.instance.ShowAd(AdsManager.AdType.INTERSTITIAL);
 
-		Destroy(this.gameObject);
+        //--
+        AdsManager.instance.ShowAd(AdsManager.AdType.INTERSTITIAL);
+
+        Destroy(this.gameObject);
 	}
 
 }

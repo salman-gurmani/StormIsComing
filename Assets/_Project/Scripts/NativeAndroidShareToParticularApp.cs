@@ -10,9 +10,9 @@ public class NativeAndroidShareToParticularApp : MonoBehaviour {
     //public string packageName = "com.whatsapp";
 
     private string msgTitle = "Offroad Car Parking Simulator";
-    
-	//--
-	//private string msgText = "Hey! Checkout this amazing Parking game. Get it from the link below. \nCheers\n\n" + Constants.appLink;
+
+    //--
+    private string msgText = "Hey! Checkout this amazing Parking game. Get it from the link below. \nCheers\n\n" + Constants.appLink;
 
 
     void OnApplicationFocus (bool focus) {
@@ -78,11 +78,11 @@ public class NativeAndroidShareToParticularApp : MonoBehaviour {
 	public IEnumerator ShareTextInAnroid () {
 
 		var shareSubject = msgTitle;
-		
-		//--
-		//var shareMessage = msgText;
 
-		isProcessing = true;
+        //--
+        var shareMessage = msgText;
+
+        isProcessing = true;
 
 		if (!Application.isEditor) {
 			//Create intent for action send
@@ -96,16 +96,16 @@ public class NativeAndroidShareToParticularApp : MonoBehaviour {
 			//put text and subject extra
 			intentObject.Call<AndroidJavaObject> ("setType", "text/plain");
 			intentObject.Call<AndroidJavaObject> ("putExtra", intentClass.GetStatic<string> ("EXTRA_SUBJECT"), shareSubject);
-			
-			//--
-			//intentObject.Call<AndroidJavaObject> ("putExtra", intentClass.GetStatic<string> ("EXTRA_TEXT"), shareMessage);
+
+            //--
+            intentObject.Call<AndroidJavaObject>("putExtra", intentClass.GetStatic<string>("EXTRA_TEXT"), shareMessage);
 
             //Uncomment this if directly want to share on whatsapps
-			//set the package to whatsapp package
-			//intentObject.Call<AndroidJavaObject> ("setPackage", packageName);
+            //set the package to whatsapp package
+            //intentObject.Call<AndroidJavaObject> ("setPackage", packageName);
 
-			//call createChooser method of activity class
-			AndroidJavaClass unity = new AndroidJavaClass ("com.unity3d.player.UnityPlayer");
+            //call createChooser method of activity class
+            AndroidJavaClass unity = new AndroidJavaClass ("com.unity3d.player.UnityPlayer");
 			AndroidJavaObject currentActivity = 
 				unity.GetStatic<AndroidJavaObject> ("currentActivity");
 			AndroidJavaObject chooser = 

@@ -36,31 +36,31 @@ public class LevelFailListner : MonoBehaviour {
 	public void Press_SkipLevel()
 	{
 		Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.buttonPressYes);
-		
-		//--
-		//AdsManager.instance.SetNShowRewardedAd(AdsManager.RewardType.SKIPLEVEL, 0);
-	}
+
+        //--
+        AdsManager.instance.SetNShowRewardedAd(AdsManager.RewardType.SKIPLEVEL, 0);
+    }
 
 	public void Press_Restart()
 	{
 		Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.buttonPressYes);
-		Toolbox.GameManager.LoadScene(Toolbox.GameManager.GetCurrentLevelGameScene(), false, 0); 
-		
-		//--
-		//AdsManager.instance.ShowAd(AdsManager.AdType.INTERSTITIAL); 
+		Toolbox.GameManager.LoadScene(Toolbox.GameManager.GetCurrentLevelGameScene(), false, 0);
 
-		Destroy(this.gameObject);
+        //--
+        AdsManager.instance.ShowAd(AdsManager.AdType.INTERSTITIAL);
+
+        Destroy(this.gameObject);
 	}
 
 	public void Press_Home()
 	{
 		Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.buttonPressYes);
-		
-		//--
-		//AdsManager.instance.ShowAd(AdsManager.AdType.INTERSTITIAL); 
-		
-		
-		Toolbox.GameManager.LoadScene(Constants.sceneIndex_Menu, true, 0);
+
+        //--
+        AdsManager.instance.ShowAd(AdsManager.AdType.INTERSTITIAL);
+
+
+        Toolbox.GameManager.LoadScene(Constants.sceneIndex_Menu, true, 0);
 
 		Destroy(this.gameObject);
 	}
@@ -70,13 +70,13 @@ public class LevelFailListner : MonoBehaviour {
 			Toolbox.DB.prefs.LastSelectedLevel++;
 
 		Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.buttonPressYes);
-		
-		
-		//--
-		//AdsManager.instance.ShowAd(AdsManager.AdType.INTERSTITIAL); 
-		
-		
-		Toolbox.GameManager.LoadScene(Toolbox.GameManager.GetCurrentLevelGameScene(), true, 0);
+
+
+        //--
+        AdsManager.instance.ShowAd(AdsManager.AdType.INTERSTITIAL);
+
+
+        Toolbox.GameManager.LoadScene(Toolbox.GameManager.GetCurrentLevelGameScene(), true, 0);
 		//AdsManager.instance.ShowAd(AdsManager.AdType.INTERSTITIAL);
 
 		//Toolbox.GameManager.directShowVehicleSel = true;
