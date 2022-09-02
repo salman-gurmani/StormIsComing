@@ -417,10 +417,10 @@ public class GameManager : MonoBehaviour {
 		int _mode = Toolbox.DB.prefs.LastSelectedMode;
 		int _level = Toolbox.DB.prefs.LastSelectedLevel;
 				
-		//if (Toolbox.GameplayScript.isLevelsScene)
-		//	GameAnalytics.NewProgressionEvent(GAProgressionStatus.Fail, "Mode_" + _mode, "_Level_" + _level);
-		//else
-		//	GameAnalytics.NewProgressionEvent(GAProgressionStatus.Fail, "Mode_" + _mode);
+		if (Toolbox.GameplayScript.isLevelsScene)
+			GameAnalytics.NewProgressionEvent(GAProgressionStatus.Fail, "Mode_" + _mode, "_Level_" + _level);
+		else
+			GameAnalytics.NewProgressionEvent(GAProgressionStatus.Fail, "Mode_" + _mode);
 	
 	}
 
