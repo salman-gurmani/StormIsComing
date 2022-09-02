@@ -181,7 +181,15 @@ public class HUDListner : MonoBehaviour {
 
     public void UpdateResourceTxt(int _index) {
 
-        resourcesTxts[_index].text = Toolbox.DB.prefs.ResourceAmount[_index].value.ToString() + "/" + Toolbox.GameplayScript.levelsManager.CurLevelData.MaxAmountPlayerCanCarry;
+        resourcesTxts[_index].text = Toolbox.DB.prefs.ResourceAmount[_index].value.ToString() + "/" + Toolbox.DB.prefs.MaxCarryLimit;
+    }
+
+    public void UpdateAllResourceText()
+    {
+        for (int i = 0; i < resourcesTxts.Length; i++)
+        {
+            UpdateResourceTxt(i);
+        }
     }
 
     public void Press_Pause() {

@@ -8,6 +8,7 @@ public class PopupMsgListner : MonoBehaviour
     public Text msgTxt;
     public GameObject unlockBtn;
     public bool isPopupMsg = false;
+
     public void UpdateMsg(string str) {
 
         msgTxt.text = str;

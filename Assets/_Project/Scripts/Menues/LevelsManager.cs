@@ -22,13 +22,16 @@ public class LevelsManager : MonoBehaviour
         
     }
 
-    public void StartLevelHandling() {
+    public void StartLevelHandling()
+    {
+        if (Toolbox.DB.prefs.LastSelectedLevel != 0)
+        {
+            Toolbox.GameManager.InstantiatePopup_PurchaseUpgrade();
+        }
         if (Toolbox.DB.prefs.LastSelectedLevel > 14)
         {
             //Arooj
             Toolbox.DB.prefs.LastSelectedLevel = 0;
-
-
         }
         if(Toolbox.DB.prefs.LastSelectedLevel == 2)
         {

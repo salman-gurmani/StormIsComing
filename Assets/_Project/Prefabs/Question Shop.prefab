@@ -361,7 +361,6 @@ Transform:
   - {fileID: 5044909682790799424}
   - {fileID: 5789143315865067083}
   - {fileID: 8148988677226695256}
-  - {fileID: 3112279258275166067}
   - {fileID: 7317982169951380337}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -409,7 +408,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6ad70f4d22d91c74ab62cb3d3f5d01c6, type: 2}
   - {fileID: 11400000, guid: 411f4f011ee49734aa473f831d8a2eea, type: 2}
   - {fileID: 11400000, guid: 75f5971c07112f544a6484c033db40fe, type: 2}
-  btn: {fileID: 5630676930058543645}
+  popupButton: {fileID: 5630676930058543645}
   rewardAmountOfEachResource: 20
   coolDownTime: 30
   questionText: {fileID: 4756335588115073334}
@@ -925,7 +924,7 @@ GameObject:
   - component: {fileID: 3270749647813794914}
   - component: {fileID: 1008819948382911010}
   m_Layer: 0
-  m_Name: New Text (1)
+  m_Name: Popup Button
   m_TagString: QuestionShopUI
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -944,7 +943,7 @@ Transform:
   m_Children:
   - {fileID: 2631019343214491577}
   m_Father: {fileID: 5638424342914672035}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 15, y: -179.982, z: 0.005}
 --- !u!23 &1127565878909681746
 MeshRenderer:
@@ -1280,129 +1279,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isCorrect: 0
   questionShopHandler: {fileID: 6751208729248223562}
---- !u!1 &6279789078107914926
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 3112279258275166067}
-  - component: {fileID: 782141019974983578}
-  - component: {fileID: 4073329282404352554}
-  - component: {fileID: 9017848280690390794}
-  - component: {fileID: 1338965599900651444}
-  m_Layer: 0
-  m_Name: New Text
-  m_TagString: QuestionShopUI
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &3112279258275166067
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6279789078107914926}
-  m_LocalRotation: {x: 0.13052596, y: 0.00015144498, z: 0.000019938074, w: 0.99144495}
-  m_LocalPosition: {x: -2.01, y: 3.62, z: -0.16000003}
-  m_LocalScale: {x: 0.009999999, y: 0.009999999, z: 0.009999999}
-  m_Children: []
-  m_Father: {fileID: 5638424342914672035}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 15, y: -179.982, z: 0.005}
---- !u!23 &782141019974983578
-MeshRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6279789078107914926}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 2
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10100, guid: 0000000000000000e000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_AdditionalVertexStreams: {fileID: 0}
---- !u!102 &4073329282404352554
-TextMesh:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6279789078107914926}
-  m_Text: "Answer my riddle\n    for a reward"
-  m_OffsetZ: 0
-  m_CharacterSize: 1
-  m_LineSpacing: 1
-  m_Anchor: 0
-  m_Alignment: 0
-  m_TabSize: 4
-  m_FontSize: 500
-  m_FontStyle: 0
-  m_RichText: 1
-  m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-  m_Color:
-    serializedVersion: 2
-    rgba: 4294967295
---- !u!65 &9017848280690390794
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6279789078107914926}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 393.75754, y: 113.354485, z: 20.400204}
-  m_Center: {x: 196.87833, y: -56.67724, z: 1.2118932}
---- !u!114 &1338965599900651444
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6279789078107914926}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e52ec008ddfaa1d4aa215aede5e6ba82, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pnl: {fileID: 0}
 --- !u!1 &6336095058860556095
 GameObject:
   m_ObjectHideFlags: 0

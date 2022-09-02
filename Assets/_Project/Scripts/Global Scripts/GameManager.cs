@@ -279,6 +279,11 @@ public class GameManager : MonoBehaviour {
 
 		obj.GetComponent<PopupMsgListner>().UpdateMsg(str);
 	}
+	public void InstantiatePopup_PurchaseUpgrade()
+	{
+		GameObject obj = Instantiate((GameObject)Resources.Load(Constants.menuFolderPath + "Popup-Carry_Limit_Purchase"));
+	}
+
 	public void InstantiatePopup_Tutorial()
     {
         if (FindObjectOfType<TutorialListner>())

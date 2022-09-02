@@ -8,7 +8,6 @@ using DialogueEditor;
 public class QuestionShopHandler : MonoBehaviour
 {
     public List<QuestionAndAnswer> questionsAndAnswers;
-    public GameObject btn;
     [Header("Adjustables")]
     [SerializeField] private int rewardAmountOfEachResource = 0;
     [SerializeField] private float coolDownTime = 30f;
@@ -19,6 +18,7 @@ public class QuestionShopHandler : MonoBehaviour
     [SerializeField] private GameObject questionPanel;
     [SerializeField] private GameObject resultPanel;
     [SerializeField] private GameObject[] answerButtons;
+    [SerializeField] GameObject popupButton;
 
     private int currentQnAIndex = 0;
     private bool isShopOpen = false;
@@ -29,13 +29,18 @@ public class QuestionShopHandler : MonoBehaviour
         shopCanvas.worldCamera = Camera.main;
     }
 
-    public void TryToOpenShop()
+    public void TryToOpenPopup()
     {
         if (isShopOpen)
             return;
         if (onCoolDown)
             return;
 
+        SetPopupButton(true);
+    }
+
+    public void OpenShop()
+    {
         onCoolDown = true;
         shopCanvas.gameObject.SetActive(true);
         GenerateNextQuestion();
@@ -51,6 +56,7 @@ public class QuestionShopHandler : MonoBehaviour
         resultPanel.GetComponentInChildren<TextMeshProUGUI>().text = "Correct!\nCome back in 30 seconds and try again!";
         GiveRewards();
         isShopOpen = false;
+        SetPopupButton(false);
 
         if (Toolbox.DB.prefs.LastSelectedLevel == 3)
         {
@@ -66,6 +72,7 @@ public class QuestionShopHandler : MonoBehaviour
         resultPanel.SetActive(true);
         resultPanel.GetComponentInChildren<TextMeshProUGUI>().text = "Wrong!\nCome back in 30 seconds and try again!";
         isShopOpen = false;
+        SetPopupButton(false);
 
         if (Toolbox.DB.prefs.LastSelectedLevel == 3)
         {
@@ -114,16 +121,22 @@ public class QuestionShopHandler : MonoBehaviour
     {
         foreach (ResourceType resourceType in (ResourceType[])Enum.GetValues(typeof(ResourceType)))
         {
-            Toolbox.DB.prefs.ResourceAmount[(int)resourceType].value += rewardAmountOfEachResource;
+            int rewardAmountAllowed = rewardAmountOfEachResource;
+            int spaceAvailabe = Toolbox.DB.prefs.MaxCarryLimit - Toolbox.DB.prefs.ResourceAmount[(int)resourceType].value;
+
+            if (spaceAvailabe <= rewardAmountAllowed)
+                rewardAmountAllowed = spaceAvailabe;
+
+            Toolbox.DB.prefs.ResourceAmount[(int)resourceType].value += rewardAmountAllowed;
             Toolbox.HUDListner.UpdateResourceTxt((int)resourceType);
-            for (int i = 0; i < rewardAmountOfEachResource; i++)
+            for (int i = 0; i < rewardAmountAllowed; i++)
             {
                 Toolbox.GameplayScript.player.AddResourceOnBack(resourceType);
             }
         }
     }
-    public void ShowBtn()
+    public void SetPopupButton(bool _isActive)
     {
-        btn.SetActive(true);
+        popupButton.SetActive(_isActive);
     }
 }

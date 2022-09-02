@@ -181,7 +181,7 @@ public class PlayerController : MonoBehaviour
     {
         if (!isGathering && resourceInTrigger.Count > 0)
         {
-            if (Toolbox.DB.prefs.ResourceAmount[resourceInTrigger[0].resourceVal].value >= Toolbox.GameplayScript.levelsManager.CurLevelData.MaxAmountPlayerCanCarry)
+            if (Toolbox.DB.prefs.ResourceAmount[resourceInTrigger[0].resourceVal].value >= Toolbox.DB.prefs.MaxCarryLimit)
             {
                 TryToEnableDialogue("Can't carry anymore " + Toolbox.DB.prefs.ResourceAmount[resourceInTrigger[0].resourceVal].name);
                 return;
@@ -335,8 +335,6 @@ public class PlayerController : MonoBehaviour
                 Toolbox.HUDListner.SetProgressBarFill(progress);
                 break;
 
-           
-
             default:
                 break;
         }
@@ -356,7 +354,7 @@ public class PlayerController : MonoBehaviour
                 this.transform.parent = playerParent;
                 break;
             case "QuestionShop":
-                other.GetComponentInParent<QuestionShopHandler>().btn.SetActive(false);
+                other.GetComponentInParent<QuestionShopHandler>().SetPopupButton(false);
               
                 break;
             default:
@@ -369,9 +367,9 @@ public class PlayerController : MonoBehaviour
         switch (other.tag)
         {
             case "QuestionShop":
-                other.GetComponentInParent<QuestionShopHandler>().btn.SetActive(true);
-              
+                other.GetComponentInParent<QuestionShopHandler>().TryToOpenPopup();
                 break;
+
             case "TradeShop":
                 other.GetComponentInParent<TradeShopController>().btn.SetActive(true);
                 break;

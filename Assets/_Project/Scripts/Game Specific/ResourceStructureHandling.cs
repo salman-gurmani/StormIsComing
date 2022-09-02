@@ -91,7 +91,7 @@ public class ResourceStructureHandling : MonoBehaviour
 
         if (Toolbox.DB.prefs.ResourceAmount[requirementResourceVal].value > 0) {
 
-            if (Toolbox.DB.prefs.ResourceAmount[productionResourceVal].value >= Toolbox.GameplayScript.levelsManager.CurLevelData.MaxAmountPlayerCanCarry)
+            if (Toolbox.DB.prefs.ResourceAmount[productionResourceVal].value >= Toolbox.DB.prefs.MaxCarryLimit)
             {
                 if (!player)
                     player = Toolbox.GameplayScript.player.transform;
@@ -133,6 +133,15 @@ public class ResourceStructureHandling : MonoBehaviour
     private void TransferResource() {
 
         int resourceAmount = 1;
+
+        if (Toolbox.DB.prefs.ResourceAmount[productionResourceVal].value >= Toolbox.DB.prefs.MaxCarryLimit)
+        {
+            if (!player)
+                player = Toolbox.GameplayScript.player.transform;
+
+            player.GetComponent<PlayerController>().TryToEnableDialogue("Can't carry anymore " + Toolbox.DB.prefs.ResourceAmount[productionResourceVal].name);
+            return;
+        }
 
         if (Toolbox.DB.prefs.ResourceAmount[requirementResourceVal].value > (Toolbox.DB.prefs.ResourceGatherLevel + 1))
         {
