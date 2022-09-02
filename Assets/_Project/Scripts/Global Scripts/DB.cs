@@ -135,6 +135,7 @@ public class Prefs
     [SerializeField] private DateTime lastClaimedRewardTime;
     [SerializeField] private int rewardDay;
     [SerializeField] private int maxCarryLimit = 20;
+    [SerializeField] private int carryLimitUpgradePrice = 400;
 
     public void UnlockAllPlayerObj()
     {
@@ -205,6 +206,7 @@ public class Prefs
     public int ResourceGatherLevel { get => resourceGatherLevel; set => resourceGatherLevel = value; }
     public int PlayerSpeedLevel { get => playerSpeedLevel; set => playerSpeedLevel = value; }
     public int MaxCarryLimit { get => maxCarryLimit; set => maxCarryLimit = value; }
+    public int CarryLimitUpgradePrice { get => carryLimitUpgradePrice; set => carryLimitUpgradePrice = value; }
 }
 
 public class DB : MonoBehaviour {

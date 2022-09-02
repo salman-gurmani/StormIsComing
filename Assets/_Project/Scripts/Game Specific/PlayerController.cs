@@ -35,6 +35,7 @@ public class PlayerController : MonoBehaviour
     int resourceAvailableInLevel = 0;
     private bool isPlayerDialogueActive = false;
     public GameObject DustEffect;
+    private bool movementDisabled = false;
 
     private void Start()
     {
@@ -43,6 +44,11 @@ public class PlayerController : MonoBehaviour
 
         string path = Constants.PrefabFolderPath + Constants.LevelsScriptablesFolderPath + Toolbox.DB.prefs.LastSelectedMode.ToString() + "/" + Toolbox.DB.prefs.LastSelectedLevel.ToString();
         LevelData curLevelData = (LevelData)Resources.Load(path);
+    }
+
+    public void DisablePlayerMovement(bool _isDisabled)
+    {
+        movementDisabled = _isDisabled;
     }
 
    public void EnableCharacter(int index) {
@@ -78,6 +84,8 @@ public class PlayerController : MonoBehaviour
     }
 
     void PlayerMovement() {
+        if (movementDisabled)
+            return;
 
         groundedPlayer = controller.isGrounded;
         if (groundedPlayer && playerVelocity.y < 0)

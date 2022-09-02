@@ -9,16 +9,15 @@ public class PurchaseUpgradePopup : MonoBehaviour
     [SerializeField] private Image buyButtonCoinImage;
     [SerializeField] private Text buyButtonText;
 
-    private int upgradePrice = 200;
-
     public void Start()
     {
         CheckForCoins();
+        buyButtonText.text = Toolbox.DB.prefs.CarryLimitUpgradePrice.ToString();
     }
 
     public void CheckForCoins()
     {
-        if (Toolbox.DB.prefs.GoldCoins < upgradePrice)
+        if (Toolbox.DB.prefs.GoldCoins < Toolbox.DB.prefs.CarryLimitUpgradePrice)
         {
             DisableBuyButton();
         }
@@ -28,6 +27,7 @@ public class PurchaseUpgradePopup : MonoBehaviour
     {
         Toolbox.DB.prefs.MaxCarryLimit += 5;
         Toolbox.HUDListner.UpdateAllResourceText();
+        Toolbox.DB.prefs.CarryLimitUpgradePrice *= 2;
     }
 
     private void DisableBuyButton()
