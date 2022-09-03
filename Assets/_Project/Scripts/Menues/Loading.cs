@@ -27,6 +27,7 @@ public class Loading : MonoBehaviour {
 
     private void Start()
     {
+		
 		if (isTemporaryLoading) {
 
 			DontDestroyOnLoad(this.gameObject);
@@ -34,6 +35,8 @@ public class Loading : MonoBehaviour {
     }
 
     void Update () {
+
+		Time.timeScale = 1f;
 
 		if (loadingBar && Toolbox.GameManager.async != null) {
 		
