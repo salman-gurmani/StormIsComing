@@ -91,7 +91,7 @@ public class TradeShopCanvus : MonoBehaviour
     {
         if (Toolbox.DB.prefs.ResourceAmount[tradeshop.Type2Int].value >= tradeshop.amountExchange)
         {
-            if (Toolbox.DB.prefs.ResourceAmount[tradeshop.Type1Int].value + tradeshop.amountExchange <= tradeshop.amountPlayerCanCarry)
+            if (Toolbox.DB.prefs.ResourceAmount[tradeshop.Type1Int].value + tradeshop.amountExchange <= Toolbox.DB.prefs.MaxCarryLimit)
             {
                 switch (type1)
                 {
@@ -180,7 +180,7 @@ public class TradeShopCanvus : MonoBehaviour
     {
         if (Toolbox.DB.prefs.ResourceAmount[tradeshop.Type1Int].value >= tradeshop.amountExchange)
         {
-            if (Toolbox.DB.prefs.ResourceAmount[tradeshop.Type2Int].value + tradeshop.amountExchange <= tradeshop.amountPlayerCanCarry)
+            if (Toolbox.DB.prefs.ResourceAmount[tradeshop.Type2Int].value + tradeshop.amountExchange <= Toolbox.DB.prefs.MaxCarryLimit)
             {
                 switch (type2)
                 {

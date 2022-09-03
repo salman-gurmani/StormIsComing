@@ -41,7 +41,6 @@ public class QuestionShopHandler : MonoBehaviour
 
     public void OpenShop()
     {
-        onCoolDown = true;
         shopCanvas.gameObject.SetActive(true);
         GenerateNextQuestion();
         isShopOpen = true;
@@ -49,6 +48,7 @@ public class QuestionShopHandler : MonoBehaviour
 
     public void CorrectAnswer()
     {
+        onCoolDown = true;
         Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.questionSuccess);
         questionsAndAnswers.Remove(questionsAndAnswers[currentQnAIndex]);
         questionPanel.SetActive(false);
@@ -66,6 +66,7 @@ public class QuestionShopHandler : MonoBehaviour
 
     public void WrongAnswer()
     {
+        onCoolDown = true;
         Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.questionFailure);
         questionsAndAnswers.Remove(questionsAndAnswers[currentQnAIndex]);
         questionPanel.SetActive(false);

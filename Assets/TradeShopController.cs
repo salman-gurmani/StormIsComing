@@ -14,7 +14,6 @@ public class TradeShopController : MonoBehaviour
     public GameObject pnl;
     public GameObject btn;
     public int amountExchange;
-    public int amountPlayerCanCarry;
 
     void Start()
     {
