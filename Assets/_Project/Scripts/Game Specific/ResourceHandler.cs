@@ -111,7 +111,7 @@ public class ResourceHandler : MonoBehaviour
         }
         else if (Toolbox.DB.prefs.LastSelectedLevel == 4)
         {
-            if (Toolbox.DB.prefs.ResourceAmount[(int)ResourceType.STONE_BLOCK].value == 20)
+            if (Toolbox.DB.prefs.ResourceAmount[(int)ResourceType.WOOD_LOG].value == 20)
                 ConversationManager.Instance.PressSelectedOption();
         }
         else if (Toolbox.DB.prefs.LastSelectedLevel == 6)

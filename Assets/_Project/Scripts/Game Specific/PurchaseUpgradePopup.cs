@@ -25,6 +25,8 @@ public class PurchaseUpgradePopup : MonoBehaviour
 
     public void PurchaseCarryLimit()
     {
+        Toolbox.DB.prefs.GoldCoins -= Toolbox.DB.prefs.CarryLimitUpgradePrice;
+        FindObjectOfType<MainMenuListner>().UpdateTxt();
         Toolbox.DB.prefs.MaxCarryLimit += 5;
         Toolbox.HUDListner.UpdateAllResourceText();
         Toolbox.DB.prefs.CarryLimitUpgradePrice *= 2;

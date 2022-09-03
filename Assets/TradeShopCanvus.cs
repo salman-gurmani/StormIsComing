@@ -168,11 +168,6 @@ public class TradeShopCanvus : MonoBehaviour
                 Debug.Log("Your Pack Is Full");
                 tradeshop.pnl.SetActive(false);
             }
-
-            if (Toolbox.DB.prefs.LastSelectedLevel == 4)
-            {
-                ConversationManager.Instance.PressSelectedOption();
-            }
         }
         else
         {
@@ -254,6 +249,11 @@ public class TradeShopCanvus : MonoBehaviour
                 Toolbox.GameManager.InstantiatePopup_Message("Your Pack Is Full.");
                 Debug.Log("Your Pack Is Full");
                 tradeshop.pnl.SetActive(false);
+            }
+
+            if (Toolbox.DB.prefs.LastSelectedLevel == 4)
+            {
+                ConversationManager.Instance.PressSelectedOption();
             }
         }
         else
