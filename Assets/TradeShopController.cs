@@ -25,4 +25,8 @@ public class TradeShopController : MonoBehaviour
     {
         pnl.SetActive(true);
     }
+    public void DisAblePnl()
+    {
+        pnl.SetActive(false);
+    }
 }

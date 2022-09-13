@@ -32,7 +32,8 @@ public class AdsManager : MonoBehaviour, IUnityAdsInitializationListener, IUnity
     {
         FREECOINS,
         DOUBLEREWARD,
-        SKIPLEVEL
+        SKIPLEVEL,
+        Wizard
     };
     private RewardType rewardType = RewardType.FREECOINS;
     private int coinsToReward = 0;
@@ -244,11 +245,20 @@ public class AdsManager : MonoBehaviour, IUnityAdsInitializationListener, IUnity
                 //  FindObjectOfType<LevelFailListner>().UnlockAndPlayNextLevel();
 
                 break;
+
+            case RewardType.Wizard:
+                FindObjectOfType<WizardShopController>().GiveReward();
+                break;
         }
     }
 
     #endregion
+    public void WizardShopAd(RewardType type)
+    {
+        rewardType = type;
 
+        ShowAd(AdType.REWARDED);
+    }
     #region ADMOB
 
     private void Admob_HandleInitCompleteAction(InitializationStatus initstatus)
