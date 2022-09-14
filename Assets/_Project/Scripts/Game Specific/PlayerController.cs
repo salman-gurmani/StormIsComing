@@ -352,6 +352,19 @@ public class PlayerController : MonoBehaviour
         //Debug.LogError("Trigger = " + other.gameObject.tag.ToString());
         switch (other.tag)
         {
+            case "WizardShop":
+                if (AdsManager.instance.unity_isInitialized || AdsManager.instance.admob_isInitialized)
+                {
+                    other.GetComponentInParent<TradeShopController>().btn.SetActive(false);
+                    FindObjectOfType<WizardShopController>().UpdateIMG();
+                    FindObjectOfType<WizardShopController>().aminShopkepper.SetBool("magic", false);
+                }
+                else
+                { 
+                    FindObjectOfType<WizardShopController>().btnNOAdsVailable.SetActive(false);
+                }
+                break;
+
             case "Resource":
                 RemoveResource(other.GetComponent<ResourceHandler>());
                 break;
@@ -378,6 +391,18 @@ public class PlayerController : MonoBehaviour
                 other.GetComponentInParent<QuestionShopHandler>().TryToOpenPopup();
                 break;
 
+            case "WizardShop":
+                if (AdsManager.instance.unity_isInitialized || AdsManager.instance.admob_isInitialized)
+                {
+                    other.GetComponentInParent<TradeShopController>().btn.SetActive(true);
+                    FindObjectOfType<WizardShopController>().UpdateIMG();
+                    FindObjectOfType<WizardShopController>().aminShopkepper.SetBool("magic", true);
+                }
+                else
+                {
+                    FindObjectOfType<WizardShopController>().btnNOAdsVailable.SetActive(true);
+                }
+                break;
             case "TradeShop":
                 other.GetComponentInParent<TradeShopController>().btn.SetActive(true);
                 break;

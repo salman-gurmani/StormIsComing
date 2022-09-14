@@ -38,8 +38,8 @@ public class AdsManager : MonoBehaviour, IUnityAdsInitializationListener, IUnity
     private RewardType rewardType = RewardType.FREECOINS;
     private int coinsToReward = 0;
 
-    private bool admob_isInitialized = false;
-    private bool unity_isInitialized = false;
+    public bool admob_isInitialized = false;
+    public bool unity_isInitialized = false;
 
     private BannerView admob_bannerView;
     private InterstitialAd admob_interstitialAd;

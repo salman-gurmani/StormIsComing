@@ -59,6 +59,11 @@ public class IntractiveButton : MonoBehaviour
                     QuestionShopHandler riddleShopHandler = FindObjectOfType<QuestionShopHandler>();
                     riddleShopHandler.OpenShop();
                 }
+                if(hit.collider.CompareTag("WizardShopUI"))
+                {
+                    FindObjectOfType<WizardShopController>().ShowADS();
+                   
+                }
             }
         }
     }
