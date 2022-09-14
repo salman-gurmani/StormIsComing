@@ -22,6 +22,11 @@ public class TutorialTargetController : MonoBehaviour
         currentTarget = targetsInThisLevel[currentTargetIndex];
     }
 
+    public TutorialTarget GetCurrentTarget()
+    {
+        return currentTarget;
+    }
+
     public void SetTutorialCursor(bool _isActive)
     {
         tutorialArrow.SetActive(_isActive);
