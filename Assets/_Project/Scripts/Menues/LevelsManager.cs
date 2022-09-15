@@ -33,9 +33,22 @@ public class LevelsManager : MonoBehaviour
             //Arooj
             Toolbox.DB.prefs.LastSelectedLevel = 0;
         }
+
         if(Toolbox.DB.prefs.LastSelectedLevel == 2)
         {
             Toolbox.GameManager.InstantiatePopup_Message2("collect the coins and treasure chest boxes.");
+        }
+        else if(Toolbox.DB.prefs.LastSelectedLevel == 6)
+        {
+            Toolbox.GameManager.InstantiatPopup_Cement_Tutorial();
+        }
+        else if(Toolbox.DB.prefs.LastSelectedLevel == 7)
+        {
+            Toolbox.GameManager.InstantiatPopup_Brick_Tutorial();
+        }
+        else if(Toolbox.DB.prefs.LastSelectedLevel == 12)
+        {
+            Toolbox.GameManager.InstantiatPopup_Iron_Tutorial();
         }
 
         if (testMode)

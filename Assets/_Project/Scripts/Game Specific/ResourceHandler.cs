@@ -114,39 +114,6 @@ public class ResourceHandler : MonoBehaviour
             if (Toolbox.DB.prefs.ResourceAmount[(int)ResourceType.WOOD_LOG].value == 20)
                 ConversationManager.Instance.PressSelectedOption();
         }
-        else if (Toolbox.DB.prefs.LastSelectedLevel == 6)
-        {
-            if (type == ResourceType.CEMENT_BLOCK)
-            {
-                if (!Toolbox.GameplayScript.hasCollectedCement)
-                {
-                    Toolbox.GameplayScript.hasCollectedCement = true;
-                    Toolbox.GameManager.InstantiatPopup_Cement_Tutorial();
-                }
-            }
-        }
-        else if (Toolbox.DB.prefs.LastSelectedLevel == 7)
-        {
-            if (type == ResourceType.MUD_BLOCK)
-            {
-                if (!Toolbox.GameplayScript.hasCollectedMud)
-                {
-                    Toolbox.GameplayScript.hasCollectedMud = true;
-                    Toolbox.GameManager.InstantiatPopup_Brick_Tutorial();
-                }
-            }
-        }
-        else if (Toolbox.DB.prefs.LastSelectedLevel == 12)
-        {
-            if (type == ResourceType.IRON_BLOCK)
-            {
-                if (!Toolbox.GameplayScript.hasCollectedIron)
-                {
-                    Toolbox.GameplayScript.hasCollectedIron = true;
-                    Toolbox.GameManager.InstantiatPopup_Iron_Tutorial();
-                }
-            }
-        }
 
         Toolbox.HUDListner.UpdateResourceTxt(resourceVal);
         curResouceQuantity--;
