@@ -113,6 +113,21 @@ public class ResourceHandler : MonoBehaviour
         {
             if (Toolbox.DB.prefs.ResourceAmount[(int)ResourceType.WOOD_LOG].value == 20)
                 ConversationManager.Instance.PressSelectedOption();
+        } 
+        else if (Toolbox.DB.prefs.LastSelectedLevel == 6)
+        {
+            if (Toolbox.DB.prefs.ResourceAmount[(int)ResourceType.CEMENT_BLOCK].value == 10)
+                ConversationManager.Instance.PressSelectedOption();
+        }
+        else if (Toolbox.DB.prefs.LastSelectedLevel == 7)
+        {
+            if (Toolbox.DB.prefs.ResourceAmount[(int)ResourceType.MUD_BLOCK].value == 10)
+                ConversationManager.Instance.PressSelectedOption();
+        } 
+        else if (Toolbox.DB.prefs.LastSelectedLevel == 12)
+        {
+            if (Toolbox.DB.prefs.ResourceAmount[(int)ResourceType.IRON_BLOCK].value == 10)
+                ConversationManager.Instance.PressSelectedOption();
         }
 
         Toolbox.HUDListner.UpdateResourceTxt(resourceVal);
