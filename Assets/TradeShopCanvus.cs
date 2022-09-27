@@ -85,7 +85,46 @@ public class TradeShopCanvus : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Toolbox.DB.prefs.ResourceAmount[0].value >= 5)
+        {
+            tradeshop.amountExchange = Toolbox.DB.prefs.ResourceAmount[0].value;
+            text1.text = tradeshop.amountExchange.ToString();
+            text2.text = tradeshop.amountExchange.ToString();
+            text3.text = tradeshop.amountExchange.ToString();
+            text4.text = tradeshop.amountExchange.ToString();
+        }
+        else if (Toolbox.DB.prefs.ResourceAmount[1].value >= 5)
+        {
+            tradeshop.amountExchange = Toolbox.DB.prefs.ResourceAmount[1].value;
+            text1.text = tradeshop.amountExchange.ToString();
+            text2.text = tradeshop.amountExchange.ToString();
+            text3.text = tradeshop.amountExchange.ToString();
+            text4.text = tradeshop.amountExchange.ToString();
+        }
+        else if (Toolbox.DB.prefs.ResourceAmount[2].value >= 5)
+        {
+            tradeshop.amountExchange = Toolbox.DB.prefs.ResourceAmount[2].value;
+            text1.text = tradeshop.amountExchange.ToString();
+            text2.text = tradeshop.amountExchange.ToString();
+            text3.text = tradeshop.amountExchange.ToString();
+            text4.text = tradeshop.amountExchange.ToString();
+        }
+        else if (Toolbox.DB.prefs.ResourceAmount[4].value >= 5)
+        {
+            tradeshop.amountExchange = Toolbox.DB.prefs.ResourceAmount[4].value;
+            text1.text = tradeshop.amountExchange.ToString();
+            text2.text = tradeshop.amountExchange.ToString();
+            text3.text = tradeshop.amountExchange.ToString();
+            text4.text = tradeshop.amountExchange.ToString();
+        }
+        else if (Toolbox.DB.prefs.ResourceAmount[6].value >= 5)
+        {
+            tradeshop.amountExchange = Toolbox.DB.prefs.ResourceAmount[6].value;
+            text1.text = tradeshop.amountExchange.ToString();
+            text2.text = tradeshop.amountExchange.ToString();
+            text3.text = tradeshop.amountExchange.ToString();
+            text4.text = tradeshop.amountExchange.ToString();
+        }
     }
     public void Tranfer2()
     {

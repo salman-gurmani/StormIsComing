@@ -404,7 +404,11 @@ public class PlayerController : MonoBehaviour
                 }
                 break;
             case "TradeShop":
-                other.GetComponentInParent<TradeShopController>().btn.SetActive(true);
+                if (Toolbox.DB.prefs.ResourceAmount[0].value >= 5 || Toolbox.DB.prefs.ResourceAmount[1].value >= 5 || Toolbox.DB.prefs.ResourceAmount[2].value >= 5 || Toolbox.DB.prefs.ResourceAmount[4].value >= 5 || Toolbox.DB.prefs.ResourceAmount[6].value >= 5)
+                {
+                    other.GetComponentInParent<TradeShopController>().btn.SetActive(true);
+                } 
+                //other.GetComponentInParent<TradeShopController>().btn.SetActive(true);
                 break;
         }
         //Debug.LogError("Trigger = " + other.gameObject.tag.ToString());
