@@ -183,6 +183,27 @@ public class ResourceStructureHandling : MonoBehaviour
                 ConversationManager.Instance.PressSelectedOption();
             }
         }
+        else if (Toolbox.DB.prefs.LastSelectedLevel == 6)
+        {
+            if (Toolbox.DB.prefs.ResourceAmount[(int)ResourceType.CEMENT_SACK].value == 10)
+            {
+                ConversationManager.Instance.PressSelectedOption();
+            }
+        }
+        else if (Toolbox.DB.prefs.LastSelectedLevel == 7)
+        {
+            if (Toolbox.DB.prefs.ResourceAmount[(int)ResourceType.MUD_BRICK].value == 10)
+            {
+                ConversationManager.Instance.PressSelectedOption();
+            }
+        }
+        else if (Toolbox.DB.prefs.LastSelectedLevel == 12)
+        {
+            if (Toolbox.DB.prefs.ResourceAmount[(int)ResourceType.STEEL_ROD].value == 10)
+            {
+                ConversationManager.Instance.PressSelectedOption();
+            }
+        }
     }
 
     public void InitEffect()

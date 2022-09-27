@@ -27,6 +27,9 @@ public class HUDListner : MonoBehaviour {
     public NPCConversation levelTwoTutorialConversation;
     public NPCConversation levelThreeTutorialConversation;
     public NPCConversation levelFourTutorialConversation;
+    public NPCConversation levelSixTutorialConversation;
+    public NPCConversation levelSevenTutorialConversation;
+    public NPCConversation levelTwelveTutorialConversation;
     public bool startTime { get; set; }
     public float tempTime { get; private set; }
 
@@ -74,6 +77,15 @@ public class HUDListner : MonoBehaviour {
                 break;
             case 4:
                 ConversationManager.Instance.StartConversation(levelFourTutorialConversation);
+                break;
+            case 6:
+                ConversationManager.Instance.StartConversation(levelSixTutorialConversation);
+                break;
+            case 7:
+                ConversationManager.Instance.StartConversation(levelSevenTutorialConversation);
+                break;
+            case 12:
+                ConversationManager.Instance.StartConversation(levelTwelveTutorialConversation);
                 break;
         }
 
