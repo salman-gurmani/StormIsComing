@@ -122,6 +122,7 @@ public class StructureHandler : MonoBehaviour
         {
             if (partsBuild == 3)
             {
+                Toolbox.HUDListner.ConversationPanel.SetActive(true);
                 ConversationManager.Instance.PressSelectedOption();
                 ConversationManager.Instance.OptionsPanel.gameObject.SetActive(true);
             }

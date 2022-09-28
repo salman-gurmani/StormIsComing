@@ -181,6 +181,8 @@ public class ResourceStructureHandling : MonoBehaviour
             if (Toolbox.DB.prefs.ResourceAmount[(int)ResourceType.WOOD_PLANK].value == 10)
             {
                 ConversationManager.Instance.PressSelectedOption();
+                Toolbox.HUDListner.ConversationPanel.SetActive(true);
+
             }
         }
         else if (Toolbox.DB.prefs.LastSelectedLevel == 6)
@@ -188,6 +190,8 @@ public class ResourceStructureHandling : MonoBehaviour
             if (Toolbox.DB.prefs.ResourceAmount[(int)ResourceType.CEMENT_SACK].value == 10)
             {
                 ConversationManager.Instance.PressSelectedOption();
+                Toolbox.HUDListner.ConversationPanel.SetActive(true);
+
             }
         }
         else if (Toolbox.DB.prefs.LastSelectedLevel == 7)
@@ -195,6 +199,7 @@ public class ResourceStructureHandling : MonoBehaviour
             if (Toolbox.DB.prefs.ResourceAmount[(int)ResourceType.MUD_BRICK].value == 10)
             {
                 ConversationManager.Instance.PressSelectedOption();
+                Toolbox.HUDListner.ConversationPanel.SetActive(true);
             }
         }
         else if (Toolbox.DB.prefs.LastSelectedLevel == 12)
@@ -202,6 +207,7 @@ public class ResourceStructureHandling : MonoBehaviour
             if (Toolbox.DB.prefs.ResourceAmount[(int)ResourceType.STEEL_ROD].value == 10)
             {
                 ConversationManager.Instance.PressSelectedOption();
+                Toolbox.HUDListner.ConversationPanel.SetActive(true);
             }
         }
     }

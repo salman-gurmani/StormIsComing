@@ -158,6 +158,9 @@ namespace DialogueEditor
         {
             SetState(eState.TransitioningDialogueOff);
 
+            Debug.Log("Conversaton ended");
+            Toolbox.HUDListner.BGPanel.SetActive(false);
+
             if (OnConversationEnded != null)
                 OnConversationEnded.Invoke();
         }
@@ -356,6 +359,11 @@ namespace DialogueEditor
                 // Finished?
                 if (m_scrollIndex >= m_targetScrollTextCount)
                 {
+                    Debug.Log("Sentence complete");
+                    if (Toolbox.HUDListner.IsEndNode == false)
+                    {
+                        Toolbox.HUDListner.CloseBtn.SetActive(true);
+                    }
                     SetState(eState.TransitioningOptionsOn);
                 }
             }

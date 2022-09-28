@@ -61,6 +61,7 @@ public class QuestionShopHandler : MonoBehaviour
         if (Toolbox.DB.prefs.LastSelectedLevel == 3)
         {
             ConversationManager.Instance.PressSelectedOption();
+            Toolbox.HUDListner.ConversationPanel.SetActive(true);
         }
     }
 
@@ -78,6 +79,7 @@ public class QuestionShopHandler : MonoBehaviour
         if (Toolbox.DB.prefs.LastSelectedLevel == 3)
         {
             ConversationManager.Instance.PressSelectedOption();
+            Toolbox.HUDListner.ConversationPanel.SetActive(true);
         }
     }
 

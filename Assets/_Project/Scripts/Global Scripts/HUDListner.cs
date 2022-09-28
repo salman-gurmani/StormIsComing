@@ -30,6 +30,10 @@ public class HUDListner : MonoBehaviour {
     public NPCConversation levelSixTutorialConversation;
     public NPCConversation levelSevenTutorialConversation;
     public NPCConversation levelTwelveTutorialConversation;
+    public GameObject ConversationPanel;
+    public GameObject CloseBtn;
+    public bool IsEndNode;
+    public GameObject BGPanel;
     public bool startTime { get; set; }
     public float tempTime { get; private set; }
 
@@ -95,6 +99,21 @@ public class HUDListner : MonoBehaviour {
         }
     }
 
+    public void HideConversationPanel()
+    {
+        ConversationPanel.SetActive(false);
+        CloseBtn.SetActive(false);
+    }
+
+    public void ShowCloseBtn()
+    {
+        //Invoke("CloseButtonFunc", 2f);
+    }
+
+    //public void CloseButtonFunc()
+    //{
+    //    CloseBtn.SetActive(true);
+    //}
     public void SetIsGamePaused(bool _isGamePaused)
     {
         isGamePaused = _isGamePaused;
@@ -103,6 +122,7 @@ public class HUDListner : MonoBehaviour {
     public void SetTutorialDialogueOptions(bool _isActive)
     {
         ConversationManager.Instance.OptionsPanel.gameObject.SetActive(_isActive);
+        IsEndNode = _isActive;
     }
 
     public void DisableHUD() 

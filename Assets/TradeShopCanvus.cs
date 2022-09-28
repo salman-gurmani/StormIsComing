@@ -293,6 +293,7 @@ public class TradeShopCanvus : MonoBehaviour
             if (Toolbox.DB.prefs.LastSelectedLevel == 4)
             {
                 ConversationManager.Instance.PressSelectedOption();
+                Toolbox.HUDListner.ConversationPanel.SetActive(true);
             }
         }
         else

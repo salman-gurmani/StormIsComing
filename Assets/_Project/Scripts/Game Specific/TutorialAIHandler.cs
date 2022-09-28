@@ -21,6 +21,7 @@ public class TutorialAIHandler : MonoBehaviour
     {
         currentTarget = player.GetComponent<TutorialTargetController>().GetCurrentTarget();
         navAgent.SetDestination(currentTarget.transform.position);
+
     }
 
     private void Update()
