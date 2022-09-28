@@ -1,6 +1,7 @@
 ﻿using System;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
 using DialogueEditor;
 using TMPro;
 
@@ -10,15 +11,17 @@ public class HUDListner : MonoBehaviour {
     public Text goldTxt;
     public GameObject uiParent;
     public GameObject Bar;
+    public GameObject MiniMap;
     public GameObject CoinsCollect;
     public GameObject RewardedAd;
+    public GameObject GlowImage;
     public RectTransform resourcesParent;
     private int resourceIndex = 0;
     public Image progressbar;
     [HideInInspector]public float progress;
     [Tooltip("Should be in the order of resources")]
     public Text[] resourcesTxts;
-    public GameObject MiniMap;
+    public GameObject MiniMapScaleUp; 
     public RectTransform[] resourcePosition;
     //public int maxAmountPlayerCanCarry = 3;
     float reportTime = 20;
@@ -41,7 +44,7 @@ public class HUDListner : MonoBehaviour {
 
     private bool isGamePaused = false;
     private LevelData curLevelData;
-
+    private Vector3 Pos, Scale ;
 
     private void OnEnable()
     {
@@ -254,6 +257,34 @@ public class HUDListner : MonoBehaviour {
     public void Press_ControlChange()
     {
         Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.Select);
+    }
+    public void Press_MiniMap()
+    {
+        GlowImage.SetActive(false);
+        Pos = MiniMapScaleUp.transform.position;
+        Scale = MiniMapScaleUp.transform.localScale;
+        Scale.x = 7;
+        Scale.y = 7;
+        Pos.x -= -400;
+        Pos.y -= 500;
+        MiniMapScaleUp.transform.position = Pos;
+        MiniMapScaleUp.transform.localScale = Scale;
+        MiniMapScaleUp.GetComponent<Button>().interactable = false;
+        StartCoroutine(TimeDelay());
+    } 
+    IEnumerator TimeDelay()
+    {
+        yield return new WaitForSeconds(7f);
+        Pos = MiniMapScaleUp.transform.position;
+        Scale = MiniMapScaleUp.transform.localScale;
+        Scale.x = 1.7265f;
+        Scale.y = 1.7265f;
+        Pos.x += -400;
+        Pos.y += 500;
+        MiniMapScaleUp.GetComponent<Button>().interactable = true;
+        MiniMapScaleUp.transform.position = Pos;
+        MiniMapScaleUp.transform.localScale = Scale;
+        GlowImage.SetActive(true);
     }
 
     public void Press_Settings()
