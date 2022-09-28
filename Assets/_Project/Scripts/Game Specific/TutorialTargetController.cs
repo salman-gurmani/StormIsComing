@@ -5,14 +5,16 @@ using UnityEngine;
 
 public class TutorialTargetController : MonoBehaviour
 {
+    public static TutorialTargetController Instance;
     [SerializeField] GameObject tutorialArrow;
 
     private TutorialTarget[] targetsInThisLevel;
     private TutorialTarget currentTarget;
-    private int currentTargetIndex = 0;
+    public int currentTargetIndex = 0;
 
     private void Start()
     {
+        Instance = this;
         targetsInThisLevel = FindObjectsOfType<TutorialTarget>();
         if (targetsInThisLevel.Length == 0)
             return;

@@ -3,6 +3,7 @@ using DialogueEditor;
 
 public class ResourceHandler : MonoBehaviour
 {
+    public static ResourceHandler Instance;
     public ResourceType type;
     private BoxCollider collider; 
     [Tooltip("This many times user will get resource from this Object")]
@@ -31,9 +32,11 @@ public class ResourceHandler : MonoBehaviour
     private bool distanceCheck = false;
     private bool isRespawning = false;
     private Transform player;
+    public bool IsTutorialDone;
 
     private void Start()
     {
+       Instance = this;
         player = Toolbox.GameplayScript.player.transform;
         resourceVal = (int)type;
         collider = this.GetComponent<BoxCollider>();
@@ -101,10 +104,14 @@ public class ResourceHandler : MonoBehaviour
 
         if (Toolbox.DB.prefs.LastSelectedLevel == 0)
         {
+            
             if (Toolbox.DB.prefs.ResourceAmount[(int)ResourceType.WOOD_LOG].value == 10)
             {
+                
+                TutorialTargetController.Instance.currentTargetIndex = 6;
                 ConversationManager.Instance.PressSelectedOption();
                 Toolbox.HUDListner.ConversationPanel.SetActive(true);
+                
             }
         }
         else if (Toolbox.DB.prefs.LastSelectedLevel == 1)

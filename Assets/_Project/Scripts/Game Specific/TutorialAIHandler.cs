@@ -5,6 +5,7 @@ using UnityEngine.AI;
 
 public class TutorialAIHandler : MonoBehaviour
 {
+    public static TutorialAIHandler Instance;
     [SerializeField] private GameObject player;
     [SerializeField] private NavMeshAgent navAgent;
     [SerializeField] private Animator animator;
@@ -12,8 +13,10 @@ public class TutorialAIHandler : MonoBehaviour
     private TutorialTarget currentTarget;
     private bool canCutWood = true;
 
+
     private void Start()
     {
+        Instance = this;
         animator.fireEvents = false;
     }
 
