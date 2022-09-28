@@ -12,6 +12,8 @@ public class TutorialAIHandler : MonoBehaviour
 
     private TutorialTarget currentTarget;
     private bool canCutWood = true;
+    private bool canCollectMud = true;
+    private bool canCollectIron = true;
 
 
     private void Start()
@@ -37,6 +39,22 @@ public class TutorialAIHandler : MonoBehaviour
         {
             animator.SetBool("Run", false);
         }
+
+        CheckDistance();
+    }
+
+
+    public void CheckDistance()
+    {
+        float dist = Vector3.Distance(player.transform.position, transform.position);
+        if (dist > 2.5f)
+        {
+            navAgent.speed = 0;
+        }
+        else
+        {
+            navAgent.speed = 2f;
+        }
     }
 
     private void OnTriggerStay(Collider other)
@@ -47,6 +65,14 @@ public class TutorialAIHandler : MonoBehaviour
             Debug.Log("Here2");
             CutWood();
         }
+        //else if (other.CompareTag("MudCollectingTarget"))
+        //{
+        //    CollectMud();
+        //}
+        //else if (other.CompareTag("IronCollectingTarget"))
+        //{
+        //    CollectIron();
+        //}
     }
 
     private void CutWood()
@@ -61,5 +87,32 @@ public class TutorialAIHandler : MonoBehaviour
         animator.SetTrigger("Attack");
         yield return new WaitForSeconds(0.5f);
         canCutWood = true;
+    }
+
+    private void CollectMud()
+    {
+        if (canCollectMud)
+            StartCoroutine(nameof(CallMudCollectingAnimation));
+    }
+
+    private IEnumerator CallMudCollectingAnimation()
+    {
+        canCollectMud = false;
+        animator.SetTrigger("Attack 2");
+        yield return new WaitForSeconds(0.5f);
+        canCollectMud = true;
+    }
+    private void CollectIron()
+    {
+        if (canCollectIron)
+            StartCoroutine(nameof(CallIronCollectingAnimation));
+    }
+
+    private IEnumerator CallIronCollectingAnimation()
+    {
+        canCollectIron = false;
+        animator.SetTrigger("Attack 3");
+        yield return new WaitForSeconds(0.5f);
+        canCollectIron = true;
     }
 }
