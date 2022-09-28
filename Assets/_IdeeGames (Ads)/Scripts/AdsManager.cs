@@ -223,19 +223,19 @@ public class AdsManager : MonoBehaviour, IUnityAdsInitializationListener, IUnity
 
     void RewardPlayer()
     {
-        Toolbox.DB.prefs.GoldCoins += coinsToReward;
+        
 
         switch (rewardType)
         {
 
             case RewardType.FREECOINS:
-
+                FindObjectOfType<HUDListner>().tempTime = 40;
                 //Toolbox.GameManager.InstantiatePopup_Message(coinsToReward + " coins awarded.");
 
                 break;
 
             case RewardType.DOUBLEREWARD:
-
+                Toolbox.DB.prefs.GoldCoins += coinsToReward;
                 //Toolbox.GameManager.InstantiatePopup_Message(coinsToReward + "x2 coins awarded.");
 
                 break;

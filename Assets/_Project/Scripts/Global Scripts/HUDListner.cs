@@ -11,6 +11,7 @@ public class HUDListner : MonoBehaviour {
     public GameObject uiParent;
     public GameObject Bar;
     public GameObject CoinsCollect;
+    public GameObject RewardedAd;
     public RectTransform resourcesParent;
     private int resourceIndex = 0;
     public Image progressbar;
@@ -34,8 +35,9 @@ public class HUDListner : MonoBehaviour {
     public GameObject CloseBtn;
     public bool IsEndNode;
     public GameObject BGPanel;
+    bool RewardedVideoAd = true;
     public bool startTime { get; set; }
-    public float tempTime { get; private set; }
+    public float tempTime { get; set; }
 
     private bool isGamePaused = false;
     private LevelData curLevelData;
@@ -197,6 +199,11 @@ public class HUDListner : MonoBehaviour {
                 }
                 
             }
+            if (tempTime <= 20 && RewardedVideoAd == true)
+            {
+                RewardedAd.SetActive(true);
+
+            }
         }
     }
 
@@ -228,6 +235,16 @@ public class HUDListner : MonoBehaviour {
 
         Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.Select);
         Toolbox.GameManager.Instantiate_PauseMenu();
+    }
+    public void Press_RewardedVideo()
+    {
+
+        Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.buttonPressYes);
+
+        //--
+        AdsManager.instance.SetNShowRewardedAd(AdsManager.RewardType.FREECOINS, 20);
+        RewardedVideoAd = false;
+        RewardedAd.SetActive(false);
     }
 
     public void Press_Camera()
