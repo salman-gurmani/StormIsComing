@@ -33,7 +33,8 @@ public class AdsManager : MonoBehaviour, IUnityAdsInitializationListener, IUnity
         FREECOINS,
         DOUBLEREWARD,
         SKIPLEVEL,
-        Wizard
+        Wizard,
+        SECONDCHANCE
     };
     private RewardType rewardType = RewardType.FREECOINS;
     private int coinsToReward = 0;
@@ -248,6 +249,11 @@ public class AdsManager : MonoBehaviour, IUnityAdsInitializationListener, IUnity
 
             case RewardType.Wizard:
                 FindObjectOfType<WizardShopController>().GiveReward();
+                break;
+            case RewardType.SECONDCHANCE:
+                FindObjectOfType<QuestionShopHandler>().resultPanel.SetActive(false);
+                //FindObjectOfType<QuestionShopHandler>().OpenShop();
+                FindObjectOfType<QuestionShopHandler>().IsFirstTry = false;
                 break;
         }
     }

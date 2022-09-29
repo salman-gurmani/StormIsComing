@@ -244,7 +244,13 @@ public class GameManager : MonoBehaviour {
     {
         Instantiate((GameObject)Resources.Load(Constants.menuFolderPath + "Daily Reward"));
     }
-	 
+	public void Instantiate_SecondChanceMenu()
+    {
+		Debug.Log("In GameManager");
+        Instantiate((GameObject)Resources.Load(Constants.menuFolderPath + "Popup-SecondChance"));
+    }
+	
+	
 
     public void Instantiate_QuitMenu()
     {

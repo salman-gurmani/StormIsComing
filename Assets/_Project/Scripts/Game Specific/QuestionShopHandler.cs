@@ -16,18 +16,21 @@ public class QuestionShopHandler : MonoBehaviour
     [SerializeField] private TextMeshProUGUI questionText;
     [SerializeField] private Canvas shopCanvas;
     [SerializeField] private GameObject questionPanel;
-    [SerializeField] private GameObject resultPanel;
+    [SerializeField] public GameObject resultPanel;
     [SerializeField] private GameObject[] answerButtons;
     [SerializeField] GameObject popupButton;
 
     private int currentQnAIndex = 0;
     private bool isShopOpen = false;
     private bool onCoolDown = false;
+    public bool IsFirstTry;
 
     private void Awake()
     {
         shopCanvas.worldCamera = Camera.main;
+        IsFirstTry=true;
     }
+    
 
     public void TryToOpenPopup()
     {
@@ -57,6 +60,7 @@ public class QuestionShopHandler : MonoBehaviour
         GiveRewards();
         isShopOpen = false;
         SetPopupButton(false);
+        IsFirstTry = true;
 
         if (Toolbox.DB.prefs.LastSelectedLevel == 3)
         {
@@ -67,20 +71,35 @@ public class QuestionShopHandler : MonoBehaviour
 
     public void WrongAnswer()
     {
-        onCoolDown = true;
-        Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.questionFailure);
-        questionsAndAnswers.Remove(questionsAndAnswers[currentQnAIndex]);
-        questionPanel.SetActive(false);
-        resultPanel.SetActive(true);
-        resultPanel.GetComponentInChildren<TextMeshProUGUI>().text = "Wrong!\nCome back in 30 seconds and try again!";
-        isShopOpen = false;
-        SetPopupButton(false);
 
-        if (Toolbox.DB.prefs.LastSelectedLevel == 3)
+        if (IsFirstTry)
         {
-            ConversationManager.Instance.PressSelectedOption();
-            Toolbox.HUDListner.ConversationPanel.SetActive(true);
+            Debug.Log("In Wrong Answer If");
+            Toolbox.GameManager.Instantiate_SecondChanceMenu();
         }
+        else
+        {
+            onCoolDown = true;
+            Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.questionFailure);
+            questionsAndAnswers.Remove(questionsAndAnswers[currentQnAIndex]);
+            questionPanel.SetActive(false);
+            resultPanel.SetActive(true);
+            resultPanel.GetComponentInChildren<TextMeshProUGUI>().text = "Wrong!\nCome back in 30 seconds and try again!";
+            isShopOpen = false;
+            SetPopupButton(false);
+            IsFirstTry = true;
+            if (Toolbox.DB.prefs.LastSelectedLevel == 3)
+            {
+                ConversationManager.Instance.PressSelectedOption();
+                Toolbox.HUDListner.ConversationPanel.SetActive(true);
+            }
+        }
+
+        //if (Toolbox.DB.prefs.LastSelectedLevel == 3)
+        //{
+        //    ConversationManager.Instance.PressSelectedOption();
+        //    Toolbox.HUDListner.ConversationPanel.SetActive(true);
+        //}
     }
 
     private void Update()

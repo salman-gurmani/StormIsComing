@@ -47,6 +47,23 @@ public class PopupMsgListner : MonoBehaviour
         Destroy(this.gameObject);
     }
 
+    public void OnPress_SecondChance()
+    {
+        AdsManager.instance.SetNShowRewardedAd(AdsManager.RewardType.SECONDCHANCE, 20);
+        Time.timeScale = 1f;
+        Destroy(this.gameObject);
+    }
+    public void OnPress_CloseSC()
+    {
+        Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.buttonPressYes);
+        Destroy(this.gameObject);
+        Time.timeScale = 1f;
+        AudioListener.pause = false;
+
+        FindObjectOfType<QuestionShopHandler>().IsFirstTry=false;
+        FindObjectOfType<QuestionShopHandler>().WrongAnswer();
+    }
+
     public void PauseTime()
     {
         Time.timeScale = 0f;
