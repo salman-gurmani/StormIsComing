@@ -45,10 +45,12 @@ public class HUDListner : MonoBehaviour {
     private bool isGamePaused = false;
     private LevelData curLevelData;
     private Vector3 Pos, Scale ;
+    public Text FillPercentage;
 
     private void OnEnable()
     {
-        UpdateTxt(); 
+        UpdateTxt();
+        FillPercentage.text = ("0 %");
     }
 
     void Awake() {
@@ -298,6 +300,7 @@ public class HUDListner : MonoBehaviour {
         //Debug.LogError("Fill = " + _val);
         progress = _val;
         progressbar.fillAmount = _val;
+        FillPercentage.text = Mathf.RoundToInt((progressbar.fillAmount *100)).ToString() + "%"; 
     }
 
 }

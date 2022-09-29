@@ -47,7 +47,7 @@ public class TutorialAIHandler : MonoBehaviour
     public void CheckDistance()
     {
         float dist = Vector3.Distance(player.transform.position, transform.position);
-        if (dist > 2.5f)
+        if (dist > 3.5f)
         {
             navAgent.speed = 0;
         }
