@@ -267,7 +267,7 @@ public class HUDListner : MonoBehaviour {
         Scale = MiniMapScaleUp.transform.localScale;
         Scale.x = 7;
         Scale.y = 7;
-        Pos.x -= -400;
+        Pos.x -= -270;
         Pos.y -= 500;
         MiniMapScaleUp.transform.position = Pos;
         MiniMapScaleUp.transform.localScale = Scale;
@@ -281,7 +281,7 @@ public class HUDListner : MonoBehaviour {
         Scale = MiniMapScaleUp.transform.localScale;
         Scale.x = 1.7265f;
         Scale.y = 1.7265f;
-        Pos.x += -400;
+        Pos.x += -270;
         Pos.y += 500;
         MiniMapScaleUp.GetComponent<Button>().interactable = true;
         MiniMapScaleUp.transform.position = Pos;
