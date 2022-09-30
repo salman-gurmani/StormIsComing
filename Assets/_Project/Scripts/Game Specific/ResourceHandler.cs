@@ -124,7 +124,7 @@ public class ResourceHandler : MonoBehaviour
         }
         else if (Toolbox.DB.prefs.LastSelectedLevel == 4)
         {
-            if (Toolbox.DB.prefs.ResourceAmount[(int)ResourceType.WOOD_LOG].value == 20)
+            if (Toolbox.DB.prefs.ResourceAmount[(int)ResourceType.WOOD_LOG].value == 5)
             {
                 ConversationManager.Instance.PressSelectedOption();
                 Toolbox.HUDListner.ConversationPanel.SetActive(true);
