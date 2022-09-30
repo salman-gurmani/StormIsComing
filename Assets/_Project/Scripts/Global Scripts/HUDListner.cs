@@ -98,6 +98,10 @@ public class HUDListner : MonoBehaviour {
             case 12:
                 ConversationManager.Instance.StartConversation(levelTwelveTutorialConversation);
                 break;
+            default:
+                BGPanel.SetActive(false);
+                break;
+
         }
 
         if (Toolbox.GameplayScript.levelsManager.CurLevelData.isBonus)
