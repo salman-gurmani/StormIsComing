@@ -140,6 +140,6 @@ public class DailyReward : MonoBehaviour
     public void OnPress_Close()
     {
         Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.buttonPressNo);
-        //Destroy(this.gameObject, 3f);
+        Destroy(this.gameObject);
     }
 }
