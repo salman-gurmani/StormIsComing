@@ -15,6 +15,8 @@ public class HUDListner : MonoBehaviour {
     public GameObject CoinsCollect;
     public GameObject RewardedAd;
     public GameObject GlowImage;
+    public GameObject miniMap;
+    public GameObject closeBtn;
     public RectTransform resourcesParent;
     private int resourceIndex = 0;
     public Image progressbar;
@@ -205,6 +207,9 @@ public class HUDListner : MonoBehaviour {
                 else
                 {
                     Toolbox.GameplayScript.OnStormHandling();
+                    MiniMap.SetActive(false);
+                    GlowImage.SetActive(false);
+                    closeBtn.SetActive(false);
                 }
                 
             }
@@ -267,6 +272,7 @@ public class HUDListner : MonoBehaviour {
     public void Press_MiniMap()
     {
         GlowImage.SetActive(false);
+        closeBtn.SetActive(true);
         Pos = MiniMapScaleUp.transform.position;
         Scale = MiniMapScaleUp.transform.localScale;
         Scale.x = 7;
@@ -276,9 +282,23 @@ public class HUDListner : MonoBehaviour {
         MiniMapScaleUp.transform.position = Pos;
         MiniMapScaleUp.transform.localScale = Scale;
         MiniMapScaleUp.GetComponent<Button>().interactable = false;
-        StartCoroutine(TimeDelay());
+        //StartCoroutine(TimeDelay());
     } 
-    IEnumerator TimeDelay()
+    public void Press_CloseBtn()
+    {
+        closeBtn.SetActive(false);
+        Pos = MiniMapScaleUp.transform.position;
+        Scale = MiniMapScaleUp.transform.localScale;
+        Scale.x = 1.7265f;
+        Scale.y = 1.7265f;
+        Pos.x += -270;
+        Pos.y += 500;
+        MiniMapScaleUp.GetComponent<Button>().interactable = true;
+        MiniMapScaleUp.transform.position = Pos;
+        MiniMapScaleUp.transform.localScale = Scale;
+        GlowImage.SetActive(true);
+    }
+    /*IEnumerator TimeDelay()
     {
         yield return new WaitForSeconds(7f);
         Pos = MiniMapScaleUp.transform.position;
@@ -291,7 +311,7 @@ public class HUDListner : MonoBehaviour {
         MiniMapScaleUp.transform.position = Pos;
         MiniMapScaleUp.transform.localScale = Scale;
         GlowImage.SetActive(true);
-    }
+    }*/
 
     public void Press_Settings()
     {

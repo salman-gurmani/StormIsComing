@@ -230,7 +230,7 @@ public class AdsManager : MonoBehaviour, IUnityAdsInitializationListener, IUnity
         {
 
             case RewardType.FREECOINS:
-                FindObjectOfType<HUDListner>().tempTime = 40;
+                FindObjectOfType<HUDListner>().tempTime = 70;
                 //Toolbox.GameManager.InstantiatePopup_Message(coinsToReward + " coins awarded.");
 
                 break;
