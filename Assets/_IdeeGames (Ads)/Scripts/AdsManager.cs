@@ -253,6 +253,7 @@ public class AdsManager : MonoBehaviour, IUnityAdsInitializationListener, IUnity
                 break;
             case RewardType.SECONDCHANCE:
                 FindObjectOfType<QuestionShopHandler>().resultPanel.SetActive(false);
+                
                 //FindObjectOfType<QuestionShopHandler>().OpenShop();
                 FindObjectOfType<QuestionShopHandler>().IsFirstTry = false;
                 break;

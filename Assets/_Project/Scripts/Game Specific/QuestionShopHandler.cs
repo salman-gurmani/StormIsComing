@@ -75,6 +75,8 @@ public class QuestionShopHandler : MonoBehaviour
         if (IsFirstTry)
         {
             Debug.Log("In Wrong Answer If");
+            //Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.questionFailure);
+
             Toolbox.GameManager.Instantiate_SecondChanceMenu();
         }
         else

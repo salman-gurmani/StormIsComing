@@ -52,6 +52,8 @@ public class PopupMsgListner : MonoBehaviour
         AdsManager.instance.SetNShowRewardedAd(AdsManager.RewardType.SECONDCHANCE, 20);
         Time.timeScale = 1f;
         Destroy(this.gameObject);
+        AudioListener.pause = false;
+
     }
     public void OnPress_CloseSC()
     {
