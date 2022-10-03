@@ -216,7 +216,7 @@ public class HUDListner : MonoBehaviour {
                 }
                 
             }
-            if (tempTime <= 20 && RewardedVideoAd == true)
+            if (tempTime <= 30 && RewardedVideoAd == true)
             {
                 RewardedAd.SetActive(true);
                 TimeObject.GetComponent<Image>().sprite = redTimer;
@@ -262,7 +262,7 @@ public class HUDListner : MonoBehaviour {
         AdsManager.instance.SetNShowRewardedAd(AdsManager.RewardType.FREECOINS, 20);
         RewardedVideoAd = false;
         RewardedAd.SetActive(false);
-        TimeObject.GetComponent<Image>().sprite = defaultTimer;
+        //TimeObject.GetComponent<Image>().sprite = defaultTimer;
 
     }
 
