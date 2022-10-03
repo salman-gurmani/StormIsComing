@@ -15,8 +15,11 @@ public class HUDListner : MonoBehaviour {
     public GameObject CoinsCollect;
     public GameObject RewardedAd;
     public GameObject GlowImage;
+    public GameObject TimeObject;
     public GameObject miniMap;
     public GameObject closeBtn;
+    public Sprite redTimer;
+    public Sprite defaultTimer;
     public RectTransform resourcesParent;
     private int resourceIndex = 0;
     public Image progressbar;
@@ -216,7 +219,7 @@ public class HUDListner : MonoBehaviour {
             if (tempTime <= 20 && RewardedVideoAd == true)
             {
                 RewardedAd.SetActive(true);
-
+                TimeObject.GetComponent<Image>().sprite = redTimer;
             }
         }
     }
@@ -259,6 +262,8 @@ public class HUDListner : MonoBehaviour {
         AdsManager.instance.SetNShowRewardedAd(AdsManager.RewardType.FREECOINS, 20);
         RewardedVideoAd = false;
         RewardedAd.SetActive(false);
+        TimeObject.GetComponent<Image>().sprite = defaultTimer;
+
     }
 
     public void Press_Camera()
