@@ -161,6 +161,9 @@ public class StructureHandler : MonoBehaviour
             if (liftObj)
                 liftObj.SetActive(false);
             Toolbox.GameplayScript.OnStormHandling();
+            FindObjectOfType<HUDListner>().MiniMap.SetActive(false);
+            FindObjectOfType<HUDListner>().GlowImage.SetActive(false);
+            FindObjectOfType<HUDListner>().closeBtn.SetActive(false);
         }
     }
 
