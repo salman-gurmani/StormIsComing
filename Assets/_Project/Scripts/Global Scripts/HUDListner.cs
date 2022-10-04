@@ -209,10 +209,11 @@ public class HUDListner : MonoBehaviour {
                 
                 else
                 {
-                    Toolbox.GameplayScript.OnStormHandling();
                     MiniMap.SetActive(false);
                     GlowImage.SetActive(false);
                     closeBtn.SetActive(false);
+                    Toolbox.GameplayScript.OnStormHandling();
+                    
                 }
                 
             }
