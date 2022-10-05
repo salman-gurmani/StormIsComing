@@ -23,12 +23,25 @@ public class ShopListner : MonoBehaviour
 
     public void OnPress_FreeCoins()
     {
-        Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.buttonPressNo);
+        Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.buttonPressYes);
 
         //--
-        AdsManager.instance.SetNShowRewardedAd(AdsManager.RewardType.FREECOINS, 100);
+        AdsManager.instance.SetNShowRewardedAd(AdsManager.RewardType.DOUBLEREWARD, 100);
     }
+    public void OnPress_FreeCoins2()
+    {
+        Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.buttonPressYes);
 
+        //--
+        AdsManager.instance.SetNShowRewardedAd(AdsManager.RewardType.DOUBLEREWARD, 200);
+    }
+    public void OnPress_FreeCoins3()
+    {
+        Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.buttonPressYes);
+
+        //--
+        AdsManager.instance.SetNShowRewardedAd(AdsManager.RewardType.DOUBLEREWARD, 300);
+    }
     public void PurchaseProduct(int _val)
     {
 

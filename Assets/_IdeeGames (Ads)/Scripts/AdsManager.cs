@@ -239,6 +239,8 @@ public class AdsManager : MonoBehaviour, IUnityAdsInitializationListener, IUnity
 
             case RewardType.DOUBLEREWARD:
                 Toolbox.DB.prefs.GoldCoins += coinsToReward;
+                FindObjectOfType<ShopListner>().goldTxt.text = Toolbox.DB.prefs.GoldCoins.ToString();
+                FindObjectOfType<MainMenuListner>().UpdateTxt();
                 //Toolbox.GameManager.InstantiatePopup_Message(coinsToReward + "x2 coins awarded.");
 
                 break;
