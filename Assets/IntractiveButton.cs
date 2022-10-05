@@ -64,6 +64,10 @@ public class IntractiveButton : MonoBehaviour
                     FindObjectOfType<WizardShopController>().ShowADS();
                    
                 }
+                if(hit.collider.CompareTag("EnergyBtn"))
+                {
+                    Toolbox.GameManager.Instantiate_Store();
+                }
             }
         }
     }

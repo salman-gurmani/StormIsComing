@@ -112,7 +112,7 @@ public class MainMenuListner : MonoBehaviour {
 	public void OnPress_StoreCars()
 	{
 		Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.buttonPressYes);
-		Toolbox.GameManager.Instantiate_StoreCars();
+		//Toolbox.GameManager.Instantiate_StoreCars();
 	}
 	//public void OnPress_DailReward()
 	//   {
