@@ -7,16 +7,16 @@ public class PlayerController : MonoBehaviour
     int coinAndChest = 0;
     float progress;
     public CharacterController controller; 
-    private Animator anim;
+    public Animator anim;
     private LevelData curLevelData;
     public GameObject[] models;
     private int index = 0;
     private bool run = false;
     private Vector3 playerVelocity;
     private bool groundedPlayer;
-    [SerializeField] private float playerSpeed = 2.0f;
+    [SerializeField] public float playerSpeed = 2.0f;
     private float gravityValue = -9.81f;
-    bool drunk = false; 
+    public bool drunk = false; 
     public GameObject hitEffect; 
     public GameObject hitEffect2; 
     public GameObject [] resourcesObjs;
@@ -365,6 +365,11 @@ public class PlayerController : MonoBehaviour
                 }
                 break;
 
+            case "MarketPlace":
+
+                other.GetComponentInParent<TradeShopController>().btn.SetActive(false);
+
+                break;
             case "Resource":
                 RemoveResource(other.GetComponent<ResourceHandler>());
                 break;
@@ -402,6 +407,11 @@ public class PlayerController : MonoBehaviour
                 {
                     FindObjectOfType<WizardShopController>().btnNOAdsVailable.SetActive(true);
                 }
+                break;
+            case "MarketPlace":
+
+                other.GetComponentInParent<TradeShopController>().btn.SetActive(true);
+
                 break;
             case "TradeShop":
                 if (Toolbox.DB.prefs.ResourceAmount[0].value >= 5 || Toolbox.DB.prefs.ResourceAmount[1].value >= 5 || Toolbox.DB.prefs.ResourceAmount[2].value >= 5 || Toolbox.DB.prefs.ResourceAmount[4].value >= 5 || Toolbox.DB.prefs.ResourceAmount[6].value >= 5)

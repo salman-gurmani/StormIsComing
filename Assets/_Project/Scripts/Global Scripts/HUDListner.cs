@@ -7,6 +7,8 @@ using TMPro;
 
 public class HUDListner : MonoBehaviour {
 
+    public int intervalSpeedLess;
+    public float temp;
     public Text timeTxt;
     public Text goldTxt;
     public GameObject uiParent;
@@ -181,11 +183,25 @@ public class HUDListner : MonoBehaviour {
             int roundedSec = Mathf.RoundToInt(tempTime);
             int min = roundedSec / 60;
             int seconds = roundedSec - (min * 60);
+            
 
             timeTxt.text = String.Format("{0:D2} : {1:D2}", min, seconds);
-
+            temp += Time.deltaTime;
             //Debug.LogError("roundedSec = " + roundedSec);
-
+            if(temp >= intervalSpeedLess)
+            {
+                temp = 0f;
+                if(Toolbox.GameplayScript.player.playerSpeed > 1)
+                {
+                    Toolbox.GameplayScript.player.playerSpeed--;
+                }
+                if(Toolbox.GameplayScript.player.playerSpeed == 1)
+                {
+                    Toolbox.GameplayScript.player.drunk = true;
+                  //Toolbox.GameplayScript.player.anim.SetBool("Run", false);
+                  //Toolbox.GameplayScript.player.anim.SetBool("Walk", true);
+                }
+            }
             if (reportTime <= 0) {
                 if (Toolbox.DB.prefs.LastSelectedLevel == 2 || Toolbox.DB.prefs.LastSelectedLevel == 5 || Toolbox.DB.prefs.LastSelectedLevel == 8 || Toolbox.DB.prefs.LastSelectedLevel == 11 || Toolbox.DB.prefs.LastSelectedLevel == 14)
                 {
