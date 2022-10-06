@@ -97,6 +97,10 @@ public class ResourceHandler : MonoBehaviour
 
         Toolbox.DB.prefs.ResourceAmount[resourceVal].value += (Toolbox.DB.prefs.ResourceGatherLevel + 1);
         Toolbox.DB.prefs.CarryLimit = Toolbox.DB.prefs.CarryLimit - 1;
+        if (type == ResourceType.WOOD_LOG || type == ResourceType.STONE_BLOCK || type == ResourceType.MUD_BLOCK || type == ResourceType.IRON_BLOCK || type == ResourceType.CEMENT_BLOCK)
+        {
+            Toolbox.DB.prefs.GoldCoins += 10;
+        }
         //Toolbox.DB.prefs.MaxCarryLimit = Toolbox.DB.prefs.CarryLimit;
         if (Toolbox.DB.prefs.CarryLimit > 0)
         {
