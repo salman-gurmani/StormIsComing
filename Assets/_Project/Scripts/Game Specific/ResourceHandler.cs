@@ -96,10 +96,15 @@ public class ResourceHandler : MonoBehaviour
             return;
 
         Toolbox.DB.prefs.ResourceAmount[resourceVal].value += (Toolbox.DB.prefs.ResourceGatherLevel + 1);
-
-        for (int i = 0; i < (Toolbox.DB.prefs.ResourceGatherLevel + 1); i++)
+        Toolbox.DB.prefs.CarryLimit = Toolbox.DB.prefs.CarryLimit - 1;
+        //Toolbox.DB.prefs.MaxCarryLimit = Toolbox.DB.prefs.CarryLimit;
+        if (Toolbox.DB.prefs.CarryLimit > 0)
         {
-            Toolbox.GameplayScript.player.AddResourceOnBack(type);
+            for (int i = 0; i < (Toolbox.DB.prefs.ResourceGatherLevel + 1); i++)
+            {
+                Toolbox.GameplayScript.player.AddResourceOnBack(type);
+            }
+
         }
 
         if (Toolbox.DB.prefs.LastSelectedLevel == 0)
