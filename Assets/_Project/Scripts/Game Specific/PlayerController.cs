@@ -445,6 +445,17 @@ public class PlayerController : MonoBehaviour
                 other.GetComponentInParent<QuestionShopHandler>().SetPopupButton(false);
               
                 break;
+
+            case "ResourceStorage":
+
+                other.GetComponentInParent<TradeShopController>().btn.SetActive(false);
+                break;
+            case "MissionBase":
+
+                other.GetComponentInParent<TradeShopController>().btn.SetActive(false);
+
+                break;
+                
             default:
                 break;
         }
@@ -457,7 +468,16 @@ public class PlayerController : MonoBehaviour
             case "QuestionShop":
                 other.GetComponentInParent<QuestionShopHandler>().TryToOpenPopup();
                 break;
+            case "ResourceStorage":
 
+                other.GetComponentInParent<TradeShopController>().btn.SetActive(true);
+
+                break;
+            case "MissionBase":
+
+                other.GetComponentInParent<TradeShopController>().btn.SetActive(true);
+
+                break;
             case "WizardShop":
                 if (AdsManager.instance.unity_isInitialized || AdsManager.instance.admob_isInitialized)
                 {
