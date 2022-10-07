@@ -71,10 +71,12 @@ public class GameMode
 [System.Serializable]
 public class Prefs
 {
+    [SerializeField] private bool jobAccepted = false;
     [SerializeField] private bool[] skinsUnlocked;
     [SerializeField] private bool[] charactersUnlocked;
     [SerializeField] private bool[] carsUnlocked;
     [SerializeField] private ResourceAmount[] resourceAmount;
+    [SerializeField] private ResourceAmount[] resourceAmountInStorage;
     [SerializeField] private bool gameAudio = true;
     [SerializeField] private bool gameMusic = true;
     [SerializeField] private bool hasShadows = true;
@@ -164,7 +166,7 @@ public class Prefs
     {
         foreach (var item in resourceAmount)
         {
-            item.value = 0;
+           // item.value = 0;
         }
     }
 
@@ -211,6 +213,8 @@ public class Prefs
     public int MaxCarryLimit { get => maxCarryLimit; set => maxCarryLimit = value; }
     public int CarryLimit { get => carryLimit; set => carryLimit = value; }
     public int CarryLimitUpgradePrice { get => carryLimitUpgradePrice; set => carryLimitUpgradePrice = value; }
+    public ResourceAmount[] ResourceAmountInStorage { get => resourceAmountInStorage; set => resourceAmountInStorage = value; }
+    public bool JobAccepted { get => jobAccepted; set => jobAccepted = value; }
 }
 
 public class DB : MonoBehaviour {
