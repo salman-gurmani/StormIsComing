@@ -21,11 +21,11 @@ public class StorageController : MonoBehaviour
     {
         string path = Constants.PrefabFolderPath + Constants.LevelsScriptablesFolderPath + Toolbox.DB.prefs.LastSelectedMode.ToString() + "/" + Toolbox.DB.prefs.LastSelectedLevel.ToString();
         LevelData curLevelData = (LevelData)Resources.Load(path);
-        Debug.Log(curLevelData);
+        //Debug.Log(curLevelData);
         for (int i = 0; i < curLevelData.hasResources.Length; i++)
         {
             //  checkToTransfer[i] = ((int)curLevelData.hasResources[i]);
-            Debug.Log(((int)curLevelData.hasResources[i]));
+         //   Debug.Log(((int)curLevelData.hasResources[i]));
            
 
                 checkToTransferBool[(int)curLevelData.hasResources[i]] = true;
@@ -48,16 +48,16 @@ public class StorageController : MonoBehaviour
     }
     public void UpdateStorage()
     {
-        Debug.Log(btn);
+       
         for (int i = 0; i < 9; i++)
         {
-            Debug.Log(resources[i]);
+           
             resources[i] = Toolbox.DB.prefs.ResourceAmount[i].value;
             resourcesTexts[i].text = resources[i].ToString();
         }
         for (int i = 0; i < 9; i++)
         {
-            Debug.Log(resourcesInStorage[i]);
+           
             resourcesInStorage[i] = Toolbox.DB.prefs.ResourceAmountInStorage[i].value;
             resourcesTextsInStorage[i].text = resourcesInStorage[i].ToString();
         }
@@ -73,6 +73,11 @@ public class StorageController : MonoBehaviour
             resourcesInStorage[i] = Toolbox.DB.prefs.ResourceAmountInStorage[i].value;
             resourcesTextsInStorage[i].text = resourcesInStorage[i].ToString();
             Toolbox.GameManager.InstantiatePopup_MessageBar("Resources Stored In Storage");
+            
+        }
+        if (Toolbox.GameplayScript)
+        {
+            FindObjectOfType<PlayerController>().UpdateResourceMinus();
         }
     }
     public void RetriveResources()
@@ -89,8 +94,13 @@ public class StorageController : MonoBehaviour
                 resourcesInStorage[i] = Toolbox.DB.prefs.ResourceAmountInStorage[i].value;
                 resourcesTextsInStorage[i].text = resourcesInStorage[i].ToString();
                 Toolbox.GameManager.InstantiatePopup_MessageBar("Resources Retrived In Inventory");
+               
             }
         }
+         if (Toolbox.GameplayScript)
+                {
+                    FindObjectOfType<PlayerController>().UpdateResource();
+                }
     }
     public void CheckExtraItem()
     {

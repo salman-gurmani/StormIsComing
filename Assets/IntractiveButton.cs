@@ -51,12 +51,12 @@ public class IntractiveButton : MonoBehaviour
             {
                 if (hit.collider.CompareTag("TradeShopUI"))
                 {
-                    print(hit.collider.name);
+                   
                     pnl.SetActive(true);
                 }
                 if (hit.collider.CompareTag("MissionBase"))
                 {
-                    print(hit.collider.name);
+                   
                     pnl.SetActive(true);
                 }
                 if (hit.collider.CompareTag("Travel"))
@@ -68,10 +68,11 @@ public class IntractiveButton : MonoBehaviour
                 }
                 if (hit.collider.CompareTag("ResourceStorage"))
                 {
-                    print(hit.collider.name);
+                   
                     if (Toolbox.DB.prefs.JobAccepted)
                     {
-                        transform.parent.GetComponent<StorageController>().UpdateStorage();
+                        FindObjectOfType<StorageController>().UpdateStorage();
+                      //  Debug.Log(FindObjectOfType<StorageController>());
                         pnl.SetActive(true);
                     }
                     else

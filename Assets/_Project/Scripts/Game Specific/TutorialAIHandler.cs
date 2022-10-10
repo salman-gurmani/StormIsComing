@@ -59,10 +59,10 @@ public class TutorialAIHandler : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        Debug.Log("Here1");
+      
         if (other.CompareTag("WoodCuttingTarget"))
         {
-            Debug.Log("Here2");
+            
             CutWood();
         }
         //else if (other.CompareTag("MudCollectingTarget"))

@@ -70,20 +70,73 @@ public class PlayerController : MonoBehaviour
     }
     public void UpdateResource()
     {
+
         foreach (ResourceType resourceType in (ResourceType[])Enum.GetValues(typeof(ResourceType)))
-        {
+        {          
             Toolbox.HUDListner.UpdateResourceTxt((int)resourceType);
-            for (int i = 0; i < Toolbox.DB.prefs.ResourceAmount[(int)resourceType].value; i++)
-            {
-                Toolbox.GameplayScript.player.AddResourceOnBack(resourceType);
-            }
-           
+            
+        }
+        for (int i = 0; i < Toolbox.DB.prefs.ResourceAmount[(int)ResourceType.CEMENT_BLOCK].value; i++)
+        {
+            AddResourceOnBack(ResourceType.CEMENT_BLOCK);
+        }
+        for (int i = 0; i < Toolbox.DB.prefs.ResourceAmount[(int)ResourceType.CEMENT_SACK].value; i++)
+        {
+            AddResourceOnBack(ResourceType.CEMENT_SACK);
+        }
+        for (int i = 0; i < Toolbox.DB.prefs.ResourceAmount[(int)ResourceType.IRON_BLOCK].value; i++)
+        {
+            AddResourceOnBack(ResourceType.IRON_BLOCK);
+        }
+        for (int i = 0; i < Toolbox.DB.prefs.ResourceAmount[(int)ResourceType.MUD_BLOCK].value; i++)
+        {
+            AddResourceOnBack(ResourceType.MUD_BLOCK);
+        }
+        for (int i = 0; i < Toolbox.DB.prefs.ResourceAmount[(int)ResourceType.MUD_BRICK].value; i++)
+        {
+            AddResourceOnBack(ResourceType.MUD_BRICK);
+        }
+        for (int i = 0; i < Toolbox.DB.prefs.ResourceAmount[(int)ResourceType.STEEL_ROD].value; i++)
+        {
+            AddResourceOnBack(ResourceType.STEEL_ROD);
+        }
+        for (int i = 0; i < Toolbox.DB.prefs.ResourceAmount[(int)ResourceType.STONE_BLOCK].value; i++)
+        {
+            AddResourceOnBack(ResourceType.STONE_BLOCK);
+        }
+        for (int i = 0; i < Toolbox.DB.prefs.ResourceAmount[(int)ResourceType.WOOD_LOG].value; i++)
+        {
+            AddResourceOnBack(ResourceType.WOOD_LOG);
+        }
+
+        for (int i = 0; i < Toolbox.DB.prefs.ResourceAmount[(int)ResourceType.WOOD_PLANK].value; i++)
+        {
+            AddResourceOnBack(ResourceType.WOOD_PLANK);
         }
        
-       
+        
+    }
+    public void UpdateResourceMinus()
+    {
+        foreach (ResourceType resourceType in (ResourceType[])Enum.GetValues(typeof(ResourceType)))
+        {
+           
+            Toolbox.HUDListner.UpdateResourceTxt((int)resourceType);
+          
 
-
-
+        }
+        for (int i = resourcesHandler[0].index; i > -1; i--)
+        {
+            RemoveResourceOnBack(ResourceType.CEMENT_BLOCK);
+            RemoveResourceOnBack(ResourceType.CEMENT_SACK);
+            RemoveResourceOnBack(ResourceType.IRON_BLOCK);
+            RemoveResourceOnBack(ResourceType.MUD_BLOCK);
+            RemoveResourceOnBack(ResourceType.MUD_BRICK);
+            RemoveResourceOnBack(ResourceType.STEEL_ROD);
+            RemoveResourceOnBack(ResourceType.STONE_BLOCK);
+            RemoveResourceOnBack(ResourceType.WOOD_LOG);
+            RemoveResourceOnBack(ResourceType.WOOD_PLANK);
+        }
     }
     void Update()
     {
