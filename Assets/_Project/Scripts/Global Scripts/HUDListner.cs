@@ -10,6 +10,7 @@ public class HUDListner : MonoBehaviour {
     public int intervalSpeedLess;
     public float temp;
     public Text timeTxt;
+    public Text lvlTxt;
     public Text goldTxt;
     public GameObject uiParent;
     public GameObject Bar;
@@ -79,6 +80,10 @@ public class HUDListner : MonoBehaviour {
 
     private void Start()
     {
+        Toolbox.GameplayScript.StartGame();
+        string path = Constants.PrefabFolderPath + Constants.LevelsScriptablesFolderPath + Toolbox.DB.prefs.LastSelectedMode.ToString() + "/" + Toolbox.DB.prefs.LastSelectedLevel.ToString();
+        LevelData curLevelData = (LevelData)Resources.Load(path);
+        lvlTxt.text = curLevelData.LevelTxt;
         switch (Toolbox.DB.prefs.LastSelectedLevel)
         {
             case 0:
@@ -241,6 +246,7 @@ public class HUDListner : MonoBehaviour {
         }
     }
 
+
     public void EnableResource(int _index) {
 
         
@@ -270,6 +276,11 @@ public class HUDListner : MonoBehaviour {
         Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.Select);
         Toolbox.GameManager.Instantiate_PauseMenu();
     }
+    public void OnPress_Store()
+    {
+        Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.Select);
+        Toolbox.GameManager.Instantiate_Shop();
+    }
     public void Press_RewardedVideo()
     {
 
@@ -290,6 +301,11 @@ public class HUDListner : MonoBehaviour {
     public void Press_ControlChange()
     {
         Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.Select);
+    }
+    public void OnPress_Settings()
+    {
+        Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.Select);
+        Toolbox.GameManager.Instantiate_SettingsMenu();
     }
     public void Press_MiniMap()
     {
