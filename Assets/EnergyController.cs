@@ -24,6 +24,7 @@ public class EnergyController : MonoBehaviour
             Toolbox.GameplayScript.player.playerSpeed = 4f;
             Toolbox.GameManager.InstantiatePopup_Message("You have bought Energy Drink");
             Toolbox.DB.prefs.GoldCoins = Toolbox.DB.prefs.GoldCoins - 10;
+            FindObjectOfType<HUDListner>().UpdateTxt();
         }
         else
         {
@@ -40,5 +41,12 @@ public class EnergyController : MonoBehaviour
         Toolbox.GameplayScript.player.drunk = false;
         Toolbox.GameplayScript.player.playerSpeed = 4f;
         Toolbox.GameManager.InstantiatePopup_Message("You have bought Energy Drink");
+    }
+    public void OnPress_CloseSC()
+    {
+        Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.buttonPressYes);
+        Destroy(this.gameObject);
+        Time.timeScale = 1f;
+        //AudioListener.pause = false; 
     }
 }

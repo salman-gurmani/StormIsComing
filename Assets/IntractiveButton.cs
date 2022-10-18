@@ -92,7 +92,7 @@ public class IntractiveButton : MonoBehaviour
                 }
                 if(hit.collider.CompareTag("EnergyBtn"))
                 {
-                    Toolbox.GameManager.Instantiate_Store();
+                    Toolbox.GameManager.Instantiate_Energy();
                 }
             }
         }
