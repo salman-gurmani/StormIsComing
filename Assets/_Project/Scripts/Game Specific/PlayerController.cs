@@ -449,6 +449,9 @@ public class PlayerController : MonoBehaviour
             case "Lift":
                 this.transform.parent = other.transform;
                 break;
+            case "Boom":
+                FindObjectOfType<TravelBooth>().Boom.GetComponent<Animator>().enabled = true;
+                break;
 
             case "Coin":
                 other.gameObject.GetComponent<MapMarker>().isActive = false;

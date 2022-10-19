@@ -61,9 +61,10 @@ public class IntractiveButton : MonoBehaviour
                 }
                 if (hit.collider.CompareTag("Travel"))
                 {
-                    FindObjectOfType<StorageController>().travelpnl.SetActive(true);
+                    //FindObjectOfType<StorageController>().travelpnl.SetActive(true);
+                    //Toolbox.GameManager.Instantiate_Loading();
                     //Toolbox.GameManager.Instantiate_Blackout();
-                    Toolbox.GameManager.LoadScene(2, false, 3);
+                    Toolbox.GameManager.LoadScene(2, true, 3);
 
                 }
                 if (hit.collider.CompareTag("ResourceStorage"))
