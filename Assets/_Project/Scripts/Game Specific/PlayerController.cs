@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
     float temp;
     float energy;
     public SpriteRenderer staminaIMG;
-    public float stamina = 100f;
+    public float stamina = 1000f;
     int coinAndChest = 0;
     float progress;
     public CharacterController controller; 
@@ -176,7 +176,7 @@ public class PlayerController : MonoBehaviour
         {
             stamina = stamina - variableCutting;
             gameObject.transform.forward = move;
-            temp = 100 - stamina;
+            temp = 10 - stamina;
             if (energy <= 360)
             {
                 energy = (360 * temp) / 100;
