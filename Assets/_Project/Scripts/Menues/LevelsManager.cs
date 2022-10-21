@@ -17,8 +17,8 @@ public class LevelsManager : MonoBehaviour
 
     private void Start()
     {
-        Toolbox.DB.prefs.CarryLimit = 15;
-        Toolbox.DB.prefs.MaxCarryLimit = Toolbox.DB.prefs.CarryLimit;
+        Toolbox.DB.prefs.CarryLimit = Toolbox.DB.prefs.MaxCarryLimit;
+        //Toolbox.DB.prefs.MaxCarryLimit = Toolbox.DB.prefs.CarryLimit;
         //if (testMode)
             StartLevelHandling();
         

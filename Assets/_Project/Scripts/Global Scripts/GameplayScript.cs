@@ -55,6 +55,8 @@ public class GameplayScript : MonoBehaviour {
     {
         levelCompleted = false;
         Toolbox.DB.prefs.ResetResources();
+
+        
        
         //--
         AdsManager.instance.RequestAd(AdsManager.AdType.INTERSTITIAL);

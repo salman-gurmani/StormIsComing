@@ -140,6 +140,10 @@ public class Prefs
     [SerializeField] private int maxCarryLimit = 20;
     [SerializeField] private int carryLimit = 20;
     [SerializeField] private int carryLimitUpgradePrice = 400;
+    [SerializeField] public float Stamina;
+    [SerializeField] public float Speed;
+    [SerializeField] public int Capacity;
+    [SerializeField] public int Strength;
 
     public void UnlockAllPlayerObj()
     {
