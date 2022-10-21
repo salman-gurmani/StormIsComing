@@ -64,7 +64,11 @@ public class IntractiveButton : MonoBehaviour
                     //FindObjectOfType<StorageController>().travelpnl.SetActive(true);
                     //Toolbox.GameManager.Instantiate_Loading();
                     //Toolbox.GameManager.Instantiate_Blackout();
-                    Toolbox.GameManager.LoadScene(2, true, 3);
+                    if (Toolbox.DB.prefs.JobAccepted)
+                        Toolbox.GameManager.LoadScene(2, true, 3);
+                    else
+                        Toolbox.GameManager.InstantiatePopup_Message("You have not selected any mission yet Kindly go to mission base Select mission and then come back to travel");
+                    
 
                 }
                 if (hit.collider.CompareTag("ResourceStorage"))

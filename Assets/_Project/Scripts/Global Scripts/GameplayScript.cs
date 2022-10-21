@@ -33,7 +33,7 @@ public class GameplayScript : MonoBehaviour {
     [Header("Colors")]
     public Color[] randomColors;
 
-
+    public bool a = false;
     [Header("Truck")]
     public bool truckON;
 
