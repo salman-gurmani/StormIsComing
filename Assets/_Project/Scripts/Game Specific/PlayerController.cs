@@ -342,7 +342,7 @@ public class PlayerController : MonoBehaviour
     {
         if (!isGathering && resourceInTrigger.Count > 0)
         {
-            if (Toolbox.DB.prefs.CarryLimit == 0)
+            if (Toolbox.DB.prefs.CarryLimit >= Toolbox.DB.prefs.MaxCarryLimit)
             { 
                   TryToEnableDialogue("Can't carry anymore " + Toolbox.DB.prefs.ResourceAmount[resourceInTrigger[0].resourceVal].name);
                   return; 

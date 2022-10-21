@@ -12,6 +12,7 @@ public class HUDListner : MonoBehaviour {
     public Text timeTxt;
     public Text lvlTxt;
     public Text goldTxt;
+    public Text playerCapacity;
     public GameObject uiParent;
     public GameObject Bar;
     public GameObject MiniMap;
@@ -260,7 +261,8 @@ public class HUDListner : MonoBehaviour {
 
     public void UpdateResourceTxt(int _index) {
 
-        resourcesTxts[_index].text = Toolbox.DB.prefs.ResourceAmount[_index].value.ToString() + "/" + Toolbox.DB.prefs.MaxCarryLimit;
+        resourcesTxts[_index].text = Toolbox.DB.prefs.ResourceAmount[_index].value.ToString();
+        playerCapacity.text = Toolbox.DB.prefs.CarryLimit + "/" + Toolbox.DB.prefs.MaxCarryLimit;
     }
 
     public void UpdateAllResourceText()

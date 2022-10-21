@@ -17,7 +17,7 @@ public class LevelsManager : MonoBehaviour
 
     private void Start()
     {
-        Toolbox.DB.prefs.CarryLimit = Toolbox.DB.prefs.MaxCarryLimit;
+        //Toolbox.DB.prefs.CarryLimit = Toolbox.DB.prefs.MaxCarryLimit;
         //Toolbox.DB.prefs.MaxCarryLimit = Toolbox.DB.prefs.CarryLimit;
         //if (testMode)
             StartLevelHandling();
@@ -26,11 +26,11 @@ public class LevelsManager : MonoBehaviour
 
     public void StartLevelHandling()
     { 
-        if (Toolbox.DB.prefs.LastSelectedLevel > 14)
+        /*if (Toolbox.DB.prefs.LastSelectedLevel > 14)
         {
             //Arooj
             Toolbox.DB.prefs.LastSelectedLevel = 0;
-        }
+        }*/
 
         if(Toolbox.DB.prefs.LastSelectedLevel == 2)
         {
