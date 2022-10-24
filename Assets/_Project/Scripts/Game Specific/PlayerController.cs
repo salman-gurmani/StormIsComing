@@ -695,4 +695,9 @@ public class PlayerController : MonoBehaviour
         Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.Select);
         Toolbox.GameManager.Instantiate_StoreSkin();
     }
+    public void OnPress_StoreCart()
+    {
+        Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.Select);
+        Toolbox.GameManager.Instantiate_StoreCart();
+    }
 }
