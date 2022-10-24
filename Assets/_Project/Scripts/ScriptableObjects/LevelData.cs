@@ -32,4 +32,5 @@ public class LevelData : ScriptableObject
 
     [Space(20)]
     private EnvProfile envProfile;
+    public string levelInfo;
 }
