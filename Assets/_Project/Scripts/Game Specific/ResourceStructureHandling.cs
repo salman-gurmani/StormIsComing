@@ -109,10 +109,12 @@ public class ResourceStructureHandling : MonoBehaviour
             {
                 CementMachine();
                 Toolbox.DB.prefs.GoldCoins -= 50;
+                FindObjectOfType<HUDListner>().UpdateTxt();
             }
-            if (productionType == ResourceType.WOOD_PLANK || productionType == ResourceType.MUD_BRICK)
+            if (productionType == ResourceType.WOOD_PLANK || productionType == ResourceType.MUD_BRICK || productionType == ResourceType.STEEL_ROD)
             {
                 Toolbox.DB.prefs.GoldCoins -= 50;
+                FindObjectOfType<HUDListner>().UpdateTxt();
             }
 
 

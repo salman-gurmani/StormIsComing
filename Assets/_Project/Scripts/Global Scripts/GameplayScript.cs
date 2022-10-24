@@ -114,9 +114,8 @@ public class GameplayScript : MonoBehaviour {
         Toolbox.DB.prefs.GoldCoins += cost;
         Toolbox.GameManager.Instantiate_RewardAnim();
 
-        if (FindObjectOfType<MainMenuListner>())
-        {
-            FindObjectOfType<MainMenuListner>().UpdateTxt();
+        if (FindObjectOfType<HUDListner>())
+        { 
             FindObjectOfType<HUDListner>().UpdateTxt();
         }
     }
