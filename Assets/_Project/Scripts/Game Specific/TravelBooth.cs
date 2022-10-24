@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class TravelBooth : MonoBehaviour
 {
-    public GameObject Boom;
+    //public GameObject Boom;
     // Start is called before the first frame update
     void Start()
     {
-        Boom.GetComponent<Animator>().enabled = false;
+        //Boom.GetComponent<Animator>().enabled = false;
     }
 
     // Update is called once per frame
