@@ -51,16 +51,17 @@ public class IntractiveButton : MonoBehaviour
             {
                 if (hit.collider.CompareTag("TradeShopUI"))
                 {
-                   
+                    Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.Select);
                     pnl.SetActive(true);
                 }
                 if (hit.collider.CompareTag("MissionBaseBtn"))
                 {
-                   
+                    Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.Select);
                     pnl.SetActive(true);
                 }
                 if (hit.collider.CompareTag("Travel"))
                 {
+                    Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.Select);
                     //FindObjectOfType<StorageController>().travelpnl.SetActive(true);
                     //Toolbox.GameManager.Instantiate_Loading();
                     //Toolbox.GameManager.Instantiate_Blackout();
@@ -71,9 +72,21 @@ public class IntractiveButton : MonoBehaviour
                     
 
                 }
+                if (hit.collider.CompareTag("Cart"))
+                {
+                    Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.Select);
+                    pnl.SetActive(true);
+                    //Toolbox.GameManager.Instantiate_StoreCart();
+                }
+                if (hit.collider.CompareTag("Shop"))
+                {
+                    Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.Select);
+                    pnl.SetActive(true);
+                    //Toolbox.GameManager.Instantiate_StoreSkin();
+                }
                 if (hit.collider.CompareTag("ResourceStorageBtn"))
                 {
-                   
+                    Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.Select);
                     if (Toolbox.DB.prefs.JobAccepted)
                     {
                         FindObjectOfType<StorageController>().UpdateStorage();
@@ -87,16 +100,19 @@ public class IntractiveButton : MonoBehaviour
                 }
                 if (hit.collider.CompareTag("QuestionShopUI"))
                 {
+                    Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.Select);
                     QuestionShopHandler riddleShopHandler = FindObjectOfType<QuestionShopHandler>();
                     riddleShopHandler.OpenShop();
                 }
                 if(hit.collider.CompareTag("WizardShopUI"))
                 {
+                    Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.Select);
                     FindObjectOfType<WizardShopController>().ShowADS();
                    
                 }
                 if(hit.collider.CompareTag("EnergyBtn"))
                 {
+                    Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.Select);
                     Toolbox.GameManager.Instantiate_Energy();
                 }
             }
