@@ -52,7 +52,7 @@ public class PlayerController : MonoBehaviour
         index = Toolbox.DB.prefs.LastSelectedPlayerObj;
         indexCart = Toolbox.DB.prefs.LastSelectedPlayerObj;
         EnableCharacter(index);
-        if(Toolbox.DB.prefs.CartAvailable)
+        if(Toolbox.DB.prefs.CartAvailable && Toolbox.GameplayScript)
         {
             EnableCart(Toolbox.DB.prefs.LastSelectedCartObj);
         }
