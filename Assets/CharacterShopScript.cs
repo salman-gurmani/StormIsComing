@@ -278,6 +278,7 @@ public class CharacterShopScript : MonoBehaviour
 
     public void OnPress_Back()
     {
+        FindObjectOfType<PlayerController>().shutdown = false;
         Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.buttonPressNo);
         FindObjectOfType<PlayerController>().EnableCharacter(Toolbox.DB.prefs.LastSelectedPlayerObj);
         FindObjectOfType<PlayerController>().HUDSH.SetActive(true);
