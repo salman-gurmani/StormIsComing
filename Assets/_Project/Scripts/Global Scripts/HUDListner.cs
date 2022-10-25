@@ -7,16 +7,15 @@ using TMPro;
 
 public class HUDListner : MonoBehaviour {
 
-    public int intervalSpeedLess;
+    public int intervalSpeedLess; 
     public float temp;
     public Text timeTxt;
-    public Text lvlTxt;
+    public Text lvlTxt; 
     public Text goldTxt;
     public Text playerCapacity;
-    public GameObject uiParent;
+    public GameObject uiParent; 
     public GameObject Bar;
-    public GameObject MiniMap;
-    public GameObject CoinsCollect;
+    public GameObject MiniMap; 
     public GameObject RewardedAd;
     public GameObject GlowImage;
     public GameObject TimeObject;
@@ -48,6 +47,7 @@ public class HUDListner : MonoBehaviour {
     public bool IsEndNode;
     public GameObject BGPanel;
     bool RewardedVideoAd = true;
+    bool SirenAd = true;
     public bool startTime { get; set; }
     public float tempTime { get; set; }
 
@@ -67,12 +67,11 @@ public class HUDListner : MonoBehaviour {
         Toolbox.Set_HudListner(this.GetComponent<HUDListner>());
         if (Toolbox.DB.prefs.LastSelectedLevel == 2 || Toolbox.DB.prefs.LastSelectedLevel == 5 || Toolbox.DB.prefs.LastSelectedLevel == 8 || Toolbox.DB.prefs.LastSelectedLevel == 11 || Toolbox.DB.prefs.LastSelectedLevel == 14)
         {
-           // Bar.SetActive(false);
-            CoinsCollect.SetActive(true);
+           // Bar.SetActive(false); 
         }
         else
         {
-            CoinsCollect.SetActive(false);
+            //CoinsCollect.SetActive(false);
         }
         string path = Constants.PrefabFolderPath + Constants.LevelsScriptablesFolderPath + Toolbox.DB.prefs.LastSelectedMode.ToString() + "/" + Toolbox.DB.prefs.LastSelectedLevel.ToString();
         LevelData curLevelData = (LevelData)Resources.Load(path);
@@ -238,6 +237,12 @@ public class HUDListner : MonoBehaviour {
                     
                 }
                 
+            }
+            if(tempTime <= 40f && tempTime >= 38f && SirenAd == true)
+            {
+                //Toolbox.GameManager.Instantiate_LevelComplete(0);
+                Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.siren);
+                SirenAd=false;
             }
             if (tempTime <= 30 && RewardedVideoAd == true)
             {
