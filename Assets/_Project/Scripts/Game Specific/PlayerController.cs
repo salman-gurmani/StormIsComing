@@ -63,7 +63,7 @@ public class PlayerController : MonoBehaviour
         {
             Toolbox.DB.prefs.Speed = 3f;
             Toolbox.DB.prefs.Stamina = 50f;
-            Toolbox.DB.prefs.MaxCarryLimit = 15;
+            Toolbox.DB.prefs.MaxCarryLimit = 20;
             Toolbox.DB.prefs.Strength = 1;
         }
 
