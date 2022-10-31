@@ -56,6 +56,7 @@ public class IntractiveButton : MonoBehaviour
                 }
                 if (hit.collider.CompareTag("MissionBaseBtn"))
                 {
+                    FindObjectOfType<PlayerController>().HUDSH.SetActive(false);
                     Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.Select);
                     pnl.SetActive(true);
                 }
@@ -87,6 +88,7 @@ public class IntractiveButton : MonoBehaviour
                 }
                 if (hit.collider.CompareTag("ResourceStorageBtn"))
                 {
+                    FindObjectOfType<PlayerController>().HUDSH.SetActive(false);
                     Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.Select);
                     if (Toolbox.DB.prefs.JobAccepted)
                     {

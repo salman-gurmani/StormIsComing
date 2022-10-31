@@ -26,16 +26,11 @@ public class LevelsManager : MonoBehaviour
 
     public void StartLevelHandling()
     { 
-        if (Toolbox.DB.prefs.LastSelectedLevel > 19)
+        if (Toolbox.DB.prefs.LastSelectedLevel > 14)
         {
             //Arooj
             Toolbox.DB.prefs.LastSelectedLevel = 0;
-        }
-
-        if(Toolbox.DB.prefs.LastSelectedLevel == 2)
-        {
-            Toolbox.GameManager.InstantiatePopup_Message2("collect the coins and treasure chest boxes.");
-        }
+        } 
         else if(Toolbox.DB.prefs.LastSelectedLevel == 6)
         {
             Toolbox.GameManager.InstantiatPopup_Cement_Tutorial();
