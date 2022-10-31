@@ -594,5 +594,9 @@ public class GameManager : MonoBehaviour {
 	void OnApplicationQuit(){
 
 		Toolbox.DB.Save_Binary_Prefs();
-    }
+		for (int i = 0; i < 9; i++)
+		{
+			Toolbox.DB.prefs.ResourceAmount[i].value = 0;
+		}
+	}
 }

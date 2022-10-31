@@ -56,6 +56,7 @@ public class SoundManager : MonoBehaviour {
 	public AudioClip Storm;
 	public AudioClip fire;
 	public AudioClip siren;
+	public AudioClip siren1;
 	public AudioClip panicSound;
 	public AudioClip vehicleUpgrade;
 	public AudioClip vehicleUnlock;

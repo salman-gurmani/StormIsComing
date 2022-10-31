@@ -100,6 +100,7 @@ public class ResourceHandler : MonoBehaviour
         if (type == ResourceType.WOOD_LOG || type == ResourceType.STONE_BLOCK || type == ResourceType.MUD_BLOCK || type == ResourceType.IRON_BLOCK || type == ResourceType.CEMENT_BLOCK)
         {
             Toolbox.DB.prefs.GoldCoins += 10;
+            Toolbox.GameManager.Instantiate_RewardAnim();
             FindObjectOfType<HUDListner>().UpdateTxt();
         }
         //Toolbox.DB.prefs.MaxCarryLimit = Toolbox.DB.prefs.CarryLimit;

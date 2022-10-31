@@ -9,6 +9,11 @@ public class SafeHouseController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        Invoke("ShowSafeHouse", 5f);
+        //Toolbox.GameManager.InstantiatePopup_MessageBar("Safehouse");
+    }
+    public void ShowSafeHouse()
+    {
         Toolbox.GameManager.InstantiatePopup_MessageBar("Safehouse");
     }
 

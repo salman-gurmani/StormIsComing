@@ -360,10 +360,21 @@ namespace DialogueEditor
                 if (m_scrollIndex >= m_targetScrollTextCount)
                 {
                     Debug.Log("Sentence complete");
-                    if (Toolbox.HUDListner.IsEndNode == false)
+                    if (FindObjectOfType<HUDListner>())
                     {
-                        Toolbox.HUDListner.CloseBtn.SetActive(true);
+                        if (Toolbox.HUDListner.IsEndNode == false)
+                        {
+                            Toolbox.HUDListner.CloseBtn.SetActive(true);
+                        }
                     }
+                    if (FindObjectOfType<HUDListner2>())
+                    {
+                        if (FindObjectOfType<HUDListner2>().IsEndNode == false)
+                        {
+                            FindObjectOfType<HUDListner2>().CloseBtn.SetActive(true);
+                        }
+                    }
+                    
                     SetState(eState.TransitioningOptionsOn);
                 }
             }
