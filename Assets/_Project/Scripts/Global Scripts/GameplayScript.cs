@@ -87,7 +87,7 @@ public class GameplayScript : MonoBehaviour {
         Toolbox.HUDListner.EnableHUD();
         Toolbox.HUDListner.StartTime(levelsManager.CurLevelData.time);
 
-        if (Toolbox.DB.prefs.LastSelectedLevel == 2 || Toolbox.DB.prefs.LastSelectedLevel == 5 || Toolbox.DB.prefs.LastSelectedLevel == 8 || Toolbox.DB.prefs.LastSelectedLevel == 11 || Toolbox.DB.prefs.LastSelectedLevel == 14)
+        if (Toolbox.DB.prefs.LastSelectedLevel == 2 || Toolbox.DB.prefs.LastSelectedLevel == 5 || Toolbox.DB.prefs.LastSelectedLevel == 8 || Toolbox.DB.prefs.LastSelectedLevel == 11 || Toolbox.DB.prefs.LastSelectedLevel == 14 || Toolbox.DB.prefs.LastSelectedLevel == 17 || Toolbox.DB.prefs.LastSelectedLevel == 19)
         {
             Toolbox.Soundmanager.PlayBGSound(Toolbox.Soundmanager.BonusLevelMusic);
 
