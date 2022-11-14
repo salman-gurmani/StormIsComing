@@ -8,7 +8,7 @@ using DialogueEditor;
 public class TradeShopCanvus : MonoBehaviour
 {
     public TradeShopController tradeshop;
-
+    public GameObject Tradepnl;
 
     public Image img1;
     public Image img2;
@@ -128,6 +128,7 @@ public class TradeShopCanvus : MonoBehaviour
     }
     public void Tranfer2()
     {
+        FindObjectOfType<HUDListner>().EnableHUD();
         if (Toolbox.DB.prefs.ResourceAmount[tradeshop.Type2Int].value >= tradeshop.amountExchange)
         {
             if (Toolbox.DB.prefs.ResourceAmount[tradeshop.Type1Int].value + tradeshop.amountExchange <= Toolbox.DB.prefs.MaxCarryLimit)
@@ -217,6 +218,7 @@ public class TradeShopCanvus : MonoBehaviour
     }
     public void Tranfer1()
     {
+        FindObjectOfType<HUDListner>().EnableHUD();
         if (Toolbox.DB.prefs.ResourceAmount[tradeshop.Type1Int].value >= tradeshop.amountExchange)
         {
             if (Toolbox.DB.prefs.ResourceAmount[tradeshop.Type2Int].value + tradeshop.amountExchange <= Toolbox.DB.prefs.MaxCarryLimit)
@@ -302,5 +304,10 @@ public class TradeShopCanvus : MonoBehaviour
             Debug.Log("Lowwwww Resource");
             tradeshop.pnl.SetActive(false);
         }
+    }
+    public void Back()
+    {
+        Tradepnl.SetActive(false);
+        FindObjectOfType<HUDListner>().EnableHUD();
     }
 }
