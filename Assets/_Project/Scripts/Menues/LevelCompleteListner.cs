@@ -7,6 +7,7 @@ public class LevelCompleteListner : MonoBehaviour {
 	public Text lvlTxt;
 	public Text goldTxt;
 	public Text pointTxt;
+	public GameObject lvlComplete;
 	[Header("Unlock Car")]
 	bool startAnim = false;
 	public GameObject carUnlockObj;
@@ -32,7 +33,7 @@ public class LevelCompleteListner : MonoBehaviour {
 
         EarningsHandling();
 
-		UnlockNextLevel();
+		//UnlockNextLevel();
 		//NextEnvSetHandling();
 		//if ((Toolbox.DB.prefs.LastSelectedLevel + 1) % 5 == 0)
 		//	Toolbox.DB.prefs.IsBossLevel = true;
@@ -220,4 +221,9 @@ public class LevelCompleteListner : MonoBehaviour {
 
         //doubleRewardButton.SetActive(false);
 	} 
+	public void Close()
+    {
+		lvlComplete.SetActive(false);
+	}
+
 }

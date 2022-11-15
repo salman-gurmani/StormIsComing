@@ -80,7 +80,7 @@ public class StorageController : MonoBehaviour
             resourcesTextsInStorage[i].text = resourcesInStorage[i].ToString();
             Toolbox.GameManager.InstantiatePopup_MessageBar("Resources Stored In Storage");
             store.interactable = false;
-            FindObjectOfType<PlayerController>().HUDSH.SetActive(true);
+            //FindObjectOfType<PlayerController>().HUDSH.SetActive(true);
 
 
         }
@@ -109,7 +109,7 @@ public class StorageController : MonoBehaviour
                     resourcesTextsInStorage[i].text = resourcesInStorage[i].ToString();
                     Toolbox.GameManager.InstantiatePopup_MessageBar("Resources Retrieved In Inventory");
                     retrieve.interactable = false;
-                    FindObjectOfType<PlayerController>().HUDSH.SetActive(true);
+                    //FindObjectOfType<PlayerController>().HUDSH.SetActive(true);
                 }
                 
 
