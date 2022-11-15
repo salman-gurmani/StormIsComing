@@ -4,6 +4,7 @@ using UnityEngine;
 using DialogueEditor;
 public class HUDListner2 : MonoBehaviour
 {
+    public static HUDListner2 instance;
     public NPCConversation levelZeroTutorialConversation;
     public bool IsEndNode;
     public GameObject CloseBtn;
@@ -11,6 +12,7 @@ public class HUDListner2 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        instance = this;
         ConversationManager.Instance.StartConversation(levelZeroTutorialConversation);
     }
 
@@ -28,5 +30,11 @@ public class HUDListner2 : MonoBehaviour
     {
         ConversationPanel.SetActive(false);
         CloseBtn.SetActive(false);
+    }
+
+    public void ShowConvPanel()
+    {
+        ConversationPanel.SetActive(true);
+
     }
 }
