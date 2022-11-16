@@ -36,7 +36,7 @@ public static class Constants{
 
     public static readonly float [] maxSpecValue = { 500, 550, 90000, 500 };
 
-    public static readonly int[] maxLevelsOfMode = { 10, 10, 10, 10 };
+    public static readonly int[] maxLevelsOfMode = { 31, 31, 31, 31 };
 
 
     #region AdMob Ids

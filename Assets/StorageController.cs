@@ -95,9 +95,13 @@ public class StorageController : MonoBehaviour
         {
             if (checkToTransferBool[i])
             {
-                int Player = Toolbox.DB.prefs.ResourceAmount[0].value + Toolbox.DB.prefs.ResourceAmount[1].value + Toolbox.DB.prefs.ResourceAmount[2].value + Toolbox.DB.prefs.ResourceAmount[3].value + Toolbox.DB.prefs.ResourceAmount[4].value + Toolbox.DB.prefs.ResourceAmount[5].value + Toolbox.DB.prefs.ResourceAmount[6].value + Toolbox.DB.prefs.ResourceAmount[7].value + Toolbox.DB.prefs.ResourceAmount[8].value;
+                int Player = Toolbox.DB.prefs.ResourceAmountInStorage[0].value + Toolbox.DB.prefs.ResourceAmountInStorage[1].value + Toolbox.DB.prefs.ResourceAmountInStorage[2].value + Toolbox.DB.prefs.ResourceAmount[3].value + Toolbox.DB.prefs.ResourceAmountInStorage[4].value + Toolbox.DB.prefs.ResourceAmountInStorage[5].value + Toolbox.DB.prefs.ResourceAmountInStorage[6].value + Toolbox.DB.prefs.ResourceAmountInStorage[7].value + Toolbox.DB.prefs.ResourceAmountInStorage[8].value;
+                Debug.Log("Player" + Player);
                 if (Player > Toolbox.DB.prefs.MaxCarryLimit)
+                {
+                    Toolbox.GameManager.InstantiatePopup_MessageBar("Resources cannot be retrieved");
                     return;
+                }
                 else
                 {
                     Toolbox.DB.prefs.ResourceAmount[i].value = Toolbox.DB.prefs.ResourceAmount[i].value + Toolbox.DB.prefs.ResourceAmountInStorage[i].value;

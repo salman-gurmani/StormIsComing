@@ -127,7 +127,7 @@ public class ResourceHandler : MonoBehaviour
         }
         else if (Toolbox.DB.prefs.LastSelectedLevel == 1)
         {
-            if (Toolbox.DB.prefs.ResourceAmount[(int)ResourceType.WOOD_LOG].value == 10)
+            if (Toolbox.DB.prefs.ResourceAmount[(int)ResourceType.WOOD_LOG].value >= 10)
             {
                 ConversationManager.Instance.PressSelectedOption();
                 Toolbox.HUDListner.ConversationPanel.SetActive(true);
@@ -143,7 +143,7 @@ public class ResourceHandler : MonoBehaviour
         }
         else if (Toolbox.DB.prefs.LastSelectedLevel == 6)
         {
-            if (Toolbox.DB.prefs.ResourceAmount[(int)ResourceType.CEMENT_BLOCK].value == 10)
+            if (Toolbox.DB.prefs.ResourceAmount[(int)ResourceType.CEMENT_BLOCK].value >= 10)
             {
 
                 ConversationManager.Instance.PressSelectedOption();
@@ -152,7 +152,7 @@ public class ResourceHandler : MonoBehaviour
         }
         else if (Toolbox.DB.prefs.LastSelectedLevel == 7)
         {
-            if (Toolbox.DB.prefs.ResourceAmount[(int)ResourceType.MUD_BLOCK].value == 10)
+            if (Toolbox.DB.prefs.ResourceAmount[(int)ResourceType.MUD_BLOCK].value >= 10)
             {
                 ConversationManager.Instance.PressSelectedOption();
                 Toolbox.HUDListner.ConversationPanel.SetActive(true);
@@ -161,7 +161,7 @@ public class ResourceHandler : MonoBehaviour
         }
         else if (Toolbox.DB.prefs.LastSelectedLevel == 12)
         {
-            if (Toolbox.DB.prefs.ResourceAmount[(int)ResourceType.IRON_BLOCK].value == 10)
+            if (Toolbox.DB.prefs.ResourceAmount[(int)ResourceType.IRON_BLOCK].value >= 10)
             {
                 ConversationManager.Instance.PressSelectedOption();
                 Toolbox.HUDListner.ConversationPanel.SetActive(true);
