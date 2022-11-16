@@ -8,6 +8,8 @@ namespace DialogueEditor
     {
         Vector3 touchPosWorld;
         public GameObject pnl;
+        public string LastVisited;
+        public static int LastIndex;
         //Change me to change the touch phase used.
         TouchPhase touchPhase = TouchPhase.Ended;
         // Start is called before the first frame update
@@ -66,9 +68,13 @@ namespace DialogueEditor
                         Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.Select);
                         pnl.SetActive(true);
 
-
-                        ConversationManager.Instance.PressSelectedOption();
-                        HUDListner2.instance.ShowConvPanel();
+                        if (LastIndex == 0)
+                        {
+                            ConversationManager.Instance.PressSelectedOption();
+                            HUDListner2.instance.ShowConvPanel();
+                            LastIndex = 1;
+                            // LastVisited = "MissionBase";
+                        }
                     }
                     if (hit.collider.CompareTag("Travel"))
                     {
@@ -77,7 +83,10 @@ namespace DialogueEditor
                         //Toolbox.GameManager.Instantiate_Loading();
                         //Toolbox.GameManager.Instantiate_Blackout();
                         if (Toolbox.DB.prefs.JobAccepted)
+                        {
                             Toolbox.GameManager.LoadScene(2, true, 0);
+                            LastIndex = 0;
+                        }
                         else
                             Toolbox.GameManager.InstantiatePopup_Message("You have not selected any mission yet Kindly go to mission base Select mission and then come back to travel");
 
@@ -106,8 +115,14 @@ namespace DialogueEditor
                             FindObjectOfType<StorageController>().UpdateStorage();
                             //  Debug.Log(FindObjectOfType<StorageController>());
                             pnl.SetActive(true);
-                            ConversationManager.Instance.PressSelectedOption();
-                            HUDListner2.instance.ShowConvPanel();
+
+                            if (LastIndex == 1)
+                            {
+                                ConversationManager.Instance.PressSelectedOption();
+                                HUDListner2.instance.ShowConvPanel();
+                                LastIndex = 2;
+                                //LastVisited = "StorageBase";
+                            }
                         }
                         else
                         {
