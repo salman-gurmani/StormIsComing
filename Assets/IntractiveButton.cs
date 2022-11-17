@@ -88,7 +88,7 @@ namespace DialogueEditor
                             LastIndex = 0;
                         }
                         else
-                            Toolbox.GameManager.InstantiatePopup_Message("You have not selected any mission yet Kindly go to mission base Select mission, go to storage get resources and come back to travel");
+                            Toolbox.GameManager.InstantiatePopup_Message("You need to select Mission Base and Resource Storage both before Traveling");
 
 
                     }
