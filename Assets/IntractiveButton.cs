@@ -82,13 +82,13 @@ namespace DialogueEditor
                         //FindObjectOfType<StorageController>().travelpnl.SetActive(true);
                         //Toolbox.GameManager.Instantiate_Loading();
                         //Toolbox.GameManager.Instantiate_Blackout();
-                        if (Toolbox.DB.prefs.JobAccepted)
+                        if (Toolbox.DB.prefs.JobAccepted && Toolbox.DB.prefs.StorageAccepted)
                         {
                             Toolbox.GameManager.LoadScene(2, true, 0);
                             LastIndex = 0;
                         }
                         else
-                            Toolbox.GameManager.InstantiatePopup_Message("You have not selected any mission yet Kindly go to mission base Select mission and then come back to travel");
+                            Toolbox.GameManager.InstantiatePopup_Message("You have not selected any mission yet Kindly go to mission base Select mission, go to storage get resources and come back to travel");
 
 
                     }
