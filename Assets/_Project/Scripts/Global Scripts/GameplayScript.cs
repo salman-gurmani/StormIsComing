@@ -167,10 +167,10 @@ public class GameplayScript : MonoBehaviour {
         RenderSettings.skybox = _mat;
     }
 
-    public void EnableResource(int _val) {
+    //public void EnableResource(int _val) {
 
-        resourceObjects[_val].SetActive(true);
-    }
+    //    resourceObjects[_val].SetActive(true);
+    //}
 
     public void OnStormHandling() {
 
