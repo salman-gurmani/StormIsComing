@@ -251,9 +251,7 @@ public class AdsManager : MonoBehaviour, IUnityAdsInitializationListener, IUnity
 
                 break;
             case RewardType.EnergyDrink:
-                //Toolbox.GameplayScript.player.GetComponent<EnergyController>().GiveReward();
-                Toolbox.DB.prefs.GoldCoins += 10;
-                FindObjectOfType<HUDListner>().UpdateTxt();
+                Toolbox.GameplayScript.player.GetComponent<EnergyController>().GiveReward();
                 break;
             case RewardType.Wizard:
                 FindObjectOfType<WizardShopController>().GiveReward();
