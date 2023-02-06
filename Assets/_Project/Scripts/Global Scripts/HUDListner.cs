@@ -253,7 +253,8 @@ public class HUDListner : MonoBehaviour {
         
         Transform resource = resourcesParent.GetChild(_index).transform;
         resource.gameObject.SetActive(true);
-        UpdateResourceTxt(_index); 
+        UpdateResourceTxt(_index);
+
         resource.GetComponent<RectTransform>().position = resourcePosition[resourceIndex].position;
         resourceIndex++;
     }
@@ -261,7 +262,6 @@ public class HUDListner : MonoBehaviour {
     public void UpdateResourceTxt(int _index) {
 
         resourcesTxts[_index].text = Toolbox.DB.prefs.ResourceAmount[_index].value.ToString();
-        Toolbox.DB.prefs.CarryLimit = Toolbox.DB.prefs.ResourceAmount[0].value + Toolbox.DB.prefs.ResourceAmount[1].value + Toolbox.DB.prefs.ResourceAmount[2].value + Toolbox.DB.prefs.ResourceAmount[3].value + Toolbox.DB.prefs.ResourceAmount[4].value + Toolbox.DB.prefs.ResourceAmount[5].value + Toolbox.DB.prefs.ResourceAmount[6].value + Toolbox.DB.prefs.ResourceAmount[7].value + Toolbox.DB.prefs.ResourceAmount[8].value;
         playerCapacity.text = Toolbox.DB.prefs.CarryLimit + "/" + Toolbox.DB.prefs.MaxCarryLimit;
     }
 
