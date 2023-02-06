@@ -16,20 +16,20 @@ public class LevelsManager : MonoBehaviour
     public PileHandler pileHandler;
 
     private void Start()
-    { 
+    {
         //Toolbox.DB.prefs.CarryLimit = Toolbox.DB.prefs.MaxCarryLimit;
         //Toolbox.DB.prefs.MaxCarryLimit = Toolbox.DB.prefs.CarryLimit;
         //if (testMode)
-        StartLevelHandling();
+            StartLevelHandling();
         
     }
 
     public void StartLevelHandling()
     { 
-        if (Toolbox.DB.prefs.LastSelectedLevel > 29)
+        if (Toolbox.DB.prefs.LastSelectedLevel > 14)
         {
             //Arooj
-             Toolbox.DB.prefs.LastSelectedLevel = 0;
+            Toolbox.DB.prefs.LastSelectedLevel = 0;
         } 
         else if(Toolbox.DB.prefs.LastSelectedLevel == 6)
         {
@@ -59,7 +59,7 @@ public class LevelsManager : MonoBehaviour
         ExtraHandling();
 
         
-        if (Toolbox.DB.prefs.LastSelectedLevel == 2 || Toolbox.DB.prefs.LastSelectedLevel == 5 || Toolbox.DB.prefs.LastSelectedLevel == 8 || Toolbox.DB.prefs.LastSelectedLevel == 11 || Toolbox.DB.prefs.LastSelectedLevel == 14 || Toolbox.DB.prefs.LastSelectedLevel == 17 || Toolbox.DB.prefs.LastSelectedLevel == 19)
+        if (Toolbox.DB.prefs.LastSelectedLevel == 2 || Toolbox.DB.prefs.LastSelectedLevel == 5 || Toolbox.DB.prefs.LastSelectedLevel == 8 || Toolbox.DB.prefs.LastSelectedLevel == 11 || Toolbox.DB.prefs.LastSelectedLevel == 14)
         {
             Toolbox.Soundmanager.PlayBGSound(Toolbox.Soundmanager.BonusLevelMusic);
            

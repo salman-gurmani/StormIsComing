@@ -66,7 +66,7 @@ public class HUDListner : MonoBehaviour {
     void Awake() {
         
         Toolbox.Set_HudListner(this.GetComponent<HUDListner>());
-        if (Toolbox.DB.prefs.LastSelectedLevel == 2 || Toolbox.DB.prefs.LastSelectedLevel == 5 || Toolbox.DB.prefs.LastSelectedLevel == 8 || Toolbox.DB.prefs.LastSelectedLevel == 11 || Toolbox.DB.prefs.LastSelectedLevel == 14 || Toolbox.DB.prefs.LastSelectedLevel == 17 || Toolbox.DB.prefs.LastSelectedLevel == 19)
+        if (Toolbox.DB.prefs.LastSelectedLevel == 2 || Toolbox.DB.prefs.LastSelectedLevel == 5 || Toolbox.DB.prefs.LastSelectedLevel == 8 || Toolbox.DB.prefs.LastSelectedLevel == 11 || Toolbox.DB.prefs.LastSelectedLevel == 14)
         {
             playerCarry.SetActive(false);
            // Bar.SetActive(false); 
@@ -211,7 +211,7 @@ public class HUDListner : MonoBehaviour {
             //    }
             //}
             if (reportTime <= 0) {
-                if (Toolbox.DB.prefs.LastSelectedLevel == 2 || Toolbox.DB.prefs.LastSelectedLevel == 5 || Toolbox.DB.prefs.LastSelectedLevel == 8 || Toolbox.DB.prefs.LastSelectedLevel == 11 || Toolbox.DB.prefs.LastSelectedLevel == 14 || Toolbox.DB.prefs.LastSelectedLevel == 17 || Toolbox.DB.prefs.LastSelectedLevel == 19)
+                if (Toolbox.DB.prefs.LastSelectedLevel == 2 || Toolbox.DB.prefs.LastSelectedLevel == 5 || Toolbox.DB.prefs.LastSelectedLevel == 8 || Toolbox.DB.prefs.LastSelectedLevel == 11 || Toolbox.DB.prefs.LastSelectedLevel == 14)
                 {
                     reportTime = 25;
                 }
@@ -226,7 +226,7 @@ public class HUDListner : MonoBehaviour {
             if (tempTime <= 0)
             {
                 startTime = false;
-                if (Toolbox.DB.prefs.LastSelectedLevel == 2 || Toolbox.DB.prefs.LastSelectedLevel == 5 || Toolbox.DB.prefs.LastSelectedLevel == 8 || Toolbox.DB.prefs.LastSelectedLevel == 11 || Toolbox.DB.prefs.LastSelectedLevel == 14 || Toolbox.DB.prefs.LastSelectedLevel == 17 || Toolbox.DB.prefs.LastSelectedLevel == 19)
+                if (Toolbox.DB.prefs.LastSelectedLevel == 2 || Toolbox.DB.prefs.LastSelectedLevel == 5 || Toolbox.DB.prefs.LastSelectedLevel == 8 || Toolbox.DB.prefs.LastSelectedLevel == 11 || Toolbox.DB.prefs.LastSelectedLevel == 14)
                 {
                     Toolbox.GameManager.Instantiate_LevelComplete(0);
                     Toolbox.Soundmanager.Stop_PlayingBGSound();
