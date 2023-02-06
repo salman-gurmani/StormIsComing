@@ -57,8 +57,7 @@ public class PauseListner : MonoBehaviour {
 	}
 
 	public void Press_Home(){
-		Toolbox.DB.prefs.JobAccepted = false;
-		Toolbox.DB.prefs.StorageAccepted = false;
+
 		Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.buttonPressYes);
 		Toolbox.GameManager.LoadScene(Constants.sceneIndex_Menu, true, 0);
 
