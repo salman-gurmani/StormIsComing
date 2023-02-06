@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using DialogueEditor;
+
 public class MissionController : MonoBehaviour
 {
     public GameObject btn;
@@ -22,9 +22,7 @@ public class MissionController : MonoBehaviour
     public void AcceptJob()
     {
         Toolbox.DB.prefs.JobAccepted = true;
-        //ConversationManager.Instance.PressSelectedOption();
-        //FindObjectOfType<HUDListner2>().ConversationPanel.SetActive(true);
-        Toolbox.GameManager.InstantiatePopup_Message("Good, You have accepted the Contract Now go to Storage to get the resources you need");
+        Toolbox.GameManager.InstantiatePopup_Message("Good Job You have accepted the Contract Now go to Storage to get the resources you need");
     }
     public void RejectJob()
     {

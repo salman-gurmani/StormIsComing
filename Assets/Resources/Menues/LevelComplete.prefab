@@ -241,6 +241,8 @@ GameObject:
   - component: {fileID: 5327660942606580586}
   - component: {fileID: 8489994902720237244}
   - component: {fileID: 7305990324484371024}
+  - component: {fileID: 2759754767454356877}
+  - component: {fileID: 1176846492975122830}
   m_Layer: 5
   m_Name: Replay
   m_TagString: Untagged
@@ -354,7 +356,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 9077517519993612092}
         m_TargetAssemblyTypeName: LevelCompleteListner, Assembly-CSharp
-        m_MethodName: Press_Restart
+        m_MethodName: Press_2XReward
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -364,6 +366,118 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &2759754767454356877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1664048298608637220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8cd94524c7a386468cb60773c70fe7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnShow:
+    m_PersistentCalls:
+      m_Calls: []
+  OnHide:
+    m_PersistentCalls:
+      m_Calls: []
+  OnShowComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  OnHideComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  showItemOnMenuEnable: 1
+  showAnimationType: 0
+  hideAnimationType: 0
+  animationFromCornerType: 0
+  animationToCornerType: 0
+  pivotWhileRotating: 0
+  animationFromCornerStartFromType: 0
+  fadeChildren: 0
+  animationShowDuration: 0.5
+  animationHideDuration: 0.5
+  withDelay: 0
+  showDelay: 0
+  hideDelay: 0
+  elasticityPower: 1
+  rotateFrom: {x: 0, y: 0, z: 0}
+  rotateTo: {x: 0, y: 0, z: 0}
+  initialWorldPosition: {x: 0, y: 0, z: 0}
+  initialLocalPosition: {x: 0, y: 0, z: 0}
+  initialAnchoredPosition: {x: 0, y: 0, z: 0}
+  initialColorsOfChildren: []
+  initialScale: {x: 0, y: 0, z: 0}
+  initialRotation: {x: 0, y: 0, z: 0, w: 0}
+  initialPivot: {x: 0, y: 0}
+  componentsToAnimate_SHOW: 0
+  componentsToAnimate_HIDE: 0
+  TransformAnimationRecords_SHOW:
+  - Delay: 0
+    Duration: 0.5
+    Position: {x: 15, y: -398, z: 0}
+    Scale: {x: 1, y: 1, z: 1}
+    RotationEuler: {x: -0, y: 0, z: 5}
+    Pivot: {x: 0.5, y: 0.5}
+    AnchorMin: {x: 0.5, y: 0.5}
+    AnchorMax: {x: 0.5, y: 0.5}
+  - Delay: 0
+    Duration: 0.5
+    Position: {x: 0, y: -398, z: 0}
+    Scale: {x: 1, y: 1, z: 1}
+    RotationEuler: {x: -0, y: 0, z: 0}
+    Pivot: {x: 0.5, y: 0.5}
+    AnchorMin: {x: 0.5, y: 0.5}
+    AnchorMax: {x: 0.5, y: 0.5}
+  - Delay: 0
+    Duration: 0.5
+    Position: {x: -15, y: -398, z: 0}
+    Scale: {x: 1, y: 1, z: 1}
+    RotationEuler: {x: -0, y: 0, z: -5}
+    Pivot: {x: 0.5, y: 0.5}
+    AnchorMin: {x: 0.5, y: 0.5}
+    AnchorMax: {x: 0.5, y: 0.5}
+  - Delay: 0
+    Duration: 0.5
+    Position: {x: 0, y: -398, z: 0}
+    Scale: {x: 1, y: 1, z: 1}
+    RotationEuler: {x: -0, y: 0, z: 0}
+    Pivot: {x: 0.5, y: 0.5}
+    AnchorMin: {x: 0.5, y: 0.5}
+    AnchorMax: {x: 0.5, y: 0.5}
+  - Delay: 0
+    Duration: 0.5
+    Position: {x: 15, y: -398, z: 0}
+    Scale: {x: 1, y: 1, z: 1}
+    RotationEuler: {x: -0, y: 0, z: 5}
+    Pivot: {x: 0.5, y: 0.5}
+    AnchorMin: {x: 0.5, y: 0.5}
+    AnchorMax: {x: 0.5, y: 0.5}
+  GraphicAnimationRecords_SHOW: []
+  TransformAndGraphicAnimationRecords_SHOW: []
+  TransformAnimationRecords_HIDE: []
+  GraphicAnimationRecords_HIDE: []
+  TransformAndGraphicAnimationRecords_HIDE: []
+  currentRecordDuration: 0.5
+  currentRecordDelay: 0
+  loop: 1
+--- !u!114 &1176846492975122830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1664048298608637220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1089ef60c355e5848a410c41d3c102d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  childrenElements: []
+  showMenuOnEnable: 1
 --- !u!1 &1849792036785485127
 GameObject:
   m_ObjectHideFlags: 0
@@ -913,6 +1027,8 @@ GameObject:
   - component: {fileID: 6389863552478029378}
   - component: {fileID: 3774397986120931020}
   - component: {fileID: 3564441542586259944}
+  - component: {fileID: 2195471305207354097}
+  - component: {fileID: 1660283507884472477}
   m_Layer: 5
   m_Name: Next
   m_TagString: Untagged
@@ -1026,7 +1142,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 9077517519993612092}
         m_TargetAssemblyTypeName: LevelCompleteListner, Assembly-CSharp
-        m_MethodName: Press_Next
+        m_MethodName: Press_2XReward
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1036,6 +1152,118 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &2195471305207354097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2940419379144626220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8cd94524c7a386468cb60773c70fe7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnShow:
+    m_PersistentCalls:
+      m_Calls: []
+  OnHide:
+    m_PersistentCalls:
+      m_Calls: []
+  OnShowComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  OnHideComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  showItemOnMenuEnable: 1
+  showAnimationType: 0
+  hideAnimationType: 0
+  animationFromCornerType: 0
+  animationToCornerType: 0
+  pivotWhileRotating: 0
+  animationFromCornerStartFromType: 0
+  fadeChildren: 0
+  animationShowDuration: 0.5
+  animationHideDuration: 0.5
+  withDelay: 0
+  showDelay: 0
+  hideDelay: 0
+  elasticityPower: 1
+  rotateFrom: {x: 0, y: 0, z: 0}
+  rotateTo: {x: 0, y: 0, z: 0}
+  initialWorldPosition: {x: 0, y: 0, z: 0}
+  initialLocalPosition: {x: 0, y: 0, z: 0}
+  initialAnchoredPosition: {x: 0, y: 0, z: 0}
+  initialColorsOfChildren: []
+  initialScale: {x: 0, y: 0, z: 0}
+  initialRotation: {x: 0, y: 0, z: 0, w: 0}
+  initialPivot: {x: 0, y: 0}
+  componentsToAnimate_SHOW: 0
+  componentsToAnimate_HIDE: 0
+  TransformAnimationRecords_SHOW:
+  - Delay: 0
+    Duration: 0.5
+    Position: {x: 15, y: -398, z: 0}
+    Scale: {x: 1, y: 1, z: 1}
+    RotationEuler: {x: -0, y: 0, z: 5}
+    Pivot: {x: 0.5, y: 0.5}
+    AnchorMin: {x: 0.5, y: 0.5}
+    AnchorMax: {x: 0.5, y: 0.5}
+  - Delay: 0
+    Duration: 0.5
+    Position: {x: 0, y: -398, z: 0}
+    Scale: {x: 1, y: 1, z: 1}
+    RotationEuler: {x: -0, y: 0, z: 0}
+    Pivot: {x: 0.5, y: 0.5}
+    AnchorMin: {x: 0.5, y: 0.5}
+    AnchorMax: {x: 0.5, y: 0.5}
+  - Delay: 0
+    Duration: 0.5
+    Position: {x: -15, y: -398, z: 0}
+    Scale: {x: 1, y: 1, z: 1}
+    RotationEuler: {x: -0, y: 0, z: -5}
+    Pivot: {x: 0.5, y: 0.5}
+    AnchorMin: {x: 0.5, y: 0.5}
+    AnchorMax: {x: 0.5, y: 0.5}
+  - Delay: 0
+    Duration: 0.5
+    Position: {x: 0, y: -398, z: 0}
+    Scale: {x: 1, y: 1, z: 1}
+    RotationEuler: {x: -0, y: 0, z: 0}
+    Pivot: {x: 0.5, y: 0.5}
+    AnchorMin: {x: 0.5, y: 0.5}
+    AnchorMax: {x: 0.5, y: 0.5}
+  - Delay: 0
+    Duration: 0.5
+    Position: {x: 15, y: -398, z: 0}
+    Scale: {x: 1, y: 1, z: 1}
+    RotationEuler: {x: -0, y: 0, z: 5}
+    Pivot: {x: 0.5, y: 0.5}
+    AnchorMin: {x: 0.5, y: 0.5}
+    AnchorMax: {x: 0.5, y: 0.5}
+  GraphicAnimationRecords_SHOW: []
+  TransformAndGraphicAnimationRecords_SHOW: []
+  TransformAnimationRecords_HIDE: []
+  GraphicAnimationRecords_HIDE: []
+  TransformAndGraphicAnimationRecords_HIDE: []
+  currentRecordDuration: 0.5
+  currentRecordDelay: 0
+  loop: 1
+--- !u!114 &1660283507884472477
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2940419379144626220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1089ef60c355e5848a410c41d3c102d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  childrenElements: []
+  showMenuOnEnable: 1
 --- !u!1 &2985845910034831956
 GameObject:
   m_ObjectHideFlags: 0
@@ -2406,6 +2634,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32ad4713d8c21c74fb1beb2ca1d70764, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  nextButton: {fileID: 2425504250452673366}
+  doubleRewardButton: {fileID: 4802440018879125926}
+  pressHome: {fileID: 4704658902924656637}
+  pressReplay: {fileID: 5433861476496928663}
+  pressNext: {fileID: 7775321580915855194}
   lvlTxt: {fileID: 309783328606814885}
   goldTxt: {fileID: 5897261009008094151}
   pointTxt: {fileID: 4244019011172199850}
@@ -2777,6 +3010,8 @@ GameObject:
   - component: {fileID: 1778894047176948625}
   - component: {fileID: 321874599131627806}
   - component: {fileID: 8073712831573143528}
+  - component: {fileID: 8653700411796217344}
+  - component: {fileID: 8204636564479592896}
   m_Layer: 5
   m_Name: Home
   m_TagString: Untagged
@@ -2890,7 +3125,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 9077517519993612092}
         m_TargetAssemblyTypeName: LevelCompleteListner, Assembly-CSharp
-        m_MethodName: Press_Home
+        m_MethodName: Press_2XReward
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2900,6 +3135,118 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &8653700411796217344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5773162778285981694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8cd94524c7a386468cb60773c70fe7f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OnShow:
+    m_PersistentCalls:
+      m_Calls: []
+  OnHide:
+    m_PersistentCalls:
+      m_Calls: []
+  OnShowComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  OnHideComplete:
+    m_PersistentCalls:
+      m_Calls: []
+  showItemOnMenuEnable: 1
+  showAnimationType: 0
+  hideAnimationType: 0
+  animationFromCornerType: 0
+  animationToCornerType: 0
+  pivotWhileRotating: 0
+  animationFromCornerStartFromType: 0
+  fadeChildren: 0
+  animationShowDuration: 0.5
+  animationHideDuration: 0.5
+  withDelay: 0
+  showDelay: 0
+  hideDelay: 0
+  elasticityPower: 1
+  rotateFrom: {x: 0, y: 0, z: 0}
+  rotateTo: {x: 0, y: 0, z: 0}
+  initialWorldPosition: {x: 0, y: 0, z: 0}
+  initialLocalPosition: {x: 0, y: 0, z: 0}
+  initialAnchoredPosition: {x: 0, y: 0, z: 0}
+  initialColorsOfChildren: []
+  initialScale: {x: 0, y: 0, z: 0}
+  initialRotation: {x: 0, y: 0, z: 0, w: 0}
+  initialPivot: {x: 0, y: 0}
+  componentsToAnimate_SHOW: 0
+  componentsToAnimate_HIDE: 0
+  TransformAnimationRecords_SHOW:
+  - Delay: 0
+    Duration: 0.5
+    Position: {x: 15, y: -398, z: 0}
+    Scale: {x: 1, y: 1, z: 1}
+    RotationEuler: {x: -0, y: 0, z: 5}
+    Pivot: {x: 0.5, y: 0.5}
+    AnchorMin: {x: 0.5, y: 0.5}
+    AnchorMax: {x: 0.5, y: 0.5}
+  - Delay: 0
+    Duration: 0.5
+    Position: {x: 0, y: -398, z: 0}
+    Scale: {x: 1, y: 1, z: 1}
+    RotationEuler: {x: -0, y: 0, z: 0}
+    Pivot: {x: 0.5, y: 0.5}
+    AnchorMin: {x: 0.5, y: 0.5}
+    AnchorMax: {x: 0.5, y: 0.5}
+  - Delay: 0
+    Duration: 0.5
+    Position: {x: -15, y: -398, z: 0}
+    Scale: {x: 1, y: 1, z: 1}
+    RotationEuler: {x: -0, y: 0, z: -5}
+    Pivot: {x: 0.5, y: 0.5}
+    AnchorMin: {x: 0.5, y: 0.5}
+    AnchorMax: {x: 0.5, y: 0.5}
+  - Delay: 0
+    Duration: 0.5
+    Position: {x: 0, y: -398, z: 0}
+    Scale: {x: 1, y: 1, z: 1}
+    RotationEuler: {x: -0, y: 0, z: 0}
+    Pivot: {x: 0.5, y: 0.5}
+    AnchorMin: {x: 0.5, y: 0.5}
+    AnchorMax: {x: 0.5, y: 0.5}
+  - Delay: 0
+    Duration: 0.5
+    Position: {x: 15, y: -398, z: 0}
+    Scale: {x: 1, y: 1, z: 1}
+    RotationEuler: {x: -0, y: 0, z: 5}
+    Pivot: {x: 0.5, y: 0.5}
+    AnchorMin: {x: 0.5, y: 0.5}
+    AnchorMax: {x: 0.5, y: 0.5}
+  GraphicAnimationRecords_SHOW: []
+  TransformAndGraphicAnimationRecords_SHOW: []
+  TransformAnimationRecords_HIDE: []
+  GraphicAnimationRecords_HIDE: []
+  TransformAndGraphicAnimationRecords_HIDE: []
+  currentRecordDuration: 0.5
+  currentRecordDelay: 0
+  loop: 1
+--- !u!114 &8204636564479592896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5773162778285981694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1089ef60c355e5848a410c41d3c102d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  childrenElements: []
+  showMenuOnEnable: 1
 --- !u!1 &6410960368984737667
 GameObject:
   m_ObjectHideFlags: 0

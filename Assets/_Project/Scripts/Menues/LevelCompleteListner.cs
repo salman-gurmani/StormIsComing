@@ -4,6 +4,11 @@ using UnityEngine.UI;
 
 public class LevelCompleteListner : MonoBehaviour {
 
+	public GameObject nextButton;
+	public GameObject doubleRewardButton;
+	public GameObject pressHome;
+	public GameObject pressReplay;
+	public GameObject pressNext;
 	public Text lvlTxt;
 	public Text goldTxt;
 	public Text pointTxt;
@@ -160,7 +165,7 @@ public class LevelCompleteListner : MonoBehaviour {
 	}
 	public void ShowNoThanksBtb()
     {
-		//nextButton.SetActive(true);
+		nextButton.SetActive(true);
     }
 	public void Press_Next()
 	{
@@ -187,13 +192,10 @@ public class LevelCompleteListner : MonoBehaviour {
 	public void Press_Restart()
 	{
 		Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.buttonPressYes);
-		Toolbox.GameManager.LoadScene(2, false, 0);
-		for (int i = 0; i < 9; i++)
-		{
-			Toolbox.DB.prefs.ResourceAmount[i].value = 0;
-		}
-		//--
-		AdsManager.instance.ShowAd(AdsManager.AdType.INTERSTITIAL);
+		Toolbox.GameManager.LoadScene(Toolbox.GameManager.GetCurrentLevelGameScene(), false, 0);
+
+        //--
+        AdsManager.instance.ShowAd(AdsManager.AdType.INTERSTITIAL);
 
 
         Destroy(this.gameObject);
@@ -218,6 +220,12 @@ public class LevelCompleteListner : MonoBehaviour {
         //--
         AdsManager.instance.SetNShowRewardedAd(AdsManager.RewardType.DOUBLEREWARD, rewardAmount);
 
-        //doubleRewardButton.SetActive(false);
-	} 
+        doubleRewardButton.SetActive(false);
+	}
+	public void Press_NoThanks()
+    {
+		pressHome.SetActive(true);
+		pressReplay.SetActive(true);
+		pressNext.SetActive(true);
+    }
 }

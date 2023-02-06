@@ -19,7 +19,7 @@ public class StorageController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //Toolbox.GameManager.InstantiatePopup_Message1();
+        Toolbox.GameManager.InstantiatePopup_Message1();
         string path = Constants.PrefabFolderPath + Constants.LevelsScriptablesFolderPath + Toolbox.DB.prefs.LastSelectedMode.ToString() + "/" + Toolbox.DB.prefs.LastSelectedLevel.ToString();
         LevelData curLevelData = (LevelData)Resources.Load(path);
         //Debug.Log(curLevelData);
@@ -39,7 +39,7 @@ public class StorageController : MonoBehaviour
         //        checkToTransferBool[i] = true;
         //    }
         //}
-        //StoreResources();
+        StoreResources();
     }
 
     // Update is called once per frame
@@ -94,7 +94,7 @@ public class StorageController : MonoBehaviour
                 resourcesTexts[i].text = resources[i].ToString();
                 resourcesInStorage[i] = Toolbox.DB.prefs.ResourceAmountInStorage[i].value;
                 resourcesTextsInStorage[i].text = resourcesInStorage[i].ToString();
-                Toolbox.GameManager.InstantiatePopup_MessageBar("Resources Retrieved In Inventory");
+                Toolbox.GameManager.InstantiatePopup_MessageBar("Resources Retrived In Inventory");
                
             }
         }

@@ -15,7 +15,6 @@ public class HUDListner : MonoBehaviour {
     public Text playerCapacity;
     public GameObject uiParent; 
     public GameObject Bar;
-    public GameObject playerCarry;
     public GameObject MiniMap; 
     public GameObject RewardedAd;
     public GameObject GlowImage;
@@ -68,12 +67,10 @@ public class HUDListner : MonoBehaviour {
         Toolbox.Set_HudListner(this.GetComponent<HUDListner>());
         if (Toolbox.DB.prefs.LastSelectedLevel == 2 || Toolbox.DB.prefs.LastSelectedLevel == 5 || Toolbox.DB.prefs.LastSelectedLevel == 8 || Toolbox.DB.prefs.LastSelectedLevel == 11 || Toolbox.DB.prefs.LastSelectedLevel == 14)
         {
-            playerCarry.SetActive(false);
            // Bar.SetActive(false); 
         }
         else
         {
-            playerCarry.SetActive(true);
             //CoinsCollect.SetActive(false);
         }
         string path = Constants.PrefabFolderPath + Constants.LevelsScriptablesFolderPath + Toolbox.DB.prefs.LastSelectedMode.ToString() + "/" + Toolbox.DB.prefs.LastSelectedLevel.ToString();
@@ -229,7 +226,6 @@ public class HUDListner : MonoBehaviour {
                 if (Toolbox.DB.prefs.LastSelectedLevel == 2 || Toolbox.DB.prefs.LastSelectedLevel == 5 || Toolbox.DB.prefs.LastSelectedLevel == 8 || Toolbox.DB.prefs.LastSelectedLevel == 11 || Toolbox.DB.prefs.LastSelectedLevel == 14)
                 {
                     Toolbox.GameManager.Instantiate_LevelComplete(0);
-                    Toolbox.Soundmanager.Stop_PlayingBGSound();
                 }
                 
                 else
@@ -238,14 +234,14 @@ public class HUDListner : MonoBehaviour {
                     GlowImage.SetActive(false);
                     closeBtn.SetActive(false);
                     Toolbox.GameplayScript.OnStormHandling();
-                    Toolbox.Soundmanager.Stop_PlayingBGSound();
+                    
                 }
                 
             }
-            if(tempTime <= 30f && tempTime >= 28f && SirenAd == true)
+            if(tempTime <= 40f && tempTime >= 38f && SirenAd == true)
             {
                 //Toolbox.GameManager.Instantiate_LevelComplete(0);
-                Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.siren1);
+                Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.siren);
                 SirenAd=false;
             }
             if (tempTime <= 30 && RewardedVideoAd == true)
@@ -290,7 +286,7 @@ public class HUDListner : MonoBehaviour {
     public void OnPress_Store()
     {
         Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.Select);
-        //Toolbox.GameManager.Instantiate_Shop();
+        Toolbox.GameManager.Instantiate_Shop();
     }
     public void Press_RewardedVideo()
     {
