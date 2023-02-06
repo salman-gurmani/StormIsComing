@@ -19,7 +19,7 @@ public class QuestionShopHandler : MonoBehaviour
     [SerializeField] public GameObject resultPanel;
     [SerializeField] private GameObject[] answerButtons;
     [SerializeField] GameObject popupButton;
-    public bool[] checkHasResource;
+
     private int currentQnAIndex = 0;
     private bool isShopOpen = false;
     private bool onCoolDown = false;
@@ -41,21 +41,7 @@ public class QuestionShopHandler : MonoBehaviour
 
         SetPopupButton(true);
     }
-    private void Start()
-    {
-        string path = Constants.PrefabFolderPath + Constants.LevelsScriptablesFolderPath + Toolbox.DB.prefs.LastSelectedMode.ToString() + "/" + Toolbox.DB.prefs.LastSelectedLevel.ToString();
-        LevelData curLevelData = (LevelData)Resources.Load(path);
-        //Debug.Log(curLevelData);
-        for (int i = 0; i < curLevelData.hasResources.Length; i++)
-        {
-            //  checkToTransfer[i] = ((int)curLevelData.hasResources[i]);
-            //   Debug.Log(((int)curLevelData.hasResources[i]));
 
-
-            checkHasResource[(int)curLevelData.hasResources[i]] = true;
-
-        }
-    }
     public void OpenShop()
     {
         shopCanvas.gameObject.SetActive(true);
@@ -157,29 +143,21 @@ public class QuestionShopHandler : MonoBehaviour
 
     private void GiveRewards()
     {
-        int j = 0;
-        string path = Constants.PrefabFolderPath + Constants.LevelsScriptablesFolderPath + Toolbox.DB.prefs.LastSelectedMode.ToString() + "/" + Toolbox.DB.prefs.LastSelectedLevel.ToString();
-        LevelData curLevelData = (LevelData)Resources.Load(path);
         foreach (ResourceType resourceType in (ResourceType[])Enum.GetValues(typeof(ResourceType)))
         {
+            int rewardAmountAllowed = rewardAmountOfEachResource;
+            int spaceAvailabe = 5 - Toolbox.DB.prefs.ResourceAmount[(int)resourceType].value;
 
-            if (checkHasResource[j])
+            if (spaceAvailabe <= rewardAmountAllowed)
+                rewardAmountAllowed = spaceAvailabe;
+
+            Toolbox.DB.prefs.ResourceAmount[(int)resourceType].value += rewardAmountAllowed; 
+            Toolbox.HUDListner.UpdateResourceTxt((int)resourceType);
+            for (int i = 0; i < rewardAmountAllowed; i++)
             {
-                int rewardAmountAllowed = rewardAmountOfEachResource;
-                int spaceAvailabe = 5 - Toolbox.DB.prefs.ResourceAmount[(int)resourceType].value;
-
-                if (spaceAvailabe <= rewardAmountAllowed)
-                    rewardAmountAllowed = spaceAvailabe;
-
-                Toolbox.DB.prefs.ResourceAmount[(int)resourceType].value += rewardAmountAllowed;
-                Toolbox.HUDListner.UpdateResourceTxt((int)resourceType);
-                for (int i = 0; i < rewardAmountAllowed; i++)
-                {
-                    Toolbox.GameplayScript.player.AddResourceOnBack(resourceType);
-
-                }
+                Toolbox.GameplayScript.player.AddResourceOnBack(resourceType);
+                 
             }
-                j++;
         }
     }
     public void SetPopupButton(bool _isActive)
