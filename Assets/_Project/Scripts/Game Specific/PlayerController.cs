@@ -529,11 +529,6 @@ public class PlayerController : MonoBehaviour
             case "Travel":
                 other.transform.GetChild(0).gameObject.SetActive(false);
                 break;
-
-            case "OutFit":
-                other.transform.GetChild(0).gameObject.SetActive(false);
-                other.transform.GetChild(1).gameObject.SetActive(false);
-                break;
             case "WizardShop":
                 if (AdsManager.instance.unity_isInitialized || AdsManager.instance.admob_isInitialized)
                 {
@@ -587,11 +582,6 @@ public class PlayerController : MonoBehaviour
         {
             case "Travel":
                 other.transform.GetChild(0).gameObject.SetActive(true);
-                break;
-
-            case "OutFit":
-                other.transform.GetChild(0).gameObject.SetActive(true);
-                other.transform.GetChild(1).gameObject.SetActive(true);
                 break;
             case "QuestionShop":
                 other.GetComponentInParent<QuestionShopHandler>().TryToOpenPopup();
