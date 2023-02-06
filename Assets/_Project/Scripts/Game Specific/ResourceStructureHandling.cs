@@ -91,15 +91,15 @@ public class ResourceStructureHandling : MonoBehaviour
 
         if (Toolbox.DB.prefs.ResourceAmount[requirementResourceVal].value > 0) {
             if (Toolbox.DB.prefs.CarryLimit < 0)
-            {
-                if (!player)
-                    player = Toolbox.GameplayScript.player.transform;
+            { 
+                    if (!player)
+                        player = Toolbox.GameplayScript.player.transform;
 
-                player.GetComponent<PlayerController>().TryToEnableDialogue("Can't carry anymore " + Toolbox.DB.prefs.ResourceAmount[productionResourceVal].name);
-                return;
+                    player.GetComponent<PlayerController>().TryToEnableDialogue("Can't carry anymore " + Toolbox.DB.prefs.ResourceAmount[productionResourceVal].name);
+                    return; 
             }
 
-
+            
 
             startProcessing = true;
 
@@ -108,11 +108,6 @@ public class ResourceStructureHandling : MonoBehaviour
             if (productionType == ResourceType.CEMENT_SACK)
             {
                 CementMachine();
-                Toolbox.DB.prefs.GoldCoins -= 50;
-            }
-            if (productionType == ResourceType.WOOD_PLANK || productionType == ResourceType.MUD_BRICK)
-            {
-                Toolbox.DB.prefs.GoldCoins -= 50;
             }
 
 
