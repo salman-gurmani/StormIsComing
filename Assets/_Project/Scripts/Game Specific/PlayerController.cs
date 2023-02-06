@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using System;
-using DialogueEditor;
+
 public class PlayerController : MonoBehaviour
 {
     public bool shutdown = false;
@@ -360,22 +360,12 @@ public class PlayerController : MonoBehaviour
     }
     private void ResourceGatherHandling()
     {
-        
         if (!isGathering && resourceInTrigger.Count > 0)
         {
             if (Toolbox.DB.prefs.CarryLimit >= Toolbox.DB.prefs.MaxCarryLimit)
             { 
-                TryToEnableDialogue("Can't carry anymore " + Toolbox.DB.prefs.ResourceAmount[resourceInTrigger[0].resourceVal].name);
-                if (Toolbox.DB.prefs.LastSelectedLevel == 4)
-                {
-                    if (Toolbox.DB.prefs.ResourceAmount[(int)ResourceType.WOOD_LOG].value == 20)
-                    {
-                        ConversationManager.Instance.PressSelectedOption();
-                        Toolbox.HUDListner.ConversationPanel.SetActive(true);
-                    }
-                }
-                return; 
-
+                  TryToEnableDialogue("Can't carry anymore " + Toolbox.DB.prefs.ResourceAmount[resourceInTrigger[0].resourceVal].name);
+                  return; 
             }
             
 
@@ -745,7 +735,7 @@ public class PlayerController : MonoBehaviour
     public void OnPress_StoreCart()
     {
         shutdown = true;
-        //Debug.Log("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+        Debug.Log("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.Select);
         Toolbox.GameManager.Instantiate_StoreCart();
         FindObjectOfType<PlayerController>().HUDSH.SetActive(false);
