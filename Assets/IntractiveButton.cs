@@ -54,31 +54,6 @@ public class IntractiveButton : MonoBehaviour
                     print(hit.collider.name);
                     pnl.SetActive(true);
                 }
-                if (hit.collider.CompareTag("MissionBase"))
-                {
-                    print(hit.collider.name);
-                    pnl.SetActive(true);
-                }
-                if (hit.collider.CompareTag("Travel"))
-                {
-                    FindObjectOfType<StorageController>().travelpnl.SetActive(true);
-                    //Toolbox.GameManager.Instantiate_Blackout();
-                    Toolbox.GameManager.LoadScene(2, false, 3);
-
-                }
-                if (hit.collider.CompareTag("ResourceStorage"))
-                {
-                    print(hit.collider.name);
-                    if (Toolbox.DB.prefs.JobAccepted)
-                    {
-                        transform.parent.GetComponent<StorageController>().UpdateStorage();
-                        pnl.SetActive(true);
-                    }
-                    else
-                    {
-                        Toolbox.GameManager.InstantiatePopup_Message("Kindly Accept the Job first");
-                    }
-                }
                 if (hit.collider.CompareTag("QuestionShopUI"))
                 {
                     QuestionShopHandler riddleShopHandler = FindObjectOfType<QuestionShopHandler>();

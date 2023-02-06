@@ -83,7 +83,6 @@ public class GameplayScript : MonoBehaviour {
 
     public void StartGame()
     {
-        player.UpdateResource();
         Toolbox.HUDListner.EnableHUD();
         Toolbox.HUDListner.StartTime(levelsManager.CurLevelData.time);
 
