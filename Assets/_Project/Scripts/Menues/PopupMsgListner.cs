@@ -1,18 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI; 
+using UnityEngine.UI;
 
 public class PopupMsgListner : MonoBehaviour
 {
-    public TMPro.TextMeshProUGUI TextMesh;
     public Text msgTxt;
     public GameObject unlockBtn;
     public bool isPopupMsg = false;
 
     public void UpdateMsg(string str) {
-        TextMesh.text = str;
-        //msgTxt.text = str;
+
+        msgTxt.text = str;
     }
 
     public void OnEnable()
