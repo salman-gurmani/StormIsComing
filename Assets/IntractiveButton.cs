@@ -65,7 +65,7 @@ public class IntractiveButton : MonoBehaviour
                     //Toolbox.GameManager.Instantiate_Loading();
                     //Toolbox.GameManager.Instantiate_Blackout();
                     if (Toolbox.DB.prefs.JobAccepted)
-                        Toolbox.GameManager.LoadScene(2, true, 0);
+                        Toolbox.GameManager.LoadScene(2, true, 3);
                     else
                         Toolbox.GameManager.InstantiatePopup_Message("You have not selected any mission yet Kindly go to mission base Select mission and then come back to travel");
                     
