@@ -72,18 +72,17 @@ public class IntractiveButton : MonoBehaviour
                     
 
                 }
-                //if (hit.collider.CompareTag("Cart"))
-                //{
-                //    Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.Select);
-                //    FindObjectOfType<PlayerController>().OnPress_StoreCart();
-                //  //  pnl.SetActive(true);
-                //   // Toolbox.GameManager.Instantiate_StoreCart();
-                //}
+                if (hit.collider.CompareTag("Cart"))
+                {
+                    Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.Select);
+                    pnl.SetActive(true);
+                    //Toolbox.GameManager.Instantiate_StoreCart();
+                }
                 if (hit.collider.CompareTag("Shop"))
                 {
                     Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.Select);
-                    //  pnl.SetActive(true);
-                    FindObjectOfType<PlayerController>().OnPress_Store();
+                    pnl.SetActive(true);
+                    //Toolbox.GameManager.Instantiate_StoreSkin();
                 }
                 if (hit.collider.CompareTag("ResourceStorageBtn"))
                 {

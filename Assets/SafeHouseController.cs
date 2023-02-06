@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class SafeHouseController : MonoBehaviour
 {
-    public GameObject hud;
    // public bool jobAccepted = false;
     // Start is called before the first frame update
     void Start()
