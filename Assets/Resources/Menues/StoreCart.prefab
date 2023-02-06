@@ -780,8 +780,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4953941119794433142}
-        m_TargetAssemblyTypeName: CartShopController, Assembly-CSharp
+      - m_Target: {fileID: 6392485714714893941}
+        m_TargetAssemblyTypeName: CharacterShopScript, Assembly-CSharp
         m_MethodName: NextBtn
         m_Mode: 1
         m_Arguments:
@@ -8470,9 +8470,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6091009464264222226}
   - component: {fileID: 6392485714714893941}
-  - component: {fileID: 4953941119794433142}
   m_Layer: 20
-  m_Name: CartManager
+  m_Name: CharacterManager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8519,34 +8518,6 @@ MonoBehaviour:
   StaminaTxt: {fileID: 1206111767392321258}
   CapacityTxt: {fileID: 3301356215345506499}
   SpeedTxt: {fileID: 6691035521894902883}
-  StrengthTxt: {fileID: 1261068874750889804}
-  GoldCoins: {fileID: 5524617081962523098}
-  ExpPoints: {fileID: 3460832095897918543}
-  BuyBtnCoins: {fileID: 4357487833373656690}
-  BuyBtnXP: {fileID: 7924318013056901777}
-  SelectedBtn: {fileID: 1209779914730858789}
-  ApplyBtn: {fileID: 4787228305481164232}
-  pricetxtCoins: {fileID: 6747493543252759000}
-  pricetxtXP: {fileID: 1717466134919661555}
-  Currentindex: 0
-  parentob: {fileID: 3944838478431152186}
---- !u!114 &4953941119794433142
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1741251361393911446}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 99f9192a3c1b1024b8c681634634db42, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  AllPlayers:
-  - {fileID: 2841198538297258785}
-  - {fileID: 8285680696286738835}
-  StrengthAmt: 1400000028000000
-  Price: e8030000d0070000
   StrengthTxt: {fileID: 1261068874750889804}
   GoldCoins: {fileID: 5524617081962523098}
   ExpPoints: {fileID: 3460832095897918543}
@@ -26460,8 +26431,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4953941119794433142}
-        m_TargetAssemblyTypeName: CartShopController, Assembly-CSharp
+      - m_Target: {fileID: 6392485714714893941}
+        m_TargetAssemblyTypeName: CharacterShopScript, Assembly-CSharp
         m_MethodName: ApplyCharacter
         m_Mode: 1
         m_Arguments:
@@ -26715,8 +26686,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4953941119794433142}
-        m_TargetAssemblyTypeName: CartShopController, Assembly-CSharp
+      - m_Target: {fileID: 6392485714714893941}
+        m_TargetAssemblyTypeName: CharacterShopScript, Assembly-CSharp
         m_MethodName: BuyCoinsCharacter
         m_Mode: 1
         m_Arguments:
@@ -29761,8 +29732,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4953941119794433142}
-        m_TargetAssemblyTypeName: CartShopController, Assembly-CSharp
+      - m_Target: {fileID: 6392485714714893941}
+        m_TargetAssemblyTypeName: CharacterShopScript, Assembly-CSharp
         m_MethodName: BuyExpCharacter
         m_Mode: 1
         m_Arguments:
@@ -46275,8 +46246,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4953941119794433142}
-        m_TargetAssemblyTypeName: CartShopController, Assembly-CSharp
+      - m_Target: {fileID: 6392485714714893941}
+        m_TargetAssemblyTypeName: CharacterShopScript, Assembly-CSharp
         m_MethodName: PreviousBtn
         m_Mode: 1
         m_Arguments:
@@ -48580,25 +48551,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 3944838478431152183}
     m_Modifications:
-    - target: {fileID: 73976722955087328, guid: cf31792fa33ebe94b81c6b9c03acd3ee,
-        type: 3}
-      propertyPath: m_Layer
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 91783875822205361, guid: cf31792fa33ebe94b81c6b9c03acd3ee,
-        type: 3}
-      propertyPath: m_Layer
-      value: 20
-      objectReference: {fileID: 0}
     - target: {fileID: 296539652321605090, guid: cf31792fa33ebe94b81c6b9c03acd3ee,
         type: 3}
       propertyPath: m_Name
       value: Cart 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 296539652321605090, guid: cf31792fa33ebe94b81c6b9c03acd3ee,
-        type: 3}
-      propertyPath: m_Layer
-      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 1105164846346940248, guid: cf31792fa33ebe94b81c6b9c03acd3ee,
         type: 3}
@@ -48670,102 +48626,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1316355370891834003, guid: cf31792fa33ebe94b81c6b9c03acd3ee,
-        type: 3}
-      propertyPath: m_Layer
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 1360924637082787238, guid: cf31792fa33ebe94b81c6b9c03acd3ee,
-        type: 3}
-      propertyPath: m_Layer
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 2214098365028901571, guid: cf31792fa33ebe94b81c6b9c03acd3ee,
-        type: 3}
-      propertyPath: m_Layer
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 2254069578773183376, guid: cf31792fa33ebe94b81c6b9c03acd3ee,
-        type: 3}
-      propertyPath: m_Layer
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 2422840068741938723, guid: cf31792fa33ebe94b81c6b9c03acd3ee,
-        type: 3}
-      propertyPath: m_Layer
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 2560628169737656377, guid: cf31792fa33ebe94b81c6b9c03acd3ee,
-        type: 3}
-      propertyPath: m_Layer
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 3129555845802187633, guid: cf31792fa33ebe94b81c6b9c03acd3ee,
-        type: 3}
-      propertyPath: m_Layer
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 3743431508414992506, guid: cf31792fa33ebe94b81c6b9c03acd3ee,
-        type: 3}
-      propertyPath: m_Layer
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 4221441175801955308, guid: cf31792fa33ebe94b81c6b9c03acd3ee,
-        type: 3}
-      propertyPath: m_Layer
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 4742234523874313681, guid: cf31792fa33ebe94b81c6b9c03acd3ee,
-        type: 3}
-      propertyPath: m_Layer
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 5207316670997793065, guid: cf31792fa33ebe94b81c6b9c03acd3ee,
-        type: 3}
-      propertyPath: m_Layer
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 6250672922417838999, guid: cf31792fa33ebe94b81c6b9c03acd3ee,
-        type: 3}
-      propertyPath: m_Layer
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 6348242172577793399, guid: cf31792fa33ebe94b81c6b9c03acd3ee,
-        type: 3}
-      propertyPath: m_Layer
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 8305680824814026474, guid: cf31792fa33ebe94b81c6b9c03acd3ee,
-        type: 3}
-      propertyPath: m_Layer
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 8592860039263885315, guid: cf31792fa33ebe94b81c6b9c03acd3ee,
-        type: 3}
-      propertyPath: m_Layer
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 8611602987797977282, guid: cf31792fa33ebe94b81c6b9c03acd3ee,
-        type: 3}
-      propertyPath: m_Layer
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 8713114040423610236, guid: cf31792fa33ebe94b81c6b9c03acd3ee,
-        type: 3}
-      propertyPath: m_Layer
-      value: 20
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cf31792fa33ebe94b81c6b9c03acd3ee, type: 3}
---- !u!4 &3181273793337321883 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1105164846346940248, guid: cf31792fa33ebe94b81c6b9c03acd3ee,
-    type: 3}
-  m_PrefabInstance: {fileID: 2553666584130569923}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2841198538297258785 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 296539652321605090, guid: cf31792fa33ebe94b81c6b9c03acd3ee,
+    type: 3}
+  m_PrefabInstance: {fileID: 2553666584130569923}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &3181273793337321883 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1105164846346940248, guid: cf31792fa33ebe94b81c6b9c03acd3ee,
     type: 3}
   m_PrefabInstance: {fileID: 2553666584130569923}
   m_PrefabAsset: {fileID: 0}

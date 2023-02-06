@@ -72,10 +72,8 @@ public class GameMode
 public class Prefs
 {
     [SerializeField] private bool jobAccepted = false;
-    [SerializeField] private bool cartAvailable = false;
     [SerializeField] private bool[] skinsUnlocked;
     [SerializeField] private bool[] charactersUnlocked;
-    [SerializeField] private bool[] cartsUnlocked;
     [SerializeField] private bool[] carsUnlocked;
     [SerializeField] private ResourceAmount[] resourceAmount;
     [SerializeField] private ResourceAmount[] resourceAmountInStorage;
@@ -95,7 +93,6 @@ public class Prefs
     [SerializeField] private int playerSpeedLevel = 0;
 
     [SerializeField] private int lastSelectedPlayerObj = 0;
-    [SerializeField] private int lastSelectedCartObj = 0;
     [SerializeField] private int lastSelectedMode = 0;
     [SerializeField] private int lastSelectedLevel = 0;
     [SerializeField] private int lastSelectedEnv = 0;
@@ -147,7 +144,6 @@ public class Prefs
     [SerializeField] public float Speed;
     [SerializeField] public int Capacity;
     [SerializeField] public int Strength;
-    [SerializeField] private int strengthCart;
 
     public void UnlockAllPlayerObj()
     {
@@ -194,9 +190,7 @@ public class Prefs
     public DateTime LastNotificationFireTime { get => lastNotificationFireTime; set => lastNotificationFireTime = value; }
     public int Analytic_GameRunCount { get => analytic_GameRunCount; set => analytic_GameRunCount = value; }
     public int LastSelectedPlayerObj { get => lastSelectedPlayerObj; set => lastSelectedPlayerObj = value; }
-    public int LastSelectedCartObj { get => lastSelectedCartObj; set => lastSelectedCartObj = value; }
     public int LastSelectedMode { get => lastSelectedMode; set => lastSelectedMode = value; }
-    public int StrengthCart { get => strengthCart; set => strengthCart = value; }
     public int LastSelectedLevel { get => lastSelectedLevel; set => lastSelectedLevel = value; }
     public GameMode[] GameMode { get => gameMode; set => gameMode = value; }
     public bool[] PlayerObjectBought { get => playerObjectBought; set => playerObjectBought = value; }
@@ -214,7 +208,6 @@ public class Prefs
     public int GraphicsVal { get => graphicsVal; set => graphicsVal = value; }
     public bool[] SkinsUnlocked { get => skinsUnlocked; set => skinsUnlocked = value; }
     public bool[] CharactersUnlocked { get => charactersUnlocked; set => charactersUnlocked = value; }
-    public bool[] CartsUnlocked { get => cartsUnlocked; set => cartsUnlocked = value; }
     public bool[] CarsUnlocked { get => carsUnlocked; set => carsUnlocked = value; }
     public int LastSelectedEnv { get => lastSelectedEnv; set => lastSelectedEnv = value; }
     public bool IsBossLevel { get => isBossLevel; set => isBossLevel = value; }
@@ -227,7 +220,6 @@ public class Prefs
     public int CarryLimitUpgradePrice { get => carryLimitUpgradePrice; set => carryLimitUpgradePrice = value; }
     public ResourceAmount[] ResourceAmountInStorage { get => resourceAmountInStorage; set => resourceAmountInStorage = value; }
     public bool JobAccepted { get => jobAccepted; set => jobAccepted = value; }
-    public bool CartAvailable { get => cartAvailable; set => cartAvailable = value; }
 }
 
 public class DB : MonoBehaviour {

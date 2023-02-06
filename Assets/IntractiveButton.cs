@@ -54,7 +54,7 @@ public class IntractiveButton : MonoBehaviour
                    
                     pnl.SetActive(true);
                 }
-                if (hit.collider.CompareTag("MissionBaseBtn"))
+                if (hit.collider.CompareTag("MissionBase"))
                 {
                    
                     pnl.SetActive(true);
@@ -71,7 +71,7 @@ public class IntractiveButton : MonoBehaviour
                     
 
                 }
-                if (hit.collider.CompareTag("ResourceStorageBtn"))
+                if (hit.collider.CompareTag("ResourceStorage"))
                 {
                    
                     if (Toolbox.DB.prefs.JobAccepted)
