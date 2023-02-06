@@ -47,48 +47,18 @@ public class CartShopController : MonoBehaviour
     public void SetCharacterStart()
     {
         //AllPlayers[0].SetActive(true);
-        
         StrengthTxt.text = "Lvl. " + StrengthAmt[0].ToString();
-
-        if (Toolbox.DB.prefs.CartsUnlocked[0] == true)
+        BuyBtnCoins.gameObject.SetActive(false);
+        if (Toolbox.DB.prefs.LastSelectedCartObj == 0)
         {
-            BuyBtnCoins.gameObject.SetActive(false);
-            BuyBtnXP.gameObject.SetActive(false);
-
-            if (Toolbox.DB.prefs.LastSelectedCartObj == 0)
-            {
-                SelectedBtn.gameObject.SetActive(true);
-                ApplyBtn.gameObject.SetActive(false);
-            }
-            else
-            {
-                SelectedBtn.gameObject.SetActive(false);
-                ApplyBtn.gameObject.SetActive(true);
-            }
+            SelectedBtn.gameObject.SetActive(true);
+            ApplyBtn.gameObject.SetActive(false);
         }
         else
         {
-
-            BuyBtnCoins.gameObject.SetActive(true);
-            BuyBtnXP.gameObject.SetActive(false);
-            pricetxtCoins.text = Price[0].ToString();
-            pricetxtXP.text = Price[0].ToString();
             SelectedBtn.gameObject.SetActive(false);
-            ApplyBtn.gameObject.SetActive(false);
-
+            ApplyBtn.gameObject.SetActive(true);
         }
-
-        //BuyBtnCoins.gameObject.SetActive(false);
-        //if (Toolbox.DB.prefs.LastSelectedCartObj == 0)
-        //{
-        //    SelectedBtn.gameObject.SetActive(true);
-        //    ApplyBtn.gameObject.SetActive(false);
-        //}
-        //else
-        //{
-        //    SelectedBtn.gameObject.SetActive(false);
-        //    ApplyBtn.gameObject.SetActive(true);
-        //}
 
         //for(int i =0;i<Toolbox.DB.prefs.CharactersUnlocked.Length;i++)
         //{
@@ -131,14 +101,25 @@ public class CartShopController : MonoBehaviour
         }
         else
         {
-           
+            ////if (Toolbox.DB.prefs.CharactersUnlocked[3] || Toolbox.DB.prefs.CharactersUnlocked[6] || Toolbox.DB.prefs.CharactersUnlocked[9])
+            //if (Currentindex == 3 || Currentindex == 6 || Currentindex == 9)
+            //{
+            //    BuyBtnCoins.gameObject.SetActive(false);
+            //    BuyBtnXP.gameObject.SetActive(true);
+            //    pricetxtCoins.text = Price[Currentindex].ToString();
+            //    pricetxtXP.text = Price[Currentindex].ToString();
+            //    SelectedBtn.gameObject.SetActive(false);
+            //    ApplyBtn.gameObject.SetActive(false);
+            //}
+            //else
+            //{
                 BuyBtnCoins.gameObject.SetActive(true);
                 BuyBtnXP.gameObject.SetActive(false);
                 pricetxtCoins.text = Price[Currentindex].ToString();
                pricetxtXP.text = Price[Currentindex].ToString();
                 SelectedBtn.gameObject.SetActive(false);
                 ApplyBtn.gameObject.SetActive(false);
-            
+            //}
         }
     }
 
