@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 114555630961410036}
   - component: {fileID: 4531382801865060894}
   - component: {fileID: 4098663233098264051}
-  - component: {fileID: 2476560074971518718}
+  - component: {fileID: 1034621907520214407}
   m_Layer: 5
   m_Name: Popup-Msg
   m_TagString: Untagged
@@ -139,7 +139,7 @@ MonoBehaviour:
     y: 0
     width: 1
     height: 1
---- !u!114 &2476560074971518718
+--- !u!114 &1034621907520214407
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -148,7 +148,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1663884813863118}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eddcc28e899956648a0824b75a66566e, type: 3}
+  m_Script: {fileID: 11500000, guid: e2b9907444f54674a9fb60256bf94535, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   msgTxt: {fileID: 8932264968931222535}
@@ -530,8 +530,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2476560074971518718}
-        m_TargetAssemblyTypeName: PopUpMessage, Assembly-CSharp
+      - m_Target: {fileID: 1034621907520214407}
+        m_TargetAssemblyTypeName: PopupMsgListner, Assembly-CSharp
         m_MethodName: OnPress_Close
         m_Mode: 1
         m_Arguments:
