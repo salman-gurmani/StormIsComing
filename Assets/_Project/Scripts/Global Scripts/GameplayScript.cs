@@ -110,7 +110,7 @@ public class GameplayScript : MonoBehaviour {
     public void IncrementGoldCoins(int cost)
     {
         Toolbox.DB.prefs.GoldCoins += cost;
-        //Toolbox.GameManager.Instantiate_RewardAnim();
+        Toolbox.GameManager.Instantiate_RewardAnim();
 
         if (FindObjectOfType<HUDListner>())
         { 
