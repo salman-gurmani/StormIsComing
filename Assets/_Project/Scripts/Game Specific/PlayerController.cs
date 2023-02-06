@@ -483,9 +483,7 @@ public class PlayerController : MonoBehaviour
                 if (!isResourceHandlerAvailable(handler))
                     AddResource(handler);
                 break;
-            case "Boom":
-                FindObjectOfType<TravelBooth>().Boom.GetComponent<Animator>().SetTrigger("Set");
-                break;
+
             case "Traffic":
                 Debug.Log("PlayerCrashed In Car");
                 playerSpeed = 0.5f;
@@ -542,10 +540,6 @@ public class PlayerController : MonoBehaviour
                 other.transform.GetChild(0).gameObject.SetActive(false);
                 break;
 
-            case "Boom":
-                //FindObjectOfType<TravelBooth>().Boom.GetComponent<Animator>().enabled = false;
-                FindObjectOfType<TravelBooth>().Boom.GetComponent<Animator>().SetTrigger("Set 1");
-                break;
             case "OutFit":
                 other.transform.GetChild(0).gameObject.SetActive(false);
                 other.transform.GetChild(1).gameObject.SetActive(false);
@@ -559,7 +553,7 @@ public class PlayerController : MonoBehaviour
                 }
                 else
                 { 
-                    FindObjectOfType<WizardShopController>().btnNOAdsVailable.SetActive(false); 
+                    FindObjectOfType<WizardShopController>().btnNOAdsVailable.SetActive(false);
                 }
                 break;
 
@@ -604,7 +598,7 @@ public class PlayerController : MonoBehaviour
             case "Travel":
                 other.transform.GetChild(0).gameObject.SetActive(true);
                 break;
-            
+
             case "OutFit":
                 if (shutdown)
                 {
