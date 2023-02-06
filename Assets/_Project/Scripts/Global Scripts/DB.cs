@@ -80,7 +80,6 @@ public class Prefs
     [SerializeField] private bool hasShadows = true;
 
     [SerializeField] private int goldCoins = 0;
-    [SerializeField] private int expPoints = 0;
     [SerializeField] private int highScore = 0;
     [SerializeField] private int difficulty = 0;
     [SerializeField] private int startSpawnPlayersVal = 0;
@@ -171,7 +170,6 @@ public class Prefs
     public bool GameAudio { get => gameAudio; set => gameAudio = value; }
     public bool GameMusic { get => gameMusic; set => gameMusic = value; }
     public int GoldCoins { get => goldCoins; set => goldCoins = value; }
-    public int ExpPoints { get => expPoints; set => expPoints = value; }
     public int HighScore { get => highScore; set => highScore = value; }
     public int Difficulty { get => difficulty; set => difficulty = value; }
     public bool FbLoggedIn { get => fbLoggedIn; set => fbLoggedIn = value; }
