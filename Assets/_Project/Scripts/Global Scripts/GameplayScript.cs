@@ -54,7 +54,8 @@ public class GameplayScript : MonoBehaviour {
     void Start()
     {
         levelCompleted = false;
-        Toolbox.DB.prefs.ResetResources(); 
+        Toolbox.DB.prefs.ResetResources();
+
         
        
         //--

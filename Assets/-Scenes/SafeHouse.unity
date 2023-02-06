@@ -1932,7 +1932,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   btn: {fileID: 4469408859995199495}
-  btn2: {fileID: 2319376213163362384}
   textInfo: {fileID: 1741506644}
   safeHouse: {fileID: 1762765425}
 --- !u!1 &238734402
@@ -4371,6 +4370,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ecc096922c0d73a48bff0416b1c78d2a, type: 3}
+--- !u!1 &539509997 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6269081328442644605, guid: ecc096922c0d73a48bff0416b1c78d2a,
+    type: 3}
+  m_PrefabInstance: {fileID: 539509996}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &539509998 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6269081328442644601, guid: ecc096922c0d73a48bff0416b1c78d2a,
+    type: 3}
+  m_PrefabInstance: {fileID: 539509996}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 539509997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3cd6012eaa2ad704d8f29da5e90b51fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &546068171
 GameObject:
   m_ObjectHideFlags: 0
@@ -4639,10 +4656,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 236278166}
-        m_TargetAssemblyTypeName: MissionController, Assembly-CSharp
-        m_MethodName: Close
-        m_Mode: 1
+      - m_Target: {fileID: 2319376213163362384}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -4696,10 +4713,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CurrentIDCounter: 6
-  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":3}],"EditorInfo":{"isRoot":true,"xPos":52.2000122,"yPos":31},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"First
-    go to Mission Base and select Mission","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Bob","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":4}],"EditorInfo":{"isRoot":false,"xPos":62,"yPos":176},"ID":3,"ParamActions":[],"TMPFontGUID":null,"Text":"Go
-    back to Resource Storage to get Resources","parentUIDs":[0],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Bob","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":69,"yPos":329},"ID":4,"ParamActions":[],"TMPFontGUID":null,"Text":"Finally
-    Go to Travel Booth ","parentUIDs":[3],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Bob","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
+  json: '{"Options":[],"Parameters":[],"SpeechNodes":[{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":3}],"EditorInfo":{"isRoot":true,"xPos":24,"yPos":46},"ID":0,"ParamActions":[],"TMPFontGUID":null,"Text":"First
+    go to Mission Base select Mission","parentUIDs":[],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Bob","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[{"__type":"EditableSpeechConnection:#DialogueEditor","Conditions":[],"NodeUID":4}],"EditorInfo":{"isRoot":false,"xPos":35.7999878,"yPos":201},"ID":3,"ParamActions":[],"TMPFontGUID":null,"Text":"Go
+    to Resource Storage to get Resources","parentUIDs":[0],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Bob","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0},{"Connections":[],"EditorInfo":{"isRoot":false,"xPos":42.7999878,"yPos":353},"ID":4,"ParamActions":[],"TMPFontGUID":null,"Text":"Go
+    to Travel Booth ","parentUIDs":[3],"AdvanceDialogueAutomatically":false,"AudioGUID":null,"AutoAdvanceShouldDisplayOption":false,"IconGUID":null,"Name":"Bob","OptionUIDs":null,"SpeechUID":0,"TimeUntilAdvance":0,"Volume":0}]}'
   saveVersion: 110
   DefaultName: Bob
   DefaultSprite: {fileID: 21300000, guid: 6a54bfc2681cc4d4d83f60d9a819dd30, type: 3}
@@ -4726,6 +4743,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 539509997}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
       - m_Target: {fileID: 1458173280}
         m_TargetAssemblyTypeName: TutorialTargetController, Assembly-CSharp
         m_MethodName: SetTutorialCursor
@@ -4736,7 +4765,7 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!1 &591208120
 GameObject:
@@ -7772,7 +7801,7 @@ PrefabInstance:
     - target: {fileID: 2887259639379414755, guid: 747f088e99be8134d92c2259305334f7,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 14.28
+      value: 10.13
       objectReference: {fileID: 0}
     - target: {fileID: 2887259639379414755, guid: 747f088e99be8134d92c2259305334f7,
         type: 3}
@@ -8264,21 +8293,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1064126602, guid: 802cf76f48675ba409943f593fadb8ef, type: 3}
-      propertyPath: store
-      value: 
-      objectReference: {fileID: 1064126603}
-    - target: {fileID: 1064126602, guid: 802cf76f48675ba409943f593fadb8ef, type: 3}
-      propertyPath: retrieve
-      value: 
-      objectReference: {fileID: 1064126602}
-    - target: {fileID: 1064126602, guid: 802cf76f48675ba409943f593fadb8ef, type: 3}
       propertyPath: travelpnl
       value: 
       objectReference: {fileID: 518112146}
-    - target: {fileID: 1064126602, guid: 802cf76f48675ba409943f593fadb8ef, type: 3}
-      propertyPath: travelpnl2
-      value: 
-      objectReference: {fileID: 1064126605}
     - target: {fileID: 12494810835024472, guid: 802cf76f48675ba409943f593fadb8ef,
         type: 3}
       propertyPath: m_IsActive
@@ -8454,26 +8471,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Resource Storage
       objectReference: {fileID: 0}
-    - target: {fileID: 2437604149368740312, guid: 802cf76f48675ba409943f593fadb8ef,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2437604149368740312, guid: 802cf76f48675ba409943f593fadb8ef,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 1064126604}
-    - target: {fileID: 2437604149368740312, guid: 802cf76f48675ba409943f593fadb8ef,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: Close
-      objectReference: {fileID: 0}
-    - target: {fileID: 2437604149368740312, guid: 802cf76f48675ba409943f593fadb8ef,
-        type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: StorageController, Assembly-CSharp
-      objectReference: {fileID: 0}
     - target: {fileID: 2772387351114791016, guid: 802cf76f48675ba409943f593fadb8ef,
         type: 3}
       propertyPath: m_IsActive
@@ -8624,42 +8621,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1064126600}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1064126602 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1440354086, guid: 802cf76f48675ba409943f593fadb8ef,
-    type: 3}
-  m_PrefabInstance: {fileID: 1064126600}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1064126603 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1566332758, guid: 802cf76f48675ba409943f593fadb8ef,
-    type: 3}
-  m_PrefabInstance: {fileID: 1064126600}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1064126604 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1064126602, guid: 802cf76f48675ba409943f593fadb8ef,
-    type: 3}
-  m_PrefabInstance: {fileID: 1064126600}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2396b0df55a0a6d4497f30ee7b3b8631, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1064126605 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2319376213195528644, guid: 802cf76f48675ba409943f593fadb8ef,
@@ -9652,6 +9613,30 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 539509997}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 1458173280}
+        m_TargetAssemblyTypeName: TutorialTargetController, Assembly-CSharp
+        m_MethodName: SetTutorialCursor
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
   NodeID: 0
@@ -9675,8 +9660,8 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1458173280}
         m_TargetAssemblyTypeName: TutorialTargetController, Assembly-CSharp
-        m_MethodName: SetTutorialCursor
-        m_Mode: 6
+        m_MethodName: MoveToNextTarget
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -9685,17 +9670,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 947146252}
-        m_TargetAssemblyTypeName: HUDListner2, Assembly-CSharp
-        m_MethodName: SetTutorialDialogueOptions
-        m_Mode: 6
+      - m_Target: {fileID: 539509998}
+        m_TargetAssemblyTypeName: TutorialAIHandler, Assembly-CSharp
+        m_MethodName: MoveToNextTarget
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 1
+          m_BoolArgument: 0
         m_CallState: 2
   NodeID: 3
   TMPFont: {fileID: 11400000, guid: 5aab28315ecdfc245b9cb313d83a0039, type: 2}
@@ -9726,7 +9711,7 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
       - m_Target: {fileID: 1458173280}
         m_TargetAssemblyTypeName: TutorialTargetController, Assembly-CSharp
@@ -11165,7 +11150,7 @@ PrefabInstance:
     - target: {fileID: 987715023219068271, guid: bee8d001addf8f14da30d131b6722f69,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 14.1
+      value: 12.03
       objectReference: {fileID: 0}
     - target: {fileID: 987715023219068271, guid: bee8d001addf8f14da30d131b6722f69,
         type: 3}
@@ -14007,7 +13992,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1816915666}
   m_LocalRotation: {x: 0.42261827, y: 0, z: 0, w: 0.9063079}
-  m_LocalPosition: {x: 14.1, y: 16.324188, z: -17.227879}
+  m_LocalPosition: {x: 12.03, y: 16.324188, z: -17.227879}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1558106426}
@@ -14794,7 +14779,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2001912390}
   m_LocalRotation: {x: 0.42261827, y: 0, z: 0, w: 0.9063079}
-  m_LocalPosition: {x: 14.1, y: 16.324188, z: -17.227879}
+  m_LocalPosition: {x: 12.03, y: 16.324188, z: -17.227879}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1726110436}
@@ -21538,10 +21523,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 236278166}
-        m_TargetAssemblyTypeName: MissionController, Assembly-CSharp
-        m_MethodName: Close
-        m_Mode: 1
+      - m_Target: {fileID: 2319376213163362384}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine

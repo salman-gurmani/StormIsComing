@@ -6,24 +6,19 @@ using UnityEngine.UI;
 public class StorageController : MonoBehaviour
 {
     public GameObject travelpnl;
-    public GameObject travelpnl2;
     public int[] checkToTransfer;
     public bool[] checkToTransferBool;
     public int[] temp;
-    public int capacity = 5;
+    public int capacity = 20;
     public int[] resources;
     public int[] resourcesInStorage;
     public Text[] resourcesTexts;
     public Text[] resourcesTextsInStorage;
     public GameObject btn;
-    public Button store;
-    public Button retrieve;
     //public SafeHouseController safeHouse;
     // Start is called before the first frame update
     void Start()
     {
-        store.interactable = true;
-        retrieve.interactable = true;
         //Toolbox.GameManager.InstantiatePopup_Message1();
         string path = Constants.PrefabFolderPath + Constants.LevelsScriptablesFolderPath + Toolbox.DB.prefs.LastSelectedMode.ToString() + "/" + Toolbox.DB.prefs.LastSelectedLevel.ToString();
         LevelData curLevelData = (LevelData)Resources.Load(path);
@@ -79,10 +74,7 @@ public class StorageController : MonoBehaviour
             resourcesInStorage[i] = Toolbox.DB.prefs.ResourceAmountInStorage[i].value;
             resourcesTextsInStorage[i].text = resourcesInStorage[i].ToString();
             Toolbox.GameManager.InstantiatePopup_MessageBar("Resources Stored In Storage");
-            store.interactable = false;
-            FindObjectOfType<PlayerController>().HUDSH.SetActive(true);
-
-
+            
         }
         if (Toolbox.GameplayScript)
         {
@@ -103,9 +95,7 @@ public class StorageController : MonoBehaviour
                 resourcesInStorage[i] = Toolbox.DB.prefs.ResourceAmountInStorage[i].value;
                 resourcesTextsInStorage[i].text = resourcesInStorage[i].ToString();
                 Toolbox.GameManager.InstantiatePopup_MessageBar("Resources Retrieved In Inventory");
-                retrieve.interactable = false;
-                FindObjectOfType<PlayerController>().HUDSH.SetActive(true);
-
+               
             }
         }
          if (Toolbox.GameplayScript)
@@ -125,10 +115,5 @@ public class StorageController : MonoBehaviour
                 Toolbox.DB.prefs.ResourceAmount[i].value = Toolbox.DB.prefs.ResourceAmount[i].value - temp[i];
             }
         } 
-    }
-    public void Close()
-    {
-        travelpnl2.SetActive(false);
-        FindObjectOfType<PlayerController>().HUDSH.SetActive(true);
     }
 }

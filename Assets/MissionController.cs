@@ -6,7 +6,6 @@ using DialogueEditor;
 public class MissionController : MonoBehaviour
 {
     public GameObject btn;
-    public GameObject btn2;
     public Text textInfo;
     public SafeHouseController safeHouse;
     // Start is called before the first frame update
@@ -26,11 +25,10 @@ public class MissionController : MonoBehaviour
         //ConversationManager.Instance.PressSelectedOption();
         //FindObjectOfType<HUDListner2>().ConversationPanel.SetActive(true);
         Toolbox.GameManager.InstantiatePopup_Message("Good, You have accepted the Contract Now go to Storage to get the resources you need");
-        FindObjectOfType<PlayerController>().HUDSH.SetActive(true);
     }
     public void RejectJob()
     {
-        FindObjectOfType<PlayerController>().HUDSH.SetActive(true);
+        
     }
     public void AssignText()
     {
@@ -38,10 +36,5 @@ public class MissionController : MonoBehaviour
         LevelData curLevelData = (LevelData)Resources.Load(path);
         textInfo.text = curLevelData.levelInfo;
 
-    }
-    public void Close()
-    {
-        btn2.SetActive(false);
-        FindObjectOfType<PlayerController>().HUDSH.SetActive(true);
     }
 }
