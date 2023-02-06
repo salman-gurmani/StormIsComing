@@ -1,17 +1,15 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class MissionController : MonoBehaviour
 {
     public GameObject btn;
-    public Text textInfo;
     public SafeHouseController safeHouse;
     // Start is called before the first frame update
     void Start()
     {
-        AssignText();
+        
     }
 
     // Update is called once per frame
@@ -27,12 +25,5 @@ public class MissionController : MonoBehaviour
     public void RejectJob()
     {
         
-    }
-    public void AssignText()
-    {
-        string path = Constants.PrefabFolderPath + Constants.LevelsScriptablesFolderPath + Toolbox.DB.prefs.LastSelectedMode.ToString() + "/" + Toolbox.DB.prefs.LastSelectedLevel.ToString();
-        LevelData curLevelData = (LevelData)Resources.Load(path);
-        textInfo.text = curLevelData.levelInfo;
-
     }
 }
