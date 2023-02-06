@@ -90,12 +90,10 @@ public class LevelCompleteListner : MonoBehaviour {
 		
 		levelEarningTxt.text = "+" + rewardAmount.ToString();
 		Toolbox.GameplayScript.IncrementGoldCoins(rewardAmount);*/
-
-		levelEarningTxt.text = " + " + rewardAmount.ToString();
-		pointTxt.text = " + 175".ToString();
+		levelEarningTxt.text = "+" + rewardAmount.ToString();
 		Toolbox.GameplayScript.IncrementGoldCoins(rewardAmount);
-		Toolbox.DB.prefs.ExpPoints += 175; 
-		
+		Toolbox.DB.prefs.ExpPoints += 100; 
+		pointTxt.text = Toolbox.DB.prefs.ExpPoints.ToString();
 	}
 
     IEnumerator StartAnimation() {
