@@ -36,7 +36,7 @@ public class Loading : MonoBehaviour {
 
     void Update () {
 
-		//Time.timeScale = 1f;
+		Time.timeScale = 1f;
 
 		if (loadingBar && Toolbox.GameManager.async != null) {
 		
