@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 114555630961410036}
   - component: {fileID: 4531382801865060894}
   - component: {fileID: 4098663233098264051}
+  - component: {fileID: 1034621907520214407}
   - component: {fileID: 2697830156633338414}
-  - component: {fileID: 25944226293910903}
   m_Layer: 5
   m_Name: Popup-MsgCoin
   m_TagString: Untagged
@@ -139,6 +139,21 @@ MonoBehaviour:
     y: 0
     width: 1
     height: 1
+--- !u!114 &1034621907520214407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1663884813863118}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2b9907444f54674a9fb60256bf94535, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  msgTxt: {fileID: 8932264968931222535}
+  unlockBtn: {fileID: 0}
+  isPopupMsg: 1
 --- !u!95 &2697830156633338414
 Animator:
   serializedVersion: 3
@@ -158,21 +173,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &25944226293910903
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1663884813863118}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eddcc28e899956648a0824b75a66566e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  msgTxt: {fileID: 8932264968931222535}
-  unlockBtn: {fileID: 0}
-  isPopupMsg: 0
 --- !u!1 &1505089113716924895
 GameObject:
   m_ObjectHideFlags: 0
@@ -530,8 +530,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 25944226293910903}
-        m_TargetAssemblyTypeName: PopUpMessage, Assembly-CSharp
+      - m_Target: {fileID: 1034621907520214407}
+        m_TargetAssemblyTypeName: PopupMsgListner, Assembly-CSharp
         m_MethodName: OnPress_Close
         m_Mode: 1
         m_Arguments:

@@ -269,13 +269,13 @@ public class GameManager : MonoBehaviour {
 	{
 		GameObject obj = Instantiate((GameObject)Resources.Load(Constants.menuFolderPath + "Popup-Msg"));
 
-		obj.GetComponent<PopUpMessage>().UpdateMsg(str);
+		obj.GetComponent<PopupMsgListner>().UpdateMsg(str);
 	}
 	public void InstantiatePopup_Message2(String str)
 	{
 		GameObject obj = Instantiate((GameObject)Resources.Load(Constants.menuFolderPath + "Popup-MsgCoin"));
 
-		obj.GetComponent<PopUpMessage>().UpdateMsg(str);
+		obj.GetComponent<PopupMsgListner>().UpdateMsg(str);
 	}
 	public void InstantiatePopup_RewardInfo(String str)
 	{
