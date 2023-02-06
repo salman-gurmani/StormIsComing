@@ -119,8 +119,6 @@ public class StructurePartHandler : MonoBehaviour
         for (int i = 0; i < resourceAmount; i++)
         {
             Toolbox.GameplayScript.player.RemoveResourceOnBack(requireType);
-            Toolbox.DB.prefs.CarryLimit = Toolbox.DB.prefs.CarryLimit + 1;
-            Toolbox.DB.prefs.MaxCarryLimit = Toolbox.DB.prefs.CarryLimit;
         }
 
         Toolbox.HUDListner.UpdateResourceTxt(requirementResourceVal);

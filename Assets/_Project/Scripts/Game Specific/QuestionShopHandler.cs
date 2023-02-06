@@ -146,17 +146,16 @@ public class QuestionShopHandler : MonoBehaviour
         foreach (ResourceType resourceType in (ResourceType[])Enum.GetValues(typeof(ResourceType)))
         {
             int rewardAmountAllowed = rewardAmountOfEachResource;
-            int spaceAvailabe = 5 - Toolbox.DB.prefs.ResourceAmount[(int)resourceType].value;
+            int spaceAvailabe = Toolbox.DB.prefs.MaxCarryLimit - Toolbox.DB.prefs.ResourceAmount[(int)resourceType].value;
 
             if (spaceAvailabe <= rewardAmountAllowed)
                 rewardAmountAllowed = spaceAvailabe;
 
-            Toolbox.DB.prefs.ResourceAmount[(int)resourceType].value += rewardAmountAllowed; 
+            Toolbox.DB.prefs.ResourceAmount[(int)resourceType].value += rewardAmountAllowed;
             Toolbox.HUDListner.UpdateResourceTxt((int)resourceType);
             for (int i = 0; i < rewardAmountAllowed; i++)
             {
                 Toolbox.GameplayScript.player.AddResourceOnBack(resourceType);
-                 
             }
         }
     }
