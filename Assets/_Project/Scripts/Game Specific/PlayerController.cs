@@ -4,8 +4,6 @@ using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
-    bool checkMoved = false;
-    public float variableCutting = 0.05f;
     float temp;
     float energy;
     public SpriteRenderer staminaIMG;
@@ -101,66 +99,20 @@ public class PlayerController : MonoBehaviour
 
         Vector3 move = new Vector3(CnControls.CnInputManager.GetAxis("Horizontal"), 0, CnControls.CnInputManager.GetAxis("Vertical"));
         controller.Move(move * Time.deltaTime * playerSpeed);
-
+       
         if (move != Vector3.zero)
         {
-            stamina = stamina - variableCutting;
+            stamina = stamina - 0.05f;
             gameObject.transform.forward = move;
             temp = 100 - stamina;
-            if (energy <= 360)
-            {
-                energy = (360 * temp) / 100;
-                staminaIMG.GetComponent<SpriteRenderer>().material.SetFloat("_Arc1", energy);
-            }
-            if (energy > 0)
+            energy = (360 * temp) / 100;
+            staminaIMG.GetComponent<SpriteRenderer>().material.SetFloat("_Arc1", energy);
+            if(energy > 210)
             {
                 staminaIMG.gameObject.SetActive(true);
             }
-           
-                if (energy > 60 && energy < 120 && variableCutting <= 0.09f)
-                {
-
-                    variableCutting = 0.09f;
-                    playerSpeed = 3.3f;
-                }
-                if (energy > 120 && energy < 180 && variableCutting <= 0.1f)
-                {
-                    variableCutting = 0.1f;
-                    playerSpeed = 2.8f;
-                }
-                if (energy > 180 && energy < 240 && variableCutting <= 0.2f)
-                {
-                    variableCutting = 0.2f;
-                    playerSpeed = 2.2f;
-                }
-                if (energy > 240 && energy < 320 && variableCutting <= 0.3f)
-                {
-                    variableCutting = 0.3f;
-                    playerSpeed = 1.6f;
-                }
-                if (energy >= 360 && variableCutting <= 0.35f)
-                {
-                    variableCutting = 0.35f;
-                    playerSpeed = 1f;
-                    drunk = true;
-                
-            }
-        }
-        else
-        {
-
-
             
-            stamina = 100f;
-            if (energy > 0)
-            {
-                energy -= 350 * Time.deltaTime;
-                staminaIMG.GetComponent<SpriteRenderer>().material.SetFloat("_Arc1", energy);
-            }
         }
-
-
-        
 
         playerVelocity.y += gravityValue * Time.deltaTime;
         controller.Move(playerVelocity * Time.deltaTime);

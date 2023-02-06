@@ -224,9 +224,9 @@ public class GameManager : MonoBehaviour {
 	{
 		Instantiate((GameObject)Resources.Load(Constants.menuFolderPath + "StoreSkins"));
 	}
-	public void Instantiate_Store()
+	public void Instantiate_StoreCars()
 	{
-		Instantiate((GameObject)Resources.Load(Constants.menuFolderPath + "Store"));
+		Instantiate((GameObject)Resources.Load(Constants.menuFolderPath + "StoreCars"));
 	}
 	public void Instantiate_SettingsMenu()
     {
