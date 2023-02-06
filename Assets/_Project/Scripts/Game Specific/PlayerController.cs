@@ -43,7 +43,6 @@ public class PlayerController : MonoBehaviour
     private bool isPlayerDialogueActive = false;
     public GameObject DustEffect;
     private bool movementDisabled = false;
-    public GameObject HUDSH;
 
     private void Start()
     {
@@ -52,17 +51,6 @@ public class PlayerController : MonoBehaviour
 
         string path = Constants.PrefabFolderPath + Constants.LevelsScriptablesFolderPath + Toolbox.DB.prefs.LastSelectedMode.ToString() + "/" + Toolbox.DB.prefs.LastSelectedLevel.ToString();
         LevelData curLevelData = (LevelData)Resources.Load(path);
-
-        if (Toolbox.DB.prefs.LastSelectedPlayerObj == 0)
-        {
-            Toolbox.DB.prefs.Speed = 3f;
-            Toolbox.DB.prefs.Stamina = 50f;
-            Toolbox.DB.prefs.MaxCarryLimit = 15;
-            Toolbox.DB.prefs.Strength = 1;
-        }
-
-        playerSpeed = Toolbox.DB.prefs.Speed;
-        stamina = Toolbox.DB.prefs.Stamina;
     }
 
     public void DisablePlayerMovement(bool _isDisabled)
@@ -678,10 +666,5 @@ public class PlayerController : MonoBehaviour
         isPlayerDialogueActive = false;
         dialogueCanvas.gameObject.SetActive(false);
         dialogueText.text = "";
-    }
-    public void OnPress_Store()
-    {
-        Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.Select);
-        Toolbox.GameManager.Instantiate_StoreSkin();
     }
 }
