@@ -11,7 +11,7 @@ public class LevelCompleteListner : MonoBehaviour {
 	public GameObject pressNext;
 	public Text lvlTxt;
 	public Text goldTxt;
-	public Text pointTxt;
+
 	[Header("Unlock Car")]
 	bool startAnim = false;
 	public GameObject carUnlockObj;
@@ -23,7 +23,7 @@ public class LevelCompleteListner : MonoBehaviour {
 	public Text lifeBonusTxt;
 	public Text netWorthTxt;
 
-	int rewardAmount = 75;
+	int rewardAmount = 100;
 	//public Sprite[] vehicleImages;
 
 	private void Start()
@@ -79,7 +79,7 @@ public class LevelCompleteListner : MonoBehaviour {
 
 	private void EarningsHandling()
     {
-		/*if(Toolbox.HUDListner.progress > 0.5f && Toolbox.HUDListner.progress == 1f)
+		if(Toolbox.HUDListner.progress > 0.5f && Toolbox.HUDListner.progress == 1f)
         {
 			rewardAmount = (Toolbox.DB.prefs.LastSelectedLevel + 1) * 200;
 		}
@@ -89,12 +89,8 @@ public class LevelCompleteListner : MonoBehaviour {
 		}
 		
 		levelEarningTxt.text = "+" + rewardAmount.ToString();
-		Toolbox.GameplayScript.IncrementGoldCoins(rewardAmount);*/
-		levelEarningTxt.text = "+" + rewardAmount.ToString();
 		Toolbox.GameplayScript.IncrementGoldCoins(rewardAmount);
-		Toolbox.DB.prefs.ExpPoints += 100; 
-		pointTxt.text = Toolbox.DB.prefs.ExpPoints.ToString();
-	}
+    }
 
     IEnumerator StartAnimation() {
 
