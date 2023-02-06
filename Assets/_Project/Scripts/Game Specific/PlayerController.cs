@@ -5,7 +5,7 @@ using System;
 
 public class PlayerController : MonoBehaviour
 {
-    public bool shutdown = false;
+  
     bool checkMoved = false;
     public float variableCutting = 0.05f;
     float temp;
@@ -590,16 +590,8 @@ public class PlayerController : MonoBehaviour
                 break;
 
             case "OutFit":
-                if (shutdown)
-                {
-                    other.transform.GetChild(0).gameObject.SetActive(false);
-                    other.transform.GetChild(1).gameObject.SetActive(false);
-                }
-                else
-                {
-                    other.transform.GetChild(0).gameObject.SetActive(true);
-                    other.transform.GetChild(1).gameObject.SetActive(true);
-                }
+                other.transform.GetChild(0).gameObject.SetActive(true);
+                other.transform.GetChild(1).gameObject.SetActive(true);
                 break;
             case "QuestionShop":
                 other.GetComponentInParent<QuestionShopHandler>().TryToOpenPopup();
@@ -727,17 +719,12 @@ public class PlayerController : MonoBehaviour
     }
     public void OnPress_Store()
     {
-        shutdown = true;
         Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.Select);
         Toolbox.GameManager.Instantiate_StoreSkin();
-        FindObjectOfType<PlayerController>().HUDSH.SetActive(false);
     }
     public void OnPress_StoreCart()
     {
-        shutdown = true;
-        Debug.Log("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
         Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.Select);
         Toolbox.GameManager.Instantiate_StoreCart();
-        FindObjectOfType<PlayerController>().HUDSH.SetActive(false);
     }
 }
