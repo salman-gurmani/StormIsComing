@@ -2,144 +2,133 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace DialogueEditor
+public class IntractiveButton : MonoBehaviour
 {
-    public class IntractiveButton : MonoBehaviour
+    Vector3 touchPosWorld;
+    public GameObject pnl;
+    //Change me to change the touch phase used.
+    TouchPhase touchPhase = TouchPhase.Ended;
+    // Start is called before the first frame update
+    void Start()
     {
-        Vector3 touchPosWorld;
-        public GameObject pnl;
-        //Change me to change the touch phase used.
-        TouchPhase touchPhase = TouchPhase.Ended;
-        // Start is called before the first frame update
-        void Start()
+        
+    }
+
+    // Update is called once per frame
+    //void Update()
+    //{
+    //    if ((Input.touchCount > 0) && (Input.GetTouch(0).phase == TouchPhase.Began))
+    //    {
+    //        Ray raycast = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
+    //        RaycastHit raycastHit;
+    //        if (Physics.Raycast(raycast, out raycastHit))
+    //        {
+    //            Debug.Log("Something Hit");
+    //            //if (raycastHit.collider.name == "Soccer")
+    //            //{
+    //            //    Debug.Log("Soccer Ball clicked");
+    //            //}
+
+    //            //OR with Tag
+
+    //            if (raycastHit.collider.CompareTag("TradeShopUI"))
+    //            {
+    //                Debug.Log("Soccer Ball clicked");
+    //            }
+    //        }
+    //    }
+    //}
+
+    Ray ray;
+    RaycastHit hit;
+
+    void Update()
+    {
+        if (Input.GetMouseButtonDown(0))
         {
-
-        }
-
-        // Update is called once per frame
-        //void Update()
-        //{
-        //    if ((Input.touchCount > 0) && (Input.GetTouch(0).phase == TouchPhase.Began))
-        //    {
-        //        Ray raycast = Camera.main.ScreenPointToRay(Input.GetTouch(0).position);
-        //        RaycastHit raycastHit;
-        //        if (Physics.Raycast(raycast, out raycastHit))
-        //        {
-        //            Debug.Log("Something Hit");
-        //            //if (raycastHit.collider.name == "Soccer")
-        //            //{
-        //            //    Debug.Log("Soccer Ball clicked");
-        //            //}
-
-        //            //OR with Tag
-
-        //            if (raycastHit.collider.CompareTag("TradeShopUI"))
-        //            {
-        //                Debug.Log("Soccer Ball clicked");
-        //            }
-        //        }
-        //    }
-        //}
-
-        Ray ray;
-        RaycastHit hit;
-
-        void Update()
-        {
-            if (Input.GetMouseButtonDown(0))
+            ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            if (Physics.Raycast(ray, out hit))
             {
-                ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-                if (Physics.Raycast(ray, out hit))
+                if (hit.collider.CompareTag("TradeShopUI"))
                 {
-                    if (hit.collider.CompareTag("TradeShopUI"))
-                    {
-                        Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.Select);
-                        FindObjectOfType<HUDListner>().DisableHUD();
-                        pnl.SetActive(true);
+                    Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.Select);
+                    FindObjectOfType<HUDListner>().DisableHUD();
+                    pnl.SetActive(true);
+                }
+                if (hit.collider.CompareTag("MissionBaseBtn"))
+                {
+                    FindObjectOfType<PlayerController>().HUDSH.SetActive(false);
+                    Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.Select);
+                    pnl.SetActive(true);
+                }
+                if (hit.collider.CompareTag("Travel"))
+                {
+                    Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.Select);
+                    //FindObjectOfType<StorageController>().travelpnl.SetActive(true);
+                    //Toolbox.GameManager.Instantiate_Loading();
+                    //Toolbox.GameManager.Instantiate_Blackout();
+                    if (Toolbox.DB.prefs.JobAccepted)
+                        Toolbox.GameManager.LoadScene(2, true, 0);
+                    else
+                        Toolbox.GameManager.InstantiatePopup_Message("You have not selected any mission yet Kindly go to mission base Select mission and then come back to travel");
+                    
 
-
-                       
-                    }
-                    if (hit.collider.CompareTag("MissionBaseBtn"))
+                }
+                //if (hit.collider.CompareTag("Cart"))
+                //{
+                //    Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.Select);
+                //    FindObjectOfType<PlayerController>().OnPress_StoreCart();
+                //  //  pnl.SetActive(true);
+                //   // Toolbox.GameManager.Instantiate_StoreCart();
+                //}
+                if (hit.collider.CompareTag("Shop"))
+                {
+                    Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.Select);
+                    //  pnl.SetActive(true);
+                    FindObjectOfType<PlayerController>().OnPress_Store();
+                }
+                if (hit.collider.CompareTag("ResourceStorageBtn"))
+                {
+                    
+                    Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.Select);
+                    if (Toolbox.DB.prefs.JobAccepted)
                     {
                         FindObjectOfType<PlayerController>().HUDSH.SetActive(false);
-                        Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.Select);
+                        FindObjectOfType<StorageController>().UpdateStorage();
+                      //  Debug.Log(FindObjectOfType<StorageController>());
                         pnl.SetActive(true);
-
-
-                        ConversationManager.Instance.PressSelectedOption();
-                        HUDListner2.instance.ShowConvPanel();
                     }
-                    if (hit.collider.CompareTag("Travel"))
+                    else
                     {
-                        Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.Select);
-                        //FindObjectOfType<StorageController>().travelpnl.SetActive(true);
-                        //Toolbox.GameManager.Instantiate_Loading();
-                        //Toolbox.GameManager.Instantiate_Blackout();
-                        if (Toolbox.DB.prefs.JobAccepted)
-                            Toolbox.GameManager.LoadScene(2, true, 0);
-                        else
-                            Toolbox.GameManager.InstantiatePopup_Message("You have not selected any mission yet Kindly go to mission base Select mission and then come back to travel");
-
-
+                        Toolbox.GameManager.InstantiatePopup_Message("Kindly Accept the Job first");
                     }
-                    //if (hit.collider.CompareTag("Cart"))
-                    //{
-                    //    Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.Select);
-                    //    FindObjectOfType<PlayerController>().OnPress_StoreCart();
-                    //  //  pnl.SetActive(true);
-                    //   // Toolbox.GameManager.Instantiate_StoreCart();
-                    //}
-                    if (hit.collider.CompareTag("Shop"))
-                    {
-                        Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.Select);
-                        //  pnl.SetActive(true);
-                        FindObjectOfType<PlayerController>().OnPress_Store();
-                    }
-                    if (hit.collider.CompareTag("ResourceStorageBtn"))
-                    {
-
-                        Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.Select);
-                        if (Toolbox.DB.prefs.JobAccepted)
-                        {
-                            FindObjectOfType<PlayerController>().HUDSH.SetActive(false);
-                            FindObjectOfType<StorageController>().UpdateStorage();
-                            //  Debug.Log(FindObjectOfType<StorageController>());
-                            pnl.SetActive(true);
-                            ConversationManager.Instance.PressSelectedOption();
-                            HUDListner2.instance.ShowConvPanel();
-                        }
-                        else
-                        {
-                            Toolbox.GameManager.InstantiatePopup_Message("Kindly Accept the Job first");
-                        }
-                    }
-                    if (hit.collider.CompareTag("QuestionShopUI"))
-                    {
-                        Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.Select);
-                        QuestionShopHandler riddleShopHandler = FindObjectOfType<QuestionShopHandler>();
-                        riddleShopHandler.OpenShop();
-                        FindObjectOfType<HUDListner>().DisableHUD();
-                    }
-                    if (hit.collider.CompareTag("WizardShopUI"))
-                    {
-                        Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.Select);
-                        FindObjectOfType<WizardShopController>().ShowADS();
-
-                    }
-                    if (hit.collider.CompareTag("EnergyBtn"))
-                    {
-                        Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.Select);
-                        Toolbox.GameManager.Instantiate_Energy();
-                    }
+                }
+                if (hit.collider.CompareTag("QuestionShopUI"))
+                {
+                    Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.Select);
+                    QuestionShopHandler riddleShopHandler = FindObjectOfType<QuestionShopHandler>();
+                    riddleShopHandler.OpenShop();
+                    FindObjectOfType<HUDListner>().DisableHUD();
+                }
+                if(hit.collider.CompareTag("WizardShopUI"))
+                {
+                    Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.Select);
+                    FindObjectOfType<WizardShopController>().ShowADS();
+                   
+                }
+                if(hit.collider.CompareTag("EnergyBtn"))
+                {
+                    Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.Select);
+                    Toolbox.GameManager.Instantiate_Energy();
                 }
             }
         }
-
-
-
-
-
-
     }
+
+
+
+
+
+
 }
+
