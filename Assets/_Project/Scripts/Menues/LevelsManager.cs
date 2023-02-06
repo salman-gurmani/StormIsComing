@@ -26,11 +26,11 @@ public class LevelsManager : MonoBehaviour
 
     public void StartLevelHandling()
     { 
-        if (Toolbox.DB.prefs.LastSelectedLevel > 19)
+        /*if (Toolbox.DB.prefs.LastSelectedLevel > 14)
         {
             //Arooj
             Toolbox.DB.prefs.LastSelectedLevel = 0;
-        }
+        }*/
 
         if(Toolbox.DB.prefs.LastSelectedLevel == 2)
         {
