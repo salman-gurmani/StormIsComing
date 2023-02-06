@@ -13,7 +13,6 @@ public class Toolbox : MonoBehaviour {
     private static MenuHandler menuHandler;
     private static GameplayScript gameplayScript;
     private static HUDListner hudListner;
-    private static HUDListner2 hudListner2;
 
     public static GameManager GameManager {
         get { return gameManager; }
@@ -43,9 +42,6 @@ public class Toolbox : MonoBehaviour {
 
     public static HUDListner HUDListner {
         get { return hudListner; }
-    }
-    public static HUDListner2 HUDListner2 {
-        get { return hudListner2; }
     }
 
     void Awake()

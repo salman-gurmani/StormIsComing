@@ -44,11 +44,7 @@ public class LevelFailListner : MonoBehaviour {
 	public void Press_Restart()
 	{
 		Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.buttonPressYes);
-		Toolbox.GameManager.LoadScene(2, false, 0);
-		for(int i = 0; i<9;i++)
-        {
-			Toolbox.DB.prefs.ResourceAmount[i].value = 0;
-		}
+		Toolbox.GameManager.LoadScene(Toolbox.GameManager.GetCurrentLevelGameScene(), false, 0);
 
         //--
         AdsManager.instance.ShowAd(AdsManager.AdType.INTERSTITIAL);

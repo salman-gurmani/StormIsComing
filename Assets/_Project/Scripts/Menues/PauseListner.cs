@@ -44,14 +44,10 @@ public class PauseListner : MonoBehaviour {
 	public void Press_Restart()
 	{
 		Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.buttonPressYes);
-		Toolbox.GameManager.LoadScene(2, true, 0);
-		for (int i = 0; i < 9; i++)
-		{
-			Toolbox.DB.prefs.ResourceAmount[i].value = 0;
-		}
+		Toolbox.GameManager.LoadScene(Toolbox.GameManager.GetCurrentLevelGameScene(), true, 0);
 
-		//--
-		AdsManager.instance.ShowAd(AdsManager.AdType.INTERSTITIAL);
+        //--
+        AdsManager.instance.ShowAd(AdsManager.AdType.INTERSTITIAL);
 
         Destroy(this.gameObject);
 	}
