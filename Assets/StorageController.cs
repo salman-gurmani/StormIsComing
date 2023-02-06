@@ -38,7 +38,7 @@ public class StorageController : MonoBehaviour
         //        checkToTransferBool[i] = true;
         //    }
         //}
-        StoreResources();
+
     }
 
     // Update is called once per frame

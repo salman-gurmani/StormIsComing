@@ -19,8 +19,6 @@ public class EnergyController : MonoBehaviour
     {
         if (Toolbox.DB.prefs.GoldCoins >= 10)
         {
-            Toolbox.GameplayScript.player.staminaIMG.gameObject.SetActive(false);
-            Toolbox.GameplayScript.player.variableCutting = 0.05f; 
           //  tradeshop.pnl.SetActive(false);
             Toolbox.GameplayScript.player.drunk = false;
             Toolbox.GameplayScript.player.playerSpeed = 4f;
