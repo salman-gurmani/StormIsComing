@@ -228,10 +228,6 @@ public class GameManager : MonoBehaviour {
 	{
 		Instantiate((GameObject)Resources.Load(Constants.menuFolderPath + "Store"));
 	}
-	public void Instantiate_Energy()
-	{
-		Instantiate((GameObject)Resources.Load(Constants.menuFolderPath + "Energy Drink Shop"));
-	}
 	public void Instantiate_SettingsMenu()
     {
         Instantiate((GameObject)Resources.Load(Constants.menuFolderPath + "Settings"));
