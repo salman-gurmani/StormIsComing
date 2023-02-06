@@ -156,17 +156,14 @@ public class StructureHandler : MonoBehaviour
         }
 
         if (partsBuild >= totalParts) {
-            Toolbox.GameManager.InstantiatePopup_Message_BuildingComplete();
+
             //MaterialsTransparentStatus(false);
             if (liftObj)
-            {
-               
-            }
-            //    liftObj.SetActive(false);
-           //Toolbox.GameplayScript.OnStormHandling();
-            //FindObjectOfType<HUDListner>().MiniMap.SetActive(false);
-            //FindObjectOfType<HUDListner>().GlowImage.SetActive(false);
-            //FindObjectOfType<HUDListner>().closeBtn.SetActive(false);
+                liftObj.SetActive(false);
+            Toolbox.GameplayScript.OnStormHandling();
+            FindObjectOfType<HUDListner>().MiniMap.SetActive(false);
+            FindObjectOfType<HUDListner>().GlowImage.SetActive(false);
+            FindObjectOfType<HUDListner>().closeBtn.SetActive(false);
         }
     }
 

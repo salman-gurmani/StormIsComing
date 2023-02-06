@@ -382,15 +382,7 @@ public class GameManager : MonoBehaviour {
 
 		//Toolbox.HUDListner.IncrementPanelty(1);
 	}
-	public void InstantiatePopup_Message_BuildingComplete()
-	{
-		GameObject obj = Instantiate((GameObject)Resources.Load(Constants.menuFolderPath + "Popup-MsgOnBuildingComplete"));
 
-	//obj.GetComponent<PopupMsgListner>().UpdateMsg(str);
-
-		//Toolbox.HUDListner.IncrementPanelty(1);
-	}
-	
 	public void Instantiate_Blackout()
 	{
 		Instantiate((GameObject)Resources.Load(Constants.menuFolderPath + "Blackout"));
