@@ -5,28 +5,15 @@ public class PlayerResourceHandler : MonoBehaviour
     public ResourceType type;
     public GameObject resourceObj;
     public float yOffset = 1;
-    public float zOffset = 1;
     public int index = -1;
     public GameObject lastObj;
-    bool a =false;
+
     public void SetResource(ResourceType _type, GameObject _obj) {
 
         type = _type;
         resourceObj = _obj;
-        if (Toolbox.GameplayScript.player.cartAvailable)
-        {
-            if(!a)
-            {
-                a = true;
-                transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z - 1f);
-                transform.parent =  FindObjectOfType<CartController>().gameObject.transform;
-            }
-        }
     }
-    private void Start()
-    {
-       
-    }
+
     public void Add() {
 
         index++;
