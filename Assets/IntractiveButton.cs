@@ -52,7 +52,6 @@ public class IntractiveButton : MonoBehaviour
                 if (hit.collider.CompareTag("TradeShopUI"))
                 {
                     Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.Select);
-                    FindObjectOfType<HUDListner>().DisableHUD();
                     pnl.SetActive(true);
                 }
                 if (hit.collider.CompareTag("MissionBaseBtn"))
@@ -108,7 +107,6 @@ public class IntractiveButton : MonoBehaviour
                     Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.Select);
                     QuestionShopHandler riddleShopHandler = FindObjectOfType<QuestionShopHandler>();
                     riddleShopHandler.OpenShop();
-                    FindObjectOfType<HUDListner>().DisableHUD();
                 }
                 if(hit.collider.CompareTag("WizardShopUI"))
                 {

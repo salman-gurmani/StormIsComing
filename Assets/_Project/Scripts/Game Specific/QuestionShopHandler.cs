@@ -73,7 +73,7 @@ public class QuestionShopHandler : MonoBehaviour
         resultPanel.GetComponentInChildren<TextMeshProUGUI>().text = "Correct!\nCome back in 30 seconds and try again!";
         GiveRewards();
         isShopOpen = false;
-        SetPopupButton(false); 
+        SetPopupButton(false);
         IsFirstTry = true;
 
         if (Toolbox.DB.prefs.LastSelectedLevel == 3)
@@ -91,11 +91,10 @@ public class QuestionShopHandler : MonoBehaviour
             Debug.Log("In Wrong Answer If");
             //Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.questionFailure);
 
-            Toolbox.GameManager.Instantiate_SecondChanceMenu(); 
-
+            Toolbox.GameManager.Instantiate_SecondChanceMenu();
         }
         else
-        { 
+        {
             onCoolDown = true;
             Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.questionFailure);
             questionsAndAnswers.Remove(questionsAndAnswers[currentQnAIndex]);
@@ -186,10 +185,5 @@ public class QuestionShopHandler : MonoBehaviour
     public void SetPopupButton(bool _isActive)
     {
         popupButton.SetActive(_isActive);
-    }
-    public void Close()
-    {
-        FindObjectOfType<HUDListner>().EnableHUD();
-        resultPanel.SetActive(false);
     }
 }
