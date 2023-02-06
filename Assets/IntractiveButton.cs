@@ -88,11 +88,10 @@ public class IntractiveButton : MonoBehaviour
                 }
                 if (hit.collider.CompareTag("ResourceStorageBtn"))
                 {
-                    
+                    FindObjectOfType<PlayerController>().HUDSH.SetActive(false);
                     Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.Select);
                     if (Toolbox.DB.prefs.JobAccepted)
                     {
-                        FindObjectOfType<PlayerController>().HUDSH.SetActive(false);
                         FindObjectOfType<StorageController>().UpdateStorage();
                       //  Debug.Log(FindObjectOfType<StorageController>());
                         pnl.SetActive(true);
