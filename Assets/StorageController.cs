@@ -95,23 +95,16 @@ public class StorageController : MonoBehaviour
         {
             if (checkToTransferBool[i])
             {
-                int Player = Toolbox.DB.prefs.ResourceAmount[0].value + Toolbox.DB.prefs.ResourceAmount[1].value + Toolbox.DB.prefs.ResourceAmount[2].value + Toolbox.DB.prefs.ResourceAmount[3].value + Toolbox.DB.prefs.ResourceAmount[4].value + Toolbox.DB.prefs.ResourceAmount[5].value + Toolbox.DB.prefs.ResourceAmount[6].value + Toolbox.DB.prefs.ResourceAmount[7].value + Toolbox.DB.prefs.ResourceAmount[8].value;
-                if (Player > Toolbox.DB.prefs.MaxCarryLimit)
-                    return;
-                else
-                {
-                    Toolbox.DB.prefs.ResourceAmount[i].value = Toolbox.DB.prefs.ResourceAmount[i].value + Toolbox.DB.prefs.ResourceAmountInStorage[i].value;
-                    Toolbox.DB.prefs.ResourceAmountInStorage[i].value = 0;
-                    //CheckExtraItem();
-                    resources[i] = Toolbox.DB.prefs.ResourceAmount[i].value;
-                    resourcesTexts[i].text = resources[i].ToString();
-                    resourcesInStorage[i] = Toolbox.DB.prefs.ResourceAmountInStorage[i].value;
-                    resourcesTextsInStorage[i].text = resourcesInStorage[i].ToString();
-                    Toolbox.GameManager.InstantiatePopup_MessageBar("Resources Retrieved In Inventory");
-                    retrieve.interactable = false;
-                    FindObjectOfType<PlayerController>().HUDSH.SetActive(true);
-                }
-                
+                Toolbox.DB.prefs.ResourceAmount[i].value = Toolbox.DB.prefs.ResourceAmount[i].value + Toolbox.DB.prefs.ResourceAmountInStorage[i].value;
+                Toolbox.DB.prefs.ResourceAmountInStorage[i].value = 0;
+                CheckExtraItem();
+                resources[i] = Toolbox.DB.prefs.ResourceAmount[i].value;
+                resourcesTexts[i].text = resources[i].ToString();
+                resourcesInStorage[i] = Toolbox.DB.prefs.ResourceAmountInStorage[i].value;
+                resourcesTextsInStorage[i].text = resourcesInStorage[i].ToString();
+                Toolbox.GameManager.InstantiatePopup_MessageBar("Resources Retrieved In Inventory");
+                retrieve.interactable = false;
+                FindObjectOfType<PlayerController>().HUDSH.SetActive(true);
 
             }
         }
