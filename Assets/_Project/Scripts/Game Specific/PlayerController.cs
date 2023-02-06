@@ -5,7 +5,7 @@ using System;
 
 public class PlayerController : MonoBehaviour
 {
-  
+    public bool cartAvailable = false;
     bool checkMoved = false;
     public float variableCutting = 0.05f;
     float temp;
@@ -19,7 +19,6 @@ public class PlayerController : MonoBehaviour
     private LevelData curLevelData;
     public GameObject[] models;
     private int index = 0;
-    private int indexCart = 0;
     private bool run = false;
     private Vector3 playerVelocity;
     private bool groundedPlayer;
@@ -50,12 +49,8 @@ public class PlayerController : MonoBehaviour
     private void Start()
     {
         index = Toolbox.DB.prefs.LastSelectedPlayerObj;
-        indexCart = Toolbox.DB.prefs.LastSelectedPlayerObj;
         EnableCharacter(index);
-        if(Toolbox.DB.prefs.CartAvailable)
-        {
-            EnableCart(Toolbox.DB.prefs.LastSelectedCartObj);
-        }
+
         string path = Constants.PrefabFolderPath + Constants.LevelsScriptablesFolderPath + Toolbox.DB.prefs.LastSelectedMode.ToString() + "/" + Toolbox.DB.prefs.LastSelectedLevel.ToString();
         LevelData curLevelData = (LevelData)Resources.Load(path);
 
@@ -75,22 +70,7 @@ public class PlayerController : MonoBehaviour
     {
         movementDisabled = _isDisabled;
     }
-    public void EnableCart(int i)
-    {
-        foreach (var item in carts)
-        {
-            item.gameObject.SetActive(false);
-        }
-        carts[i].SetActive(true);
-        if (i == 0)
-        {
-            Toolbox.DB.prefs.MaxCarryLimit =  25;
-        }
-        if( i == 1)
-        {
-            Toolbox.DB.prefs.MaxCarryLimit = 35;
-        }
-    }
+
    public void EnableCharacter(int index) {
 
         foreach (var item in models)
@@ -100,9 +80,9 @@ public class PlayerController : MonoBehaviour
         
         models[index].SetActive(true);
         anim = models[index].GetComponent<Animator>();
-        if(Toolbox.DB.prefs.CartAvailable)
+        if(cartAvailable)
         {
-            //carts[0].SetActive(true);
+            carts[0].SetActive(true);
         }
     }
     public void UpdateResource()

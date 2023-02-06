@@ -13,7 +13,7 @@ public class PlayerResourceHandler : MonoBehaviour
 
         type = _type;
         resourceObj = _obj;
-        if (Toolbox.DB.prefs.CartAvailable)
+        if (Toolbox.GameplayScript.player.cartAvailable)
         {
             if(!a)
             {
