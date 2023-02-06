@@ -368,7 +368,7 @@ public class GameManager : MonoBehaviour {
 	}
 	public void Instantiate_Shop()
 	{
-		Instantiate((GameObject)Resources.Load(Constants.menuFolderPath + "Store 1"));
+		Instantiate((GameObject)Resources.Load(Constants.menuFolderPath + "Store"));
 	}	
 	public void Instantiate_PaneltyMsg(String str)
 	{
