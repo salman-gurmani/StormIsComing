@@ -58,8 +58,6 @@ public class LevelFailListner : MonoBehaviour {
 
 	public void Press_Home()
 	{
-		Toolbox.DB.prefs.JobAccepted = false;
-		Toolbox.DB.prefs.StorageAccepted = false;
 		Toolbox.Soundmanager.PlaySound(Toolbox.Soundmanager.buttonPressYes);
 
         //--

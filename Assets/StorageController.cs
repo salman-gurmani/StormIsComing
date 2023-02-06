@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class StorageController : MonoBehaviour
 {
     public GameObject travelpnl;
-    public GameObject back;
     public GameObject travelpnl2;
     public int[] checkToTransfer;
     public bool[] checkToTransferBool;
@@ -23,7 +22,6 @@ public class StorageController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        back.SetActive(false);
         store.interactable = true;
         retrieve.interactable = true;
         //Toolbox.GameManager.InstantiatePopup_Message1();
@@ -74,8 +72,6 @@ public class StorageController : MonoBehaviour
     {
         for (int i = 0; i < 9; i++)
         {
-            Toolbox.DB.prefs.StorageAccepted = true;
-            back.SetActive(true);
             Toolbox.DB.prefs.ResourceAmountInStorage[i].value = Toolbox.DB.prefs.ResourceAmountInStorage[i].value + Toolbox.DB.prefs.ResourceAmount[i].value;
             Toolbox.DB.prefs.ResourceAmount[i].value = 0;
             resources[i] = Toolbox.DB.prefs.ResourceAmount[i].value;
@@ -99,8 +95,6 @@ public class StorageController : MonoBehaviour
         {
             if (checkToTransferBool[i])
             {
-                Toolbox.DB.prefs.StorageAccepted = true;
-                back.SetActive(true);
                 int Player = Toolbox.DB.prefs.ResourceAmountInStorage[0].value + Toolbox.DB.prefs.ResourceAmountInStorage[1].value + Toolbox.DB.prefs.ResourceAmountInStorage[2].value + Toolbox.DB.prefs.ResourceAmount[3].value + Toolbox.DB.prefs.ResourceAmountInStorage[4].value + Toolbox.DB.prefs.ResourceAmountInStorage[5].value + Toolbox.DB.prefs.ResourceAmountInStorage[6].value + Toolbox.DB.prefs.ResourceAmountInStorage[7].value + Toolbox.DB.prefs.ResourceAmountInStorage[8].value;
                 Debug.Log("Player" + Player);
                 if (Player > Toolbox.DB.prefs.MaxCarryLimit)

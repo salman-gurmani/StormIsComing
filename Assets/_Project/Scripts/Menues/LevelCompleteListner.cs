@@ -161,8 +161,6 @@ public class LevelCompleteListner : MonoBehaviour {
     }
 	public void Press_Next()
 	{
-		Toolbox.DB.prefs.JobAccepted = false;
-		Toolbox.DB.prefs.StorageAccepted = false;
 		if (Toolbox.DB.prefs.LastSelectedLevel < Constants.maxLevelsOfMode[Toolbox.DB.prefs.LastSelectedMode]-1)
         {
 			Toolbox.DB.prefs.LastSelectedLevel++; 

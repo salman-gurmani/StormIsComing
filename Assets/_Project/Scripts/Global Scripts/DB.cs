@@ -72,7 +72,6 @@ public class GameMode
 public class Prefs
 {
     [SerializeField] private bool jobAccepted = false;
-    [SerializeField] private bool storageAccepted = false;
     [SerializeField] private bool cartAvailable = false;
     [SerializeField] private bool[] skinsUnlocked;
     [SerializeField] private bool[] charactersUnlocked;
@@ -228,7 +227,6 @@ public class Prefs
     public int CarryLimitUpgradePrice { get => carryLimitUpgradePrice; set => carryLimitUpgradePrice = value; }
     public ResourceAmount[] ResourceAmountInStorage { get => resourceAmountInStorage; set => resourceAmountInStorage = value; }
     public bool JobAccepted { get => jobAccepted; set => jobAccepted = value; }
-    public bool StorageAccepted { get => storageAccepted; set => storageAccepted = value; }
     public bool CartAvailable { get => cartAvailable; set => cartAvailable = value; }
 }
 
@@ -244,7 +242,6 @@ public class DB : MonoBehaviour {
 
         Load_Binary_Prefs();
         prefs.JobAccepted = false;
-        prefs.StorageAccepted = false;
         //if (getServerData && Application.internetReachability != NetworkReachability.NotReachable)
         //{
         //    StartCoroutine(GetOnlineData());
