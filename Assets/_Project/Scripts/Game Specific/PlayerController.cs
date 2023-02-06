@@ -4,10 +4,6 @@ using TMPro;
 
 public class PlayerController : MonoBehaviour
 {
-    float temp;
-    float energy;
-    public SpriteRenderer staminaIMG;
-    public float stamina = 100f;
     int coinAndChest = 0;
     float progress;
     public CharacterController controller; 
@@ -99,19 +95,10 @@ public class PlayerController : MonoBehaviour
 
         Vector3 move = new Vector3(CnControls.CnInputManager.GetAxis("Horizontal"), 0, CnControls.CnInputManager.GetAxis("Vertical"));
         controller.Move(move * Time.deltaTime * playerSpeed);
-       
+
         if (move != Vector3.zero)
         {
-            stamina = stamina - 0.05f;
             gameObject.transform.forward = move;
-            temp = 100 - stamina;
-            energy = (360 * temp) / 100;
-            staminaIMG.GetComponent<SpriteRenderer>().material.SetFloat("_Arc1", energy);
-            if(energy > 210)
-            {
-                staminaIMG.gameObject.SetActive(true);
-            }
-            
         }
 
         playerVelocity.y += gravityValue * Time.deltaTime;

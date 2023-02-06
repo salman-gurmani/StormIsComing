@@ -52,5 +52,19 @@ public class MarketPlaceController : MonoBehaviour
     }
 
 
-   
+    public void EnergyDrink()
+    {
+        if (Toolbox.DB.prefs.GoldCoins >= 10)
+        {
+            tradeshop.pnl.SetActive(false);
+            Toolbox.GameplayScript.player.drunk = false;
+            Toolbox.GameplayScript.player.playerSpeed = 4f;
+            Toolbox.GameManager.InstantiatePopup_Message("You have bought Energy Drink");
+            Toolbox.DB.prefs.GoldCoins = Toolbox.DB.prefs.GoldCoins - 10;
+        }
+        else
+        {
+            Toolbox.GameManager.InstantiatePopup_Message("You dont have enough coins");
+        }
+    }
 }

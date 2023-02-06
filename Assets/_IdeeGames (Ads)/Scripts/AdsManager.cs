@@ -34,7 +34,6 @@ public class AdsManager : MonoBehaviour, IUnityAdsInitializationListener, IUnity
         DOUBLEREWARD,
         SKIPLEVEL,
         Wizard,
-        EnergyDrink,
         SECONDCHANCE
     };
     private RewardType rewardType = RewardType.FREECOINS;
@@ -248,9 +247,7 @@ public class AdsManager : MonoBehaviour, IUnityAdsInitializationListener, IUnity
                 //  FindObjectOfType<LevelFailListner>().UnlockAndPlayNextLevel();
 
                 break;
-            case RewardType.EnergyDrink:
-                Toolbox.GameplayScript.player.GetComponent<EnergyController>().GiveReward();
-                break;
+
             case RewardType.Wizard:
                 FindObjectOfType<WizardShopController>().GiveReward();
                 break;
