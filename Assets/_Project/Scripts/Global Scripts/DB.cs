@@ -163,8 +163,7 @@ public class Prefs
     }
 
     public void ResetResources()
-    { 
-        
+    {
         foreach (var item in resourceAmount)
         {
            // item.value = 0;
@@ -227,9 +226,8 @@ public class DB : MonoBehaviour {
 
     private void Awake()
     {
-
         Load_Binary_Prefs();
-        prefs.JobAccepted = false;
+
         //if (getServerData && Application.internetReachability != NetworkReachability.NotReachable)
         //{
         //    StartCoroutine(GetOnlineData());
