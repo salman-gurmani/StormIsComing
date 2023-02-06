@@ -5,7 +5,6 @@ using System;
 
 public class PlayerController : MonoBehaviour
 {
-    public bool cartAvailable = false;
     bool checkMoved = false;
     public float variableCutting = 0.05f;
     float temp;
@@ -35,7 +34,7 @@ public class PlayerController : MonoBehaviour
     [Space(10)]
     public List<ResourceHandler> resourceInTrigger;
     [SerializeField] private bool isGathering = false;
-    public GameObject[] carts;
+
     [SerializeField] Canvas dialogueCanvas;
     [SerializeField] TextMeshProUGUI dialogueText;
     float time = 0;
@@ -80,10 +79,6 @@ public class PlayerController : MonoBehaviour
         
         models[index].SetActive(true);
         anim = models[index].GetComponent<Animator>();
-        if(cartAvailable)
-        {
-            carts[0].SetActive(true);
-        }
     }
     public void UpdateResource()
     {
@@ -203,13 +198,8 @@ public class PlayerController : MonoBehaviour
             {
                 staminaIMG.gameObject.SetActive(true);
             }
-            else
-            {
-                staminaIMG.gameObject.SetActive(false);
-            }
-
-
-            if (energy > 60 && energy < 120 && variableCutting <= 0.09f)
+           
+                if (energy > 60 && energy < 120 && variableCutting <= 0.09f)
                 {
 
                     variableCutting = 0.09f;
@@ -643,7 +633,6 @@ public class PlayerController : MonoBehaviour
         {
             ResourceType rType = Toolbox.GameplayScript.levelsManager.CurLevelData.hasResources[i];
             resourcesHandler[i].SetResource(Toolbox.GameplayScript.levelsManager.CurLevelData.hasResources[i], resourcesObjs[(int)rType]);
-          
         }
     }
     public void AddResourceOnBack(ResourceType _type)
