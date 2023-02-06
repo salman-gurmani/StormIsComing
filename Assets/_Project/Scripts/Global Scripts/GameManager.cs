@@ -224,10 +224,6 @@ public class GameManager : MonoBehaviour {
 	{
 		Instantiate((GameObject)Resources.Load(Constants.menuFolderPath + "StoreSkins"));
 	}
-	public void Instantiate_StoreCart()
-	{
-		Instantiate((GameObject)Resources.Load(Constants.menuFolderPath + "StoreCart"));
-	}
 	public void Instantiate_Store()
 	{
 		Instantiate((GameObject)Resources.Load(Constants.menuFolderPath + "Store"));
