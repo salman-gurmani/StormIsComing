@@ -1,7 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
-using System;
 
 public class PlayerController : MonoBehaviour
 {
@@ -64,27 +63,11 @@ public class PlayerController : MonoBehaviour
         {
             item.gameObject.SetActive(false);
         }
-        
+
         models[index].SetActive(true);
         anim = models[index].GetComponent<Animator>();
     }
-    public void UpdateResource()
-    {
-        foreach (ResourceType resourceType in (ResourceType[])Enum.GetValues(typeof(ResourceType)))
-        {
-            Toolbox.HUDListner.UpdateResourceTxt((int)resourceType);
-            for (int i = 0; i < Toolbox.DB.prefs.ResourceAmount[(int)resourceType].value; i++)
-            {
-                Toolbox.GameplayScript.player.AddResourceOnBack(resourceType);
-            }
-           
-        }
-       
-       
 
-
-
-    }
     void Update()
     {
         PlayerMovement();
@@ -431,9 +414,6 @@ public class PlayerController : MonoBehaviour
         //Debug.LogError("Trigger = " + other.gameObject.tag.ToString());
         switch (other.tag)
         {
-            case "Travel":
-                other.transform.GetChild(0).gameObject.SetActive(false);
-                break;
             case "WizardShop":
                 if (AdsManager.instance.unity_isInitialized || AdsManager.instance.admob_isInitialized)
                 {
@@ -468,11 +448,11 @@ public class PlayerController : MonoBehaviour
 
             case "ResourceStorage":
 
-                other.GetComponentInParent<StorageController>().btn.SetActive(false);
+                other.GetComponentInParent<TradeShopController>().btn.SetActive(false);
                 break;
             case "MissionBase":
 
-                other.GetComponentInParent<MissionController>().btn.SetActive(false);
+                other.GetComponentInParent<TradeShopController>().btn.SetActive(false);
 
                 break;
                 
@@ -485,20 +465,17 @@ public class PlayerController : MonoBehaviour
     {
         switch (other.tag)
         {
-            case "Travel":
-                other.transform.GetChild(0).gameObject.SetActive(true);
-                break;
             case "QuestionShop":
                 other.GetComponentInParent<QuestionShopHandler>().TryToOpenPopup();
                 break;
             case "ResourceStorage":
 
-                other.GetComponentInParent<StorageController>().btn.SetActive(true);
+                other.GetComponentInParent<TradeShopController>().btn.SetActive(true);
 
                 break;
             case "MissionBase":
 
-                other.GetComponentInParent<MissionController>().btn.SetActive(true);
+                other.GetComponentInParent<TradeShopController>().btn.SetActive(true);
 
                 break;
             case "WizardShop":
