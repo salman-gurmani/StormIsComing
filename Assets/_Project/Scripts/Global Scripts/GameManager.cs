@@ -392,7 +392,7 @@ public class GameManager : MonoBehaviour {
 	}
 	public void InstantiatePopup_Message_BuildingComplete()
 	{
-		GameObject obj = Instantiate((GameObject)Resources.Load(Constants.menuFolderPath + "LevelComplete 1"));
+		GameObject obj = Instantiate((GameObject)Resources.Load(Constants.menuFolderPath + "Popup-MsgOnBuildingComplete"));
 
 	//obj.GetComponent<PopupMsgListner>().UpdateMsg(str);
 
